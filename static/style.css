@@ -43,7 +43,8 @@ h3 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
 /* Header and footer */
 .site-header { border-bottom: 1px solid var(--line); background: var(--surface); }
 .site-header .wrap { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; align-items: center; padding-block: 0.75rem; }
-.brand { font-weight: 700; color: var(--ink); text-decoration: none; }
+.brand { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+.brand img { display: block; width: 36px; height: 36px; margin: -4px 0 -4px -6px; }
 .site-header nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
 .site-header nav a { color: var(--ink-2); text-decoration: none; }
 .site-header nav a:hover { color: var(--ink); text-decoration: underline; }
@@ -163,3 +164,10 @@ table.map tr.fs > * { border-top: 6px solid var(--surface); background-clip: pad
 .tip-swatch { width: 12px; height: 12px; border-radius: 3px; flex: none; }
 .tip-pair { margin-top: 0.15rem; }
 .tip-reason { margin-top: 0.3rem; color: var(--ink-2); }
+
+/* Footer: "A project by ML Challenges" */
+.by { display: inline-flex; align-items: center; gap: 0.75rem; color: var(--ink-2); text-decoration: none; font-size: 1rem; }
+.by-logo { display: inline-flex; padding: 0.55rem 0.9rem; background: #ffffff; border: 1px solid var(--line); border-radius: 8px; transition: border-color 0.15s; }
+.by:hover .by-logo { border-color: var(--muted); }
+.by-logo img { display: block; height: 24px; width: auto; }
+.site-footer .build { margin: 1rem 0 0; }
