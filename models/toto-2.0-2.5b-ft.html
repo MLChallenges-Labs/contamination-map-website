@@ -37,15 +37,15 @@
 
 <section>
   <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
-<p>Level determined for <strong>97%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 1, Training data seen: 28, Related data seen: 7, Not seen: 0, Unknown: 1">
-<span class="lvl-seen_split_unclear" style="flex-grow: 1" title="Seen, split unclear: 1"></span><span class="lvl-train_seen" style="flex-grow: 28" title="Training data seen: 28"></span><span class="lvl-related" style="flex-grow: 7" title="Related data seen: 7"></span><span class="lvl-unknown" style="flex-grow: 1" title="Unknown: 1"></span></div>
+<p>Level determined for <strong>73%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 1, Training data seen: 28, Related data seen: 7, Not seen: 0, Unknown: 13">
+<span class="lvl-seen_split_unclear" style="flex-grow: 1" title="Seen, split unclear: 1"></span><span class="lvl-train_seen" style="flex-grow: 28" title="Training data seen: 28"></span><span class="lvl-related" style="flex-grow: 7" title="Related data seen: 7"></span><span class="lvl-unknown" style="flex-grow: 13" title="Unknown: 13"></span></div>
 <ul class="legend" aria-label="Contamination levels">
   <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
   <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">1</span></li>
   <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">28</span></li>
   <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">7</span></li>
   <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
-  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">1</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">13</span></li>
 </ul>  <figure class="evidence">
   <blockquote>“The full mix was: GIFT-Eval Pretrain (45%), Datadog 5+ minute metrics (25%), GIFT-Eval train (15%), synthetic (10%), and Datadog 10 s and 60 s metrics (2.5% each)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2605.20119v2">arxiv.org</a>
@@ -1272,7 +1272,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
   <h2>Benchmark cells</h2>
   <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
   <div class="cell-detail" id="gift-eval--jena-weather">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1290,7 +1290,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-application">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1308,7 +1308,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-service">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1326,7 +1326,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-l2c">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1344,7 +1344,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1362,7 +1362,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bitbrains-rnd">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1380,7 +1380,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--recruit-restaurant">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1398,7 +1398,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--ett1">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1416,7 +1416,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--ett2">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1434,7 +1434,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--loop-seattle">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1452,7 +1452,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--sz-taxi">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1470,7 +1470,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m-dense">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1488,7 +1488,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--lstnet-solar">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1506,7 +1506,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hierarchical-sales">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1524,7 +1524,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-yearly">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1542,7 +1542,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-quarterly">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1560,7 +1560,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-monthly">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1578,7 +1578,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-weekly">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1596,7 +1596,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-daily">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1614,7 +1614,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-hourly">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1632,7 +1632,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hospital">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1650,7 +1650,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--covid-deaths">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1668,7 +1668,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--us-births">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1686,7 +1686,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--saugeen-river-flow">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1704,7 +1704,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--temperature-rain">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1722,7 +1722,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--kdd-cup-2018">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1740,7 +1740,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--car-parts">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1758,7 +1758,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“finetuned on a mix that **includes the GIFT-Eval training split**”</blockquote>
   <figcaption><a href="https://huggingface.co/Datadog/Toto-2.0-2.5B-FT/raw/main/README.md">huggingface.co</a>
@@ -1968,6 +1968,44 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 <span class="muted">· paper · Table 14 (dataset column) · retrieved 2026-10-15</span></figcaption>
 </figure>
 </details>  </div>
+  <h3><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></h3>
+  <div class="cell-detail" id="ts-anomaly--tsb-ad-u">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/tsb-ad-u.html">TSB-AD-U (TSB-AD univariate)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--tsb-ad-m">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/tsb-ad-m.html">TSB-AD-M (TSB-AD multivariate)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--ucr-anomaly-archive">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ucr-anomaly-archive.html">UCR Time Series Anomaly Archive (Hexagon ML/UCR, KDD Cup 2021)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--smd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/smd.html">Server Machine Dataset (SMD)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--msl">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/msl.html">Mars Science Laboratory (MSL) telemetry anomaly dataset</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--smap">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/smap.html">Soil Moisture Active Passive (SMAP) telemetry anomaly dataset</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--psm">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/psm.html">Pooled Server Metrics (PSM)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--swat">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swat.html">Secure Water Treatment (SWaT)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--yahoo-s5">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/yahoo-s5.html">Yahoo S5 Labeled Anomaly Detection Dataset (Yahoo Webscope S5)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--nab">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/nab.html">Numenta Anomaly Benchmark (NAB)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/ts-classification.html">Time-series classification</a></h3>
+  <div class="cell-detail" id="ts-classification--ucr-archive">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ucr-archive.html">UCR Time Series Classification Archive (2018)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-classification--uea-archive">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/uea-archive.html">UEA Multivariate Time Series Classification Archive (2018)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
 </section>
 
 <section><h2>Notes</h2><p class="notes">Benchmark-only checkpoint: Toto 2.0 2.5B finetuned 10,000 steps on GIFT-Eval Pretrain (45%), Datadog metrics (30%), GIFT-Eval train split (15%) and TempoPFN synthetic (10%). It is a finetuned (not zero-shot) GIFT-Eval submission. The companion Toto-2.0-Family-and-Friends is an XGBoost-gated ensemble of 10 foundation models (not a separately pretrained model) and is not listed as a model here.</p></section><section>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Qwen3-VL</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html" class="active">Text / LLM</a>
+        <a href="../vision/index.html">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../text/index.html">Text / LLM</a> / Model</p>
+<h1>Qwen3-VL</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Alibaba Cloud (Qwen Team)</dd>
+  <dt>Family</dt><dd>Qwen · version 3</dd>
+  <dt>Released</dt><dd>2025-09-22 <span class="muted small">(HF repo creation of Qwen/Qwen3-VL-235B-A22B-Instruct (2025-09-22, via huggingface.co API); smaller sizes followed until 2025-10-19; tech report arXiv v1 2025-11-26)</span></dd>
+<dt>Checkpoints</dt><dd>Qwen/Qwen3-VL-2B-Instruct, Qwen/Qwen3-VL-2B-Thinking, Qwen/Qwen3-VL-4B-Instruct, Qwen/Qwen3-VL-4B-Thinking, Qwen/Qwen3-VL-8B-Instruct, Qwen/Qwen3-VL-8B-Thinking, Qwen/Qwen3-VL-32B-Instruct, Qwen/Qwen3-VL-32B-Thinking, Qwen/Qwen3-VL-30B-A3B-Instruct, Qwen/Qwen3-VL-30B-A3B-Thinking, Qwen/Qwen3-VL-235B-A22B-Instruct, Qwen/Qwen3-VL-235B-A22B-Thinking</dd>  <dt>Weights</dt><dd>Open · Apache 2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/abs/2511.21631">Paper</a><a href="https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/raw/main/README.md">Model card</a><a href="https://github.com/QwenLM/Qwen3-VL">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-vague">Vague</span></h2>
+<p>Level determined for <strong>0%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 22">
+<span class="lvl-unknown" style="flex-grow: 22" title="Unknown: 22"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">22</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“The model is trained on a massive and diverse dataset of approximately 1 trillion (1T) tokens.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 Stage 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Built on</h2>
+  <p class="muted small">Everything these base models may have seen is inherited by Qwen3-VL.</p>
+  <ul class="rows">
+    <li>
+      <a href="qwen3.html"><strong>Qwen3</strong></a>
+      <span class="muted">· disclosure: Vague</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“all built upon Qwen3 backbones”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 2 Large Language Model · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="siglip-2.html"><strong>SigLIP 2</strong></a>
+      <span class="muted">· disclosure: Partial list</span>
+<p class="small">SigLIP2-SO-400M by default; SigLIP2-Large (300M) for the 2B and 4B models.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We utilize the SigLIP-2 architecture (Tschannen et al., 2025) as our vision encoder and continue training it with dynamic input resolutions, initialized from official pretrained checkpoints.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 2 Vision Encoder · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>web image-caption pairs (predominantly Chinese-English, recaptioned)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We curate a large-scale corpus of contemporary, predominantly Chinese–English multilingual image–text pairs from web sources”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>interleaved image-text documents from Chinese and English websites</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We collect diverse real-world multimodal documents sourced from recent Chinese and English websites”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>3 million PDFs from Common Crawl (document parsing) and 4 million internal documents</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For document parsing, we collect 3 million PDFs from Common Crawl, evenly distributed across 10 document types (300K samples each), along with 4 million internal documents.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>COCO, Objects365, OpenImages, RefCOCO/+/g (box grounding)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We begin by aggregating widely used open-source datasets, including COCO (Lin et al., 2014), Objects365 (Shao et al., 2019), OpenImages (Kuznetsova et al., 2020), and RefCOCO/+/g”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PixMo pointing and counting annotations</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“public pointing and counting annotations from PixMo (Deitke et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>K-12 and undergraduate-level exercises (multimodal reasoning data, &gt;60M)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Sources of the exercises are not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“million K–12 and undergraduate-level exercises, meticulously curated through a rigorous cleaning and reformulation pipeline”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2.8 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>synthesized long-CoT multimodal reasoning samples (&gt;12M)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Regarding long CoT problem-solving data, we synthesize over 12 million multimodal reasoning samples paired with images.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2.8 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Qwen3 and Qwen3-Coder code corpus</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We reuse the extensive code corpus from the Qwen3 and Qwen3-Coder series.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2.6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SFT dataset (~1.2M samples from open-source datasets and web resources)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Open-source datasets are not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we systematically curated the SFT dataset through the meticulous selection and synthesis of samples from open-source datasets and web resources.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This dataset comprises approximately 1,200,000 samples”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>RL queries from open-source and proprietary sources (~30K)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We curate training data from both open-source and proprietary sources and apply rigorous preprocessing and manual annotation to ensure high-quality RL queries.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2511.21631v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-multimodal--mmmu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu.html">MMMU (Massive Multi-discipline Multimodal Understanding and Reasoning)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mmmu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu-pro.html">MMMU-Pro</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mathvista">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mathvista.html">MathVista</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--chartqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/chartqa.html">ChartQA</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--docvqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/docvqa.html">DocVQA</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--ai2d">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--charxiv">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/charxiv.html">CharXiv</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">No benchmark is named as training data and no decontamination statement against multimodal benchmarks was found in the report. Evaluations report ChartQA/DocVQA/AI2D test, MMMU, MathVista testmini, CharXiv.
+
+Accepts image input: “The Qwen3-VL framework integrates a vision encoder and a language model decoder to process multimodal inputs, including text, images, and video.”</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2511.21631v2">Qwen3-VL Technical Report (arXiv 2511.21631v2)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/raw/main/README.md">Qwen3-VL-8B-Instruct model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

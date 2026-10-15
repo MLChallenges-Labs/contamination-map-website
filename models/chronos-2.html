@@ -37,14 +37,14 @@
 
 <section>
   <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
-<p>Level determined for <strong>100%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 7, Related data seen: 3, Not seen: 27, Unknown: 0">
-<span class="lvl-train_seen" style="flex-grow: 7" title="Training data seen: 7"></span><span class="lvl-related" style="flex-grow: 3" title="Related data seen: 3"></span><span class="lvl-not_seen" style="flex-grow: 27" title="Not seen: 27"></span></div>
+<p>Level determined for <strong>100%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 7, Related data seen: 3, Not seen: 39, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 7" title="Training data seen: 7"></span><span class="lvl-related" style="flex-grow: 3" title="Related data seen: 3"></span><span class="lvl-not_seen" style="flex-grow: 39" title="Not seen: 39"></span></div>
 <ul class="legend" aria-label="Contamination levels">
   <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
   <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
   <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">7</span></li>
   <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">3</span></li>
-  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">27</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">39</span></li>
   <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">0</span></li>
 </ul>  <figure class="evidence">
   <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
@@ -1319,6 +1319,404 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </details>  </div>
   <div class="cell-detail" id="long-horizon--ili">
     <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <h3><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></h3>
+  <div class="cell-detail" id="ts-anomaly--tsb-ad-u">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/tsb-ad-u.html">TSB-AD-U (TSB-AD univariate)</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--tsb-ad-m">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/tsb-ad-m.html">TSB-AD-M (TSB-AD multivariate)</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--ucr-anomaly-archive">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ucr-anomaly-archive.html">UCR Time Series Anomaly Archive (Hexagon ML/UCR, KDD Cup 2021)</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--smd">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/smd.html">Server Machine Dataset (SMD)</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--msl">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/msl.html">Mars Science Laboratory (MSL) telemetry anomaly dataset</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--smap">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/smap.html">Soil Moisture Active Passive (SMAP) telemetry anomaly dataset</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--psm">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/psm.html">Pooled Server Metrics (PSM)</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--swat">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/swat.html">Secure Water Treatment (SWaT)</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--yahoo-s5">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/yahoo-s5.html">Yahoo S5 Labeled Anomaly Detection Dataset (Yahoo Webscope S5)</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--nab">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/nab.html">Numenta Anomaly Benchmark (NAB)</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <h3><a href="../benchmarks/ts-classification.html">Time-series classification</a></h3>
+  <div class="cell-detail" id="ts-classification--ucr-archive">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ucr-archive.html">UCR Time Series Classification Archive (2018)</a> <span class="muted">· absent from the complete list of training data</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The full list of datasets is provided in Table 6 (Appendix).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 6: Real univariate datasets used for pretraining Chronos-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [GIFT-Eval Pretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Subset of [Chronos Datasets](https://huggingface.co/datasets/autogluon/chronos_datasets) (excluding test portion of datasets that overlap with GIFT-Eval)”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Synthetic univariate and multivariate data”</blockquote>
+  <figcaption><a href="https://huggingface.co/amazon/chronos-2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Section &#39;Training data&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-classification--uea-archive">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/uea-archive.html">UEA Multivariate Time Series Classification Archive (2018)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (6)</summary><figure class="evidence">
   <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>

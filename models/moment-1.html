@@ -37,15 +37,15 @@
 
 <section>
   <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
-<p>Level determined for <strong>72%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 14, Training data seen: 9, Related data seen: 4, Not seen: 0, Unknown: 10">
-<span class="lvl-seen_split_unclear" style="flex-grow: 14" title="Seen, split unclear: 14"></span><span class="lvl-train_seen" style="flex-grow: 9" title="Training data seen: 9"></span><span class="lvl-related" style="flex-grow: 4" title="Related data seen: 4"></span><span class="lvl-unknown" style="flex-grow: 10" title="Unknown: 10"></span></div>
+<p>Level determined for <strong>75%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 14, Training data seen: 16, Related data seen: 6, Not seen: 0, Unknown: 12">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-seen_split_unclear" style="flex-grow: 14" title="Seen, split unclear: 14"></span><span class="lvl-train_seen" style="flex-grow: 16" title="Training data seen: 16"></span><span class="lvl-related" style="flex-grow: 6" title="Related data seen: 6"></span><span class="lvl-unknown" style="flex-grow: 12" title="Unknown: 12"></span></div>
 <ul class="legend" aria-label="Contamination levels">
-  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">1</span></li>
   <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">14</span></li>
-  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">9</span></li>
-  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">4</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">16</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">6</span></li>
   <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
-  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">10</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">12</span></li>
 </ul>  <figure class="evidence">
   <blockquote>“we collate multiple time series from 4 taskspecific, widely-used public repositories resulting in a large number of time series spanning diverse domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -65,7 +65,7 @@
   <ul class="rows">
     <li>
       <strong>Time Series Pile</strong>
-      <span class="muted">· 58 sources · pre-training</span>
+      <span class="muted">· 64 sources · pre-training</span>
  · <a href="https://huggingface.co/datasets/AutonLab/Timeseries-PILE">homepage</a>      <details><summary>Evidence that MOMENT-1 uses it</summary><figure class="evidence">
   <blockquote>“We call this collection the Time Series Pile.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -1192,8 +1192,8 @@
 </details>
 </li>
 <li>
-<em>UCR/UEA classification archive</em>  <span class="muted">· split: train</span>
-<p class="small">Collection-level entry; the individual UCR/UEA datasets are not enumerated here (files under classification/UCR in the HF repo).</p>  <details><summary>Evidence</summary><figure class="evidence">
+<a href="../datasets/ucr-archive.html">UCR Time Series Classification Archive (2018)</a>  <span class="muted">· split: train of ts-classification</span>
+<p class="small">The HF repo folder classification/UCR/ holds 158 dataset folders = the 128 UCR 2018 univariate datasets plus all 30 UEA datasets, each with both _TRAIN.ts and _TEST.ts files. MOMENT states it adheres to the creators&#39; predefined splits and pre-trains only on training splits, i.e. the official UCR TRAIN files. The entry covers two registry datasets (ucr-archive and uea-archive), hence two updates for this raw_name. MOMENT then evaluates classification on the TEST splits of 91 UCR datasets (unsupervised representations + SVM).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“UCR/UEA classification archive (Dau et al., 2018) comprises of 159 time series datasets”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
 <span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
@@ -1203,11 +1203,65 @@
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
 <span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
 </figure>
+<figure class="evidence">
+  <blockquote>“Table 16: Classification datasets in Time Series Pile taken from (Ismail Fawaz et al., 2019) [UCR Archive].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 16 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For these datasets, a complete time series is either training, validation, or testing.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“classification/UCR/ACSF1/ACSF1_TRAIN.ts”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing of AutonLab/Timeseries-PILE · retrieved 2026-10-15</span></figcaption>
+</figure>
 </details>
 </li>
 <li>
-<em>TSB-UAD anomaly benchmark</em>  <span class="muted">· split: train</span>
-<p class="small">Collection-level entry; individual TSB-UAD datasets are not enumerated (files under anomaly_detection/TSB-UAD-Public in the HF repo).</p>  <details><summary>Evidence</summary><figure class="evidence">
+<a href="../datasets/uea-archive.html">UEA Multivariate Time Series Classification Archive (2018)</a>  <span class="muted">· split: train of ts-classification</span>
+<p class="small">All 30 UEA 2018 multivariate datasets (ArticularyWordRecognition ... UWaveGestureLibrary, incl. EigenWorms, InsectWingbeat, MotorImagery, PEMS-SF) are present as folders under classification/UCR/ with _TRAIN.ts and _TEST.ts files (checked against the HF file listing). Only the TRAIN files are used per the paper; MOMENT is univariate, so channels are presumably treated separately (not stated).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“classification/UCR/MotorImagery/MotorImagery_TRAIN.ts”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing of AutonLab/Timeseries-PILE · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“classification/UCR/SpokenArabicDigits/SpokenArabicDigits_TRAIN.ts”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing of AutonLab/Timeseries-PILE · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“classification/UCR/InsectWingbeat/InsectWingbeat_TRAIN.ts”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing of AutonLab/Timeseries-PILE · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“UCR/UEA classification archive (Dau et al., 2018) comprises of 159 time series datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We only use the training splits of all datasets for pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/ucr-anomaly-archive.html">UCR Time Series Anomaly Archive (Hexagon ML/UCR, KDD Cup 2021)</a>  <span class="muted">· split: train of ts-anomaly</span>
+<p class="small">TSB-UAD&#39;s &#39;KDD21&#39; folder holds all 250 series of the UCR/KDD Cup 2021 anomaly archive (files 001-250). Each file name encodes the creators&#39; training-end index (e.g. 35000); MOMENT says it uses creators&#39; splits and only training splits for pre-training, so the anomaly-free training prefix of every series was seen in pre-training, not the test part. Caveat: the pre-training data pipeline is not public; the released fine-tuning/eval loader (momentfm) uses exactly this file-name split. MOMENT reports anomaly detection on subsets (44 / 248 series) of this archive.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“TSB-UAD anomaly benchmark (Paparrizos et al., 2022b) is a recent collection of 1980 univariate time series with labeled anomalies from 18 anomaly detection datasets”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
 <span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
@@ -1216,6 +1270,286 @@
   <blockquote>“We only use the training splits of all datasets for pre-training.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
 <span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/KDD21/001_UCR_Anomaly_DISTORTED1sddb40_35000_52000_52620.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (KDD21 folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/KDD21/250_UCR_Anomaly_weallwalk_2951_7290_7296.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (KDD21 folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“n_train = int(details[4])”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/moment-timeseries-foundation-model/moment/main/momentfm/data/anomaly_detection_dataset.py">raw.githubusercontent.com</a>
+<span class="muted">· code · AnomalyDetectionDataset._get_borders · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/smd.html">Server Machine Dataset (SMD)</a>  <span class="muted">· split: test</span>
+<p class="small">IMPORTANT: the 281 TSB-UAD SMD files are single channels taken from SMD&#39;s machine-*.test.csv files (file names &#39;machine-X-Y.test.csv@k.out&#39;), i.e. they come from the official SMD TEST period (the only labelled part). MOMENT pre-trains on the training portion of each such series (horizontal split; whether TSB-UAD-provided or its own 60/10/30 split is not stated), so a prefix of the official SMD test data is in pre-training. Univariate per-channel versions, not the 38-dim multivariate SMD. TimeRCD (third party) excluded MOMENT results on SMD for this reason. TSB-UAD (used here) is the 2022 predecessor of TSB-AD; TSB-AD-U/-M were curated from many of the same sources (e.g. YAHOO, NAB, UCR, MSL, SMAP, SMD, IOPS, MGAB), so overlap with tsb-ad-u/tsb-ad-m series is likely but not established by the sources cited here.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/SMD/machine-1-1.test.csv@1.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (SMD folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In cases where such splits are unavailable, we randomly sample 60% of the data for training, 10% for validation, and 30% for testing.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/msl.html">Mars Science Laboratory (MSL) telemetry anomaly dataset</a>  <span class="muted">· split: train of ts-anomaly</span>
+<p class="small">TSB-UAD&#39;s NASA-MSL folder holds 54 files = 27 channels x (.train.out, .test.out). MOMENT says it follows creators&#39; splits and pre-trains only on training splits, but does not say whether it used the .train.out files or a horizontal split of the .test.out files; hence split_of null. Univariate (first-channel) versions as in TSB-UAD, not the 55-dim multivariate MSL. TSB-UAD (used here) is the 2022 predecessor of TSB-AD; TSB-AD-U/-M were curated from many of the same sources (e.g. YAHOO, NAB, UCR, MSL, SMAP, SMD, IOPS, MGAB), so overlap with tsb-ad-u/tsb-ad-m series is likely but not established by the sources cited here.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NASA-MSL/C-1.train.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NASA-MSL folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NASA-MSL/C-1.test.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NASA-MSL folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/smap.html">Soil Moisture Active Passive (SMAP) telemetry anomaly dataset</a>  <span class="muted">· split: train of ts-anomaly</span>
+<p class="small">TSB-UAD&#39;s NASA-SMAP folder holds 108 files = 54 channels x (.train.out, .test.out). Which file/portion MOMENT used as training split is not stated (creators&#39; split claimed). Univariate versions. TSB-UAD (used here) is the 2022 predecessor of TSB-AD; TSB-AD-U/-M were curated from many of the same sources (e.g. YAHOO, NAB, UCR, MSL, SMAP, SMD, IOPS, MGAB), so overlap with tsb-ad-u/tsb-ad-m series is likely but not established by the sources cited here.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NASA-SMAP/A-1.train.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NASA-SMAP folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NASA-SMAP/A-1.test.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NASA-SMAP folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/yahoo-s5.html">Yahoo S5 Labeled Anomaly Detection Dataset (Yahoo Webscope S5)</a>  <span class="muted">· split: train of ts-anomaly</span>
+<p class="small">367 YAHOO files (A1real 67 + A2synthetic 100 + A3/A4Benchmark 200) = all of Yahoo S5. Yahoo has no creator train/test split, so per MOMENT the series are split horizontally 60/10/30 and the first ~60% (training part) of every series is in pre-training; that portion contains labelled anomalies used by benchmarks that score the whole series (e.g. TSB-AD). TSB-UAD (used here) is the 2022 predecessor of TSB-AD; TSB-AD-U/-M were curated from many of the same sources (e.g. YAHOO, NAB, UCR, MSL, SMAP, SMD, IOPS, MGAB), so overlap with tsb-ad-u/tsb-ad-m series is likely but not established by the sources cited here.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/YAHOO/Yahoo_A1real_1_data.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (YAHOO folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/YAHOO/YahooA3Benchmark-TS100_data.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (YAHOO folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In cases where such splits are unavailable, we randomly sample 60% of the data for training, 10% for validation, and 30% for testing.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/nab.html">Numenta Anomaly Benchmark (NAB)</a>  <span class="muted">· split: train of ts-anomaly</span>
+<p class="small">58 NAB files in TSB-UAD-Public/NAB. NAB has no creator train/test split, so per MOMENT a horizontal 60/10/30 split applies and the first ~60% of each series is in pre-training. TSB-UAD (used here) is the 2022 predecessor of TSB-AD; TSB-AD-U/-M were curated from many of the same sources (e.g. YAHOO, NAB, UCR, MSL, SMAP, SMD, IOPS, MGAB), so overlap with tsb-ad-u/tsb-ad-m series is likely but not established by the sources cited here.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NAB/NAB_data_CloudWatch_1.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NAB folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NAB/NAB_data_tweets_9.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NAB folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In cases where such splits are unavailable, we randomly sample 60% of the data for training, 10% for validation, and 30% for testing.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
 </figure>
 </details>
 </li>
@@ -1950,7 +2284,7 @@ Benchmark <a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ET
 </details>  </div>
   <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
   <div class="cell-detail" id="long-horizon--etth1">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· only the training split was used, not the test data Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI) evaluates on (via Time Series Pile); the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile); the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (10)</summary><figure class="evidence">
   <blockquote>“We call this collection the Time Series Pile.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -2003,7 +2337,7 @@ Benchmark <a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ET
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--etth2">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· only the training split was used, not the test data Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI) evaluates on (via Time Series Pile); the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile); the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (10)</summary><figure class="evidence">
   <blockquote>“We call this collection the Time Series Pile.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -2056,7 +2390,7 @@ Benchmark <a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ET
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--ettm1">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· only the training split was used, not the test data Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI) evaluates on (via Time Series Pile); the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile); the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (10)</summary><figure class="evidence">
   <blockquote>“We call this collection the Time Series Pile.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -2109,7 +2443,7 @@ Benchmark <a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ET
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--ettm2">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· only the training split was used, not the test data Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI) evaluates on (via Time Series Pile); the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile); the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (10)</summary><figure class="evidence">
   <blockquote>“We call this collection the Time Series Pile.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -2162,7 +2496,7 @@ Benchmark <a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ET
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--electricity-321">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· only the training split was used, not the test data Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI) evaluates on (via Time Series Pile); the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile); the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (10)</summary><figure class="evidence">
   <blockquote>“We call this collection the Time Series Pile.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -2215,7 +2549,7 @@ Benchmark <a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ET
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--traffic-862">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· only the training split was used, not the test data Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI) evaluates on (via Time Series Pile); the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile); the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (10)</summary><figure class="evidence">
   <blockquote>“We call this collection the Time Series Pile.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -2268,7 +2602,7 @@ Benchmark <a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ET
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--weather-jena-2020">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· only the training split was used, not the test data Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI) evaluates on (via Time Series Pile); the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile); the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (10)</summary><figure class="evidence">
   <blockquote>“We call this collection the Time Series Pile.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -2321,7 +2655,7 @@ Benchmark <a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ET
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--exchange-rate">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· only the training split was used, not the test data Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI) evaluates on (via Time Series Pile); the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile); the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (10)</summary><figure class="evidence">
   <blockquote>“We call this collection the Time Series Pile.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -2374,7 +2708,7 @@ Benchmark <a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ET
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--ili">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· only the training split was used, not the test data Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI) evaluates on (via Time Series Pile); the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile); the test portion was explicitly excluded</span></p>
 <details><summary>Evidence (10)</summary><figure class="evidence">
   <blockquote>“We call this collection the Time Series Pile.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
@@ -2424,6 +2758,639 @@ Benchmark <a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ET
   <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
 <span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <h3><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></h3>
+  <div class="cell-detail" id="ts-anomaly--tsb-ad-u">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/tsb-ad-u.html">TSB-AD-U (TSB-AD univariate)</a> <span class="muted">· related dataset UCR Time Series Anomaly Archive (Hexagon ML/UCR, KDD Cup 2021) was used (via Time Series Pile)</span></p>
+<details><summary>Evidence (16)</summary><figure class="evidence">
+  <blockquote>“We call this collection the Time Series Pile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use the Time Series Pile and these strategies to pre-train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AutonLab/Timeseries-PILE”</blockquote>
+  <figcaption><a href="https://huggingface.co/AutonLab/MOMENT-1-large/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TSB-UAD anomaly benchmark (Paparrizos et al., 2022b) is a recent collection of 1980 univariate time series with labeled anomalies from 18 anomaly detection datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We only use the training splits of all datasets for pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/KDD21/001_UCR_Anomaly_DISTORTED1sddb40_35000_52000_52620.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (KDD21 folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/KDD21/250_UCR_Anomaly_weallwalk_2951_7290_7296.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (KDD21 folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“n_train = int(details[4])”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/moment-timeseries-foundation-model/moment/main/momentfm/data/anomaly_detection_dataset.py">raw.githubusercontent.com</a>
+<span class="muted">· code · AnomalyDetectionDataset._get_borders · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“UCR [106] is a collection of univariate time series of multiple domains including air temperature, arterial blood pressure, ABP, astronomy, EPG, ECG, gait, power demand, respiration, walking accelerator.”</blockquote>
+  <figcaption><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/c3f3c690b7a99fba16d0efd35cb83b2c-Paper-Datasets_and_Benchmarks_Track.pdf">proceedings.neurips.cc</a>
+<span class="muted">· paper · Appendix B.1.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“R. Wu and E. J. Keogh. Current time series anomaly detection benchmarks are flawed and are creating”</blockquote>
+  <figcaption><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/c3f3c690b7a99fba16d0efd35cb83b2c-Paper-Datasets_and_Benchmarks_Track.pdf">proceedings.neurips.cc</a>
+<span class="muted">· paper · References [106] · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“303_UCR_id_1_Medical_tr_2499_1st_8000.csv”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/main/Datasets/File_List/TSB-AD-U.csv">raw.githubusercontent.com</a>
+<span class="muted">· code · TSB-AD-U file list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--tsb-ad-m">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/tsb-ad-m.html">TSB-AD-M (TSB-AD multivariate)</a> <span class="muted">· related dataset Server Machine Dataset (SMD) was used (via Time Series Pile)</span></p>
+<details><summary>Evidence (13)</summary><figure class="evidence">
+  <blockquote>“We call this collection the Time Series Pile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use the Time Series Pile and these strategies to pre-train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AutonLab/Timeseries-PILE”</blockquote>
+  <figcaption><a href="https://huggingface.co/AutonLab/MOMENT-1-large/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/SMD/machine-1-1.test.csv@1.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (SMD folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In cases where such splits are unavailable, we randomly sample 60% of the data for training, 10% for validation, and 30% for testing.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“SMD [97] is a 5-week-long dataset collected from a large Internet company, which contains 3 groups of entities from 28 different machines.”</blockquote>
+  <figcaption><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/c3f3c690b7a99fba16d0efd35cb83b2c-Paper-Datasets_and_Benchmarks_Track.pdf">proceedings.neurips.cc</a>
+<span class="muted">· paper · Appendix B.1.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“057_SMD_id_1_Facility_tr_4529_1st_4629.csv”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/main/Datasets/File_List/TSB-AD-M.csv">raw.githubusercontent.com</a>
+<span class="muted">· code · TSB-AD-M file list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--ucr-anomaly-archive">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ucr-anomaly-archive.html">UCR Time Series Anomaly Archive (Hexagon ML/UCR, KDD Cup 2021)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)</span></p>
+<details><summary>Evidence (13)</summary><figure class="evidence">
+  <blockquote>“We call this collection the Time Series Pile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use the Time Series Pile and these strategies to pre-train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AutonLab/Timeseries-PILE”</blockquote>
+  <figcaption><a href="https://huggingface.co/AutonLab/MOMENT-1-large/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TSB-UAD anomaly benchmark (Paparrizos et al., 2022b) is a recent collection of 1980 univariate time series with labeled anomalies from 18 anomaly detection datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We only use the training splits of all datasets for pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/KDD21/001_UCR_Anomaly_DISTORTED1sddb40_35000_52000_52620.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (KDD21 folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/KDD21/250_UCR_Anomaly_weallwalk_2951_7290_7296.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (KDD21 folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“n_train = int(details[4])”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/moment-timeseries-foundation-model/moment/main/momentfm/data/anomaly_detection_dataset.py">raw.githubusercontent.com</a>
+<span class="muted">· code · AnomalyDetectionDataset._get_borders · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--smd">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/smd.html">Server Machine Dataset (SMD)</a> <span class="muted">· its test split was used for training (via Time Series Pile)</span></p>
+<details><summary>Evidence (11)</summary><figure class="evidence">
+  <blockquote>“We call this collection the Time Series Pile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use the Time Series Pile and these strategies to pre-train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AutonLab/Timeseries-PILE”</blockquote>
+  <figcaption><a href="https://huggingface.co/AutonLab/MOMENT-1-large/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/SMD/machine-1-1.test.csv@1.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (SMD folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In cases where such splits are unavailable, we randomly sample 60% of the data for training, 10% for validation, and 30% for testing.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--msl">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/msl.html">Mars Science Laboratory (MSL) telemetry anomaly dataset</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)</span></p>
+<details><summary>Evidence (12)</summary><figure class="evidence">
+  <blockquote>“We call this collection the Time Series Pile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use the Time Series Pile and these strategies to pre-train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AutonLab/Timeseries-PILE”</blockquote>
+  <figcaption><a href="https://huggingface.co/AutonLab/MOMENT-1-large/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NASA-MSL/C-1.train.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NASA-MSL folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NASA-MSL/C-1.test.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NASA-MSL folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--smap">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/smap.html">Soil Moisture Active Passive (SMAP) telemetry anomaly dataset</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)</span></p>
+<details><summary>Evidence (12)</summary><figure class="evidence">
+  <blockquote>“We call this collection the Time Series Pile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use the Time Series Pile and these strategies to pre-train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AutonLab/Timeseries-PILE”</blockquote>
+  <figcaption><a href="https://huggingface.co/AutonLab/MOMENT-1-large/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NASA-SMAP/A-1.train.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NASA-SMAP folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NASA-SMAP/A-1.test.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NASA-SMAP folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--psm">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/psm.html">Pooled Server Metrics (PSM)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--swat">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swat.html">Secure Water Treatment (SWaT)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--yahoo-s5">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/yahoo-s5.html">Yahoo S5 Labeled Anomaly Detection Dataset (Yahoo Webscope S5)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)</span></p>
+<details><summary>Evidence (12)</summary><figure class="evidence">
+  <blockquote>“We call this collection the Time Series Pile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use the Time Series Pile and these strategies to pre-train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AutonLab/Timeseries-PILE”</blockquote>
+  <figcaption><a href="https://huggingface.co/AutonLab/MOMENT-1-large/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/YAHOO/Yahoo_A1real_1_data.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (YAHOO folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/YAHOO/YahooA3Benchmark-TS100_data.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (YAHOO folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In cases where such splits are unavailable, we randomly sample 60% of the data for training, 10% for validation, and 30% for testing.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--nab">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/nab.html">Numenta Anomaly Benchmark (NAB)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)</span></p>
+<details><summary>Evidence (12)</summary><figure class="evidence">
+  <blockquote>“We call this collection the Time Series Pile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use the Time Series Pile and these strategies to pre-train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AutonLab/Timeseries-PILE”</blockquote>
+  <figcaption><a href="https://huggingface.co/AutonLab/MOMENT-1-large/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Dodger ECG IOPS KDD21 MGAB NAB SensorScope YAHOO NASA-MSL NASA-SMAP Daphnet GHL Genesis MITDB OPP Occupancy SMD SVDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 12. Anomaly detection datasets in Time Series Pile taken from (Paparrizos et al., 2022b).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 12 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NAB/NAB_data_CloudWatch_1.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NAB folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“anomaly_detection/TSB-UAD-Public/NAB/NAB_data_tweets_9.out”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing (NAB folder) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Long-horizon forecasting and anomaly detection datasets are typically long time series, which are split horizontally as shown in Fig. 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In cases where such splits are unavailable, we randomly sample 60% of the data for training, 10% for validation, and 30% for testing.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“thus ensuring that MOMENT only observes the training splits of datasets during pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MOMENT: Uses the “Time Series Pile,” which contains IOPS, MGAB, NAB, YAHOO, MSL, SMAP, and SMD (Goswami et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We exclude certain baseline results (specifically from DADA and MOMENT) because their pre-training corpora heavily overlap with our zero-shot test benchmarks, violating the zero-shot evaluation setting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.21190v5">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Appendix D.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <h3><a href="../benchmarks/ts-classification.html">Time-series classification</a></h3>
+  <div class="cell-detail" id="ts-classification--ucr-archive">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ucr-archive.html">UCR Time Series Classification Archive (2018)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)</span></p>
+<details><summary>Evidence (9)</summary><figure class="evidence">
+  <blockquote>“We call this collection the Time Series Pile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use the Time Series Pile and these strategies to pre-train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AutonLab/Timeseries-PILE”</blockquote>
+  <figcaption><a href="https://huggingface.co/AutonLab/MOMENT-1-large/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“UCR/UEA classification archive (Dau et al., 2018) comprises of 159 time series datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We only use the training splits of all datasets for pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 16: Classification datasets in Time Series Pile taken from (Ismail Fawaz et al., 2019) [UCR Archive].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 16 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For these datasets, a complete time series is either training, validation, or testing.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“classification/UCR/ACSF1/ACSF1_TRAIN.ts”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing of AutonLab/Timeseries-PILE · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-classification--uea-archive">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/uea-archive.html">UEA Multivariate Time Series Classification Archive (2018)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)</span></p>
+<details><summary>Evidence (9)</summary><figure class="evidence">
+  <blockquote>“We call this collection the Time Series Pile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use the Time Series Pile and these strategies to pre-train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AutonLab/Timeseries-PILE”</blockquote>
+  <figcaption><a href="https://huggingface.co/AutonLab/MOMENT-1-large/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“classification/UCR/MotorImagery/MotorImagery_TRAIN.ts”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing of AutonLab/Timeseries-PILE · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“classification/UCR/SpokenArabicDigits/SpokenArabicDigits_TRAIN.ts”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing of AutonLab/Timeseries-PILE · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“classification/UCR/InsectWingbeat/InsectWingbeat_TRAIN.ts”</blockquote>
+  <figcaption><a href="https://huggingface.co/api/datasets/AutonLab/Timeseries-PILE">huggingface.co</a>
+<span class="muted">· dataset card · HF file listing of AutonLab/Timeseries-PILE · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“UCR/UEA classification archive (Dau et al., 2018) comprises of 159 time series datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We only use the training splits of all datasets for pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adhere to the predefined splits provided by the creators of each dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.03885v3">arxiv.org</a>
+<span class="muted">· paper · Figure 2 caption · retrieved 2026-10-15</span></figcaption>
 </figure>
 </details>  </div>
 </section>

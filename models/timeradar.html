@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · TimeRadar</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html" class="active">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../index.html">Time series</a> / Model</p>
+<h1>TimeRadar</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Singapore Management University (mala-lab)</dd>
+  <dt>Family</dt><dd>TimeRadar</dd>
+  <dt>Released</dt><dd>2026-02-22 <span class="muted small">(arXiv v1 submission date, https://arxiv.org/abs/2602.19068v1)</span></dd>
+  <dt>Weights</dt><dd>Unknown</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/abs/2602.19068">Paper</a><a href="https://github.com/mala-lab/TimeRadar">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>18%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 3, Training data seen: 0, Related data seen: 0, Not seen: 6, Unknown: 40">
+<span class="lvl-seen_split_unclear" style="flex-grow: 3" title="Seen, split unclear: 3"></span><span class="lvl-not_seen" style="flex-grow: 6" title="Not seen: 6"></span><span class="lvl-unknown" style="flex-grow: 40" title="Unknown: 40"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">3</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">6</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">40</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The abnormal time series is synthesized by injecting anomalies into the Monash normal series.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>Aus. E.D.</em>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wind</em>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wind Farms</em>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Solar Power</em>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Solar</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>London Smart M.</em>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Sunspot</em>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Weather</em>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/us-births.html">US Births</a>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>FRED_MD</em>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Bitcoin</em>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>NN5</em>  <span class="muted">· split: unknown</span>
+<p class="small">Monash+ (DADA&#39;s anomaly-injected Monash subset); pre-training uses an 8:2 train/validation split of it.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Dataset <a href="../datasets/smd.html">Server Machine Dataset (SMD)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/msl.html">Mars Science Laboratory (MSL) telemetry anomaly dataset</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/smap.html">Soil Moisture Active Passive (SMAP) telemetry anomaly dataset</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/swat.html">Secure Water Treatment (SWaT)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/psm.html">Pooled Server Metrics (PSM)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/ucr-anomaly-archive.html">UCR Time Series Anomaly Archive (Hexagon ML/UCR, KDD Cup 2021)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
+  <div class="cell-detail" id="gift-eval--jena-weather">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-application">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-service">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-l2c">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-rnd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--recruit-restaurant">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--ett1">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--ett2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--loop-seattle">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--sz-taxi">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--m-dense">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--lstnet-solar">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--hierarchical-sales">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--m4-yearly">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--m4-quarterly">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--m4-monthly">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--m4-weekly">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--m4-daily">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--m4-hourly">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--hospital">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--covid-deaths">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--us-births">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--saugeen-river-flow">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--temperature-rain">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--kdd-cup-2018">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Aus. E.D. Wind Wind Farms Solar Power Solar London Smart M. Saugeen River F. Sunspot Weather KDD Cup 2018 US Births FRED_MD Bitcoin NN5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix, Table 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In this work, we leverage Monash+ as our pretraining dataset, comprising approximately 408 million time points.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--car-parts">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
+  <div class="cell-detail" id="long-horizon--etth1">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--etth2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--ettm1">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--ettm2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--electricity-321">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--traffic-862">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--weather-jena-2020">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--exchange-rate">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--ili">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></h3>
+  <div class="cell-detail" id="ts-anomaly--tsb-ad-u">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/tsb-ad-u.html">TSB-AD-U (TSB-AD univariate)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--tsb-ad-m">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/tsb-ad-m.html">TSB-AD-M (TSB-AD multivariate)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--ucr-anomaly-archive">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ucr-anomaly-archive.html">UCR Time Series Anomaly Archive (Hexagon ML/UCR, KDD Cup 2021)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--smd">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/smd.html">Server Machine Dataset (SMD)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--msl">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/msl.html">Mars Science Laboratory (MSL) telemetry anomaly dataset</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--smap">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/smap.html">Soil Moisture Active Passive (SMAP) telemetry anomaly dataset</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--psm">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/psm.html">Pooled Server Metrics (PSM)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--swat">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/swat.html">Secure Water Treatment (SWaT)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Importantly, none of the downstream evaluation datasets are included in our pretraining data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The datasets include SMD [51], MSL [23], PSM [1], SWaT [35], SMAP [23], CICIDS [26], SWAN [26], Creditcard [26], as well as the UCR benchmark [57].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2602.19068v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="ts-anomaly--yahoo-s5">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/yahoo-s5.html">Yahoo S5 Labeled Anomaly Detection Dataset (Yahoo Webscope S5)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-anomaly--nab">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/nab.html">Numenta Anomaly Benchmark (NAB)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/ts-classification.html">Time-series classification</a></h3>
+  <div class="cell-detail" id="ts-classification--ucr-archive">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ucr-archive.html">UCR Time Series Classification Archive (2018)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="ts-classification--uea-archive">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/uea-archive.html">UEA Multivariate Time Series Classification Archive (2018)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Zero-shot anomaly FM pre-trained only on Monash+ (the Monash part of DADA&#39;s data, not DADA&#39;s anomaly datasets). README provides pre-training code and data links but no checkpoint; README badges show both MIT and Apache-2.0, GitHub API reports no license.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2602.19068v1">TimeRadar (arXiv v1, KDD 2026)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/mala-lab/TimeRadar/main/README.md">mala-lab/TimeRadar README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

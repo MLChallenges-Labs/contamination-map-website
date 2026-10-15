@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Mars Science Laboratory (MSL) telemetry anomaly dataset</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html" class="active">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../index.html">Time series</a> / Dataset</p>
+<h1>Mars Science Laboratory (MSL) telemetry anomaly dataset</h1>
+<p class="lede">Real telemetry of the Curiosity rover (Mars Science Laboratory) released by NASA JPL with Telemanom (Hundman et al., KDD 2018): 27 anonymised telemetry channels, each with one telemetry value plus one-hot encoded command information (55 dimensions in the OmniAnomaly table), 36 expert-labelled anomaly sequences (from Incident Surprise, Anomaly reports). Pre-split train and test sets per channel; labels (anomaly_sequences) refer to the test set; values are pre-scaled to (-1,1) using the test-set min/max and timestamps are anonymised. OmniAnomaly statistics: 58,317 training and 73,729 test points, anomaly ratio 10.72%.</p>
+<dl class="facts">
+<dt>Also known as</dt><dd>MSL, Mars Science Laboratory, NASA MSL, MSL rover Curiosity telemetry, Curiosity (MSL)</dd><dt>Domain</dt><dd>spacecraft telemetry</dd><dt>Test items from</dt><dd>2018-06-01<details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Open-source repository and data to be ready upon publication.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/1802.04431v1">arxiv.org</a>
+<span class="muted">· paper · footnote 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;created_at&#34;:&#34;2018-06-01T20:33:20Z&#34;”</blockquote>
+  <figcaption><a href="https://api.github.com/repos/khundman/telemanom">api.github.com</a>
+<span class="muted">· code · GitHub API: repository creation date · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details></dd><dt>Homepage</dt><dd><a href="https://github.com/khundman/telemanom">github.com</a></dd></dl>
+
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/chronos-2-synth.html#ts-anomaly--msl">Chronos-2-Synth</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/chronos-2.html#ts-anomaly--msl">Chronos-2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/chronos-bolt.html#ts-anomaly--msl">Chronos-Bolt</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/chronos-t5.html#ts-anomaly--msl">Chronos (T5)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/dada.html#ts-anomaly--msl">DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders)</a></td>
+        <td><span class="badge lvl-related">Related data seen</span></td>
+        <td class="small">a contamination analysis found test examples of the related dataset TSB-AD-U (TSB-AD univariate) (Third-party (TimeRCD authors): DADA&#39;s pre-training corpus (IOPS, MGAB, YAHOO) heavily overlaps their zero-shot test benchmarks drawn from TSB-AD.) [third-party study]; the authors state this dataset was excluded</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/granite-ttm-r1.html#ts-anomaly--msl">Granite-TimeSeries-TTM-R1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/granite-ttm-r2-1.html#ts-anomaly--msl">Granite-TimeSeries-TTM-R2.1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/granite-ttm-r2.html#ts-anomaly--msl">Granite-TimeSeries-TTM-R2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/granite-ttm-r3.html#ts-anomaly--msl">Granite-TTM-R3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/lag-llama.html#ts-anomaly--msl">Lag-Llama</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/mantis-8m.html#ts-anomaly--msl">Mantis (Mantis-8M)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/mantis-plus.html#ts-anomaly--msl">Mantis+ (MantisPlus)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/mantis-v2.html#ts-anomaly--msl">MantisV2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/moirai-1.0-r.html#ts-anomaly--msl">Moirai-1.0-R</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/moirai-1.1-r.html#ts-anomaly--msl">Moirai-1.1-R</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/moirai-2.0-r.html#ts-anomaly--msl">Moirai-2.0-R</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/moirai-moe-1.0-r.html#ts-anomaly--msl">Moirai-MoE-1.0-R</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/moment-1.html#ts-anomaly--msl">MOMENT-1</a></td>
+        <td><span class="badge lvl-train_seen">Training data seen</span></td>
+        <td class="small">only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/nutime.html#ts-anomaly--msl">NuTime</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/sundial.html#ts-anomaly--msl">Sundial (Timer 3.0)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/time-moe.html#ts-anomaly--msl">Time-MoE</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/time-rcd.html#ts-anomaly--msl">Time-RCD (TimeRCD)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timer-s1.html#ts-anomaly--msl">Timer-S1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timer-xl.html#ts-anomaly--msl">Timer-XL (timer-base-84m)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timer.html#ts-anomaly--msl">Timer</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timeradar.html#ts-anomaly--msl">TimeRadar</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state the dataset was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timesfm-1-0.html#ts-anomaly--msl">TimesFM 1.0</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timesfm-2-0.html#ts-anomaly--msl">TimesFM 2.0</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timesfm-2-5.html#ts-anomaly--msl">TimesFM 2.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timesfm-3-0.html#ts-anomaly--msl">TimesFM 3.0</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex-1.1-gifteval.html#ts-anomaly--msl">TiRex 1.1 (gifteval)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex-2-fevbench.html#ts-anomaly--msl">TiRex-2-fevbench (TiRex-2-f)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex-2-gifteval-pretrain.html#ts-anomaly--msl">TiRex-2-gifteval-pretrain (TiRex-2-gp)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex-2-gifteval-zs.html#ts-anomaly--msl">TiRex-2-gifteval-zs (TiRex-2-g)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex-2.html#ts-anomaly--msl">TiRex-2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex.html#ts-anomaly--msl">TiRex</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/toto-1.0.html#ts-anomaly--msl">Toto-Open-Base-1.0</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/toto-2.0-2.5b-ft.html#ts-anomaly--msl">Toto-2.0-2.5B-FT</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/toto-2.0.html#ts-anomaly--msl">Toto 2.0</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/toto-2024.html#ts-anomaly--msl">Toto (2024 technical report)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tspulse-r1.html#ts-anomaly--msl">TSPulse r1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/ttm-r3.html#ts-anomaly--msl">TTM-R3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/ttm-research-r2.html#ts-anomaly--msl">Tiny Time Mixer (TTM) Research-Use R2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/units-few-shot-anomaly-detection.html#ts-anomaly--msl">UniTS few-shot anomaly detection checkpoints</a></td>
+        <td><span class="badge lvl-train_seen">Training data seen</span></td>
+        <td class="small">in fine-tuning data: only the training split was used, not the benchmark&#39;s test data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/units.html#ts-anomaly--msl">UniTS</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">published_from = creation date of the Telemanom repository; arXiv v1 (2018-02-13) said data would be released upon publication. Telemanom code is Apache 2.0; the README does not state a licence for the data (the TSB-AD homepage lists &#39;Caltech&#39;). The README now points to a Kaggle mirror (patrickfleith/nasa-anomaly-detection-dataset-smap-msl); the original S3 data.zip is cited in the OmniAnomaly README. Wu &amp; Keogh&#39;s critique of the &#39;NASA&#39; datasets covers MSL and SMAP.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/1802.04431v3">Detecting Spacecraft Anomalies Using LSTMs and Nonparametric Dynamic Thresholding (Hundman et al., arXiv v3)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/khundman/telemanom/master/README.md">Telemanom README (data description, statistics)</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li><li><a href="https://api.github.com/repos/khundman/telemanom">GitHub API metadata of khundman/telemanom</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/NetManAIOps/OmniAnomaly/master/README.md">OmniAnomaly README (MSL statistics as used in later multivariate benchmarks)</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2009.13807v4">Wu &amp; Keogh, Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress (arXiv v4; IEEE TKDE)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

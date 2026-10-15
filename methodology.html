@@ -91,6 +91,7 @@
     <li><strong>Training stages.</strong> Pre-training and fine-tuning (instruction tuning, reinforcement learning, distillation) are tracked separately. Fine-tuning mixes often include benchmark training sets; such cells say “in fine-tuning data”. A decontamination step applied only to fine-tuning data says nothing about pre-training.</li>
     <li><strong>Training-data cutoffs.</strong> When a developer states a cutoff date, benchmarks published later cannot be in pre-training. This assumes the stated cutoff is accurate; fine-tuning data collected later is not covered by it.</li>
   </ul>
+  <p>Image benchmarks (MMMU, ChartQA, …) are only shown for models that accept images; text-only models have an empty slot there.</p>
   <p>Broad web crawls (Common Crawl and the like) can contain benchmark test sets copied onto the web. A model trained on one is never marked “Not seen” just because the benchmark is absent from its list of sources.</p>
 </section>
 

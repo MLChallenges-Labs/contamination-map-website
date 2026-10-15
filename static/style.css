@@ -174,3 +174,5 @@ table.map tr.fs > * { border-top: 6px solid var(--surface); background-clip: pad
 .site-footer .build { margin: 1rem 0 0; }
 .third-party { display: inline-block; padding: 0 0.4rem; border-radius: 4px; background: #f3e8d6; color: #6b3d0a; font-size: 0.75rem; font-weight: 600; }
 .facts dd details { margin-top: 0.15rem; }
+table.map td.sq.na { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+table.map tbody th a { display: inline-block; max-width: 17rem; overflow: hidden; text-overflow: ellipsis; vertical-align: bottom; }

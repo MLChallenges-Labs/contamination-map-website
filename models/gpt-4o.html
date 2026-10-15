@@ -47,15 +47,15 @@
 
 <section>
   <h2>Training data disclosure: <span class="disc disc-vague">Vague</span></h2>
-<p>Level determined for <strong>13%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 13">
-<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 13" title="Unknown: 13"></span></div>
+<p>Level determined for <strong>13%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 3, Unknown: 19">
+<span class="lvl-not_seen" style="flex-grow: 3" title="Not seen: 3"></span><span class="lvl-unknown" style="flex-grow: 19" title="Unknown: 19"></span></div>
 <ul class="legend" aria-label="Contamination levels">
   <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
   <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
   <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
   <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
-  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">2</span></li>
-  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">13</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">3</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">19</span></li>
 </ul>  <figure class="evidence">
   <blockquote>“GPT-4o&#39;s text and voice capabilities were pre-trained using data up to October 2023, sourced from a wide variety of materials including:”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.21276v1">arxiv.org</a>
@@ -136,6 +136,48 @@
   <div class="cell-detail" id="llm-classic--winogrande">
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
+  <h3><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-multimodal--mmmu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu.html">MMMU (Massive Multi-discipline Multimodal Understanding and Reasoning)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mmmu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu-pro.html">MMMU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mathvista">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mathvista.html">MathVista</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--chartqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/chartqa.html">ChartQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--docvqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/docvqa.html">DocVQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--ai2d">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--charxiv">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/charxiv.html">CharXiv</a> <span class="muted">· its test items were published from 2024-06-26, after the model&#39;s stated training-data cutoff (2023-10-01)</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“GPT-4o&#39;s text and voice capabilities were pre-trained using data up to October 2023”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2410.21276v1">arxiv.org</a>
+<span class="muted">· model card · Section 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Oct 01, 2023 knowledge cutoff”</blockquote>
+  <figcaption><a href="https://developers.openai.com/api/docs/models/gpt-4o">developers.openai.com</a>
+<span class="muted">· website · Model page header · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“arXiv:2406.18521v1 [cs.CL] 26 Jun 2024”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.18521v1">arxiv.org</a>
+<span class="muted">· paper · arXiv v1 header · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we release all QA pairs for the validation set and keep the answers to the test set private to prevent data leakage.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.18521v1">arxiv.org</a>
+<span class="muted">· paper · Section 3, footnote 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
   <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
   <div class="cell-detail" id="llm-recent--gpqa-diamond">
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
@@ -207,7 +249,11 @@
 
 <section><h2>Notes</h2><p class="notes">No contamination or decontamination statement found in the GPT-4o System Card.
 
-Third-party signal on LiveCodeBench (code generation, release_v6) (indirect, not shown as a cell): Performance drops on LeetCode problems released since November 2023 (its stated cutoff). Temporal performance evidence.</p></section><section>
+Third-party signal on LiveCodeBench (code generation, release_v6) (indirect, not shown as a cell): Performance drops on LeetCode problems released since November 2023 (its stated cutoff). Temporal performance evidence.
+
+Accepts image input: “It accepts both text and image inputs, and produces text outputs (including Structured Outputs).”
+
+Accepts image input: “GPT-4o[1] is an autoregressive omni model, which accepts as input any combination of text, audio, image, and video and generates any combination of text, audio, and image outputs.”</p></section><section>
   <h2>Sources</h2>
   <ul class="sources">
 <li><a href="https://arxiv.org/pdf/2410.21276v1">GPT-4o System Card (arXiv 2410.21276v1)</a>

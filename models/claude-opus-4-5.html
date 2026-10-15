@@ -47,15 +47,15 @@
 
 <section>
   <h2>Training data disclosure: <span class="disc disc-vague">Vague</span></h2>
-<p>Level determined for <strong>20%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 12">
-<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 12" title="Unknown: 12"></span></div>
+<p>Level determined for <strong>13%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 19">
+<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 19" title="Unknown: 19"></span></div>
 <ul class="legend" aria-label="Contamination levels">
   <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">2</span></li>
   <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
   <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
   <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
   <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">1</span></li>
-  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">12</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">19</span></li>
 </ul>  <figure class="evidence">
   <blockquote>“Claude Opus 4.5 was trained on a proprietary mix of publicly available information from the internet up to May 2025, non-public data from third parties, data provided by data-labeling services and paid contractors, data from Claude users who have opted in to have their data used for training, and data generated internally at Anthropic.”</blockquote>
   <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
@@ -224,6 +224,28 @@ Dataset <a href="../datasets/gpqa.html">GPQA (Graduate-Level Google-Proof Q&amp;
   <div class="cell-detail" id="llm-classic--winogrande">
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
+  <h3><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-multimodal--mmmu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu.html">MMMU (Massive Multi-discipline Multimodal Understanding and Reasoning)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mmmu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu-pro.html">MMMU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mathvista">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mathvista.html">MathVista</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--chartqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/chartqa.html">ChartQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--docvqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/docvqa.html">DocVQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--ai2d">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--charxiv">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/charxiv.html">CharXiv</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
   <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
   <div class="cell-detail" id="llm-recent--gpqa-diamond">
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
@@ -270,7 +292,11 @@ Dataset <a href="../datasets/gpqa.html">GPQA (Graduate-Level Google-Proof Q&amp;
 
 <section><h2>Notes</h2><p class="notes">Included (point release) because its system card introduced Anthropic&#39;s documented decontamination methodology (Section 2.2: exact-substring removal, 20-gram fuzzy decontamination, canary filtering, manual inspection), which later cards reference. The card states manual inspection &#39;confirmed low levels of contamination for many evaluations (e.g. Humanity&#39;s Last Exam)&#39; and that decontamination was &#39;significantly improved with Claude Opus 4.5&#39;. The docs give a training data cutoff of Aug 2025 while the system card describes internet data &#39;up to May 2025&#39;.
 
-Decontamination statements not shown as cells (they name no benchmark tracked here, or none at all): Terminal-Bench.</p></section><section>
+Decontamination statements not shown as cells (they name no benchmark tracked here, or none at all): Terminal-Bench.
+
+Accepts image input: “Claude Opus 4.5 can understand both text (including voice dictation) and image inputs, engaging in conversation, analysis, coding, and creative tasks.”
+
+Accepts image input: “Text and images → text”</p></section><section>
   <h2>Sources</h2>
   <ul class="sources">
 <li><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">System Card: Claude Opus 4.5</a>

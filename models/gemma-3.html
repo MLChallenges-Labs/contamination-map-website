@@ -42,15 +42,15 @@
 
 <section>
   <h2>Training data disclosure: <span class="disc disc-vague">Vague</span></h2>
-<p>Level determined for <strong>6%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 14">
-<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 14" title="Unknown: 14"></span></div>
+<p>Level determined for <strong>4%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 21">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 21" title="Unknown: 21"></span></div>
 <ul class="legend" aria-label="Contamination levels">
   <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
   <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
   <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
   <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
   <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">1</span></li>
-  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">14</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">21</span></li>
 </ul>  <figure class="evidence">
   <blockquote>“These models were trained on a dataset of text data that includes a wide variety of sources.”</blockquote>
   <figcaption><a href="https://ai.google.dev/gemma/docs/core/model_card_3">ai.google.dev</a>
@@ -154,6 +154,28 @@
   <div class="cell-detail" id="llm-classic--winogrande">
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
+  <h3><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-multimodal--mmmu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu.html">MMMU (Massive Multi-discipline Multimodal Understanding and Reasoning)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mmmu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu-pro.html">MMMU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mathvista">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mathvista.html">MathVista</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--chartqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/chartqa.html">ChartQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--docvqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/docvqa.html">DocVQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--ai2d">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--charxiv">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/charxiv.html">CharXiv</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
   <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
   <div class="cell-detail" id="llm-recent--gpqa-diamond">
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
@@ -195,7 +217,9 @@
 
 <section><h2>Notes</h2><p class="notes">The paper adds: &#39;despite the use of decontamination techniques, there is always a risk of contamination of these probes&#39;. The 270M size, released later (Aug 2025), is described in the same model card with the same August 2024 cutoff.
 
-Decontamination statements not shown as cells (they name no benchmark tracked here, or none at all): evaluation sets (not named).</p></section><section>
+Decontamination statements not shown as cells (they name no benchmark tracked here, or none at all): evaluation sets (not named).
+
+Accepts image input: “Gemma 3 models are multimodal, handling text and image input and generating text output”</p></section><section>
   <h2>Sources</h2>
   <ul class="sources">
 <li><a href="https://arxiv.org/pdf/2503.19786v1">Gemma 3 Technical Report (arXiv v1)</a>

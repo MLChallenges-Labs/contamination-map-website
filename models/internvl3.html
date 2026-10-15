@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · InternVL3</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html" class="active">Text / LLM</a>
+        <a href="../vision/index.html">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../text/index.html">Text / LLM</a> / Model</p>
+<h1>InternVL3</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Shanghai AI Laboratory (OpenGVLab)</dd>
+  <dt>Family</dt><dd>InternVL · version 3</dd>
+  <dt>Released</dt><dd>2025-04-10 <span class="muted small">(HF repo creation of OpenGVLab/InternVL3-*B (2025-04-10, via huggingface.co API); arXiv v1 2025-04-14)</span></dd>
+<dt>Checkpoints</dt><dd>OpenGVLab/InternVL3-1B, OpenGVLab/InternVL3-2B, OpenGVLab/InternVL3-8B, OpenGVLab/InternVL3-9B, OpenGVLab/InternVL3-14B, OpenGVLab/InternVL3-38B, OpenGVLab/InternVL3-78B, OpenGVLab/InternVL3-8B-Instruct, OpenGVLab/InternVL3-8B-Pretrained</dd>  <dt>Weights</dt><dd>Open · Apache 2.0 (model card also links the Qwen license for the Qwen2.5-based components)</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/abs/2504.10479">Paper</a><a href="https://huggingface.co/OpenGVLab/InternVL3-8B/raw/main/README.md">Model card</a><a href="https://github.com/OpenGVLab/InternVL">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>31%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 3, Training data seen: 0, Related data seen: 2, Not seen: 0, Unknown: 15">
+<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-seen_split_unclear" style="flex-grow: 3" title="Seen, split unclear: 3"></span><span class="lvl-related" style="flex-grow: 2" title="Related data seen: 2"></span><span class="lvl-unknown" style="flex-grow: 15" title="Unknown: 15"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">2</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">3</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">2</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">15</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“The open-source data are being organized, and a comprehensive list will be included in a future revision of this report.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Footnote 1, page 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For SFT data, we construct the training corpora based on those used in InternVL2.5 [18] while introducing additional tool usage, 3D scene understanding, GUI operations, scientific diagrams, creative writing, and multimodal reasoning samples.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We originally intended to open-source the training dataset used in InternVL. However, due to the company policy, we have withdrawn the dataset from public access.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/OpenGVLab/InternVL-Data/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Note on Dataset Availability · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Built on</h2>
+  <p class="muted small">Everything these base models may have seen is inherited by InternVL3.</p>
+  <ul class="rows">
+    <li>
+      <a href="qwen2.5.html"><strong>Qwen2.5</strong></a>
+      <span class="muted">· disclosure: Vague</span>
+<p class="small">All sizes except InternVL3-9B use Qwen2.5 base models (0.5B-72B); InternVL3-9B uses InternLM3-8B (see training_data).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For the language model, we leverage pre-trained large language models (LLMs), specifically the Qwen2.5 series and InternLM3-8B.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>pre-training data of base model InternViT-300M-448px-V2.5 / InternViT-6B-448px-V2.5 (vision encoder)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">InternViT is not in the registry; its pre-training data are not described in this report.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“The vision encoder is available in two configurations: InternViT-300M and InternViT-6B.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>pre-training data of base model InternLM3-8B (InternVL3-9B only)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">InternLM3 is not in the registry. The model card lists internlm3-8b-instruct for InternVL3-9B, while the paper says only base models were used.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For the language model, we leverage pre-trained large language models (LLMs), specifically the Qwen2.5 series and InternLM3-8B.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>InternVL2.5 multimodal pre-training corpus</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Enumerated in InternVL2.5 report Table 4 (arXiv 2412.05271), which includes ChartQA, DocVQA and AI2D (see separate entries).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Specifically, we leverage the pre-training corpus from InternVL2.5, which covers a diverse range of domains such as image captioning, general question answering, mathematics, charts, optical character recognition (OCR), knowledge grounding, document understanding, multi-turn dialogue, and medical data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/chartqa.html">ChartQA</a>  <span class="muted">· split: unknown</span>
+<p class="small">Via the InternVL2.5 pre-training corpus reused by InternVL3. Split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Specifically, we leverage the pre-training corpus from InternVL2.5, which covers a diverse range of domains such as image captioning, general question answering, mathematics, charts, optical character recognition (OCR), knowledge grounding, document understanding, multi-turn dialogue, and medical data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ChartQA [181], PlotQA [187], FigureQA [105], LRV-Instruction [148], ArxivQA [132], MMC-Inst [149]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 4 (InternVL 2.5 pre-training data mixture), Chart row · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/docvqa.html">DocVQA</a>  <span class="muted">· split: unknown</span>
+<p class="small">Via the InternVL2.5 pre-training corpus reused by InternVL3. Split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Specifically, we leverage the pre-training corpus from InternVL2.5, which covers a diverse range of domains such as image captioning, general question answering, mathematics, charts, optical character recognition (OCR), knowledge grounding, document understanding, multi-turn dialogue, and medical data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“DocReason25K [93], DocVQA [184], Docmatix [121], Synthetic Arxiv QA”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 4 (InternVL 2.5 pre-training data mixture), Document row · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a>  <span class="muted">· split: unknown</span>
+<p class="small">Via the InternVL2.5 pre-training corpus reused by InternVL3. Split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Specifically, we leverage the pre-training corpus from InternVL2.5, which covers a diverse range of domains such as image captioning, general question answering, mathematics, charts, optical character recognition (OCR), knowledge grounding, document understanding, multi-turn dialogue, and medical data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“KonIQ-10K [91], IconQA [167], VisualMRC [225], ChemVLM Data [129], ScienceQA [165], AI2D [109]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 4 (InternVL 2.5 pre-training data mixture), Knowledge row · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>GUI, tool usage, 3D scene understanding and video data (added for InternVL3 pre-training)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“additional data is incorporated from tasks related to graphical user interfaces (GUI), tool usage, 3D scene understanding, and video comprehension.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>InternLM2.5 pre-training data and open-source text datasets (language data, ~50B tokens)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“The language corpus is primarily constructed on the pre-training data from InternLM2.5 and is further augmented with various open-source text datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>InternVL2.5 SFT data plus new tool-use, 3D, GUI, scientific-diagram, creative-writing and reasoning samples (21.7M samples)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">InternVL2.5 SFT mixture is enumerated in InternVL2.5 report Table 5.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For SFT data, we construct the training corpora based on those used in InternVL2.5 [18] while introducing additional tool usage, 3D scene understanding, GUI operations, scientific diagrams, creative writing, and multimodal reasoning samples.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/chartqa.html">ChartQA</a>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">SFT: via InternVL2.5 Table 5. MPO: reference [91] in the MMPR v1.2 &#39;chart&#39; list is ChartQA. Split not stated in the InternVL3/2.5 reports (the earlier InternVL-Chat-V1-2 SFT release used &#39;chartqa_train_18k&#39;, but that is a different model).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For SFT data, we construct the training corpora based on those used in InternVL2.5 [18] while introducing additional tool usage, 3D scene understanding, GUI operations, scientific diagrams, creative writing, and multimodal reasoning samples.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ChartQA (en) [181], MMTab (en) [310], PlotQA (en) [187], FigureQA (en) [105], VisText (en) [226]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 5 (InternVL 2.5 fine-tuning data mixture), Chart row · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For MPO data, we construct preference pairs based on the data pipeline and samples proposed in MMPR v1.2 [124], which cover a wide range of domains, including general visual question answering (VQA) [43, 50, 90, 83, 127, 126], science [57, 16, 82], chart [91, 54, 11]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/docvqa.html">DocVQA</a>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Via InternVL2.5 Table 5. Split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For SFT data, we construct the training corpora based on those used in InternVL2.5 [18] while introducing additional tool usage, 3D scene understanding, GUI operations, scientific diagrams, creative writing, and multimodal reasoning samples.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“DocVQA (en) [42], Docmatix (en) [121], DocReason25K (en) [93], Sujet-Finance-QA-Vision (en) [217]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 5 (InternVL 2.5 fine-tuning data mixture), Document row · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">SFT: via InternVL2.5 Table 5. MPO: reference [57] in the MMPR v1.2 &#39;science&#39; list is AI2D. Split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For SFT data, we construct the training corpora based on those used in InternVL2.5 [18] while introducing additional tool usage, 3D scene understanding, GUI operations, scientific diagrams, creative writing, and multimodal reasoning samples.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AI2D (en) [109], ScienceQA (en) [165], TQA (en) [110], ChemVLM Data (en &amp; zh) [129]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 5 (InternVL 2.5 fine-tuning data mixture), Science row · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For MPO data, we construct preference pairs based on the data pipeline and samples proposed in MMPR v1.2 [124], which cover a wide range of domains, including general visual question answering (VQA) [43, 50, 90, 83, 127, 126], science [57, 16, 82], chart [91, 54, 11]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>InternVL2.5 SFT mathematics datasets (GeoQA+, CLEVR-Math, Super-CLEVR, MapQA, MAVIS, Geometry3K, ...)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Several of these are source datasets from which MathVista was assembled; split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For SFT data, we construct the training corpora based on those used in InternVL2.5 [18] while introducing additional tool usage, 3D scene understanding, GUI operations, scientific diagrams, creative writing, and multimodal reasoning samples.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“GeoQA+ (en) [20], CLEVR-Math (en) [144], Super-CLEVR (en) [141], MapQA (en) [23], MAVIS (en) [300]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 5 (InternVL 2.5 fine-tuning data mixture), Mathematics row · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>MMPR v1.2 preference data (~300K samples for MPO)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Covers VQA, science (incl. AI2D, ScienceQA), chart (incl. ChartQA, DVQA, MapQA), mathematics, OCR and document data.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For MPO data, we construct preference pairs based on the data pipeline and samples proposed in MMPR v1.2 [124], which cover a wide range of domains, including general visual question answering (VQA) [43, 50, 90, 83, 127, 126], science [57, 16, 82], chart [91, 54, 11]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· via base model Qwen2.5: a contamination analysis found test examples of the related dataset MATH-500 (Exact completion of 21.2% of MATH-500 problems from a 60% prefix (Table 2).) [third-party study]</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“For the language model, we leverage pre-trained large language models (LLMs), specifically the Qwen2.5 series and InternLM3-8B.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“revealing strong signs of data contamination in the Qwen2.5 series models when evaluated on commonly used benchmarks, such as MATH-500, AMC, and AIME2024.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2507.10532v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4, Table 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We therefore evaluate our models only on the remaining 500 held-out problems. We selected these 500 test problems uniformly at random, and we believe they are representative of the test set as a whole.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/prm800k/main/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · MATH Splits · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This dataset contains a subset of 500 problems from the MATH benchmark that OpenAI created in their _Let&#39;s Verify Step by Step_ paper.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceH4/MATH-500/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-multimodal--mmmu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu.html">MMMU (Massive Multi-discipline Multimodal Understanding and Reasoning)</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mmmu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu-pro.html">MMMU-Pro</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mathvista">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/mathvista.html">MathVista</a> <span class="muted">· related dataset ChartQA was used</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Specifically, we leverage the pre-training corpus from InternVL2.5, which covers a diverse range of domains such as image captioning, general question answering, mathematics, charts, optical character recognition (OCR), knowledge grounding, document understanding, multi-turn dialogue, and medical data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ChartQA [181], PlotQA [187], FigureQA [105], LRV-Instruction [148], ArxivQA [132], MMC-Inst [149]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 4 (InternVL 2.5 pre-training data mixture), Chart row · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“It consists of 6,141 examples, derived from 28 existing multimodal datasets involving mathematics and 3 newly created datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.02255v3">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ChartQA (2022)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.02255v3">arxiv.org</a>
+<span class="muted">· paper · Table 5 (Appendix C) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;dataset&#34;: &#34;ChartQA&#34;,”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/AI4Math/MathVista/raw/main/source.json">huggingface.co</a>
+<span class="muted">· dataset card · source.json · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--chartqa">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/chartqa.html">ChartQA</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Specifically, we leverage the pre-training corpus from InternVL2.5, which covers a diverse range of domains such as image captioning, general question answering, mathematics, charts, optical character recognition (OCR), knowledge grounding, document understanding, multi-turn dialogue, and medical data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ChartQA [181], PlotQA [187], FigureQA [105], LRV-Instruction [148], ArxivQA [132], MMC-Inst [149]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 4 (InternVL 2.5 pre-training data mixture), Chart row · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--docvqa">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/docvqa.html">DocVQA</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Specifically, we leverage the pre-training corpus from InternVL2.5, which covers a diverse range of domains such as image captioning, general question answering, mathematics, charts, optical character recognition (OCR), knowledge grounding, document understanding, multi-turn dialogue, and medical data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“DocReason25K [93], DocVQA [184], Docmatix [121], Synthetic Arxiv QA”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 4 (InternVL 2.5 pre-training data mixture), Document row · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--ai2d">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Specifically, we leverage the pre-training corpus from InternVL2.5, which covers a diverse range of domains such as image captioning, general question answering, mathematics, charts, optical character recognition (OCR), knowledge grounding, document understanding, multi-turn dialogue, and medical data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“KonIQ-10K [91], IconQA [167], VisualMRC [225], ChemVLM Data [129], ScienceQA [165], AI2D [109]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.05271v5">arxiv.org</a>
+<span class="muted">· paper · Table 4 (InternVL 2.5 pre-training data mixture), Knowledge row · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--charxiv">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/charxiv.html">CharXiv</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· via base model Qwen2.5: a contamination analysis found test examples in the pre-training data (Exact completion of 13.33% of AIME 2024 problems from a 60% prefix (Table 2).) [third-party study]</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“For the language model, we leverage pre-trained large language models (LLMs), specifically the Qwen2.5 series and InternLM3-8B.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“revealing strong signs of data contamination in the Qwen2.5 series models when evaluated on commonly used benchmarks, such as MATH-500, AMC, and AIME2024.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2507.10532v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4, Table 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· unknown for its base model Qwen2.5: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· via base model Qwen2.5: a contamination analysis found test examples in the pre-training data (Exact completion of 21.2% of MATH-500 problems from a 60% prefix (Table 2).) [third-party study]</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“For the language model, we leverage pre-trained large language models (LLMs), specifically the Qwen2.5 series and InternLM3-8B.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2504.10479v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“revealing strong signs of data contamination in the Qwen2.5 series models when evaluated on commonly used benchmarks, such as MATH-500, AMC, and AIME2024.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2507.10532v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4, Table 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">The promised full data list was not published: the InternVL3 v3 report still says it &#39;will be included in a future revision&#39;, and the OpenGVLab/InternVL-Data release was withdrawn. Benchmark-named data is known only through the InternVL2.5 tables that InternVL3 says it builds on. No decontamination statement against multimodal benchmarks found.
+
+Accepts image input: “The key difference, starting from InternVL 2.0, is that we additionally introduced support for multi-image and video data.”</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2504.10479v3">InternVL3 report (arXiv 2504.10479v3)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2412.05271v5">InternVL2.5 report, Expanding Performance Boundaries of Open-Source Multimodal Models (arXiv 2412.05271v5)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/OpenGVLab/InternVL3-8B/raw/main/README.md">InternVL3-8B model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/OpenGVLab/InternVL-Data/raw/main/README.md">OpenGVLab/InternVL-Data (withdrawn)</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/OpenGVLab/MMPR-v1.2/raw/main/README.md">OpenGVLab/MMPR-v1.2</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
