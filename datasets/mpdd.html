@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · MPDD</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html" class="active">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../vision/index.html">Vision</a> / Dataset</p>
+<h1>MPDD</h1>
+<p class="lede">Dataset for visual defect detection in industrial (painted) metal parts manufacturing: more than 1000 images with pixel-precise defect annotation masks, divided into a training subset with anomaly-free samples and a validation (test) subset with normal and anomalous samples.</p>
+<dl class="facts">
+<dt>Also known as</dt><dd>Metal Parts Defect Detection Dataset, Metal Parts Defect Detection</dd><dt>Domain</dt><dd>manufacturing inspection</dd><dt>License</dt><dd>CC BY-NC-SA 4.0 (LICENSE file added to the repository in July 2024)</dd><dt>Test items from</dt><dd>2021-09-12<details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“2021-09-12T17:06:28Z”</blockquote>
+  <figcaption><a href="https://api.github.com/repos/stepanje/MPDD/commits/26362eb7ad42ee20169bcc37d73ee40f6826ba7b">api.github.com</a>
+<span class="muted">· code · commit &#39;Add download link&#39; (26362eb), author date · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details></dd><dt>Homepage</dt><dd><a href="https://github.com/stepanje/MPDD">github.com</a></dd></dl>
+
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/aa-clip-mvtec.html#industrial-ad--mpdd">AA-CLIP, trained on MVTec AD (for VisA results)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/aa-clip-visa.html#industrial-ad--mpdd">AA-CLIP, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/adaclip-all.html#industrial-ad--mpdd">AdaCLIP, trained on all 14 datasets (demo model)</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">in fine-tuning data: its test split was used for training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--mpdd">AdaCLIP, trained on MVTec AD + ColonDB</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--mpdd">AdaCLIP, trained on VisA + ClinicDB</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/adaptclip-mvtec.html#industrial-ad--mpdd">AdaptCLIP, trained on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/adaptclip-visa.html#industrial-ad--mpdd">AdaptCLIP, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomaly-ov.html#industrial-ad--mpdd">Anomaly-OneVision (Anomaly-OV)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalyclip-mvtec.html#industrial-ad--mpdd">AnomalyCLIP, trained on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalyclip-visa.html#industrial-ad--mpdd">AnomalyCLIP, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalydino.html#industrial-ad--mpdd">AnomalyDINO</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model DINOv2: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalygpt-mvtec.html#industrial-ad--mpdd">AnomalyGPT, unsupervised on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalygpt-supervised.html#industrial-ad--mpdd">AnomalyGPT, supervised (demo model)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalygpt-visa.html#industrial-ad--mpdd">AnomalyGPT, unsupervised on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/april-gan-mvtec.html#industrial-ad--mpdd">APRIL-GAN (VAND 2023), trained on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/april-gan-visa.html#industrial-ad--mpdd">APRIL-GAN (VAND 2023), trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/clip-openai.html#industrial-ad--mpdd">OpenAI CLIP</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/dinov2.html#industrial-ad--mpdd">DINOv2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/dinov3.html#industrial-ad--mpdd">DINOv3 (web / LVD-1689M models)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/filo-mvtec.html#industrial-ad--mpdd">FiLo, trained on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/filo-visa.html#industrial-ad--mpdd">FiLo, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/imagenet-wrn50.html#industrial-ad--mpdd">WideResNet-50-2 (supervised ImageNet-1k, torchvision)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/inctrl-mvtec.html#industrial-ad--mpdd">InCTRL, trained on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/inctrl-visa.html#industrial-ad--mpdd">InCTRL, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/metauas.html#industrial-ad--mpdd">MetaUAS</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/musc.html#industrial-ad--mpdd">MuSc</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/openclip-laion2b.html#industrial-ad--mpdd">OpenCLIP (LAION-2B checkpoints)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/openclip-laion400m.html#industrial-ad--mpdd">OpenCLIP (LAION-400M checkpoints)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/saa-plus.html#industrial-ad--mpdd">Segment Any Anomaly (SAA / SAA+)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/sam-2.html#industrial-ad--mpdd">SAM 2 / SAM 2.1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/sam.html#industrial-ad--mpdd">Segment Anything Model (SAM)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/siglip-2.html#industrial-ad--mpdd">SigLIP 2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/siglip.html#industrial-ad--mpdd">SigLIP</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/univad.html#industrial-ad--mpdd">UniVAD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/vcp-clip-mvtec.html#industrial-ad--mpdd">VCP-CLIP, trained on MVTec-AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/vcp-clip-visa.html#industrial-ad--mpdd">VCP-CLIP, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/winclip.html#industrial-ad--mpdd">WinCLIP / WinCLIP+</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">published_from = date of the GitHub commit that added the download link (repository created 2021-09-12); whether the repository was public that day is not documented. The paper (ICUMT 2021, DOI 10.1109/ICUMT54235.2021.9631567) is recorded as published 13.12.2021. Data is downloaded from a university SharePoint/OneDrive folder. The paper itself (IEEE Xplore) was not fetched, so per-category counts are not given.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://raw.githubusercontent.com/stepanje/MPDD/main/README.md">stepanje/MPDD README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/stepanje/MPDD/main/LICENSE">stepanje/MPDD LICENSE</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li><li><a href="https://www.vut.cz/vav/vysledky/detail/177077">Brno University of Technology record of the ICUMT 2021 paper</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -16,6 +16,7 @@
         <a href="index.html">Time series</a>
         <a href="tabular/index.html">Tabular</a>
         <a href="text/index.html">Text / LLM</a>
+        <a href="vision/index.html">Vision</a>
       </nav>
       <a class="nav-link" href="methodology.html">Methodology</a>
     </div>
@@ -62,7 +63,7 @@
   <h2>How a cell's level is assigned</h2>
   <p>For each benchmark dataset and model, every declared pre-training dataset is compared with the benchmark dataset:</p>
   <ol>
-    <li>The <strong>same dataset</strong>, used in full → <span class="badge lvl-test_seen">Test data seen</span></li>
+    <li>The <strong>same dataset</strong>, used in full or its test split used for training → <span class="badge lvl-test_seen">Test data seen</span></li>
     <li>The same dataset, used with an unstated split, or with a training split defined by another benchmark → <span class="badge lvl-seen_split_unclear">Seen, split unclear</span></li>
     <li>The same dataset, restricted to this benchmark's training split → <span class="badge lvl-train_seen">Training data seen</span></li>
     <li>A <strong>related dataset</strong> (subset, superset, resampled version, same source) → <span class="badge lvl-related">Related data seen</span></li>
@@ -75,6 +76,11 @@
     <li>if the model has a <strong>full list</strong> of training data, every entry in it has been matched to a known dataset or reviewed as unrelated, none of it is a broad web crawl, and the dataset is not there → <span class="badge lvl-not_seen">Not seen</span>;</li>
     <li>otherwise → <span class="badge lvl-unknown">Unknown</span>. Absence from a partial or vague disclosure is never read as “not seen”.</li>
   </ul>
+</section>
+
+<section>
+  <h2>Models built on other models</h2>
+  <p>Many models start from a pre-trained base model (for example an anomaly detector built on CLIP, or a distilled language model). They inherit whatever their base model may have seen: a cell shows the base model's exposure when it is stronger, and “Not seen” requires every base model to be “Not seen” as well.</p>
 </section>
 
 <section>

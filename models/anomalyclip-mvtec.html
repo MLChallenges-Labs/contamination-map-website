@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · AnomalyCLIP, trained on MVTec AD</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html" class="active">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../vision/index.html">Vision</a> / Model</p>
+<h1>AnomalyCLIP, trained on MVTec AD</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Zhejiang University / Singapore Management University et al.</dd>
+  <dt>Family</dt><dd>AnomalyCLIP · version checkpoints/9_12_4_multiscale_visa/epoch_15.pth</dd>
+  <dt>Released</dt><dd>2023-10-29 <span class="muted small">(arXiv v1 submission date (https://arxiv.org/abs/2310.18961))</span></dd>
+<dt>Checkpoints</dt><dd>checkpoints/9_12_4_multiscale_visa/epoch_15.pth</dd>  <dt>Weights</dt><dd>Open · MIT</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2310.18961v12">Paper</a><a href="https://github.com/zqhang/AnomalyCLIP">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>12%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">1</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">7</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“Then, we fine-tune AnomalyCLIP using the test data on MVTec AD and evaluate the ZSAD performance on other datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.18961v12">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Main results (We test all datasets by training once on MVTec AD. For MVTec AD, AnomalyCLIP is trained on VisA.)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/zqhang/AnomalyCLIP/main/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · Main results · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Built on</h2>
+  <p class="muted small">Everything these base models may have seen is inherited by AnomalyCLIP, trained on MVTec AD.</p>
+  <ul class="rows">
+    <li>
+      <a href="clip-openai.html"><strong>OpenAI CLIP</strong></a>
+      <span class="muted">· disclosure: Partial list</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We use the publicly available CLIP model2 (VIT-L/14@336px) as our backbone. Model parameters of CLIP are all frozen.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.18961v12">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;ViT-L/14@336px&#34;: &#34;https://openaipublic.azureedge.net/clip/models/3035c92b350959924f9f00213499208652fc7ea050643e8b385c2dac08641f02/ViT-L-14-336px.pt&#34;”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/zqhang/AnomalyCLIP/main/AnomalyCLIP_lib/model_load.py">raw.githubusercontent.com</a>
+<span class="muted">· code · AnomalyCLIP_lib/model_load.py · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<a href="../datasets/mvtec-ad.html">MVTec AD</a>  <span class="muted">· split: test · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We fine-tune AnomalyCLIP on the test data on MVTec AD and test the performance for other datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.18961v12">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></h3>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mvtec-ad.html">MVTec AD</a> <span class="muted">· in fine-tuning data: its test split was used for training</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“We fine-tune AnomalyCLIP on the test data on MVTec AD and test the performance for other datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.18961v12">arxiv.org</a>
+<span class="muted">· paper · Appendix A.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad-2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a> <span class="muted">· unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-loco-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a> <span class="muted">· unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--visa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/visa.html">VisA</a> <span class="muted">· unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--real-iad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/real-iad.html">Real-IAD</a> <span class="muted">· unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mpdd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mpdd.html">MPDD</a> <span class="muted">· unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--btad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/btad.html">BTAD</a> <span class="muted">· unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--ksdd2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ksdd2.html">KolektorSDD2</a> <span class="muted">· unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Learnable object-agnostic text prompts (CLIP frozen). Trained on the MVTec AD test set (15 epochs) and used for all reported zero-shot results except MVTec AD itself (VisA, MPDD, BTAD, SDD, DAGM, DTD-Synthetic and the medical datasets). In the repo the MVTec-trained checkpoint is the folder named &#39;9_12_4_multiscale_visa&#39; (train.sh: base_dir ..._multiscale_visa with --dataset mvtec; test.sh uses it with --dataset visa); the naming is counter-intuitive. The paper also reports a variant fine-tuned on a medical set built from ColonDB plus the test split of Endo (Table 3); no checkpoint for it is released.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2310.18961v12">AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection (ICLR 2024)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/zqhang/AnomalyCLIP/main/README.md">AnomalyCLIP README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/zqhang/AnomalyCLIP/main/train.sh">train.sh</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/zqhang/AnomalyCLIP/main/AnomalyCLIP_lib/model_load.py">model_load.py</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

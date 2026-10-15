@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Vision</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html" class="active">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<section class="intro">
+  <h1>Vision foundation models</h1>
+  <p class="lede">Which benchmark datasets could each model have seen during training? Every coloured square links to a verbatim quote from the model's paper, model card or repository. Grey means not enough has been disclosed to tell.</p>
+</section>
+
+<section>
+  <h2>Contamination map</h2>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">18</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">7</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">2</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">33</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">236</span></li>
+</ul>
+  <div class="table-wrap">
+  <table class="map">
+    <thead>
+      <tr>
+        <th class="corner"></th>
+        <th class="group" colspan="8"><a href="../benchmarks/industrial-ad.html" title="Industrial anomaly detection" style="width: calc(8 * 18px - 10px)">Industrial anomaly detection</a></th>
+      </tr>
+      <tr>
+        <th class="corner muted">Model</th>
+        <th class="col gs" data-col="industrial-ad--mvtec-ad" title="MVTec AD"><a href="../datasets/mvtec-ad.html">MVTec AD</a></th>
+        <th class="col" data-col="industrial-ad--mvtec-ad-2" title="MVTec AD 2"><a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a></th>
+        <th class="col" data-col="industrial-ad--mvtec-loco-ad" title="MVTec LOCO AD"><a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a></th>
+        <th class="col" data-col="industrial-ad--visa" title="VisA"><a href="../datasets/visa.html">VisA</a></th>
+        <th class="col" data-col="industrial-ad--real-iad" title="Real-IAD"><a href="../datasets/real-iad.html">Real-IAD</a></th>
+        <th class="col" data-col="industrial-ad--mpdd" title="MPDD"><a href="../datasets/mpdd.html">MPDD</a></th>
+        <th class="col" data-col="industrial-ad--btad" title="BTAD"><a href="../datasets/btad.html">BTAD</a></th>
+        <th class="col" data-col="industrial-ad--ksdd2" title="KolektorSDD2"><a href="../datasets/ksdd2.html">KolektorSDD2</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><a href="../models/aa-clip-mvtec.html">AA-CLIP, trained on MVTec AD (for VisA results)</a></th>
+        <td class="sq lvl-seen_split_unclear gs"><a href="../models/aa-clip-mvtec.html#industrial-ad--mvtec-ad" aria-label="AA-CLIP, trained on MVTec AD (for VisA results) × MVTec AD: Seen, split unclear" data-col="industrial-ad--mvtec-ad" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="AA-CLIP, trained on MVTec AD (for VisA results) × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: the dataset was used; the source does not say which part"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--mvtec-ad-2" aria-label="AA-CLIP, trained on MVTec AD (for VisA results) × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on MVTec AD (for VisA results) × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--mvtec-loco-ad" aria-label="AA-CLIP, trained on MVTec AD (for VisA results) × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on MVTec AD (for VisA results) × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--visa" aria-label="AA-CLIP, trained on MVTec AD (for VisA results) × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on MVTec AD (for VisA results) × VisA (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--real-iad" aria-label="AA-CLIP, trained on MVTec AD (for VisA results) × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on MVTec AD (for VisA results) × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--mpdd" aria-label="AA-CLIP, trained on MVTec AD (for VisA results) × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on MVTec AD (for VisA results) × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--btad" aria-label="AA-CLIP, trained on MVTec AD (for VisA results) × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on MVTec AD (for VisA results) × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--ksdd2" aria-label="AA-CLIP, trained on MVTec AD (for VisA results) × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on MVTec AD (for VisA results) × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/aa-clip-visa.html">AA-CLIP, trained on VisA</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/aa-clip-visa.html#industrial-ad--mvtec-ad" aria-label="AA-CLIP, trained on VisA × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on VisA × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--mvtec-ad-2" aria-label="AA-CLIP, trained on VisA × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on VisA × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--mvtec-loco-ad" aria-label="AA-CLIP, trained on VisA × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on VisA × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-seen_split_unclear"><a href="../models/aa-clip-visa.html#industrial-ad--visa" aria-label="AA-CLIP, trained on VisA × VisA: Seen, split unclear" data-col="industrial-ad--visa" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="AA-CLIP, trained on VisA × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: the dataset was used; the source does not say which part"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--real-iad" aria-label="AA-CLIP, trained on VisA × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on VisA × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--mpdd" aria-label="AA-CLIP, trained on VisA × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on VisA × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--btad" aria-label="AA-CLIP, trained on VisA × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on VisA × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--ksdd2" aria-label="AA-CLIP, trained on VisA × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AA-CLIP, trained on VisA × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/adaclip-all.html">AdaCLIP, trained on all 14 datasets (demo model)</a></th>
+        <td class="sq lvl-test_seen gs"><a href="../models/adaclip-all.html#industrial-ad--mvtec-ad" aria-label="AdaCLIP, trained on all 14 datasets (demo model) × MVTec AD: Test data seen" data-col="industrial-ad--mvtec-ad" data-level="test_seen" data-label="Test data seen" data-pair="AdaCLIP, trained on all 14 datasets (demo model) × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-all.html#industrial-ad--mvtec-ad-2" aria-label="AdaCLIP, trained on all 14 datasets (demo model) × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on all 14 datasets (demo model) × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-all.html#industrial-ad--mvtec-loco-ad" aria-label="AdaCLIP, trained on all 14 datasets (demo model) × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on all 14 datasets (demo model) × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-test_seen"><a href="../models/adaclip-all.html#industrial-ad--visa" aria-label="AdaCLIP, trained on all 14 datasets (demo model) × VisA: Test data seen" data-col="industrial-ad--visa" data-level="test_seen" data-label="Test data seen" data-pair="AdaCLIP, trained on all 14 datasets (demo model) × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-all.html#industrial-ad--real-iad" aria-label="AdaCLIP, trained on all 14 datasets (demo model) × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on all 14 datasets (demo model) × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-test_seen"><a href="../models/adaclip-all.html#industrial-ad--mpdd" aria-label="AdaCLIP, trained on all 14 datasets (demo model) × MPDD: Test data seen" data-col="industrial-ad--mpdd" data-level="test_seen" data-label="Test data seen" data-pair="AdaCLIP, trained on all 14 datasets (demo model) × MPDD (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-test_seen"><a href="../models/adaclip-all.html#industrial-ad--btad" aria-label="AdaCLIP, trained on all 14 datasets (demo model) × BTAD: Test data seen" data-col="industrial-ad--btad" data-level="test_seen" data-label="Test data seen" data-pair="AdaCLIP, trained on all 14 datasets (demo model) × BTAD (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-all.html#industrial-ad--ksdd2" aria-label="AdaCLIP, trained on all 14 datasets (demo model) × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on all 14 datasets (demo model) × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/adaclip-mvtec-colondb.html">AdaCLIP, trained on MVTec AD + ColonDB</a></th>
+        <td class="sq lvl-test_seen gs"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--mvtec-ad" aria-label="AdaCLIP, trained on MVTec AD + ColonDB × MVTec AD: Test data seen" data-col="industrial-ad--mvtec-ad" data-level="test_seen" data-label="Test data seen" data-pair="AdaCLIP, trained on MVTec AD + ColonDB × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--mvtec-ad-2" aria-label="AdaCLIP, trained on MVTec AD + ColonDB × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on MVTec AD + ColonDB × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--mvtec-loco-ad" aria-label="AdaCLIP, trained on MVTec AD + ColonDB × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on MVTec AD + ColonDB × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--visa" aria-label="AdaCLIP, trained on MVTec AD + ColonDB × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on MVTec AD + ColonDB × VisA (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--real-iad" aria-label="AdaCLIP, trained on MVTec AD + ColonDB × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on MVTec AD + ColonDB × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--mpdd" aria-label="AdaCLIP, trained on MVTec AD + ColonDB × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on MVTec AD + ColonDB × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--btad" aria-label="AdaCLIP, trained on MVTec AD + ColonDB × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on MVTec AD + ColonDB × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--ksdd2" aria-label="AdaCLIP, trained on MVTec AD + ColonDB × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on MVTec AD + ColonDB × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/adaclip-visa-clinicdb.html">AdaCLIP, trained on VisA + ClinicDB</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--mvtec-ad" aria-label="AdaCLIP, trained on VisA + ClinicDB × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on VisA + ClinicDB × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--mvtec-ad-2" aria-label="AdaCLIP, trained on VisA + ClinicDB × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on VisA + ClinicDB × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--mvtec-loco-ad" aria-label="AdaCLIP, trained on VisA + ClinicDB × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on VisA + ClinicDB × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-test_seen"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--visa" aria-label="AdaCLIP, trained on VisA + ClinicDB × VisA: Test data seen" data-col="industrial-ad--visa" data-level="test_seen" data-label="Test data seen" data-pair="AdaCLIP, trained on VisA + ClinicDB × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--real-iad" aria-label="AdaCLIP, trained on VisA + ClinicDB × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on VisA + ClinicDB × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--mpdd" aria-label="AdaCLIP, trained on VisA + ClinicDB × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on VisA + ClinicDB × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--btad" aria-label="AdaCLIP, trained on VisA + ClinicDB × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on VisA + ClinicDB × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--ksdd2" aria-label="AdaCLIP, trained on VisA + ClinicDB × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AdaCLIP, trained on VisA + ClinicDB × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/adaptclip-mvtec.html">AdaptCLIP, trained on MVTec AD</a></th>
+        <td class="sq lvl-test_seen gs"><a href="../models/adaptclip-mvtec.html#industrial-ad--mvtec-ad" aria-label="AdaptCLIP, trained on MVTec AD × MVTec AD: Test data seen" data-col="industrial-ad--mvtec-ad" data-level="test_seen" data-label="Test data seen" data-pair="AdaptCLIP, trained on MVTec AD × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--mvtec-ad-2" aria-label="AdaptCLIP, trained on MVTec AD × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on MVTec AD × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--mvtec-loco-ad" aria-label="AdaptCLIP, trained on MVTec AD × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on MVTec AD × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--visa" aria-label="AdaptCLIP, trained on MVTec AD × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on MVTec AD × VisA (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--real-iad" aria-label="AdaptCLIP, trained on MVTec AD × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on MVTec AD × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--mpdd" aria-label="AdaptCLIP, trained on MVTec AD × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on MVTec AD × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--btad" aria-label="AdaptCLIP, trained on MVTec AD × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on MVTec AD × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--ksdd2" aria-label="AdaptCLIP, trained on MVTec AD × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on MVTec AD × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/adaptclip-visa.html">AdaptCLIP, trained on VisA</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/adaptclip-visa.html#industrial-ad--mvtec-ad" aria-label="AdaptCLIP, trained on VisA × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on VisA × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--mvtec-ad-2" aria-label="AdaptCLIP, trained on VisA × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on VisA × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--mvtec-loco-ad" aria-label="AdaptCLIP, trained on VisA × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on VisA × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-test_seen"><a href="../models/adaptclip-visa.html#industrial-ad--visa" aria-label="AdaptCLIP, trained on VisA × VisA: Test data seen" data-col="industrial-ad--visa" data-level="test_seen" data-label="Test data seen" data-pair="AdaptCLIP, trained on VisA × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--real-iad" aria-label="AdaptCLIP, trained on VisA × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on VisA × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--mpdd" aria-label="AdaptCLIP, trained on VisA × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on VisA × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--btad" aria-label="AdaptCLIP, trained on VisA × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on VisA × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--ksdd2" aria-label="AdaptCLIP, trained on VisA × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AdaptCLIP, trained on VisA × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/anomaly-ov.html">Anomaly-OneVision (Anomaly-OV)</a></th>
+        <td class="sq lvl-seen_split_unclear gs"><a href="../models/anomaly-ov.html#industrial-ad--mvtec-ad" aria-label="Anomaly-OneVision (Anomaly-OV) × MVTec AD: Seen, split unclear" data-col="industrial-ad--mvtec-ad" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="Anomaly-OneVision (Anomaly-OV) × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: the dataset was used; the source does not say which part"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--mvtec-ad-2" aria-label="Anomaly-OneVision (Anomaly-OV) × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="Anomaly-OneVision (Anomaly-OV) × MVTec AD 2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--mvtec-loco-ad" aria-label="Anomaly-OneVision (Anomaly-OV) × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="Anomaly-OneVision (Anomaly-OV) × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-seen_split_unclear"><a href="../models/anomaly-ov.html#industrial-ad--visa" aria-label="Anomaly-OneVision (Anomaly-OV) × VisA: Seen, split unclear" data-col="industrial-ad--visa" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="Anomaly-OneVision (Anomaly-OV) × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: the dataset was used; the source does not say which part"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--real-iad" aria-label="Anomaly-OneVision (Anomaly-OV) × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="Anomaly-OneVision (Anomaly-OV) × Real-IAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--mpdd" aria-label="Anomaly-OneVision (Anomaly-OV) × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="Anomaly-OneVision (Anomaly-OV) × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--btad" aria-label="Anomaly-OneVision (Anomaly-OV) × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="Anomaly-OneVision (Anomaly-OV) × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--ksdd2" aria-label="Anomaly-OneVision (Anomaly-OV) × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="Anomaly-OneVision (Anomaly-OV) × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/anomalyclip-mvtec.html">AnomalyCLIP, trained on MVTec AD</a></th>
+        <td class="sq lvl-test_seen gs"><a href="../models/anomalyclip-mvtec.html#industrial-ad--mvtec-ad" aria-label="AnomalyCLIP, trained on MVTec AD × MVTec AD: Test data seen" data-col="industrial-ad--mvtec-ad" data-level="test_seen" data-label="Test data seen" data-pair="AnomalyCLIP, trained on MVTec AD × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--mvtec-ad-2" aria-label="AnomalyCLIP, trained on MVTec AD × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on MVTec AD × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--mvtec-loco-ad" aria-label="AnomalyCLIP, trained on MVTec AD × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on MVTec AD × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--visa" aria-label="AnomalyCLIP, trained on MVTec AD × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on MVTec AD × VisA (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--real-iad" aria-label="AnomalyCLIP, trained on MVTec AD × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on MVTec AD × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--mpdd" aria-label="AnomalyCLIP, trained on MVTec AD × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on MVTec AD × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--btad" aria-label="AnomalyCLIP, trained on MVTec AD × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on MVTec AD × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--ksdd2" aria-label="AnomalyCLIP, trained on MVTec AD × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on MVTec AD × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/anomalyclip-visa.html">AnomalyCLIP, trained on VisA</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/anomalyclip-visa.html#industrial-ad--mvtec-ad" aria-label="AnomalyCLIP, trained on VisA × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on VisA × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--mvtec-ad-2" aria-label="AnomalyCLIP, trained on VisA × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on VisA × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--mvtec-loco-ad" aria-label="AnomalyCLIP, trained on VisA × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on VisA × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-test_seen"><a href="../models/anomalyclip-visa.html#industrial-ad--visa" aria-label="AnomalyCLIP, trained on VisA × VisA: Test data seen" data-col="industrial-ad--visa" data-level="test_seen" data-label="Test data seen" data-pair="AnomalyCLIP, trained on VisA × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--real-iad" aria-label="AnomalyCLIP, trained on VisA × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on VisA × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--mpdd" aria-label="AnomalyCLIP, trained on VisA × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on VisA × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--btad" aria-label="AnomalyCLIP, trained on VisA × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on VisA × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--ksdd2" aria-label="AnomalyCLIP, trained on VisA × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AnomalyCLIP, trained on VisA × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/anomalydino.html">AnomalyDINO</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/anomalydino.html#industrial-ad--mvtec-ad" aria-label="AnomalyDINO × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="AnomalyDINO × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model DINOv2: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--mvtec-ad-2" aria-label="AnomalyDINO × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AnomalyDINO × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model DINOv2: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--mvtec-loco-ad" aria-label="AnomalyDINO × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AnomalyDINO × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model DINOv2: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--visa" aria-label="AnomalyDINO × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="AnomalyDINO × VisA (Industrial anomaly detection)" data-reason="unknown for its base model DINOv2: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--real-iad" aria-label="AnomalyDINO × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AnomalyDINO × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model DINOv2: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--mpdd" aria-label="AnomalyDINO × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AnomalyDINO × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model DINOv2: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--btad" aria-label="AnomalyDINO × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AnomalyDINO × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model DINOv2: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--ksdd2" aria-label="AnomalyDINO × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AnomalyDINO × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model DINOv2: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/anomalygpt-supervised.html">AnomalyGPT, supervised (demo model)</a></th>
+        <td class="sq lvl-seen_split_unclear gs"><a href="../models/anomalygpt-supervised.html#industrial-ad--mvtec-ad" aria-label="AnomalyGPT, supervised (demo model) × MVTec AD: Seen, split unclear" data-col="industrial-ad--mvtec-ad" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="AnomalyGPT, supervised (demo model) × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: the dataset was used; the source does not say which part"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-supervised.html#industrial-ad--mvtec-ad-2" aria-label="AnomalyGPT, supervised (demo model) × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, supervised (demo model) × MVTec AD 2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-seen_split_unclear"><a href="../models/anomalygpt-supervised.html#industrial-ad--mvtec-loco-ad" aria-label="AnomalyGPT, supervised (demo model) × MVTec LOCO AD: Seen, split unclear" data-col="industrial-ad--mvtec-loco-ad" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="AnomalyGPT, supervised (demo model) × MVTec LOCO AD (Industrial anomaly detection)" data-reason="in fine-tuning data: the dataset was used; the source does not say which part"></a></td>
+        <td class="sq lvl-seen_split_unclear"><a href="../models/anomalygpt-supervised.html#industrial-ad--visa" aria-label="AnomalyGPT, supervised (demo model) × VisA: Seen, split unclear" data-col="industrial-ad--visa" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="AnomalyGPT, supervised (demo model) × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: the dataset was used; the source does not say which part"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-supervised.html#industrial-ad--real-iad" aria-label="AnomalyGPT, supervised (demo model) × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, supervised (demo model) × Real-IAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-supervised.html#industrial-ad--mpdd" aria-label="AnomalyGPT, supervised (demo model) × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, supervised (demo model) × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-supervised.html#industrial-ad--btad" aria-label="AnomalyGPT, supervised (demo model) × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, supervised (demo model) × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-supervised.html#industrial-ad--ksdd2" aria-label="AnomalyGPT, supervised (demo model) × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, supervised (demo model) × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/anomalygpt-mvtec.html">AnomalyGPT, unsupervised on MVTec AD</a></th>
+        <td class="sq lvl-train_seen gs"><a href="../models/anomalygpt-mvtec.html#industrial-ad--mvtec-ad" aria-label="AnomalyGPT, unsupervised on MVTec AD × MVTec AD: Training data seen" data-col="industrial-ad--mvtec-ad" data-level="train_seen" data-label="Training data seen" data-pair="AnomalyGPT, unsupervised on MVTec AD × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: only the training split was used, not the test data Industrial anomaly detection evaluates on"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--mvtec-ad-2" aria-label="AnomalyGPT, unsupervised on MVTec AD × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on MVTec AD × MVTec AD 2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--mvtec-loco-ad" aria-label="AnomalyGPT, unsupervised on MVTec AD × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on MVTec AD × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--visa" aria-label="AnomalyGPT, unsupervised on MVTec AD × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on MVTec AD × VisA (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--real-iad" aria-label="AnomalyGPT, unsupervised on MVTec AD × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on MVTec AD × Real-IAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--mpdd" aria-label="AnomalyGPT, unsupervised on MVTec AD × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on MVTec AD × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--btad" aria-label="AnomalyGPT, unsupervised on MVTec AD × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on MVTec AD × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--ksdd2" aria-label="AnomalyGPT, unsupervised on MVTec AD × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on MVTec AD × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/anomalygpt-visa.html">AnomalyGPT, unsupervised on VisA</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/anomalygpt-visa.html#industrial-ad--mvtec-ad" aria-label="AnomalyGPT, unsupervised on VisA × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on VisA × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--mvtec-ad-2" aria-label="AnomalyGPT, unsupervised on VisA × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on VisA × MVTec AD 2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--mvtec-loco-ad" aria-label="AnomalyGPT, unsupervised on VisA × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on VisA × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-train_seen"><a href="../models/anomalygpt-visa.html#industrial-ad--visa" aria-label="AnomalyGPT, unsupervised on VisA × VisA: Training data seen" data-col="industrial-ad--visa" data-level="train_seen" data-label="Training data seen" data-pair="AnomalyGPT, unsupervised on VisA × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: only the training split was used, not the test data Industrial anomaly detection evaluates on"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--real-iad" aria-label="AnomalyGPT, unsupervised on VisA × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on VisA × Real-IAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--mpdd" aria-label="AnomalyGPT, unsupervised on VisA × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on VisA × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--btad" aria-label="AnomalyGPT, unsupervised on VisA × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on VisA × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--ksdd2" aria-label="AnomalyGPT, unsupervised on VisA × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="AnomalyGPT, unsupervised on VisA × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/april-gan-mvtec.html">APRIL-GAN (VAND 2023), trained on MVTec AD</a></th>
+        <td class="sq lvl-test_seen gs"><a href="../models/april-gan-mvtec.html#industrial-ad--mvtec-ad" aria-label="APRIL-GAN (VAND 2023), trained on MVTec AD × MVTec AD: Test data seen" data-col="industrial-ad--mvtec-ad" data-level="test_seen" data-label="Test data seen" data-pair="APRIL-GAN (VAND 2023), trained on MVTec AD × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--mvtec-ad-2" aria-label="APRIL-GAN (VAND 2023), trained on MVTec AD × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on MVTec AD × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--mvtec-loco-ad" aria-label="APRIL-GAN (VAND 2023), trained on MVTec AD × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on MVTec AD × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--visa" aria-label="APRIL-GAN (VAND 2023), trained on MVTec AD × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on MVTec AD × VisA (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--real-iad" aria-label="APRIL-GAN (VAND 2023), trained on MVTec AD × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on MVTec AD × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--mpdd" aria-label="APRIL-GAN (VAND 2023), trained on MVTec AD × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on MVTec AD × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--btad" aria-label="APRIL-GAN (VAND 2023), trained on MVTec AD × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on MVTec AD × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--ksdd2" aria-label="APRIL-GAN (VAND 2023), trained on MVTec AD × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on MVTec AD × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/april-gan-visa.html">APRIL-GAN (VAND 2023), trained on VisA</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/april-gan-visa.html#industrial-ad--mvtec-ad" aria-label="APRIL-GAN (VAND 2023), trained on VisA × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on VisA × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--mvtec-ad-2" aria-label="APRIL-GAN (VAND 2023), trained on VisA × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on VisA × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--mvtec-loco-ad" aria-label="APRIL-GAN (VAND 2023), trained on VisA × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on VisA × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-test_seen"><a href="../models/april-gan-visa.html#industrial-ad--visa" aria-label="APRIL-GAN (VAND 2023), trained on VisA × VisA: Test data seen" data-col="industrial-ad--visa" data-level="test_seen" data-label="Test data seen" data-pair="APRIL-GAN (VAND 2023), trained on VisA × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--real-iad" aria-label="APRIL-GAN (VAND 2023), trained on VisA × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on VisA × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--mpdd" aria-label="APRIL-GAN (VAND 2023), trained on VisA × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on VisA × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--btad" aria-label="APRIL-GAN (VAND 2023), trained on VisA × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on VisA × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--ksdd2" aria-label="APRIL-GAN (VAND 2023), trained on VisA × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="APRIL-GAN (VAND 2023), trained on VisA × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/clip-openai.html">OpenAI CLIP</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/clip-openai.html#industrial-ad--mvtec-ad" aria-label="OpenAI CLIP × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="OpenAI CLIP × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--mvtec-ad-2" aria-label="OpenAI CLIP × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="OpenAI CLIP × MVTec AD 2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--mvtec-loco-ad" aria-label="OpenAI CLIP × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="OpenAI CLIP × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--visa" aria-label="OpenAI CLIP × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="OpenAI CLIP × VisA (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--real-iad" aria-label="OpenAI CLIP × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="OpenAI CLIP × Real-IAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--mpdd" aria-label="OpenAI CLIP × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="OpenAI CLIP × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--btad" aria-label="OpenAI CLIP × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="OpenAI CLIP × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--ksdd2" aria-label="OpenAI CLIP × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="OpenAI CLIP × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/dinov2.html">DINOv2</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/dinov2.html#industrial-ad--mvtec-ad" aria-label="DINOv2 × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov2.html#industrial-ad--mvtec-ad-2" aria-label="DINOv2 × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × MVTec AD 2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov2.html#industrial-ad--mvtec-loco-ad" aria-label="DINOv2 × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov2.html#industrial-ad--visa" aria-label="DINOv2 × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × VisA (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov2.html#industrial-ad--real-iad" aria-label="DINOv2 × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × Real-IAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov2.html#industrial-ad--mpdd" aria-label="DINOv2 × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov2.html#industrial-ad--btad" aria-label="DINOv2 × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov2.html#industrial-ad--ksdd2" aria-label="DINOv2 × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/dinov3.html">DINOv3 (web / LVD-1689M models)</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/dinov3.html#industrial-ad--mvtec-ad" aria-label="DINOv3 (web / LVD-1689M models) × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="DINOv3 (web / LVD-1689M models) × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov3.html#industrial-ad--mvtec-ad-2" aria-label="DINOv3 (web / LVD-1689M models) × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="DINOv3 (web / LVD-1689M models) × MVTec AD 2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov3.html#industrial-ad--mvtec-loco-ad" aria-label="DINOv3 (web / LVD-1689M models) × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="DINOv3 (web / LVD-1689M models) × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov3.html#industrial-ad--visa" aria-label="DINOv3 (web / LVD-1689M models) × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="DINOv3 (web / LVD-1689M models) × VisA (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov3.html#industrial-ad--real-iad" aria-label="DINOv3 (web / LVD-1689M models) × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="DINOv3 (web / LVD-1689M models) × Real-IAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov3.html#industrial-ad--mpdd" aria-label="DINOv3 (web / LVD-1689M models) × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="DINOv3 (web / LVD-1689M models) × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov3.html#industrial-ad--btad" aria-label="DINOv3 (web / LVD-1689M models) × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="DINOv3 (web / LVD-1689M models) × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/dinov3.html#industrial-ad--ksdd2" aria-label="DINOv3 (web / LVD-1689M models) × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="DINOv3 (web / LVD-1689M models) × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/filo-mvtec.html">FiLo, trained on MVTec AD</a></th>
+        <td class="sq lvl-test_seen gs"><a href="../models/filo-mvtec.html#industrial-ad--mvtec-ad" aria-label="FiLo, trained on MVTec AD × MVTec AD: Test data seen" data-col="industrial-ad--mvtec-ad" data-level="test_seen" data-label="Test data seen" data-pair="FiLo, trained on MVTec AD × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--mvtec-ad-2" aria-label="FiLo, trained on MVTec AD × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on MVTec AD × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--mvtec-loco-ad" aria-label="FiLo, trained on MVTec AD × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on MVTec AD × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--visa" aria-label="FiLo, trained on MVTec AD × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on MVTec AD × VisA (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--real-iad" aria-label="FiLo, trained on MVTec AD × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on MVTec AD × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--mpdd" aria-label="FiLo, trained on MVTec AD × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on MVTec AD × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--btad" aria-label="FiLo, trained on MVTec AD × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on MVTec AD × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--ksdd2" aria-label="FiLo, trained on MVTec AD × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on MVTec AD × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/filo-visa.html">FiLo, trained on VisA</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/filo-visa.html#industrial-ad--mvtec-ad" aria-label="FiLo, trained on VisA × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on VisA × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--mvtec-ad-2" aria-label="FiLo, trained on VisA × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on VisA × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--mvtec-loco-ad" aria-label="FiLo, trained on VisA × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on VisA × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-test_seen"><a href="../models/filo-visa.html#industrial-ad--visa" aria-label="FiLo, trained on VisA × VisA: Test data seen" data-col="industrial-ad--visa" data-level="test_seen" data-label="Test data seen" data-pair="FiLo, trained on VisA × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--real-iad" aria-label="FiLo, trained on VisA × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on VisA × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--mpdd" aria-label="FiLo, trained on VisA × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on VisA × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--btad" aria-label="FiLo, trained on VisA × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on VisA × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--ksdd2" aria-label="FiLo, trained on VisA × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="FiLo, trained on VisA × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/inctrl-mvtec.html">InCTRL, trained on MVTec AD</a></th>
+        <td class="sq lvl-test_seen gs"><a href="../models/inctrl-mvtec.html#industrial-ad--mvtec-ad" aria-label="InCTRL, trained on MVTec AD × MVTec AD: Test data seen" data-col="industrial-ad--mvtec-ad" data-level="test_seen" data-label="Test data seen" data-pair="InCTRL, trained on MVTec AD × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: the whole dataset was used"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/inctrl-mvtec.html#industrial-ad--mvtec-ad-2" aria-label="InCTRL, trained on MVTec AD × MVTec AD 2: Not seen" data-col="industrial-ad--mvtec-ad-2" data-level="not_seen" data-label="Not seen" data-pair="InCTRL, trained on MVTec AD × MVTec AD 2 (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/inctrl-mvtec.html#industrial-ad--mvtec-loco-ad" aria-label="InCTRL, trained on MVTec AD × MVTec LOCO AD: Not seen" data-col="industrial-ad--mvtec-loco-ad" data-level="not_seen" data-label="Not seen" data-pair="InCTRL, trained on MVTec AD × MVTec LOCO AD (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/inctrl-mvtec.html#industrial-ad--visa" aria-label="InCTRL, trained on MVTec AD × VisA: Not seen" data-col="industrial-ad--visa" data-level="not_seen" data-label="Not seen" data-pair="InCTRL, trained on MVTec AD × VisA (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/inctrl-mvtec.html#industrial-ad--real-iad" aria-label="InCTRL, trained on MVTec AD × Real-IAD: Not seen" data-col="industrial-ad--real-iad" data-level="not_seen" data-label="Not seen" data-pair="InCTRL, trained on MVTec AD × Real-IAD (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/inctrl-mvtec.html#industrial-ad--mpdd" aria-label="InCTRL, trained on MVTec AD × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="InCTRL, trained on MVTec AD × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/inctrl-mvtec.html#industrial-ad--btad" aria-label="InCTRL, trained on MVTec AD × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="InCTRL, trained on MVTec AD × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/inctrl-mvtec.html#industrial-ad--ksdd2" aria-label="InCTRL, trained on MVTec AD × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="InCTRL, trained on MVTec AD × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/inctrl-visa.html">InCTRL, trained on VisA</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/inctrl-visa.html#industrial-ad--mvtec-ad" aria-label="InCTRL, trained on VisA × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="InCTRL, trained on VisA × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/inctrl-visa.html#industrial-ad--mvtec-ad-2" aria-label="InCTRL, trained on VisA × MVTec AD 2: Not seen" data-col="industrial-ad--mvtec-ad-2" data-level="not_seen" data-label="Not seen" data-pair="InCTRL, trained on VisA × MVTec AD 2 (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/inctrl-visa.html#industrial-ad--mvtec-loco-ad" aria-label="InCTRL, trained on VisA × MVTec LOCO AD: Not seen" data-col="industrial-ad--mvtec-loco-ad" data-level="not_seen" data-label="Not seen" data-pair="InCTRL, trained on VisA × MVTec LOCO AD (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-test_seen"><a href="../models/inctrl-visa.html#industrial-ad--visa" aria-label="InCTRL, trained on VisA × VisA: Test data seen" data-col="industrial-ad--visa" data-level="test_seen" data-label="Test data seen" data-pair="InCTRL, trained on VisA × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: the whole dataset was used"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/inctrl-visa.html#industrial-ad--real-iad" aria-label="InCTRL, trained on VisA × Real-IAD: Not seen" data-col="industrial-ad--real-iad" data-level="not_seen" data-label="Not seen" data-pair="InCTRL, trained on VisA × Real-IAD (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/inctrl-visa.html#industrial-ad--mpdd" aria-label="InCTRL, trained on VisA × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="InCTRL, trained on VisA × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/inctrl-visa.html#industrial-ad--btad" aria-label="InCTRL, trained on VisA × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="InCTRL, trained on VisA × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/inctrl-visa.html#industrial-ad--ksdd2" aria-label="InCTRL, trained on VisA × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="InCTRL, trained on VisA × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/metauas.html">MetaUAS</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/metauas.html#industrial-ad--mvtec-ad" aria-label="MetaUAS × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="MetaUAS × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/metauas.html#industrial-ad--mvtec-ad-2" aria-label="MetaUAS × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="MetaUAS × MVTec AD 2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/metauas.html#industrial-ad--mvtec-loco-ad" aria-label="MetaUAS × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="MetaUAS × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/metauas.html#industrial-ad--visa" aria-label="MetaUAS × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="MetaUAS × VisA (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/metauas.html#industrial-ad--real-iad" aria-label="MetaUAS × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="MetaUAS × Real-IAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/metauas.html#industrial-ad--mpdd" aria-label="MetaUAS × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="MetaUAS × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/metauas.html#industrial-ad--btad" aria-label="MetaUAS × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="MetaUAS × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/metauas.html#industrial-ad--ksdd2" aria-label="MetaUAS × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="MetaUAS × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/musc.html">MuSc</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/musc.html#industrial-ad--mvtec-ad" aria-label="MuSc × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="MuSc × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/musc.html#industrial-ad--mvtec-ad-2" aria-label="MuSc × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="MuSc × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/musc.html#industrial-ad--mvtec-loco-ad" aria-label="MuSc × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="MuSc × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/musc.html#industrial-ad--visa" aria-label="MuSc × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="MuSc × VisA (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/musc.html#industrial-ad--real-iad" aria-label="MuSc × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="MuSc × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/musc.html#industrial-ad--mpdd" aria-label="MuSc × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="MuSc × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/musc.html#industrial-ad--btad" aria-label="MuSc × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="MuSc × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/musc.html#industrial-ad--ksdd2" aria-label="MuSc × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="MuSc × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/openclip-laion2b.html">OpenCLIP (LAION-2B checkpoints)</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/openclip-laion2b.html#industrial-ad--mvtec-ad" aria-label="OpenCLIP (LAION-2B checkpoints) × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-2B checkpoints) × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/openclip-laion2b.html#industrial-ad--mvtec-ad-2" aria-label="OpenCLIP (LAION-2B checkpoints) × MVTec AD 2: Not seen" data-col="industrial-ad--mvtec-ad-2" data-level="not_seen" data-label="Not seen" data-pair="OpenCLIP (LAION-2B checkpoints) × MVTec AD 2 (Industrial anomaly detection)" data-reason="its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-01-31)"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/openclip-laion2b.html#industrial-ad--mvtec-loco-ad" aria-label="OpenCLIP (LAION-2B checkpoints) × MVTec LOCO AD: Not seen" data-col="industrial-ad--mvtec-loco-ad" data-level="not_seen" data-label="Not seen" data-pair="OpenCLIP (LAION-2B checkpoints) × MVTec LOCO AD (Industrial anomaly detection)" data-reason="its test items were published from 2022-02-22, after the model&#39;s stated training-data cutoff (2022-01-31)"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/openclip-laion2b.html#industrial-ad--visa" aria-label="OpenCLIP (LAION-2B checkpoints) × VisA: Not seen" data-col="industrial-ad--visa" data-level="not_seen" data-label="Not seen" data-pair="OpenCLIP (LAION-2B checkpoints) × VisA (Industrial anomaly detection)" data-reason="its test items were published from 2022-07-28, after the model&#39;s stated training-data cutoff (2022-01-31)"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/openclip-laion2b.html#industrial-ad--real-iad" aria-label="OpenCLIP (LAION-2B checkpoints) × Real-IAD: Not seen" data-col="industrial-ad--real-iad" data-level="not_seen" data-label="Not seen" data-pair="OpenCLIP (LAION-2B checkpoints) × Real-IAD (Industrial anomaly detection)" data-reason="its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-01-31)"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/openclip-laion2b.html#industrial-ad--mpdd" aria-label="OpenCLIP (LAION-2B checkpoints) × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-2B checkpoints) × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/openclip-laion2b.html#industrial-ad--btad" aria-label="OpenCLIP (LAION-2B checkpoints) × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-2B checkpoints) × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/openclip-laion2b.html#industrial-ad--ksdd2" aria-label="OpenCLIP (LAION-2B checkpoints) × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-2B checkpoints) × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/openclip-laion400m.html">OpenCLIP (LAION-400M checkpoints)</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/openclip-laion400m.html#industrial-ad--mvtec-ad" aria-label="OpenCLIP (LAION-400M checkpoints) × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-400M checkpoints) × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/openclip-laion400m.html#industrial-ad--mvtec-ad-2" aria-label="OpenCLIP (LAION-400M checkpoints) × MVTec AD 2: Not seen" data-col="industrial-ad--mvtec-ad-2" data-level="not_seen" data-label="Not seen" data-pair="OpenCLIP (LAION-400M checkpoints) × MVTec AD 2 (Industrial anomaly detection)" data-reason="its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2021-12-31)"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/openclip-laion400m.html#industrial-ad--mvtec-loco-ad" aria-label="OpenCLIP (LAION-400M checkpoints) × MVTec LOCO AD: Not seen" data-col="industrial-ad--mvtec-loco-ad" data-level="not_seen" data-label="Not seen" data-pair="OpenCLIP (LAION-400M checkpoints) × MVTec LOCO AD (Industrial anomaly detection)" data-reason="its test items were published from 2022-02-22, after the model&#39;s stated training-data cutoff (2021-12-31)"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/openclip-laion400m.html#industrial-ad--visa" aria-label="OpenCLIP (LAION-400M checkpoints) × VisA: Not seen" data-col="industrial-ad--visa" data-level="not_seen" data-label="Not seen" data-pair="OpenCLIP (LAION-400M checkpoints) × VisA (Industrial anomaly detection)" data-reason="its test items were published from 2022-07-28, after the model&#39;s stated training-data cutoff (2021-12-31)"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/openclip-laion400m.html#industrial-ad--real-iad" aria-label="OpenCLIP (LAION-400M checkpoints) × Real-IAD: Not seen" data-col="industrial-ad--real-iad" data-level="not_seen" data-label="Not seen" data-pair="OpenCLIP (LAION-400M checkpoints) × Real-IAD (Industrial anomaly detection)" data-reason="its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2021-12-31)"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/openclip-laion400m.html#industrial-ad--mpdd" aria-label="OpenCLIP (LAION-400M checkpoints) × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-400M checkpoints) × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/openclip-laion400m.html#industrial-ad--btad" aria-label="OpenCLIP (LAION-400M checkpoints) × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-400M checkpoints) × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/openclip-laion400m.html#industrial-ad--ksdd2" aria-label="OpenCLIP (LAION-400M checkpoints) × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-400M checkpoints) × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/imagenet-wrn50.html">WideResNet-50-2 (supervised ImageNet-1k, torchvision)</a></th>
+        <td class="sq lvl-not_seen gs"><a href="../models/imagenet-wrn50.html#industrial-ad--mvtec-ad" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MVTec AD: Not seen" data-col="industrial-ad--mvtec-ad" data-level="not_seen" data-label="Not seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MVTec AD (Industrial anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--mvtec-ad-2" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MVTec AD 2: Not seen" data-col="industrial-ad--mvtec-ad-2" data-level="not_seen" data-label="Not seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MVTec AD 2 (Industrial anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--mvtec-loco-ad" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MVTec LOCO AD: Not seen" data-col="industrial-ad--mvtec-loco-ad" data-level="not_seen" data-label="Not seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MVTec LOCO AD (Industrial anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--visa" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × VisA: Not seen" data-col="industrial-ad--visa" data-level="not_seen" data-label="Not seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × VisA (Industrial anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--real-iad" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Real-IAD: Not seen" data-col="industrial-ad--real-iad" data-level="not_seen" data-label="Not seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Real-IAD (Industrial anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--mpdd" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MPDD: Not seen" data-col="industrial-ad--mpdd" data-level="not_seen" data-label="Not seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MPDD (Industrial anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--btad" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × BTAD: Not seen" data-col="industrial-ad--btad" data-level="not_seen" data-label="Not seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × BTAD (Industrial anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--ksdd2" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × KolektorSDD2: Not seen" data-col="industrial-ad--ksdd2" data-level="not_seen" data-label="Not seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × KolektorSDD2 (Industrial anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/saa-plus.html">Segment Any Anomaly (SAA / SAA+)</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/saa-plus.html#industrial-ad--mvtec-ad" aria-label="Segment Any Anomaly (SAA / SAA+) × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="Segment Any Anomaly (SAA / SAA+) × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--mvtec-ad-2" aria-label="Segment Any Anomaly (SAA / SAA+) × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="Segment Any Anomaly (SAA / SAA+) × MVTec AD 2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--mvtec-loco-ad" aria-label="Segment Any Anomaly (SAA / SAA+) × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="Segment Any Anomaly (SAA / SAA+) × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--visa" aria-label="Segment Any Anomaly (SAA / SAA+) × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="Segment Any Anomaly (SAA / SAA+) × VisA (Industrial anomaly detection)" data-reason="unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--real-iad" aria-label="Segment Any Anomaly (SAA / SAA+) × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="Segment Any Anomaly (SAA / SAA+) × Real-IAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--mpdd" aria-label="Segment Any Anomaly (SAA / SAA+) × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="Segment Any Anomaly (SAA / SAA+) × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--btad" aria-label="Segment Any Anomaly (SAA / SAA+) × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="Segment Any Anomaly (SAA / SAA+) × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--ksdd2" aria-label="Segment Any Anomaly (SAA / SAA+) × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="Segment Any Anomaly (SAA / SAA+) × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/sam-2.html">SAM 2 / SAM 2.1</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/sam-2.html#industrial-ad--mvtec-ad" aria-label="SAM 2 / SAM 2.1 × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="SAM 2 / SAM 2.1 × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam-2.html#industrial-ad--mvtec-ad-2" aria-label="SAM 2 / SAM 2.1 × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="SAM 2 / SAM 2.1 × MVTec AD 2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam-2.html#industrial-ad--mvtec-loco-ad" aria-label="SAM 2 / SAM 2.1 × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="SAM 2 / SAM 2.1 × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam-2.html#industrial-ad--visa" aria-label="SAM 2 / SAM 2.1 × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="SAM 2 / SAM 2.1 × VisA (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam-2.html#industrial-ad--real-iad" aria-label="SAM 2 / SAM 2.1 × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="SAM 2 / SAM 2.1 × Real-IAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam-2.html#industrial-ad--mpdd" aria-label="SAM 2 / SAM 2.1 × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="SAM 2 / SAM 2.1 × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam-2.html#industrial-ad--btad" aria-label="SAM 2 / SAM 2.1 × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="SAM 2 / SAM 2.1 × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam-2.html#industrial-ad--ksdd2" aria-label="SAM 2 / SAM 2.1 × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="SAM 2 / SAM 2.1 × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/sam.html">Segment Anything Model (SAM)</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/sam.html#industrial-ad--mvtec-ad" aria-label="Segment Anything Model (SAM) × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="Segment Anything Model (SAM) × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/sam.html#industrial-ad--mvtec-ad-2" aria-label="Segment Anything Model (SAM) × MVTec AD 2: Not seen" data-col="industrial-ad--mvtec-ad-2" data-level="not_seen" data-label="Not seen" data-pair="Segment Anything Model (SAM) × MVTec AD 2 (Industrial anomaly detection)" data-reason="its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-12-31)"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam.html#industrial-ad--mvtec-loco-ad" aria-label="Segment Anything Model (SAM) × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="Segment Anything Model (SAM) × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam.html#industrial-ad--visa" aria-label="Segment Anything Model (SAM) × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="Segment Anything Model (SAM) × VisA (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/sam.html#industrial-ad--real-iad" aria-label="Segment Anything Model (SAM) × Real-IAD: Not seen" data-col="industrial-ad--real-iad" data-level="not_seen" data-label="Not seen" data-pair="Segment Anything Model (SAM) × Real-IAD (Industrial anomaly detection)" data-reason="its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-12-31)"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam.html#industrial-ad--mpdd" aria-label="Segment Anything Model (SAM) × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="Segment Anything Model (SAM) × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam.html#industrial-ad--btad" aria-label="Segment Anything Model (SAM) × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="Segment Anything Model (SAM) × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/sam.html#industrial-ad--ksdd2" aria-label="Segment Anything Model (SAM) × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="Segment Anything Model (SAM) × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/siglip.html">SigLIP</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/siglip.html#industrial-ad--mvtec-ad" aria-label="SigLIP × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="SigLIP × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/siglip.html#industrial-ad--mvtec-ad-2" aria-label="SigLIP × MVTec AD 2: Not seen" data-col="industrial-ad--mvtec-ad-2" data-level="not_seen" data-label="Not seen" data-pair="SigLIP × MVTec AD 2 (Industrial anomaly detection)" data-reason="its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-12-31)"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/siglip.html#industrial-ad--mvtec-loco-ad" aria-label="SigLIP × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="SigLIP × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/siglip.html#industrial-ad--visa" aria-label="SigLIP × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="SigLIP × VisA (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/siglip.html#industrial-ad--real-iad" aria-label="SigLIP × Real-IAD: Not seen" data-col="industrial-ad--real-iad" data-level="not_seen" data-label="Not seen" data-pair="SigLIP × Real-IAD (Industrial anomaly detection)" data-reason="its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-12-31)"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/siglip.html#industrial-ad--mpdd" aria-label="SigLIP × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="SigLIP × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/siglip.html#industrial-ad--btad" aria-label="SigLIP × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="SigLIP × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/siglip.html#industrial-ad--ksdd2" aria-label="SigLIP × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="SigLIP × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/siglip-2.html">SigLIP 2</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/siglip-2.html#industrial-ad--mvtec-ad" aria-label="SigLIP 2 × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="SigLIP 2 × MVTec AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/siglip-2.html#industrial-ad--mvtec-ad-2" aria-label="SigLIP 2 × MVTec AD 2: Not seen" data-col="industrial-ad--mvtec-ad-2" data-level="not_seen" data-label="Not seen" data-pair="SigLIP 2 × MVTec AD 2 (Industrial anomaly detection)" data-reason="its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-12-31)"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--mvtec-loco-ad" aria-label="SigLIP 2 × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="SigLIP 2 × MVTec LOCO AD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--visa" aria-label="SigLIP 2 × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="SigLIP 2 × VisA (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/siglip-2.html#industrial-ad--real-iad" aria-label="SigLIP 2 × Real-IAD: Not seen" data-col="industrial-ad--real-iad" data-level="not_seen" data-label="Not seen" data-pair="SigLIP 2 × Real-IAD (Industrial anomaly detection)" data-reason="its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-12-31)"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--mpdd" aria-label="SigLIP 2 × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="SigLIP 2 × MPDD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--btad" aria-label="SigLIP 2 × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="SigLIP 2 × BTAD (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--ksdd2" aria-label="SigLIP 2 × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="SigLIP 2 × KolektorSDD2 (Industrial anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/univad.html">UniVAD</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/univad.html#industrial-ad--mvtec-ad" aria-label="UniVAD × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="UniVAD × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/univad.html#industrial-ad--mvtec-ad-2" aria-label="UniVAD × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="UniVAD × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/univad.html#industrial-ad--mvtec-loco-ad" aria-label="UniVAD × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="UniVAD × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/univad.html#industrial-ad--visa" aria-label="UniVAD × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="UniVAD × VisA (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/univad.html#industrial-ad--real-iad" aria-label="UniVAD × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="UniVAD × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/univad.html#industrial-ad--mpdd" aria-label="UniVAD × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="UniVAD × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/univad.html#industrial-ad--btad" aria-label="UniVAD × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="UniVAD × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/univad.html#industrial-ad--ksdd2" aria-label="UniVAD × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="UniVAD × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/vcp-clip-mvtec.html">VCP-CLIP, trained on MVTec-AD</a></th>
+        <td class="sq lvl-test_seen gs"><a href="../models/vcp-clip-mvtec.html#industrial-ad--mvtec-ad" aria-label="VCP-CLIP, trained on MVTec-AD × MVTec AD: Test data seen" data-col="industrial-ad--mvtec-ad" data-level="test_seen" data-label="Test data seen" data-pair="VCP-CLIP, trained on MVTec-AD × MVTec AD (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--mvtec-ad-2" aria-label="VCP-CLIP, trained on MVTec-AD × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on MVTec-AD × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--mvtec-loco-ad" aria-label="VCP-CLIP, trained on MVTec-AD × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on MVTec-AD × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--visa" aria-label="VCP-CLIP, trained on MVTec-AD × VisA: Unknown" data-col="industrial-ad--visa" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on MVTec-AD × VisA (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--real-iad" aria-label="VCP-CLIP, trained on MVTec-AD × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on MVTec-AD × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--mpdd" aria-label="VCP-CLIP, trained on MVTec-AD × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on MVTec-AD × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--btad" aria-label="VCP-CLIP, trained on MVTec-AD × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on MVTec-AD × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--ksdd2" aria-label="VCP-CLIP, trained on MVTec-AD × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on MVTec-AD × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../models/vcp-clip-visa.html">VCP-CLIP, trained on VisA</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/vcp-clip-visa.html#industrial-ad--mvtec-ad" aria-label="VCP-CLIP, trained on VisA × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on VisA × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--mvtec-ad-2" aria-label="VCP-CLIP, trained on VisA × MVTec AD 2: Unknown" data-col="industrial-ad--mvtec-ad-2" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on VisA × MVTec AD 2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--mvtec-loco-ad" aria-label="VCP-CLIP, trained on VisA × MVTec LOCO AD: Unknown" data-col="industrial-ad--mvtec-loco-ad" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on VisA × MVTec LOCO AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-test_seen"><a href="../models/vcp-clip-visa.html#industrial-ad--visa" aria-label="VCP-CLIP, trained on VisA × VisA: Test data seen" data-col="industrial-ad--visa" data-level="test_seen" data-label="Test data seen" data-pair="VCP-CLIP, trained on VisA × VisA (Industrial anomaly detection)" data-reason="in fine-tuning data: its test split was used for training"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--real-iad" aria-label="VCP-CLIP, trained on VisA × Real-IAD: Unknown" data-col="industrial-ad--real-iad" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on VisA × Real-IAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--mpdd" aria-label="VCP-CLIP, trained on VisA × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on VisA × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--btad" aria-label="VCP-CLIP, trained on VisA × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on VisA × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--ksdd2" aria-label="VCP-CLIP, trained on VisA × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="VCP-CLIP, trained on VisA × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+      </tr>
+      <tr class="fs">
+        <th scope="row"><a href="../models/winclip.html">WinCLIP / WinCLIP+</a></th>
+        <td class="sq lvl-unknown gs"><a href="../models/winclip.html#industrial-ad--mvtec-ad" aria-label="WinCLIP / WinCLIP+ × MVTec AD: Unknown" data-col="industrial-ad--mvtec-ad" data-level="unknown" data-label="Unknown" data-pair="WinCLIP / WinCLIP+ × MVTec AD (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/winclip.html#industrial-ad--mvtec-ad-2" aria-label="WinCLIP / WinCLIP+ × MVTec AD 2: Not seen" data-col="industrial-ad--mvtec-ad-2" data-level="not_seen" data-label="Not seen" data-pair="WinCLIP / WinCLIP+ × MVTec AD 2 (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/winclip.html#industrial-ad--mvtec-loco-ad" aria-label="WinCLIP / WinCLIP+ × MVTec LOCO AD: Not seen" data-col="industrial-ad--mvtec-loco-ad" data-level="not_seen" data-label="Not seen" data-pair="WinCLIP / WinCLIP+ × MVTec LOCO AD (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/winclip.html#industrial-ad--visa" aria-label="WinCLIP / WinCLIP+ × VisA: Not seen" data-col="industrial-ad--visa" data-level="not_seen" data-label="Not seen" data-pair="WinCLIP / WinCLIP+ × VisA (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-not_seen"><a href="../models/winclip.html#industrial-ad--real-iad" aria-label="WinCLIP / WinCLIP+ × Real-IAD: Not seen" data-col="industrial-ad--real-iad" data-level="not_seen" data-label="Not seen" data-pair="WinCLIP / WinCLIP+ × Real-IAD (Industrial anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/winclip.html#industrial-ad--mpdd" aria-label="WinCLIP / WinCLIP+ × MPDD: Unknown" data-col="industrial-ad--mpdd" data-level="unknown" data-label="Unknown" data-pair="WinCLIP / WinCLIP+ × MPDD (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/winclip.html#industrial-ad--btad" aria-label="WinCLIP / WinCLIP+ × BTAD: Unknown" data-col="industrial-ad--btad" data-level="unknown" data-label="Unknown" data-pair="WinCLIP / WinCLIP+ × BTAD (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+        <td class="sq lvl-unknown"><a href="../models/winclip.html#industrial-ad--ksdd2" aria-label="WinCLIP / WinCLIP+ × KolektorSDD2: Unknown" data-col="industrial-ad--ksdd2" data-level="unknown" data-label="Unknown" data-pair="WinCLIP / WinCLIP+ × KolektorSDD2 (Industrial anomaly detection)" data-reason="unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail"></a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="muted small">Rows are models, grouped by family; columns are benchmark datasets. Hover a square for the reason, click it for the evidence.</p>
+</section>
+
+<section>
+  <h2>Benchmarks</h2>
+  <ul class="rows">
+    <li>
+      <a href="../benchmarks/industrial-ad.html"><strong>Industrial anomaly detection</strong></a>
+      <span class="muted">8 datasets</span>
+      <div class="dist" role="img" aria-label="Test data seen: 18, Seen, split unclear: 7, Training data seen: 2, Related data seen: 0, Not seen: 33, Unknown: 236">
+<span class="lvl-test_seen" style="flex-grow: 18" title="Test data seen: 18"></span><span class="lvl-seen_split_unclear" style="flex-grow: 7" title="Seen, split unclear: 7"></span><span class="lvl-train_seen" style="flex-grow: 2" title="Training data seen: 2"></span><span class="lvl-not_seen" style="flex-grow: 33" title="Not seen: 33"></span><span class="lvl-unknown" style="flex-grow: 236" title="Unknown: 236"></span></div>
+
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Models</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Model</th><th>Organisation</th><th>Released</th><th>Disclosure</th><th title="Share of benchmark cells whose level is not Unknown">Determined</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../models/aa-clip-mvtec.html">AA-CLIP, trained on MVTec AD (for VisA results)</a></td>
+        <td>Zhejiang University et al.</td>
+        <td class="num">2025-03-09</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/aa-clip-visa.html">AA-CLIP, trained on VisA</a></td>
+        <td>Zhejiang University et al.</td>
+        <td class="num">2025-03-09</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/adaclip-all.html">AdaCLIP, trained on all 14 datasets (demo model)</a></td>
+        <td>Huazhong University of Science and Technology et al.</td>
+        <td class="num">2024-07-22</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">50%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/adaclip-mvtec-colondb.html">AdaCLIP, trained on MVTec AD + ColonDB</a></td>
+        <td>Huazhong University of Science and Technology et al.</td>
+        <td class="num">2024-07-22</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/adaclip-visa-clinicdb.html">AdaCLIP, trained on VisA + ClinicDB</a></td>
+        <td>Huazhong University of Science and Technology et al.</td>
+        <td class="num">2024-07-22</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/adaptclip-mvtec.html">AdaptCLIP, trained on MVTec AD</a></td>
+        <td>Tencent YouTu Lab et al.</td>
+        <td class="num">2025-05-15</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/adaptclip-visa.html">AdaptCLIP, trained on VisA</a></td>
+        <td>Tencent YouTu Lab et al.</td>
+        <td class="num">2025-05-15</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/anomaly-ov.html">Anomaly-OneVision (Anomaly-OV)</a></td>
+        <td>Johns Hopkins University / Honda Research Institute USA</td>
+        <td class="num">2025-02-11</td>
+        <td><span class="disc disc-partial_list">Partial list</span></td>
+        <td class="num">25%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/anomalyclip-mvtec.html">AnomalyCLIP, trained on MVTec AD</a></td>
+        <td>Zhejiang University / Singapore Management University et al.</td>
+        <td class="num">2023-10-29</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/anomalyclip-visa.html">AnomalyCLIP, trained on VisA</a></td>
+        <td>Zhejiang University / Singapore Management University et al.</td>
+        <td class="num">2023-10-29</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/anomalydino.html">AnomalyDINO</a></td>
+        <td>University of Tuebingen et al. (Damm et al.)</td>
+        <td class="num">2024-05-23</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">0%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/anomalygpt-supervised.html">AnomalyGPT, supervised (demo model)</a></td>
+        <td>Institute of Automation, Chinese Academy of Sciences / Objecteye / Wuhan AI Research</td>
+        <td class="num">2023-08-29</td>
+        <td><span class="disc disc-partial_list">Partial list</span></td>
+        <td class="num">37%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/anomalygpt-mvtec.html">AnomalyGPT, unsupervised on MVTec AD</a></td>
+        <td>Institute of Automation, Chinese Academy of Sciences / Objecteye / Wuhan AI Research</td>
+        <td class="num">2023-08-29</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/anomalygpt-visa.html">AnomalyGPT, unsupervised on VisA</a></td>
+        <td>Institute of Automation, Chinese Academy of Sciences / Objecteye / Wuhan AI Research</td>
+        <td class="num">2023-08-29</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/april-gan-mvtec.html">APRIL-GAN (VAND 2023), trained on MVTec AD</a></td>
+        <td>Zhejiang University et al. (Xuhai Chen, Yue Han, Jiangning Zhang)</td>
+        <td class="num">2023-05-27</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/april-gan-visa.html">APRIL-GAN (VAND 2023), trained on VisA</a></td>
+        <td>Zhejiang University et al. (Xuhai Chen, Yue Han, Jiangning Zhang)</td>
+        <td class="num">2023-05-27</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/clip-openai.html">OpenAI CLIP</a></td>
+        <td>OpenAI</td>
+        <td class="num">2021-02-26</td>
+        <td><span class="disc disc-partial_list">Partial list</span></td>
+        <td class="num">0%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/dinov2.html">DINOv2</a></td>
+        <td>Meta AI</td>
+        <td class="num">2023-04-14</td>
+        <td><span class="disc disc-partial_list">Partial list</span></td>
+        <td class="num">0%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/dinov3.html">DINOv3 (web / LVD-1689M models)</a></td>
+        <td>Meta AI</td>
+        <td class="num">2025-08-13</td>
+        <td><span class="disc disc-partial_list">Partial list</span></td>
+        <td class="num">0%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/filo-mvtec.html">FiLo, trained on MVTec AD</a></td>
+        <td>Institute of Automation, Chinese Academy of Sciences et al.</td>
+        <td class="num">2024-04-21</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/filo-visa.html">FiLo, trained on VisA</a></td>
+        <td>Institute of Automation, Chinese Academy of Sciences et al.</td>
+        <td class="num">2024-04-21</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/inctrl-mvtec.html">InCTRL, trained on MVTec AD</a></td>
+        <td>Singapore Management University (Jiawen Zhu, Guansong Pang)</td>
+        <td class="num">2024-03-11</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">62%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/inctrl-visa.html">InCTRL, trained on VisA</a></td>
+        <td>Singapore Management University (Jiawen Zhu, Guansong Pang)</td>
+        <td class="num">2024-03-11</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">50%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/metauas.html">MetaUAS</a></td>
+        <td>Tencent YouTu Lab (Bin-Bin Gao)</td>
+        <td class="num">2025-05-14</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">0%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/musc.html">MuSc</a></td>
+        <td>Huazhong University of Science and Technology et al.</td>
+        <td class="num">2024-01-30</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">0%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/openclip-laion2b.html">OpenCLIP (LAION-2B checkpoints)</a></td>
+        <td>LAION / OpenCLIP (mlfoundations)</td>
+        <td class="num">2022-09-14</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">50%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/openclip-laion400m.html">OpenCLIP (LAION-400M checkpoints)</a></td>
+        <td>LAION / OpenCLIP (mlfoundations)</td>
+        <td class="num">2022-04-01</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">50%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/imagenet-wrn50.html">WideResNet-50-2 (supervised ImageNet-1k, torchvision)</a></td>
+        <td>PyTorch / torchvision</td>
+        <td class="num">—</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">100%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/saa-plus.html">Segment Any Anomaly (SAA / SAA+)</a></td>
+        <td>Huazhong University of Science and Technology et al.</td>
+        <td class="num">2023-05-18</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">0%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/sam-2.html">SAM 2 / SAM 2.1</a></td>
+        <td>Meta AI</td>
+        <td class="num">2024-07-29</td>
+        <td><span class="disc disc-partial_list">Partial list</span></td>
+        <td class="num">0%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/sam.html">Segment Anything Model (SAM)</a></td>
+        <td>Meta AI</td>
+        <td class="num">2023-04-05</td>
+        <td><span class="disc disc-partial_list">Partial list</span></td>
+        <td class="num">25%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/siglip.html">SigLIP</a></td>
+        <td>Google DeepMind</td>
+        <td class="num">2023-03-27</td>
+        <td><span class="disc disc-partial_list">Partial list</span></td>
+        <td class="num">25%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/siglip-2.html">SigLIP 2</a></td>
+        <td>Google DeepMind</td>
+        <td class="num">2025-02-20</td>
+        <td><span class="disc disc-partial_list">Partial list</span></td>
+        <td class="num">25%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/univad.html">UniVAD</a></td>
+        <td>Institute of Automation, Chinese Academy of Sciences et al.</td>
+        <td class="num">2024-12-04</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">0%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/vcp-clip-mvtec.html">VCP-CLIP, trained on MVTec-AD</a></td>
+        <td>Institute of Automation, Chinese Academy of Sciences et al.</td>
+        <td class="num">2024-07-17</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/vcp-clip-visa.html">VCP-CLIP, trained on VisA</a></td>
+        <td>Institute of Automation, Chinese Academy of Sciences et al.</td>
+        <td class="num">2024-07-17</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">12%</td>
+      </tr>
+      <tr>
+        <td><a href="../models/winclip.html">WinCLIP / WinCLIP+</a></td>
+        <td>Amazon AWS AI Labs / University of Wisconsin-Madison</td>
+        <td class="num">2023-03-26</td>
+        <td><span class="disc disc-full_list">Full list</span></td>
+        <td class="num">50%</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Datasets</h2>
+  <ul class="inline-list">
+<li><a href="../datasets/btad.html">BTAD</a></li><li><a href="../datasets/ksdd2.html">KolektorSDD2</a></li><li><a href="../datasets/mpdd.html">MPDD</a></li><li><a href="../datasets/mvtec-ad.html">MVTec AD</a></li><li><a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a></li><li><a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a></li><li><a href="../datasets/real-iad.html">Real-IAD</a></li><li><a href="../datasets/visa.html">VisA</a></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+<script src="../static/map.js"></script></body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · OpenAI CLIP</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html" class="active">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../vision/index.html">Vision</a> / Model</p>
+<h1>OpenAI CLIP</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>OpenAI</dd>
+  <dt>Family</dt><dd>CLIP</dd>
+  <dt>Released</dt><dd>2021-02-26 <span class="muted small">(arXiv v1 submission date (https://arxiv.org/abs/2103.00020v1). The model card gives &#39;Model Date: January 2021&#39; and later checkpoint releases up to April 2022.)</span></dd>
+<dt>Checkpoints</dt><dd>RN50, RN101, RN50x4, RN50x16, RN50x64, ViT-B/32, ViT-B/16, ViT-L/14, ViT-L/14@336px</dd>  <dt>Weights</dt><dd>Open · MIT (code and weights)</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2103.00020v1">Paper</a><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">Model card</a><a href="https://github.com/openai/CLIP">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>0%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 8">
+<span class="lvl-unknown" style="flex-grow: 8" title="Unknown: 8"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">8</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“The model was trained on publicly available image-caption data.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We do not intend for this dataset to be used as the basis for any commercial or deployed model and will not be releasing the dataset.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Data Mission Statement · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>WIT (WebImageText), OpenAI CLIP pre-training set</strong>
+      <span class="muted">· 2 sources · pre-training</span>
+      <details><summary>Evidence that OpenAI CLIP uses it</summary><figure class="evidence">
+  <blockquote>“We refer to this dataset as WIT for WebImageText.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>publicly available sources on the Internet (web-crawled image-text pairs)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Collection-level entry. The crawl dates and the websites are not disclosed. The model card says OpenAI crawled &#39;a handful of websites&#39;.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we constructed a new dataset of 400 million (image, text) pairs collected form a variety of publicly available sources on the Internet.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“A large portion of the data comes from our crawling of the internet.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>YFCC100M (filtered subset)</em>  <span class="muted">· split: unknown</span>
+<p class="small">The model card says &#39;pre-existing image datasets such as YFCC100M&#39;, so other pre-existing datasets may be included but are not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“This is due to it being constructed out of YFCC100M, which our pre-training dataset contains a filtered subset of.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This was done through a combination of crawling a handful of websites and using commonly-used pre-existing image datasets such as”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></h3>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad.html">MVTec AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad-2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-loco-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--visa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/visa.html">VisA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--real-iad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/real-iad.html">Real-IAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mpdd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mpdd.html">MPDD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--btad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/btad.html">BTAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--ksdd2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ksdd2.html">KolektorSDD2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">There was no pre-training deduplication. OpenAI chose to measure overlap afterwards instead (Section 5). The quote &#39;Instead, we document how much overlap occurs and how performance changes due to these overlaps.&#39; is in Section 5. The checkpoint list comes from the model card&#39;s &#39;Model Versions&#39;. All sizes share WIT.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2103.00020v1">Learning Transferable Visual Models From Natural Language Supervision</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">Model Card: CLIP</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

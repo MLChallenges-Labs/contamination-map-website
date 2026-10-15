@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · SigLIP 2</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html" class="active">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../vision/index.html">Vision</a> / Model</p>
+<h1>SigLIP 2</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Google DeepMind</dd>
+  <dt>Family</dt><dd>SigLIP · version 2</dd>
+  <dt>Released</dt><dd>2025-02-20 <span class="muted small">(arXiv v1 submission date (https://arxiv.org/abs/2502.14786v1). The HF repo google/siglip2-so400m-patch14-384 was created 2025-02-17.)</span></dd>
+<dt>Checkpoints</dt><dd>ViT-B/32, ViT-B/16, ViT-L/16, So400m/14, So400m/16, g-opt/16, B/16 NaFlex, google/siglip2-so400m-patch14-384</dd>  <dt>Weights</dt><dd>Open · Apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2502.14786v1">Paper</a><a href="https://huggingface.co/google/siglip2-so400m-patch14-384/raw/main/README.md">Model card</a><a href="https://github.com/google-research/big_vision">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>25%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">2</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">6</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“We use the WebLI dataset [10] containing 10 billion images and 12 billion alt-texts covering 109 languages.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.14786v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>WebLI (Web Language-Image)</strong>
+      <span class="muted">· 1 source · pre-training</span>
+      <details><summary>Evidence that SigLIP 2 uses it</summary><figure class="evidence">
+  <blockquote>“SigLIP 2 is pre-trained on the WebLI dataset”</blockquote>
+  <figcaption><a href="https://huggingface.co/google/siglip2-so400m-patch14-384/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we compose the mixture such that 90% of the training image-text pairs is sourced from English web pages, and the remaining 10% from non-English web pages”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.14786v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>images and texts from the public web (alt-text, page title, OCR)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Collection-level entry. The crawl is not public and the source pages are not documented.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we introduce WebLI, a multilingual imagelanguage dataset built from images and texts available on the public web.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2209.06794v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The WebLI dataset covers about 10 billion images and 12 billion alt-texts in 109 languages.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2209.06794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The dataset is built from a subset of public web pages.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2209.06794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix G, WebLI datasheet · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></h3>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad.html">MVTec AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad-2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a> <span class="muted">· its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-12-31)</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“Over what timeframe was the data collected? 2021-2022”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2209.06794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix G, WebLI datasheet · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“arXiv:2503.21622v1 [cs.CV] 27 Mar 2025”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2503.21622v1">arxiv.org</a>
+<span class="muted">· paper · header · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All image data is available at https://www.mvtec.com/company/research/datasets/mvtec-ad-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2503.21622v1">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-loco-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--visa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/visa.html">VisA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--real-iad">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/real-iad.html">Real-IAD</a> <span class="muted">· its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-12-31)</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Over what timeframe was the data collected? 2021-2022”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2209.06794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix G, WebLI datasheet · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“arXiv:2403.12580v1 [cs.CV] 19 Mar 2024”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2403.12580v1">arxiv.org</a>
+<span class="muted">· paper · header · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="industrial-ad--mpdd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mpdd.html">MPDD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--btad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/btad.html">BTAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--ksdd2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ksdd2.html">KolektorSDD2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">The paper says: &#39;we release model checkpoints at four sizes: ViT-B (86M), L (303M), So400m (400M), and g (1B)&#39;. Several resolutions per size are listed in big_vision README_siglip2.md. The paper does not say whether the WebLI snapshot differs from PaLI&#39;s 2021-2022 collection.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2502.14786v1">SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/google/siglip2-so400m-patch14-384/raw/main/README.md">google/siglip2-so400m-patch14-384 model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/google-research/big_vision/main/big_vision/configs/proj/image_text/README_siglip2.md">big_vision README_siglip2.md</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

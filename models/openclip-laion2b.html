@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · OpenCLIP (LAION-2B checkpoints)</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html" class="active">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../vision/index.html">Vision</a> / Model</p>
+<h1>OpenCLIP (LAION-2B checkpoints)</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>LAION / OpenCLIP (mlfoundations)</dd>
+  <dt>Family</dt><dd>OpenCLIP</dd>
+  <dt>Released</dt><dd>2022-09-14 <span class="muted small">(HF repo creation of laion/CLIP-ViT-H-14-laion2B-s32B-b79K and laion/CLIP-ViT-B-32-laion2B-s34B-b79K (HF API createdAt))</span></dd>
+<dt>Checkpoints</dt><dd>laion/CLIP-ViT-B-32-laion2B-s34B-b79K, laion/CLIP-ViT-B-16-laion2B-s34B-b88K, laion/CLIP-ViT-L-14-laion2B-s32B-b82K, laion/CLIP-ViT-H-14-laion2B-s32B-b79K, laion/CLIP-ViT-g-14-laion2B-s12B-b42K, laion/CLIP-ViT-g-14-laion2B-s34B-b88K, laion/CLIP-ViT-bigG-14-laion2B-39B-b160k</dd>  <dt>Weights</dt><dd>Open · MIT</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2212.07143v2">Paper</a><a href="https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/raw/main/README.md">Model card</a><a href="https://github.com/mlfoundations/open_clip">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>50%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 4, Unknown: 4">
+<span class="lvl-not_seen" style="flex-grow: 4" title="Not seen: 4"></span><span class="lvl-unknown" style="flex-grow: 4" title="Unknown: 4"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">4</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">4</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“This model was trained with the 2 Billion sample English subset of LAION-5B”</blockquote>
+  <figcaption><a href="https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>LAION-2B (LAION-2B-en, English subset of LAION-5B)</strong>
+      <span class="muted">· 1 source (complete list) · pre-training</span>
+ · <a href="https://laion.ai/blog/laion-5b/">homepage</a>      <details><summary>Evidence that OpenCLIP (LAION-2B checkpoints) uses it</summary><figure class="evidence">
+  <blockquote>“A CLIP ViT-H/14 model trained with the LAION-2B English subset of LAION-5B”</blockquote>
+  <figcaption><a href="https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Details · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“A ~2B sample subset of LAION-5B with english captions”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LAION-2B (en) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“LAION-5B contains an English image-text subset of 2.32 billion samples, which we refer to as LAION-2B in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2212.07143v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>Common Crawl (WAT files, HTML IMG tags with alt-text), English subset</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Collection-level entry: arbitrary public web images that passed a CLIP-similarity filter.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We constructed LAION-5B starting from Common Crawl, a public web archive [1].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2210.08402v1">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“2.32 billion English image-text pairs. We refer to this subset as LAION-2B-en or LAION-2B if the language is clear from context.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2210.08402v1">arxiv.org</a>
+<span class="muted">· paper · Section 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We removed all English image-text pairs with cosine similarity below 0.28, and all other pairs with similarity below 0.26.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2210.08402v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></h3>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad.html">MVTec AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad-2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a> <span class="muted">· its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-01-31)</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“The data was filtered from September 2021 to January 2022, but those who created the sites might have included content from before then.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2210.08402v1">arxiv.org</a>
+<span class="muted">· paper · Datasheet, Q26 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“arXiv:2503.21622v1 [cs.CV] 27 Mar 2025”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2503.21622v1">arxiv.org</a>
+<span class="muted">· paper · header · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All image data is available at https://www.mvtec.com/company/research/datasets/mvtec-ad-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2503.21622v1">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-loco-ad">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a> <span class="muted">· its test items were published from 2022-02-22, after the model&#39;s stated training-data cutoff (2022-01-31)</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The data was filtered from September 2021 to January 2022, but those who created the sites might have included content from before then.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2210.08402v1">arxiv.org</a>
+<span class="muted">· paper · Datasheet, Q26 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Published: 22 February 2022”</blockquote>
+  <figcaption><a href="https://link.springer.com/article/10.1007/s11263-022-01578-9">link.springer.com</a>
+<span class="muted">· paper · article metadata · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="industrial-ad--visa">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/visa.html">VisA</a> <span class="muted">· its test items were published from 2022-07-28, after the model&#39;s stated training-data cutoff (2022-01-31)</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“The data was filtered from September 2021 to January 2022, but those who created the sites might have included content from before then.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2210.08402v1">arxiv.org</a>
+<span class="muted">· paper · Datasheet, Q26 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“arXiv:2207.14315v1 [cs.CV] 28 Jul 2022”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2207.14315v1">arxiv.org</a>
+<span class="muted">· paper · header · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We release the Visual Anomaly (VisA) Dataset consisting of 10,821 high-resolution color images (9,621 normal and 1,200 anomalous samples) covering 12 objects in 3 domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2207.14315v1">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="industrial-ad--real-iad">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/real-iad.html">Real-IAD</a> <span class="muted">· its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-01-31)</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The data was filtered from September 2021 to January 2022, but those who created the sites might have included content from before then.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2210.08402v1">arxiv.org</a>
+<span class="muted">· paper · Datasheet, Q26 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“arXiv:2403.12580v1 [cs.CV] 19 Mar 2024”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2403.12580v1">arxiv.org</a>
+<span class="muted">· paper · header · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="industrial-ad--mpdd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mpdd.html">MPDD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--btad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/btad.html">BTAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--ksdd2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ksdd2.html">KolektorSDD2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">The list includes the ViT checkpoints most often used as AD backbones. pretrained.py also has ConvNeXt and RoBERTa-text LAION-2B checkpoints with the laion2b_* tags. disclosure is full_list because the training set is one published dataset, but that dataset is an open-ended web scrape. The scaling-law paper&#39;s pHash duplicate check (Appendix B.1) covered only ImageNet variants and VTAB and removed nothing from pre-training. training_cutoff is on the laion-2b corpus.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md">OpenCLIP docs/PRETRAINED.md</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py">OpenCLIP pretrained.py</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/raw/main/README.md">Model Card for CLIP ViT-H/14 - LAION-2B</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2212.07143v2">Reproducible scaling laws for contrastive language-image learning</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -7840,6 +7840,2374 @@
   "sources": "https://arxiv.org/pdf/2401.03955v8 https://huggingface.co/ibm-research/ttm-research-r2/raw/main/README.md"
  },
  {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "aa-clip-mvtec",
+  "level": "seen_split_unclear",
+  "reason": "in fine-tuning data: the dataset was used; the source does not say which part",
+  "sources": "https://arxiv.org/pdf/2503.06661v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "aa-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "adaclip-all",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "adaclip-mvtec-colondb",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "adaclip-visa-clinicdb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "adaptclip-mvtec",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://arxiv.org/pdf/2505.09926v2"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "adaptclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "anomaly-ov",
+  "level": "seen_split_unclear",
+  "reason": "in fine-tuning data: the dataset was used; the source does not say which part",
+  "sources": "https://arxiv.org/pdf/2502.07601v2"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "anomalyclip-mvtec",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://arxiv.org/pdf/2310.18961v12"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "anomalyclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "anomalydino",
+  "level": "unknown",
+  "reason": "unknown for its base model DINOv2: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "anomalygpt-mvtec",
+  "level": "train_seen",
+  "reason": "in fine-tuning data: only the training split was used, not the test data Industrial anomaly detection evaluates on",
+  "sources": "https://arxiv.org/pdf/2308.15366v4"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "anomalygpt-supervised",
+  "level": "seen_split_unclear",
+  "reason": "in fine-tuning data: the dataset was used; the source does not say which part",
+  "sources": "https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/README.md https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/code/datasets/all_supervised_with_cn.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "anomalygpt-visa",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "april-gan-mvtec",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://arxiv.org/pdf/2305.17382v3"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "april-gan-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "filo-mvtec",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://arxiv.org/pdf/2404.13671v3"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "filo-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "inctrl-mvtec",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: the whole dataset was used",
+  "sources": "https://arxiv.org/pdf/2403.06495v3"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "inctrl-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "metauas",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "musc",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "saa-plus",
+  "level": "unknown",
+  "reason": "unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "sam-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "sam",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "univad",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "vcp-clip-mvtec",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://arxiv.org/pdf/2407.12276v1 https://raw.githubusercontent.com/xiaozhen228/VCP-CLIP/main/utils/dataset.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "vcp-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad",
+  "model": "winclip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "aa-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "aa-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "adaclip-all",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "adaclip-mvtec-colondb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "adaclip-visa-clinicdb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "adaptclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "adaptclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "anomaly-ov",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "anomalyclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "anomalyclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "anomalydino",
+  "level": "unknown",
+  "reason": "unknown for its base model DINOv2: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "anomalygpt-mvtec",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "anomalygpt-supervised",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "anomalygpt-visa",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "april-gan-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "april-gan-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "filo-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "filo-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "inctrl-mvtec",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2503.21622v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "inctrl-visa",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2503.21622v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "metauas",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "musc",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "openclip-laion2b",
+  "level": "not_seen",
+  "reason": "its test items were published from 2025-03-27, after the model's stated training-data cutoff (2022-01-31)",
+  "sources": "https://arxiv.org/pdf/2210.08402v1 https://arxiv.org/pdf/2503.21622v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "openclip-laion400m",
+  "level": "not_seen",
+  "reason": "its test items were published from 2025-03-27, after the model's stated training-data cutoff (2021-12-31)",
+  "sources": "https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2503.21622v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "saa-plus",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "sam-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "sam",
+  "level": "not_seen",
+  "reason": "its test items were published from 2025-03-27, after the model's stated training-data cutoff (2022-12-31)",
+  "sources": "https://arxiv.org/pdf/2304.02643v1 https://arxiv.org/pdf/2503.21622v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "siglip-2",
+  "level": "not_seen",
+  "reason": "its test items were published from 2025-03-27, after the model's stated training-data cutoff (2022-12-31)",
+  "sources": "https://arxiv.org/pdf/2209.06794v4 https://arxiv.org/pdf/2503.21622v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "siglip",
+  "level": "not_seen",
+  "reason": "its test items were published from 2025-03-27, after the model's stated training-data cutoff (2022-12-31)",
+  "sources": "https://arxiv.org/pdf/2209.06794v4 https://arxiv.org/pdf/2503.21622v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "univad",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "vcp-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "vcp-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-ad-2",
+  "model": "winclip",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2303.14814v1 https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2503.21622v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "aa-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "aa-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "adaclip-all",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "adaclip-mvtec-colondb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "adaclip-visa-clinicdb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "adaptclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "adaptclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "anomaly-ov",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "anomalyclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "anomalyclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "anomalydino",
+  "level": "unknown",
+  "reason": "unknown for its base model DINOv2: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "anomalygpt-mvtec",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "anomalygpt-supervised",
+  "level": "seen_split_unclear",
+  "reason": "in fine-tuning data: the dataset was used; the source does not say which part",
+  "sources": "https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/README.md"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "anomalygpt-visa",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "april-gan-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "april-gan-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "filo-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "filo-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "inctrl-mvtec",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://link.springer.com/article/10.1007/s11263-022-01578-9"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "inctrl-visa",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://link.springer.com/article/10.1007/s11263-022-01578-9"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "metauas",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "musc",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "openclip-laion2b",
+  "level": "not_seen",
+  "reason": "its test items were published from 2022-02-22, after the model's stated training-data cutoff (2022-01-31)",
+  "sources": "https://arxiv.org/pdf/2210.08402v1 https://link.springer.com/article/10.1007/s11263-022-01578-9"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "openclip-laion400m",
+  "level": "not_seen",
+  "reason": "its test items were published from 2022-02-22, after the model's stated training-data cutoff (2021-12-31)",
+  "sources": "https://laion.ai/blog/laion-400-open-dataset/ https://link.springer.com/article/10.1007/s11263-022-01578-9"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "saa-plus",
+  "level": "unknown",
+  "reason": "unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "sam-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "sam",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "univad",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "vcp-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "vcp-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mvtec-loco-ad",
+  "model": "winclip",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2303.14814v1 https://laion.ai/blog/laion-400-open-dataset/ https://link.springer.com/article/10.1007/s11263-022-01578-9"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "aa-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "aa-clip-visa",
+  "level": "seen_split_unclear",
+  "reason": "in fine-tuning data: the dataset was used; the source does not say which part",
+  "sources": "https://arxiv.org/pdf/2503.06661v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "adaclip-all",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "adaclip-mvtec-colondb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "adaclip-visa-clinicdb",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "adaptclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "adaptclip-visa",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://arxiv.org/pdf/2505.09926v2"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "anomaly-ov",
+  "level": "seen_split_unclear",
+  "reason": "in fine-tuning data: the dataset was used; the source does not say which part",
+  "sources": "https://arxiv.org/pdf/2502.07601v2"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "anomalyclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "anomalyclip-visa",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://arxiv.org/pdf/2310.18961v12 https://raw.githubusercontent.com/zqhang/AnomalyCLIP/main/train.sh"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "anomalydino",
+  "level": "unknown",
+  "reason": "unknown for its base model DINOv2: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "anomalygpt-mvtec",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "anomalygpt-supervised",
+  "level": "seen_split_unclear",
+  "reason": "in fine-tuning data: the dataset was used; the source does not say which part",
+  "sources": "https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/README.md"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "anomalygpt-visa",
+  "level": "train_seen",
+  "reason": "in fine-tuning data: only the training split was used, not the test data Industrial anomaly detection evaluates on",
+  "sources": "https://arxiv.org/pdf/2308.15366v4"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "april-gan-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "april-gan-visa",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://arxiv.org/pdf/2305.17382v3"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "filo-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "filo-visa",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://arxiv.org/pdf/2404.13671v3"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "inctrl-mvtec",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2207.14315v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "inctrl-visa",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: the whole dataset was used",
+  "sources": "https://arxiv.org/pdf/2403.06495v3"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "metauas",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "musc",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "openclip-laion2b",
+  "level": "not_seen",
+  "reason": "its test items were published from 2022-07-28, after the model's stated training-data cutoff (2022-01-31)",
+  "sources": "https://arxiv.org/pdf/2210.08402v1 https://arxiv.org/pdf/2207.14315v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "openclip-laion400m",
+  "level": "not_seen",
+  "reason": "its test items were published from 2022-07-28, after the model's stated training-data cutoff (2021-12-31)",
+  "sources": "https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2207.14315v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "saa-plus",
+  "level": "unknown",
+  "reason": "unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "sam-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "sam",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "univad",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "vcp-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "vcp-clip-visa",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://arxiv.org/pdf/2407.12276v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "visa",
+  "model": "winclip",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2303.14814v1 https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2207.14315v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "aa-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "aa-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "adaclip-all",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "adaclip-mvtec-colondb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "adaclip-visa-clinicdb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "adaptclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "adaptclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "anomaly-ov",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "anomalyclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "anomalyclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "anomalydino",
+  "level": "unknown",
+  "reason": "unknown for its base model DINOv2: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "anomalygpt-mvtec",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "anomalygpt-supervised",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "anomalygpt-visa",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "april-gan-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "april-gan-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "filo-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "filo-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "inctrl-mvtec",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2403.12580v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "inctrl-visa",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2403.12580v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "metauas",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "musc",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "openclip-laion2b",
+  "level": "not_seen",
+  "reason": "its test items were published from 2024-03-19, after the model's stated training-data cutoff (2022-01-31)",
+  "sources": "https://arxiv.org/pdf/2210.08402v1 https://arxiv.org/pdf/2403.12580v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "openclip-laion400m",
+  "level": "not_seen",
+  "reason": "its test items were published from 2024-03-19, after the model's stated training-data cutoff (2021-12-31)",
+  "sources": "https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2403.12580v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "saa-plus",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "sam-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "sam",
+  "level": "not_seen",
+  "reason": "its test items were published from 2024-03-19, after the model's stated training-data cutoff (2022-12-31)",
+  "sources": "https://arxiv.org/pdf/2304.02643v1 https://arxiv.org/pdf/2403.12580v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "siglip-2",
+  "level": "not_seen",
+  "reason": "its test items were published from 2024-03-19, after the model's stated training-data cutoff (2022-12-31)",
+  "sources": "https://arxiv.org/pdf/2209.06794v4 https://arxiv.org/pdf/2403.12580v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "siglip",
+  "level": "not_seen",
+  "reason": "its test items were published from 2024-03-19, after the model's stated training-data cutoff (2022-12-31)",
+  "sources": "https://arxiv.org/pdf/2209.06794v4 https://arxiv.org/pdf/2403.12580v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "univad",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "vcp-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "vcp-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "real-iad",
+  "model": "winclip",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data and from its base models' data",
+  "sources": "https://arxiv.org/pdf/2303.14814v1 https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2403.12580v1"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "aa-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "aa-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "adaclip-all",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "adaclip-mvtec-colondb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "adaclip-visa-clinicdb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "adaptclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "adaptclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "anomaly-ov",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "anomalyclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "anomalyclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "anomalydino",
+  "level": "unknown",
+  "reason": "unknown for its base model DINOv2: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "anomalygpt-mvtec",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "anomalygpt-supervised",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "anomalygpt-visa",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "april-gan-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "april-gan-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "filo-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "filo-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "inctrl-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "inctrl-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "metauas",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "musc",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "saa-plus",
+  "level": "unknown",
+  "reason": "unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "sam-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "sam",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "univad",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "vcp-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "vcp-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "mpdd",
+  "model": "winclip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "aa-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "aa-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "adaclip-all",
+  "level": "test_seen",
+  "reason": "in fine-tuning data: its test split was used for training",
+  "sources": "https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "adaclip-mvtec-colondb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "adaclip-visa-clinicdb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "adaptclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "adaptclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "anomaly-ov",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "anomalyclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "anomalyclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "anomalydino",
+  "level": "unknown",
+  "reason": "unknown for its base model DINOv2: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "anomalygpt-mvtec",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "anomalygpt-supervised",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "anomalygpt-visa",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "april-gan-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "april-gan-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "filo-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "filo-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "inctrl-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "inctrl-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "metauas",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "musc",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "saa-plus",
+  "level": "unknown",
+  "reason": "unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "sam-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "sam",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "univad",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "vcp-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "vcp-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "btad",
+  "model": "winclip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "aa-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "aa-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "adaclip-all",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "adaclip-mvtec-colondb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "adaclip-visa-clinicdb",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "adaptclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "adaptclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "anomaly-ov",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "anomalyclip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "anomalyclip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "anomalydino",
+  "level": "unknown",
+  "reason": "unknown for its base model DINOv2: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "anomalygpt-mvtec",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "anomalygpt-supervised",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "anomalygpt-visa",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "april-gan-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "april-gan-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "filo-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "filo-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "inctrl-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "inctrl-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "metauas",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "musc",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "saa-plus",
+  "level": "unknown",
+  "reason": "unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "sam-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "sam",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "univad",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "vcp-clip-mvtec",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "vcp-clip-visa",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "industrial-ad",
+  "dataset": "ksdd2",
+  "model": "winclip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
   "benchmark": "llm-classic",
   "dataset": "mmlu",
   "model": "amber",

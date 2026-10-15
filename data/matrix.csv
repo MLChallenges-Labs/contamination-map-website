@@ -979,6 +979,302 @@ gift-eval,uci-electricity-load-diagrams,toto-2.0,not_seen,the authors state the 
 gift-eval,uci-electricity-load-diagrams,toto-2024,unknown,training data not disclosed in enough detail,
 gift-eval,uci-electricity-load-diagrams,ttm-r3,train_seen,"only the training split was used, not the test data GIFT-Eval evaluates on; the test portion was explicitly excluded",https://huggingface.co/ibm-research/ttm-r3/raw/main/README.md https://raw.githubusercontent.com/SalesforceAIResearch/gift-eval/main/results/TTM-R3-PT/config.json
 gift-eval,uci-electricity-load-diagrams,ttm-research-r2,not_seen,absent from the complete list of training data,https://arxiv.org/pdf/2401.03955v8 https://huggingface.co/ibm-research/ttm-research-r2/raw/main/README.md
+industrial-ad,mvtec-ad,aa-clip-mvtec,seen_split_unclear,in fine-tuning data: the dataset was used; the source does not say which part,https://arxiv.org/pdf/2503.06661v1
+industrial-ad,mvtec-ad,aa-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,adaclip-all,test_seen,in fine-tuning data: its test split was used for training,https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py
+industrial-ad,mvtec-ad,adaclip-mvtec-colondb,test_seen,in fine-tuning data: its test split was used for training,https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py
+industrial-ad,mvtec-ad,adaclip-visa-clinicdb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,adaptclip-mvtec,test_seen,in fine-tuning data: its test split was used for training,https://arxiv.org/pdf/2505.09926v2
+industrial-ad,mvtec-ad,adaptclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,anomaly-ov,seen_split_unclear,in fine-tuning data: the dataset was used; the source does not say which part,https://arxiv.org/pdf/2502.07601v2
+industrial-ad,mvtec-ad,anomalyclip-mvtec,test_seen,in fine-tuning data: its test split was used for training,https://arxiv.org/pdf/2310.18961v12
+industrial-ad,mvtec-ad,anomalyclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,anomalydino,unknown,unknown for its base model DINOv2: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,anomalygpt-mvtec,train_seen,"in fine-tuning data: only the training split was used, not the test data Industrial anomaly detection evaluates on",https://arxiv.org/pdf/2308.15366v4
+industrial-ad,mvtec-ad,anomalygpt-supervised,seen_split_unclear,in fine-tuning data: the dataset was used; the source does not say which part,https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/README.md https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/code/datasets/all_supervised_with_cn.py
+industrial-ad,mvtec-ad,anomalygpt-visa,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,april-gan-mvtec,test_seen,in fine-tuning data: its test split was used for training,https://arxiv.org/pdf/2305.17382v3
+industrial-ad,mvtec-ad,april-gan-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,clip-openai,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,dinov2,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,dinov3,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,filo-mvtec,test_seen,in fine-tuning data: its test split was used for training,https://arxiv.org/pdf/2404.13671v3
+industrial-ad,mvtec-ad,filo-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+industrial-ad,mvtec-ad,inctrl-mvtec,test_seen,in fine-tuning data: the whole dataset was used,https://arxiv.org/pdf/2403.06495v3
+industrial-ad,mvtec-ad,inctrl-visa,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,metauas,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,musc,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,openclip-laion2b,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,openclip-laion400m,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,saa-plus,unknown,unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,sam-2,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,sam,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,siglip-2,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,siglip,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,univad,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,vcp-clip-mvtec,test_seen,in fine-tuning data: its test split was used for training,https://arxiv.org/pdf/2407.12276v1 https://raw.githubusercontent.com/xiaozhen228/VCP-CLIP/main/utils/dataset.py
+industrial-ad,mvtec-ad,vcp-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad,winclip,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,aa-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,aa-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,adaclip-all,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,adaclip-mvtec-colondb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,adaclip-visa-clinicdb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,adaptclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,adaptclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,anomaly-ov,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,anomalyclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,anomalyclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,anomalydino,unknown,unknown for its base model DINOv2: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,anomalygpt-mvtec,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,anomalygpt-supervised,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,anomalygpt-visa,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,april-gan-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,april-gan-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,clip-openai,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,dinov2,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,dinov3,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,filo-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,filo-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+industrial-ad,mvtec-ad-2,inctrl-mvtec,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2503.21622v1
+industrial-ad,mvtec-ad-2,inctrl-visa,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2503.21622v1
+industrial-ad,mvtec-ad-2,metauas,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,musc,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,openclip-laion2b,not_seen,"its test items were published from 2025-03-27, after the model's stated training-data cutoff (2022-01-31)",https://arxiv.org/pdf/2210.08402v1 https://arxiv.org/pdf/2503.21622v1
+industrial-ad,mvtec-ad-2,openclip-laion400m,not_seen,"its test items were published from 2025-03-27, after the model's stated training-data cutoff (2021-12-31)",https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2503.21622v1
+industrial-ad,mvtec-ad-2,saa-plus,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,sam-2,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,sam,not_seen,"its test items were published from 2025-03-27, after the model's stated training-data cutoff (2022-12-31)",https://arxiv.org/pdf/2304.02643v1 https://arxiv.org/pdf/2503.21622v1
+industrial-ad,mvtec-ad-2,siglip-2,not_seen,"its test items were published from 2025-03-27, after the model's stated training-data cutoff (2022-12-31)",https://arxiv.org/pdf/2209.06794v4 https://arxiv.org/pdf/2503.21622v1
+industrial-ad,mvtec-ad-2,siglip,not_seen,"its test items were published from 2025-03-27, after the model's stated training-data cutoff (2022-12-31)",https://arxiv.org/pdf/2209.06794v4 https://arxiv.org/pdf/2503.21622v1
+industrial-ad,mvtec-ad-2,univad,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,vcp-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,vcp-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-ad-2,winclip,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2303.14814v1 https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2503.21622v1
+industrial-ad,mvtec-loco-ad,aa-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,aa-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,adaclip-all,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,adaclip-mvtec-colondb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,adaclip-visa-clinicdb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,adaptclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,adaptclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,anomaly-ov,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,anomalyclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,anomalyclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,anomalydino,unknown,unknown for its base model DINOv2: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,anomalygpt-mvtec,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,anomalygpt-supervised,seen_split_unclear,in fine-tuning data: the dataset was used; the source does not say which part,https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/README.md
+industrial-ad,mvtec-loco-ad,anomalygpt-visa,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,april-gan-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,april-gan-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,clip-openai,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,dinov2,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,dinov3,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,filo-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,filo-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+industrial-ad,mvtec-loco-ad,inctrl-mvtec,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://link.springer.com/article/10.1007/s11263-022-01578-9
+industrial-ad,mvtec-loco-ad,inctrl-visa,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://link.springer.com/article/10.1007/s11263-022-01578-9
+industrial-ad,mvtec-loco-ad,metauas,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,musc,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,openclip-laion2b,not_seen,"its test items were published from 2022-02-22, after the model's stated training-data cutoff (2022-01-31)",https://arxiv.org/pdf/2210.08402v1 https://link.springer.com/article/10.1007/s11263-022-01578-9
+industrial-ad,mvtec-loco-ad,openclip-laion400m,not_seen,"its test items were published from 2022-02-22, after the model's stated training-data cutoff (2021-12-31)",https://laion.ai/blog/laion-400-open-dataset/ https://link.springer.com/article/10.1007/s11263-022-01578-9
+industrial-ad,mvtec-loco-ad,saa-plus,unknown,unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,sam-2,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,sam,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,siglip-2,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,siglip,unknown,training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,univad,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,vcp-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,vcp-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mvtec-loco-ad,winclip,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2303.14814v1 https://laion.ai/blog/laion-400-open-dataset/ https://link.springer.com/article/10.1007/s11263-022-01578-9
+industrial-ad,visa,aa-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,visa,aa-clip-visa,seen_split_unclear,in fine-tuning data: the dataset was used; the source does not say which part,https://arxiv.org/pdf/2503.06661v1
+industrial-ad,visa,adaclip-all,test_seen,in fine-tuning data: its test split was used for training,https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py
+industrial-ad,visa,adaclip-mvtec-colondb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,visa,adaclip-visa-clinicdb,test_seen,in fine-tuning data: its test split was used for training,https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py
+industrial-ad,visa,adaptclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,visa,adaptclip-visa,test_seen,in fine-tuning data: its test split was used for training,https://arxiv.org/pdf/2505.09926v2
+industrial-ad,visa,anomaly-ov,seen_split_unclear,in fine-tuning data: the dataset was used; the source does not say which part,https://arxiv.org/pdf/2502.07601v2
+industrial-ad,visa,anomalyclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,visa,anomalyclip-visa,test_seen,in fine-tuning data: its test split was used for training,https://arxiv.org/pdf/2310.18961v12 https://raw.githubusercontent.com/zqhang/AnomalyCLIP/main/train.sh
+industrial-ad,visa,anomalydino,unknown,unknown for its base model DINOv2: training data not disclosed in enough detail,
+industrial-ad,visa,anomalygpt-mvtec,unknown,training data not disclosed in enough detail,
+industrial-ad,visa,anomalygpt-supervised,seen_split_unclear,in fine-tuning data: the dataset was used; the source does not say which part,https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/README.md
+industrial-ad,visa,anomalygpt-visa,train_seen,"in fine-tuning data: only the training split was used, not the test data Industrial anomaly detection evaluates on",https://arxiv.org/pdf/2308.15366v4
+industrial-ad,visa,april-gan-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,visa,april-gan-visa,test_seen,in fine-tuning data: its test split was used for training,https://arxiv.org/pdf/2305.17382v3
+industrial-ad,visa,clip-openai,unknown,training data not disclosed in enough detail,
+industrial-ad,visa,dinov2,unknown,training data not disclosed in enough detail,
+industrial-ad,visa,dinov3,unknown,training data not disclosed in enough detail,
+industrial-ad,visa,filo-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,visa,filo-visa,test_seen,in fine-tuning data: its test split was used for training,https://arxiv.org/pdf/2404.13671v3
+industrial-ad,visa,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+industrial-ad,visa,inctrl-mvtec,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2207.14315v1
+industrial-ad,visa,inctrl-visa,test_seen,in fine-tuning data: the whole dataset was used,https://arxiv.org/pdf/2403.06495v3
+industrial-ad,visa,metauas,unknown,training data not disclosed in enough detail,
+industrial-ad,visa,musc,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,visa,openclip-laion2b,not_seen,"its test items were published from 2022-07-28, after the model's stated training-data cutoff (2022-01-31)",https://arxiv.org/pdf/2210.08402v1 https://arxiv.org/pdf/2207.14315v1
+industrial-ad,visa,openclip-laion400m,not_seen,"its test items were published from 2022-07-28, after the model's stated training-data cutoff (2021-12-31)",https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2207.14315v1
+industrial-ad,visa,saa-plus,unknown,unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail,
+industrial-ad,visa,sam-2,unknown,training data not disclosed in enough detail,
+industrial-ad,visa,sam,unknown,training data not disclosed in enough detail,
+industrial-ad,visa,siglip-2,unknown,training data not disclosed in enough detail,
+industrial-ad,visa,siglip,unknown,training data not disclosed in enough detail,
+industrial-ad,visa,univad,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,visa,vcp-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,visa,vcp-clip-visa,test_seen,in fine-tuning data: its test split was used for training,https://arxiv.org/pdf/2407.12276v1
+industrial-ad,visa,winclip,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2303.14814v1 https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2207.14315v1
+industrial-ad,real-iad,aa-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,aa-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,adaclip-all,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,adaclip-mvtec-colondb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,adaclip-visa-clinicdb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,adaptclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,adaptclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,anomaly-ov,unknown,training data not disclosed in enough detail,
+industrial-ad,real-iad,anomalyclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,anomalyclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,anomalydino,unknown,unknown for its base model DINOv2: training data not disclosed in enough detail,
+industrial-ad,real-iad,anomalygpt-mvtec,unknown,training data not disclosed in enough detail,
+industrial-ad,real-iad,anomalygpt-supervised,unknown,training data not disclosed in enough detail,
+industrial-ad,real-iad,anomalygpt-visa,unknown,training data not disclosed in enough detail,
+industrial-ad,real-iad,april-gan-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,april-gan-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,clip-openai,unknown,training data not disclosed in enough detail,
+industrial-ad,real-iad,dinov2,unknown,training data not disclosed in enough detail,
+industrial-ad,real-iad,dinov3,unknown,training data not disclosed in enough detail,
+industrial-ad,real-iad,filo-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,filo-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+industrial-ad,real-iad,inctrl-mvtec,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2403.12580v1
+industrial-ad,real-iad,inctrl-visa,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2403.06495v3 https://raw.githubusercontent.com/mala-lab/InCTRL/main/open_clip/config/defaults.py https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2403.12580v1
+industrial-ad,real-iad,metauas,unknown,training data not disclosed in enough detail,
+industrial-ad,real-iad,musc,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,openclip-laion2b,not_seen,"its test items were published from 2024-03-19, after the model's stated training-data cutoff (2022-01-31)",https://arxiv.org/pdf/2210.08402v1 https://arxiv.org/pdf/2403.12580v1
+industrial-ad,real-iad,openclip-laion400m,not_seen,"its test items were published from 2024-03-19, after the model's stated training-data cutoff (2021-12-31)",https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2403.12580v1
+industrial-ad,real-iad,saa-plus,unknown,training data not disclosed in enough detail,
+industrial-ad,real-iad,sam-2,unknown,training data not disclosed in enough detail,
+industrial-ad,real-iad,sam,not_seen,"its test items were published from 2024-03-19, after the model's stated training-data cutoff (2022-12-31)",https://arxiv.org/pdf/2304.02643v1 https://arxiv.org/pdf/2403.12580v1
+industrial-ad,real-iad,siglip-2,not_seen,"its test items were published from 2024-03-19, after the model's stated training-data cutoff (2022-12-31)",https://arxiv.org/pdf/2209.06794v4 https://arxiv.org/pdf/2403.12580v1
+industrial-ad,real-iad,siglip,not_seen,"its test items were published from 2024-03-19, after the model's stated training-data cutoff (2022-12-31)",https://arxiv.org/pdf/2209.06794v4 https://arxiv.org/pdf/2403.12580v1
+industrial-ad,real-iad,univad,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,vcp-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,vcp-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,real-iad,winclip,not_seen,absent from the complete list of training data and from its base models' data,https://arxiv.org/pdf/2303.14814v1 https://laion.ai/blog/laion-400-open-dataset/ https://arxiv.org/pdf/2403.12580v1
+industrial-ad,mpdd,aa-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,aa-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,adaclip-all,test_seen,in fine-tuning data: its test split was used for training,https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py
+industrial-ad,mpdd,adaclip-mvtec-colondb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,adaclip-visa-clinicdb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,adaptclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,adaptclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,anomaly-ov,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,anomalyclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,anomalyclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,anomalydino,unknown,unknown for its base model DINOv2: training data not disclosed in enough detail,
+industrial-ad,mpdd,anomalygpt-mvtec,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,anomalygpt-supervised,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,anomalygpt-visa,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,april-gan-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,april-gan-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,clip-openai,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,dinov2,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,dinov3,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,filo-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,filo-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+industrial-ad,mpdd,inctrl-mvtec,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
+industrial-ad,mpdd,inctrl-visa,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
+industrial-ad,mpdd,metauas,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,musc,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,openclip-laion2b,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,openclip-laion400m,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,saa-plus,unknown,unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail,
+industrial-ad,mpdd,sam-2,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,sam,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,siglip-2,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,siglip,unknown,training data not disclosed in enough detail,
+industrial-ad,mpdd,univad,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,vcp-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,vcp-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,mpdd,winclip,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
+industrial-ad,btad,aa-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,aa-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,adaclip-all,test_seen,in fine-tuning data: its test split was used for training,https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py
+industrial-ad,btad,adaclip-mvtec-colondb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,adaclip-visa-clinicdb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,adaptclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,adaptclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,anomaly-ov,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,anomalyclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,anomalyclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,anomalydino,unknown,unknown for its base model DINOv2: training data not disclosed in enough detail,
+industrial-ad,btad,anomalygpt-mvtec,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,anomalygpt-supervised,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,anomalygpt-visa,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,april-gan-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,april-gan-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,clip-openai,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,dinov2,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,dinov3,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,filo-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,filo-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+industrial-ad,btad,inctrl-mvtec,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
+industrial-ad,btad,inctrl-visa,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
+industrial-ad,btad,metauas,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,musc,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,openclip-laion2b,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,openclip-laion400m,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,saa-plus,unknown,unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail,
+industrial-ad,btad,sam-2,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,sam,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,siglip-2,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,siglip,unknown,training data not disclosed in enough detail,
+industrial-ad,btad,univad,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,vcp-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,vcp-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,btad,winclip,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
+industrial-ad,ksdd2,aa-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,aa-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,adaclip-all,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,adaclip-mvtec-colondb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,adaclip-visa-clinicdb,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,adaptclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,adaptclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,anomaly-ov,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,anomalyclip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,anomalyclip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,anomalydino,unknown,unknown for its base model DINOv2: training data not disclosed in enough detail,
+industrial-ad,ksdd2,anomalygpt-mvtec,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,anomalygpt-supervised,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,anomalygpt-visa,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,april-gan-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,april-gan-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,clip-openai,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,dinov2,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,dinov3,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,filo-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,filo-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+industrial-ad,ksdd2,inctrl-mvtec,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
+industrial-ad,ksdd2,inctrl-visa,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
+industrial-ad,ksdd2,metauas,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,musc,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,openclip-laion2b,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,openclip-laion400m,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,saa-plus,unknown,unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail,
+industrial-ad,ksdd2,sam-2,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,sam,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,siglip-2,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,siglip,unknown,training data not disclosed in enough detail,
+industrial-ad,ksdd2,univad,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,vcp-clip-mvtec,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,vcp-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+industrial-ad,ksdd2,winclip,unknown,unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail,
 llm-classic,mmlu,amber,unknown,training data not disclosed in enough detail,
 llm-classic,mmlu,bloom,unknown,training data not disclosed in enough detail,
 llm-classic,mmlu,claude-3-5-sonnet,unknown,training data not disclosed in enough detail,

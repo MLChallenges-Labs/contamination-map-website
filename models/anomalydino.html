@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · AnomalyDINO</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html" class="active">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../vision/index.html">Vision</a> / Model</p>
+<h1>AnomalyDINO</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>University of Tuebingen et al. (Damm et al.)</dd>
+  <dt>Family</dt><dd>AnomalyDINO · version AnomalyDINO-S (default)</dd>
+  <dt>Released</dt><dd>2024-05-23 <span class="muted small">(arXiv v1 submission date (https://arxiv.org/abs/2405.14529))</span></dd>
+  <dt>Weights</dt><dd>Unknown · Apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2405.14529v3">Paper</a><a href="https://github.com/dammsi/AnomalyDINO">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>0%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 8">
+<span class="lvl-unknown" style="flex-grow: 8" title="Unknown: 8"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">8</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“The approach is methodologically simple and training-free and, thus, does not require any additional data for fine-tuning or meta-learning.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2405.14529v3">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Built on</h2>
+  <p class="muted small">Everything these base models may have seen is inherited by AnomalyDINO.</p>
+  <ul class="rows">
+    <li>
+      <a href="dinov2.html"><strong>DINOv2</strong></a>
+      <span class="muted">· disclosure: Partial list</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“leverages DINOv2 [30] as a backbone”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2405.14529v3">arxiv.org</a>
+<span class="muted">· paper · Section 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“To prioritize low latency, we take the smallest model as our default (and denote our default pipeline AnomalyDINO-S, accordingly)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2405.14529v3">arxiv.org</a>
+<span class="muted">· paper · Section 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></h3>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad.html">MVTec AD</a> <span class="muted">· unknown for its base model DINOv2: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad-2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a> <span class="muted">· unknown for its base model DINOv2: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-loco-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a> <span class="muted">· unknown for its base model DINOv2: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--visa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/visa.html">VisA</a> <span class="muted">· unknown for its base model DINOv2: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--real-iad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/real-iad.html">Real-IAD</a> <span class="muted">· unknown for its base model DINOv2: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mpdd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mpdd.html">MPDD</a> <span class="muted">· unknown for its base model DINOv2: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--btad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/btad.html">BTAD</a> <span class="muted">· unknown for its base model DINOv2: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--ksdd2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ksdd2.html">KolektorSDD2</a> <span class="muted">· unknown for its base model DINOv2: training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Training-free few-shot patch nearest-neighbour detector on frozen DINOv2 (default ViT-S). Reference (few-shot) images come from the target dataset&#39;s normal training split; masking decision is made on the first reference sample.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2405.14529v3">AnomalyDINO: Boosting Patch-based Few-shot Anomaly Detection with DINOv2 (WACV 2025)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/dammsi/AnomalyDINO/main/README.md">AnomalyDINO README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
