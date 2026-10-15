@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Gemma 3</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html" class="active">Text / LLM</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../text/index.html">Text / LLM</a> / Model</p>
+<h1>Gemma 3</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Google DeepMind</dd>
+  <dt>Family</dt><dd>Gemma · version 3</dd>
+  <dt>Released</dt><dd>2025-03-12 <span class="muted small">(Google blog &#39;Introducing Gemma 3&#39; dated Mar 12, 2025; the 270M size was announced on Aug 14, 2025 (Google Developers Blog))</span></dd>
+<dt>Training cutoff</dt><dd>2024-08-01<details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“The knowledge cutoff date for the training data was August 2024.”</blockquote>
+  <figcaption><a href="https://ai.google.dev/gemma/docs/core/model_card_3">ai.google.dev</a>
+<span class="muted">· model card · Model Data / Training Dataset · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details></dd><dt>Checkpoints</dt><dd>google/gemma-3-1b-pt, google/gemma-3-4b-pt, google/gemma-3-12b-pt, google/gemma-3-27b-pt, google/gemma-3-1b-it, google/gemma-3-4b-it, google/gemma-3-12b-it, google/gemma-3-27b-it, google/gemma-3-270m, google/gemma-3-270m-it</dd>  <dt>Weights</dt><dd>Open · Gemma Terms of Use</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/abs/2503.19786">Paper</a><a href="https://ai.google.dev/gemma/docs/core/model_card_3">Model card</a><a href="https://github.com/google-deepmind/gemma">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-vague">Vague</span></h2>
+<p>Level determined for <strong>6%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 14">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 14" title="Unknown: 14"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">1</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">14</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“These models were trained on a dataset of text data that includes a wide variety of sources.”</blockquote>
+  <figcaption><a href="https://ai.google.dev/gemma/docs/core/model_card_3">ai.google.dev</a>
+<span class="muted">· model card · Model Data / Training Dataset · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We also increase the amount of multilingual data to improve language coverage.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2503.19786v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 Pre-training, Training data · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>web documents</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">27B: 14T tokens, 12B: 12T, 4B: 4T, 1B: 2T, 270M: 6T; over 140 languages.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“A diverse collection of web text ensures the model is exposed to a broad range of linguistic styles, topics, and vocabulary.”</blockquote>
+  <figcaption><a href="https://ai.google.dev/gemma/docs/core/model_card_3">ai.google.dev</a>
+<span class="muted">· model card · Model Data / Training Dataset · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>code</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Exposing the model to code helps it to learn the syntax and patterns of programming languages”</blockquote>
+  <figcaption><a href="https://ai.google.dev/gemma/docs/core/model_card_3">ai.google.dev</a>
+<span class="muted">· model card · Model Data / Training Dataset · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>mathematics</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Training on mathematical text helps the model learn logical reasoning, symbolic representation, and to address mathematical queries.”</blockquote>
+  <figcaption><a href="https://ai.google.dev/gemma/docs/core/model_card_3">ai.google.dev</a>
+<span class="muted">· model card · Model Data / Training Dataset · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>images</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“A wide range of images enables the model to perform image analysis and visual data extraction tasks.”</blockquote>
+  <figcaption><a href="https://ai.google.dev/gemma/docs/core/model_card_3">ai.google.dev</a>
+<span class="muted">· model card · Model Data / Training Dataset · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>knowledge distillation from a large instruction-tuned teacher</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Our post-training approach relies on an improved version of knowledge distillation (Agarwal et al., 2024; Anil et al., 2018; Hinton et al., 2015) from a large IT teacher”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2503.19786v1">arxiv.org</a>
+<span class="muted">· paper · Section 3 Instruction-Tuning · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>human feedback data, code execution feedback and math ground-truth rewards (RL)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Prompt sources for math/code RL not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“trained with human feedback data, code execution feedback (Gehring et al., 2024), and ground-truth rewards for solving math problems”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2503.19786v1">arxiv.org</a>
+<span class="muted">· paper · Section 3 Instruction-Tuning · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-08-01)</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“The knowledge cutoff date for the training data was August 2024.”</blockquote>
+  <figcaption><a href="https://ai.google.dev/gemma/docs/core/model_card_3">ai.google.dev</a>
+<span class="muted">· model card · Model Data / Training Dataset · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“2025 AIME I problems and solutions. The test was held on Thursday, February 6, 2025.”</blockquote>
+  <figcaption><a href="https://web.archive.org/web/20250501204857/https://artofproblemsolving.com/wiki/index.php/2025_AIME_I">web.archive.org</a>
+<span class="muted">· website · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This year the AIME I will take place on February 6, 2025, while the alternate AIME II will take place on February 12, 2025.”</blockquote>
+  <figcaption><a href="https://maa.org/?p=8152">maa.org</a>
+<span class="muted">· website · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">The paper adds: &#39;despite the use of decontamination techniques, there is always a risk of contamination of these probes&#39;. The 270M size, released later (Aug 2025), is described in the same model card with the same August 2024 cutoff.
+
+Decontamination statements not shown as cells (they name no benchmark tracked here, or none at all): evaluation sets (not named).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2503.19786v1">Gemma 3 Technical Report (arXiv v1)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://ai.google.dev/gemma/docs/core/model_card_3">Gemma 3 model card (ai.google.dev)</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/">Introducing Gemma 3 (Google blog)</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://developers.googleblog.com/en/introducing-gemma-3-270m/">Introducing Gemma 3 270M (Google Developers Blog)</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

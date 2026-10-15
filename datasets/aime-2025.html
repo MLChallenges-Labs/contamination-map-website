@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · AIME 2025</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html" class="active">Text / LLM</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../text/index.html">Text / LLM</a> / Dataset</p>
+<h1>AIME 2025</h1>
+<p class="lede">The 30 problems of the 2025 American Invitational Mathematics Examination (AIME I and AIME II, 15 each); integer answers. No official dataset release: commonly used HF copies are opencompass/AIME2025 (configs AIME2025-I / AIME2025-II) and MathArena/aime_2025 (30 problems).</p>
+<dl class="facts">
+<dt>Also known as</dt><dd>AIME 2025, AIME25, AIME&#39;25</dd><dt>Domain</dt><dd>math</dd><dt>Test items from</dt><dd>2025-02-06<details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“2025 AIME I problems and solutions. The test was held on Thursday, February 6, 2025.”</blockquote>
+  <figcaption><a href="https://web.archive.org/web/20250501204857/https://artofproblemsolving.com/wiki/index.php/2025_AIME_I">web.archive.org</a>
+<span class="muted">· website · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This year the AIME I will take place on February 6, 2025, while the alternate AIME II will take place on February 12, 2025.”</blockquote>
+  <figcaption><a href="https://maa.org/?p=8152">maa.org</a>
+<span class="muted">· website · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details></dd></dl>
+
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/amber.html#llm-recent--aime-2025">LLM360 Amber</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/bloom.html#llm-recent--aime-2025">BLOOM</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-3-5-sonnet.html#llm-recent--aime-2025">Claude 3.5 Sonnet</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-04-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-3-7-sonnet.html#llm-recent--aime-2025">Claude 3.7 Sonnet</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-11-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-3.html#llm-recent--aime-2025">Claude 3 (Opus, Sonnet, Haiku)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-08-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-4.html#llm-recent--aime-2025">Claude Opus 4 and Claude Sonnet 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-fable-5.html#llm-recent--aime-2025">Claude Fable 5 / Claude Mythos 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-mythos-preview.html#llm-recent--aime-2025">Claude Mythos Preview</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-opus-4-5.html#llm-recent--aime-2025">Claude Opus 4.5</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the training data (Developer found rephrased AIME questions, official solutions and model answers in the training corpus despite decontamination; the AIME 2025 score may be inflated (example answer suggesting memorisation))</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-opus-5.html#llm-recent--aime-2025">Claude Opus 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-sonnet-5.html#llm-recent--aime-2025">Claude Sonnet 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/dclm-7b-it.html#llm-recent--aime-2025">DCLM-7B-IT (DCLM-IT-7B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/dclm-7b.html#llm-recent--aime-2025">DCLM-7B (DCLM-Baseline-7B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1-0528.html#llm-recent--aime-2025">DeepSeek-R1-0528</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1-distill.html#llm-recent--aime-2025">DeepSeek-R1-Distill</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1.html#llm-recent--aime-2025">DeepSeek-R1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state the dataset was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3-0324.html#llm-recent--aime-2025">DeepSeek-V3-0324</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.1.html#llm-recent--aime-2025">DeepSeek-V3.1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.2-exp.html#llm-recent--aime-2025">DeepSeek-V3.2-Exp</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.2.html#llm-recent--aime-2025">DeepSeek-V3.2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.html#llm-recent--aime-2025">DeepSeek-V3</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-07-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v4.1-flash.html#llm-recent--aime-2025">DeepSeek-V4.1-Flash</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v4.html#llm-recent--aime-2025">DeepSeek-V4 (Pro / Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-1-5.html#llm-recent--aime-2025">Gemini 1.5 (Pro, Flash)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-11-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-2-5.html#llm-recent--aime-2025">Gemini 2.5 (Pro, Flash)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2025-01-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-3-pro.html#llm-recent--aime-2025">Gemini 3 Pro</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2025-01-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-4-argon.html#llm-recent--aime-2025">Gemini 4 Argon</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-2.html#llm-recent--aime-2025">Gemma 2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-3.html#llm-recent--aime-2025">Gemma 3</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-08-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-3n.html#llm-recent--aime-2025">Gemma 3n</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-06-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-4.html#llm-recent--aime-2025">Gemma 4</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2025-01-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-4.html#llm-recent--aime-2025">GPT-4</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2021-09-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-4o.html#llm-recent--aime-2025">GPT-4o</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-10-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-5-2.html#llm-recent--aime-2025">GPT-5.2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-5.html#llm-recent--aime-2025">GPT-5</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-09-30)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-6-astra.html#llm-recent--aime-2025">GPT-6 Astra</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-oss.html#llm-recent--aime-2025">gpt-oss</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-06-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/k2-65b.html#llm-recent--aime-2025">LLM360 K2-65B (K2 Diamond)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/k2-horizon.html#llm-recent--aime-2025">K2-Horizon</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/k2-v2.html#llm-recent--aime-2025">K2-V2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-2.html#llm-recent--aime-2025">Llama 2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2022-09-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.1.html#llm-recent--aime-2025">Llama 3.1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-12-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.2-vision.html#llm-recent--aime-2025">Llama 3.2-Vision (11B, 90B)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-12-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.2.html#llm-recent--aime-2025">Llama 3.2 (1B, 3B)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-12-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.3.html#llm-recent--aime-2025">Llama 3.3 70B</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-12-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.html#llm-recent--aime-2025">Meta Llama 3</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-12-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-4.html#llm-recent--aime-2025">Llama 4 (Scout, Maverick)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-08-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/ministral-3.html#llm-recent--aime-2025">Ministral 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-7b.html#llm-recent--aime-2025">Mistral 7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-large-3.html#llm-recent--aime-2025">Mistral Large 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-medium-3.5.html#llm-recent--aime-2025">Mistral Medium 3.5</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-11-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-small-4.html#llm-recent--aime-2025">Mistral Small 4</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-11-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mixtral-8x7b.html#llm-recent--aime-2025">Mixtral 8x7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/o1.html#llm-recent--aime-2025">OpenAI o1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-10-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/o3.html#llm-recent--aime-2025">OpenAI o3</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-06-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-1.html#llm-recent--aime-2025">OLMo (February 2024)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-02-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-2-1124.html#llm-recent--aime-2025">OLMo 2 (November 2024)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-12-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-3.1.html#llm-recent--aime-2025">Olmo 3.1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-12-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-3.html#llm-recent--aime-2025">Olmo 3</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-12-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-hybrid-7b.html#llm-recent--aime-2025">Olmo Hybrid 7B</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-12-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-3.5.html#llm-recent--aime-2025">Phi-3.5 (mini / MoE)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-10-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-3.html#llm-recent--aime-2025">Phi-3 (mini / small / medium)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-10-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini-flash-reasoning.html#llm-recent--aime-2025">Phi-4-mini-flash-reasoning</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2025-02-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini-reasoning.html#llm-recent--aime-2025">Phi-4-mini-reasoning</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2025-02-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini.html#llm-recent--aime-2025">Phi-4-mini</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-06-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-reasoning.html#llm-recent--aime-2025">Phi-4-reasoning / Phi-4-reasoning-plus</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state the dataset was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4.html#llm-recent--aime-2025">Phi-4</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-06-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-slimmoe.html#llm-recent--aime-2025">Phi-mini-MoE / Phi-tiny-MoE (SlimMoE)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2023-10-01)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/pythia-deduped.html#llm-recent--aime-2025">Pythia (deduplicated)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/pythia.html#llm-recent--aime-2025">Pythia</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen2.5.html#llm-recent--aime-2025">Qwen2.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-2507.html#llm-recent--aime-2025">Qwen3-2507 (Instruct-2507 / Thinking-2507)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-next.html#llm-recent--aime-2025">Qwen3-Next</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.5.html#llm-recent--aime-2025">Qwen3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.6.html#llm-recent--aime-2025">Qwen3.6</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.8-flash-next.html#llm-recent--aime-2025">Qwen3.8-Flash-Next</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.8.html#llm-recent--aime-2025">Qwen3.8</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.html#llm-recent--aime-2025">Qwen3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/smollm2.html#llm-recent--aime-2025">SmolLM2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/smollm3.html#llm-recent--aime-2025">SmolLM3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">AIME I held 2025-02-06 (AoPS); MAA announced AIME II for 2025-02-12. MathArena reports that 8 AIME 2025 problems could already be found online in a similar form before the contest (arXiv 2505.23281v3, Section 4).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://web.archive.org/web/20250501204857/https://artofproblemsolving.com/wiki/index.php/2025_AIME_I">2025 AIME I - AoPS Wiki (Wayback snapshot 2025-05-01)</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://maa.org/?p=8152">2024-25 AIME Thresholds Are Available (MAA)</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/opencompass/AIME2025/raw/main/README.md">opencompass/AIME2025 dataset card</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/MathArena/aime_2025/raw/main/README.md">MathArena/aime_2025 dataset card</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

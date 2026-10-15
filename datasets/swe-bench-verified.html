@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · SWE-bench Verified</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html" class="active">Text / LLM</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../text/index.html">Text / LLM</a> / Dataset</p>
+<h1>SWE-bench Verified</h1>
+<p class="lede">500 SWE-bench test instances screened by human annotators (93 Python developers annotated 1,699 random test samples) and released by OpenAI with the SWE-bench authors in August 2024.</p>
+<dl class="facts">
+<dt>Also known as</dt><dd>SWE-bench Verified, SWE-bench_Verified</dd><dt>Domain</dt><dd>code</dd><dt>Homepage</dt><dd><a href="https://openai.com/index/introducing-swe-bench-verified/">openai.com</a></dd></dl>
+
+<section>
+  <h2>Related datasets</h2>
+  <ul class="rows">
+    <li>
+      subset of <a href="swe-bench.html">SWE-bench</a>
+<p class="small">Subset of the SWE-bench test split.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we are releasing SWE-bench Verified: a subset of the original test set from SWE-bench, consisting of 500 samples verified to be non-problematic by our human annotators.”</blockquote>
+  <figcaption><a href="https://openai.com/index/introducing-swe-bench-verified/">openai.com</a>
+<span class="muted">· website · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“SWE-bench Verified is a subset of 500 samples from the SWE-bench test set, which have been human-validated for quality.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Summary · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/amber.html#llm-recent--swe-bench-verified">LLM360 Amber</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/bloom.html#llm-recent--swe-bench-verified">BLOOM</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-3-5-sonnet.html#llm-recent--swe-bench-verified">Claude 3.5 Sonnet</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-3-7-sonnet.html#llm-recent--swe-bench-verified">Claude 3.7 Sonnet</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-3.html#llm-recent--swe-bench-verified">Claude 3 (Opus, Sonnet, Haiku)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-4.html#llm-recent--swe-bench-verified">Claude Opus 4 and Claude Sonnet 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-fable-5.html#llm-recent--swe-bench-verified">Claude Fable 5 / Claude Mythos 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-mythos-preview.html#llm-recent--swe-bench-verified">Claude Mythos Preview</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the training data (Developer memorisation audit found some signs of memorisation on SWE-bench Verified, Multilingual and Pro despite corpus-level decontamination; a high-recall filter (threshold 0.7) removes 8-15% of each benchmark)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-opus-4-5.html#llm-recent--swe-bench-verified">Claude Opus 4.5</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the training data (Third-party (OpenAI) elicitation study found strong contamination examples: Claude Opus 4.5 reproduced SWE-bench Verified gold-patch / task-specific details) [third-party study]</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-opus-5.html#llm-recent--swe-bench-verified">Claude Opus 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-sonnet-5.html#llm-recent--swe-bench-verified">Claude Sonnet 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/dclm-7b-it.html#llm-recent--swe-bench-verified">DCLM-7B-IT (DCLM-IT-7B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/dclm-7b.html#llm-recent--swe-bench-verified">DCLM-7B (DCLM-Baseline-7B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1-0528.html#llm-recent--swe-bench-verified">DeepSeek-R1-0528</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1-distill.html#llm-recent--swe-bench-verified">DeepSeek-R1-Distill</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1.html#llm-recent--swe-bench-verified">DeepSeek-R1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state its test portion was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3-0324.html#llm-recent--swe-bench-verified">DeepSeek-V3-0324</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.1.html#llm-recent--swe-bench-verified">DeepSeek-V3.1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.2-exp.html#llm-recent--swe-bench-verified">DeepSeek-V3.2-Exp</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.2.html#llm-recent--swe-bench-verified">DeepSeek-V3.2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.html#llm-recent--swe-bench-verified">DeepSeek-V3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v4.1-flash.html#llm-recent--swe-bench-verified">DeepSeek-V4.1-Flash</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v4.html#llm-recent--swe-bench-verified">DeepSeek-V4 (Pro / Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-1-5.html#llm-recent--swe-bench-verified">Gemini 1.5 (Pro, Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-2-5.html#llm-recent--swe-bench-verified">Gemini 2.5 (Pro, Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-3-pro.html#llm-recent--swe-bench-verified">Gemini 3 Pro</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-4-argon.html#llm-recent--swe-bench-verified">Gemini 4 Argon</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-2.html#llm-recent--swe-bench-verified">Gemma 2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-3.html#llm-recent--swe-bench-verified">Gemma 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-3n.html#llm-recent--swe-bench-verified">Gemma 3n</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-4.html#llm-recent--swe-bench-verified">Gemma 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-4.html#llm-recent--swe-bench-verified">GPT-4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-4o.html#llm-recent--swe-bench-verified">GPT-4o</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-5-2.html#llm-recent--swe-bench-verified">GPT-5.2</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the training data (Developer analysis found GPT-5.2 (and GPT-5.2-Chat) could reproduce SWE-bench Verified gold patches / task details and solved 31 tasks judged almost impossible without prior exposure; OpenAI stopped reporting SWE-bench Verified)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-5.html#llm-recent--swe-bench-verified">GPT-5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-6-astra.html#llm-recent--swe-bench-verified">GPT-6 Astra</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-oss.html#llm-recent--swe-bench-verified">gpt-oss</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/k2-65b.html#llm-recent--swe-bench-verified">LLM360 K2-65B (K2 Diamond)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/k2-horizon.html#llm-recent--swe-bench-verified">K2-Horizon</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/k2-v2.html#llm-recent--swe-bench-verified">K2-V2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-2.html#llm-recent--swe-bench-verified">Llama 2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.1.html#llm-recent--swe-bench-verified">Llama 3.1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.2-vision.html#llm-recent--swe-bench-verified">Llama 3.2-Vision (11B, 90B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.2.html#llm-recent--swe-bench-verified">Llama 3.2 (1B, 3B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.3.html#llm-recent--swe-bench-verified">Llama 3.3 70B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.html#llm-recent--swe-bench-verified">Meta Llama 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-4.html#llm-recent--swe-bench-verified">Llama 4 (Scout, Maverick)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/ministral-3.html#llm-recent--swe-bench-verified">Ministral 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-7b.html#llm-recent--swe-bench-verified">Mistral 7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-large-3.html#llm-recent--swe-bench-verified">Mistral Large 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-medium-3.5.html#llm-recent--swe-bench-verified">Mistral Medium 3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-small-4.html#llm-recent--swe-bench-verified">Mistral Small 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mixtral-8x7b.html#llm-recent--swe-bench-verified">Mixtral 8x7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/o1.html#llm-recent--swe-bench-verified">OpenAI o1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/o3.html#llm-recent--swe-bench-verified">OpenAI o3</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the training data (Identifies the buggy file path from the issue text alone in up to 76% of SWE-bench Verified tasks, vs &lt;53% on tasks from other repositories; the authors read it as possible memorisation/contamination.) [third-party study]</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-1.html#llm-recent--swe-bench-verified">OLMo (February 2024)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-2-1124.html#llm-recent--swe-bench-verified">OLMo 2 (November 2024)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-3.1.html#llm-recent--swe-bench-verified">Olmo 3.1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-3.html#llm-recent--swe-bench-verified">Olmo 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-hybrid-7b.html#llm-recent--swe-bench-verified">Olmo Hybrid 7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-3.5.html#llm-recent--swe-bench-verified">Phi-3.5 (mini / MoE)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-3.html#llm-recent--swe-bench-verified">Phi-3 (mini / small / medium)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini-flash-reasoning.html#llm-recent--swe-bench-verified">Phi-4-mini-flash-reasoning</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini-reasoning.html#llm-recent--swe-bench-verified">Phi-4-mini-reasoning</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini.html#llm-recent--swe-bench-verified">Phi-4-mini</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-reasoning.html#llm-recent--swe-bench-verified">Phi-4-reasoning / Phi-4-reasoning-plus</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4.html#llm-recent--swe-bench-verified">Phi-4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-slimmoe.html#llm-recent--swe-bench-verified">Phi-mini-MoE / Phi-tiny-MoE (SlimMoE)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/pythia-deduped.html#llm-recent--swe-bench-verified">Pythia (deduplicated)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/pythia.html#llm-recent--swe-bench-verified">Pythia</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen2.5.html#llm-recent--swe-bench-verified">Qwen2.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-2507.html#llm-recent--swe-bench-verified">Qwen3-2507 (Instruct-2507 / Thinking-2507)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-next.html#llm-recent--swe-bench-verified">Qwen3-Next</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.5.html#llm-recent--swe-bench-verified">Qwen3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.6.html#llm-recent--swe-bench-verified">Qwen3.6</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.8-flash-next.html#llm-recent--swe-bench-verified">Qwen3.8-Flash-Next</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.8.html#llm-recent--swe-bench-verified">Qwen3.8</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.html#llm-recent--swe-bench-verified">Qwen3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/smollm2.html#llm-recent--swe-bench-verified">SmolLM2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/smollm3.html#llm-recent--swe-bench-verified">SmolLM3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">On 2026-02-23 OpenAI announced it no longer reports SWE-bench Verified, citing flawed tests and contamination (https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://openai.com/index/introducing-swe-bench-verified/">Introducing SWE-bench Verified (OpenAI)</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/raw/main/README.md">princeton-nlp/SWE-bench_Verified dataset card</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

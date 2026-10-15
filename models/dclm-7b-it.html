@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · DCLM-7B-IT (DCLM-IT-7B)</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html" class="active">Text / LLM</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../text/index.html">Text / LLM</a> / Model</p>
+<h1>DCLM-7B-IT (DCLM-IT-7B)</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Apple / DataComp-LM (DCLM) team</dd>
+  <dt>Family</dt><dd>DCLM</dd>
+  <dt>Released</dt><dd>2024-06-15 <span class="muted small">(HF repo creation of mlfoundations/dclm-7b-it (createdAt 2024-06-15, https://huggingface.co/api/models/mlfoundations/dclm-7b-it); public availability date not verified.)</span></dd>
+<dt>Checkpoints</dt><dd>mlfoundations/dclm-7b-it</dd>  <dt>Weights</dt><dd>Open · Apple Sample Code License (apple-ascl)</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2406.11794v4">Paper</a><a href="https://huggingface.co/mlfoundations/dclm-7b-it/raw/main/README.md">Model card</a><a href="https://github.com/mlfoundations/dclm">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>26%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 4, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 11">
+<span class="lvl-test_seen" style="flex-grow: 4" title="Test data seen: 4"></span><span class="lvl-unknown" style="flex-grow: 11" title="Unknown: 11"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">4</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">11</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“DCLM-IT-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset and then further finetuned on our DCLM-IT finetuning mixture.”</blockquote>
+  <figcaption><a href="https://huggingface.co/mlfoundations/dclm-7b-it/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-7B-IT · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we curate a custom dataset, DCLM-IT, by combining some of the best instruction-tuning datasets including UltraFeedback [49], Tulu-v2 SFT [82], CodeFeedback [201], OH-2.5, Nectar [204], NoRobots [139], WildChat [199], WebInstruct [193], and StarCoder2-Self-OSS-Instruct [177].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix P · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>DCLM-Baseline 1.0</strong>
+      <span class="muted">· 1 source (complete list) · pre-training</span>
+ · <a href="https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0">homepage</a>      <details><summary>Evidence that DCLM-7B-IT (DCLM-IT-7B) uses it</summary><figure class="evidence">
+  <blockquote>“DCLM-IT-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset and then further finetuned on our DCLM-IT finetuning mixture.”</blockquote>
+  <figcaption><a href="https://huggingface.co/mlfoundations/dclm-7b-it/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-7B-IT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>DCLM-Pool (Common Crawl)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Entire corpus is filtered Common Crawl (data prior to 2023).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“DCLM-Baseline is a subset of the DCLM-Pool, which is a corpus of 240 trillion tokens derived from Common Crawl.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Out-of-Scope Use · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“DCLM-P OOL is an unfiltered web-text corpus comprised of all Common Crawl [45] data prior to 2023.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>StarCoder</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Inherited from the DCLM-7B base pretraining.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we combine our 3.8T DCLM- BASELINE with the StarCoder [96] and ProofPile2 [14] datasets to arrive at a 4.1T token dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ProofPile2</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Inherited from the DCLM-7B base pretraining.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we combine our 3.8T DCLM- BASELINE with the StarCoder [96] and ProofPile2 [14] datasets to arrive at a 4.1T token dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>UltraFeedback</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we curate a custom dataset, DCLM-IT, by combining some of the best instruction-tuning datasets including UltraFeedback [49], Tulu-v2 SFT [82], CodeFeedback [201], OH-2.5, Nectar [204], NoRobots [139], WildChat [199], WebInstruct [193], and StarCoder2-Self-OSS-Instruct [177].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix P · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“UltraFeedback [49] is used for instruction tuning and is under the MIT License.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix (datasets and licenses list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Tulu-v2 SFT</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we curate a custom dataset, DCLM-IT, by combining some of the best instruction-tuning datasets including UltraFeedback [49], Tulu-v2 SFT [82], CodeFeedback [201], OH-2.5, Nectar [204], NoRobots [139], WildChat [199], WebInstruct [193], and StarCoder2-Self-OSS-Instruct [177].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix P · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Tulu V2 SFT mixture [82] is used for instruction tuning”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix (datasets and licenses list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>CodeFeedback</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we curate a custom dataset, DCLM-IT, by combining some of the best instruction-tuning datasets including UltraFeedback [49], Tulu-v2 SFT [82], CodeFeedback [201], OH-2.5, Nectar [204], NoRobots [139], WildChat [199], WebInstruct [193], and StarCoder2-Self-OSS-Instruct [177].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix P · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CodeFeedback [201] is used for instruction tuning and is under the Apache 2.0 License.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix (datasets and licenses list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>OpenHermes 2.5 (OH-2.5)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we curate a custom dataset, DCLM-IT, by combining some of the best instruction-tuning datasets including UltraFeedback [49], Tulu-v2 SFT [82], CodeFeedback [201], OH-2.5, Nectar [204], NoRobots [139], WildChat [199], WebInstruct [193], and StarCoder2-Self-OSS-Instruct [177].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix P · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“OpenHermes2.5 [165] for instruction finetuning and to train some of our quality filters.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix (datasets and licenses list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Nectar</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we curate a custom dataset, DCLM-IT, by combining some of the best instruction-tuning datasets including UltraFeedback [49], Tulu-v2 SFT [82], CodeFeedback [201], OH-2.5, Nectar [204], NoRobots [139], WildChat [199], WebInstruct [193], and StarCoder2-Self-OSS-Instruct [177].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix P · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Nectar [204] is used for instruction tuning and is under the Apache 2.0 License.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix (datasets and licenses list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>NoRobots</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we curate a custom dataset, DCLM-IT, by combining some of the best instruction-tuning datasets including UltraFeedback [49], Tulu-v2 SFT [82], CodeFeedback [201], OH-2.5, Nectar [204], NoRobots [139], WildChat [199], WebInstruct [193], and StarCoder2-Self-OSS-Instruct [177].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix P · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“NoRobots [139] is used for instruction tuning”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix (datasets and licenses list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>WildChat</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we curate a custom dataset, DCLM-IT, by combining some of the best instruction-tuning datasets including UltraFeedback [49], Tulu-v2 SFT [82], CodeFeedback [201], OH-2.5, Nectar [204], NoRobots [139], WildChat [199], WebInstruct [193], and StarCoder2-Self-OSS-Instruct [177].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix P · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>WebInstruct</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we curate a custom dataset, DCLM-IT, by combining some of the best instruction-tuning datasets including UltraFeedback [49], Tulu-v2 SFT [82], CodeFeedback [201], OH-2.5, Nectar [204], NoRobots [139], WildChat [199], WebInstruct [193], and StarCoder2-Self-OSS-Instruct [177].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix P · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>StarCoder2-Self-OSS-Instruct</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we curate a custom dataset, DCLM-IT, by combining some of the best instruction-tuning datasets including UltraFeedback [49], Tulu-v2 SFT [82], CodeFeedback [201], OH-2.5, Nectar [204], NoRobots [139], WildChat [199], WebInstruct [193], and StarCoder2-Self-OSS-Instruct [177].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix P · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+<section>
+  <h2>Contamination analyses</h2>
+  <p class="muted small">Analyses that found benchmark test data in this model's training data, or in a corpus it uses.</p>
+  <ul class="rows">
+    <li>
+      <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">DCLM&#39;s MMLU overlap rule (question last sentence + one answer option on the same page; recall-oriented, likely overestimate) flagged 0.007% of DCLM-Baseline documents (vs 0.001% Dolma-V1.7, 0.009% FineWeb-Edu). Removing the flagged overlaps did not lower MMLU accuracy at 7B-2x scale (51.8 -&gt; 52.7).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“the percentage of documents in DCLM- BASELINE that are flagged by our MMLU-specific decontamination is roughly similar to that for other high-performing contemporary datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Note that because our flagging rule prioritizes recall over precision, these numbers are likely to be overestimates of the true contamination rates.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/hellaswag.html">HellaSwag</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">Overlaps between HellaSwag test examples and DCLM-Baseline pages were detected and removed for an ablation (fraction not reported in text); removal did not lower HellaSwag accuracy (77.9 -&gt; 78.4). In the 10-gram token-overlap analysis HellaSwag is the notable exception with a performance gap between full and &#39;clean&#39; subsets (Figure 12).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Specifically, we attempt to remove examples from these two test sets that exist in DCLM- BASELINE.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 4.6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“While Hellaswag appears to be a notable exception, we showed in Section 4.6 that removing contaminated Hellaswag examples from our training set does not decrease performance.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">27.70% of (downsampled) MMLU test questions are &#39;dirty&#39; in DCLM-baseline.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/mmlu-pro.html">MMLU-Pro</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">32.6% of ARC-Challenge test questions are &#39;dirty&#39; in DCLM-baseline (17x more than in Pile-train).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For example, ARC-Challenge has 17× more and MMLU has 1.1× more dirty entries.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (DCLM&#39;s MMLU overlap rule (question last sentence + one answer option on the same page; recall-oriented, likely overestimate) flagged 0.007% of DCLM-Baseline documents (vs 0.001% Dolma-V1.7, 0.009% FineWeb-Edu). Removing the flagged overlaps did not lower MMLU accuracy at 7B-2x scale (51.8 -&gt; 52.7).) (via DCLM-Baseline 1.0)</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“DCLM-IT-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset and then further finetuned on our DCLM-IT finetuning mixture.”</blockquote>
+  <figcaption><a href="https://huggingface.co/mlfoundations/dclm-7b-it/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-7B-IT · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“the percentage of documents in DCLM- BASELINE that are flagged by our MMLU-specific decontamination is roughly similar to that for other high-performing contemporary datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Note that because our flagging rule prioritizes recall over precision, these numbers are likely to be overestimates of the true contamination rates.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (32.6% of ARC-Challenge test questions are &#39;dirty&#39; in DCLM-baseline (17x more than in Pile-train).) [third-party study] (via DCLM-Baseline 1.0)</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“DCLM-IT-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset and then further finetuned on our DCLM-IT finetuning mixture.”</blockquote>
+  <figcaption><a href="https://huggingface.co/mlfoundations/dclm-7b-it/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-7B-IT · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For example, ARC-Challenge has 17× more and MMLU has 1.1× more dirty entries.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Overlaps between HellaSwag test examples and DCLM-Baseline pages were detected and removed for an ablation (fraction not reported in text); removal did not lower HellaSwag accuracy (77.9 -&gt; 78.4). In the 10-gram token-overlap analysis HellaSwag is the notable exception with a performance gap between full and &#39;clean&#39; subsets (Figure 12).) (via DCLM-Baseline 1.0)</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“DCLM-IT-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset and then further finetuned on our DCLM-IT finetuning mixture.”</blockquote>
+  <figcaption><a href="https://huggingface.co/mlfoundations/dclm-7b-it/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-7B-IT · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Specifically, we attempt to remove examples from these two test sets that exist in DCLM- BASELINE.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 4.6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“While Hellaswag appears to be a notable exception, we showed in Section 4.6 that removing contaminated Hellaswag examples from our training set does not decrease performance.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“DCLM-IT-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset and then further finetuned on our DCLM-IT finetuning mixture.”</blockquote>
+  <figcaption><a href="https://huggingface.co/mlfoundations/dclm-7b-it/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-7B-IT · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Instruction-tuned on DCLM-IT (~4M instances, ~8B tokens, 10 epochs). Pretraining data identical to dclm-7b (StarCoder and ProofPile2 entries and their third-party findings apply too). Paper says no alignment (PPO/DPO) was applied.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://huggingface.co/mlfoundations/dclm-7b-it/raw/main/README.md">mlfoundations/dclm-7b-it model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2406.11794v4">DataComp-LM: In search of the next generation of training sets for language models</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/api/models/mlfoundations/dclm-7b-it">HF API metadata for mlfoundations/dclm-7b-it</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Qwen2.5</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html" class="active">Text / LLM</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../text/index.html">Text / LLM</a> / Model</p>
+<h1>Qwen2.5</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Alibaba Cloud (Qwen Team)</dd>
+  <dt>Family</dt><dd>Qwen · version 2.5</dd>
+  <dt>Released</dt><dd>2024-09-19 <span class="muted small">(Date of the Qwen2.5 announcement blog post, https://qwenlm.github.io/blog/qwen2.5/)</span></dd>
+<dt>Checkpoints</dt><dd>Qwen/Qwen2.5-0.5B, Qwen/Qwen2.5-1.5B, Qwen/Qwen2.5-3B, Qwen/Qwen2.5-7B, Qwen/Qwen2.5-14B, Qwen/Qwen2.5-32B, Qwen/Qwen2.5-72B, Qwen/Qwen2.5-0.5B-Instruct, Qwen/Qwen2.5-1.5B-Instruct, Qwen/Qwen2.5-3B-Instruct, Qwen/Qwen2.5-7B-Instruct, Qwen/Qwen2.5-14B-Instruct, Qwen/Qwen2.5-32B-Instruct, Qwen/Qwen2.5-72B-Instruct</dd>  <dt>Weights</dt><dd>Open · Apache 2.0 (0.5B, 1.5B, 7B, 14B, 32B); Qwen Research License (3B); Qwen License (72B)</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/abs/2412.15115">Paper</a><a href="https://huggingface.co/Qwen/Qwen2.5-7B-Instruct">Model card</a><a href="https://github.com/QwenLM/Qwen2.5">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-vague">Vague</span></h2>
+<p>Level determined for <strong>20%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 0, Unknown: 12">
+<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 12" title="Unknown: 12"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">2</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">1</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">12</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“Building on these techniques, we have developed a larger and higher-quality pre-training dataset, expanding from the 7 trillion tokens used in Qwen2 (Yang et al., 2024a) to 18 trillion tokens.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.15115v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“all models are pretrained on our latest large-scale dataset, encompassing up to 18 trillion tokens”</blockquote>
+  <figcaption><a href="https://qwenlm.github.io/blog/qwen2.5/">qwenlm.github.io</a>
+<span class="muted">· website · Takeaways · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>web-scale data (quality-filtered and domain-rebalanced)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">The report does not name the web sources; 18T tokens total.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Our analysis revealed that domains like e-commerce, social media, and entertainment are significantly overrepresented in web-scale data, often containing repetitive, template-based, or machine-generated content.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.15115v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 (4) Better data mixture · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Qwen2.5-Math and Qwen2.5-Coder training data</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Composition is documented in the Qwen2.5-Math / Qwen2.5-Coder reports, not in this report.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“During the pre-training phase of Qwen2.5, we incorporate training data from Qwen2.5-Math (Yang et al., 2024b) and Qwen2.5-Coder (Hui et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.15115v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 (2) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>synthetic data generated by Qwen2-72B-Instruct and Qwen2-Math-72B-Instruct</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“To generate high-quality synthetic data, particularly in mathematics, code, and knowledge domains, we leverage both Qwen2-72B-Instruct (Yang et al., 2024a) and Qwen2Math-72B-Instruct (Qwen Team, 2024c).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.15115v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 (3) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>post-training data (1 million examples for SFT, DPO and GRPO)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“The post-training data amounts to 1 million examples, across the stage of supervised finetuning (SFT, Ouyang et al., 2022), direct preference optimization (DPO, Rafailov et al., 2023), and group relative policy optimization (GRPO, Shao et al., 2024).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.15115v2">arxiv.org</a>
+<span class="muted">· paper · Section 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>chain-of-thought data of Qwen2.5-Math</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">&#39;public datasets&#39; are not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We introduce the chain-of-thought data of Qwen2.5-Math (Yang et al., 2024b), which encompasses a diverse range of query sources, including public datasets, K-12 problem collections, and synthetic problems.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.15115v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 (2) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>instruction tuning data of Qwen2.5-Coder (incl. code Q&amp;A websites and GitHub snippets)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We expand our instruction dataset by synthesizing new examples from code-related Q&amp;A websites and gathering algorithmic code snippets from GitHub.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.15115v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 (3) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+<section>
+  <h2>Contamination analyses</h2>
+  <p class="muted small">Analyses that found benchmark test data in this model's training data, or in a corpus it uses.</p>
+  <ul class="rows">
+    <li>
+      <a href="../datasets/math-500.html">MATH-500</a>
+      <span class="muted">· pre-training data</span>
+<p class="small">Exact completion of 21.2% of MATH-500 problems from a 60% prefix (Table 2).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“revealing strong signs of data contamination in the Qwen2.5 series models when evaluated on commonly used benchmarks, such as MATH-500, AMC, and AIME2024.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2507.10532v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4, Table 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/aime-2024.html">AIME 2024</a>
+      <span class="muted">· pre-training data</span>
+<p class="small">Exact completion of 13.33% of AIME 2024 problems from a 60% prefix (Table 2).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“revealing strong signs of data contamination in the Qwen2.5 series models when evaluated on commonly used benchmarks, such as MATH-500, AMC, and AIME2024.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2507.10532v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4, Table 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· a contamination analysis found test examples of the related dataset MATH-500 (Exact completion of 21.2% of MATH-500 problems from a 60% prefix (Table 2).) [third-party study]</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“revealing strong signs of data contamination in the Qwen2.5 series models when evaluated on commonly used benchmarks, such as MATH-500, AMC, and AIME2024.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2507.10532v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4, Table 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We therefore evaluate our models only on the remaining 500 held-out problems. We selected these 500 test problems uniformly at random, and we believe they are representative of the test set as a whole.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/prm800k/main/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · MATH Splits · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This dataset contains a subset of 500 problems from the MATH benchmark that OpenAI created in their _Let&#39;s Verify Step by Step_ paper.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceH4/MATH-500/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Exact completion of 13.33% of AIME 2024 problems from a 60% prefix (Table 2).) [third-party study]</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“revealing strong signs of data contamination in the Qwen2.5 series models when evaluated on commonly used benchmarks, such as MATH-500, AMC, and AIME2024.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2507.10532v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4, Table 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Exact completion of 21.2% of MATH-500 problems from a 60% prefix (Table 2).) [third-party study]</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“revealing strong signs of data contamination in the Qwen2.5 series models when evaluated on commonly used benchmarks, such as MATH-500, AMC, and AIME2024.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2507.10532v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4, Table 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Base and Instruct checkpoints of each size. No training-data cutoff stated. Qwen2.5-Turbo/Plus are API-only and not covered; Qwen2.5-Coder/Math are separate model series.
+
+Decontamination statements not shown as cells (they name no benchmark tracked here, or none at all): arc-challenge; gpqa; gsm8k; hellaswag; humaneval; livecodebench; math; mmlu; mmlu-pro; truthfulqa; winogrande.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2412.15115v2">Qwen2.5 Technical Report</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://qwenlm.github.io/blog/qwen2.5/">Qwen2.5: A Party of Foundation Models!</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/raw/main/README.md">Qwen2.5-7B-Instruct model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Claude Opus 4.5</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html" class="active">Text / LLM</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../text/index.html">Text / LLM</a> / Model</p>
+<h1>Claude Opus 4.5</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Anthropic</dd>
+  <dt>Family</dt><dd>Claude · version 4.5</dd>
+  <dt>Released</dt><dd>2025-11-24 <span class="muted small">(Claude docs model page: &#39;Released November 24, 2025&#39;)</span></dd>
+<dt>Training cutoff</dt><dd>2025-08-01<details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Training data cutoff Aug 2025”</blockquote>
+  <figcaption><a href="https://platform.claude.com/docs/en/models/opus-4-5/overview.md">platform.claude.com</a>
+<span class="muted">· website · Model page, Additional details table · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Reliable knowledge cutoff May 2025”</blockquote>
+  <figcaption><a href="https://platform.claude.com/docs/en/models/opus-4-5/overview.md">platform.claude.com</a>
+<span class="muted">· website · Model page, Additional details table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details></dd><dt>Checkpoints</dt><dd>claude-opus-4-5-20251101</dd>  <dt>Weights</dt><dd>Closed · proprietary</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">Model card</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-vague">Vague</span></h2>
+<p>Level determined for <strong>20%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 12">
+<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 12" title="Unknown: 12"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">2</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">1</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">12</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“Claude Opus 4.5 was trained on a proprietary mix of publicly available information from the internet up to May 2025, non-public data from third parties, data provided by data-labeling services and paid contractors, data from Claude users who have opted in to have their data used for training, and data generated internally at Anthropic.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 1.1.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>publicly available information from the internet up to May 2025</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Claude Opus 4.5 was trained on a proprietary mix of publicly available information from the internet up to May 2025, non-public data from third parties, data provided by data-labeling services and paid contractors, data from Claude users who have opted in to have their data used for training, and data generated internally at Anthropic.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 1.1.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>non-public data from third parties</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Claude Opus 4.5 was trained on a proprietary mix of publicly available information from the internet up to May 2025, non-public data from third parties, data provided by data-labeling services and paid contractors, data from Claude users who have opted in to have their data used for training, and data generated internally at Anthropic.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 1.1.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>data provided by data-labeling services and paid contractors</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Claude Opus 4.5 was trained on a proprietary mix of publicly available information from the internet up to May 2025, non-public data from third parties, data provided by data-labeling services and paid contractors, data from Claude users who have opted in to have their data used for training, and data generated internally at Anthropic.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 1.1.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>data from Claude users who have opted in to have their data used for training</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Claude Opus 4.5 was trained on a proprietary mix of publicly available information from the internet up to May 2025, non-public data from third parties, data provided by data-labeling services and paid contractors, data from Claude users who have opted in to have their data used for training, and data generated internally at Anthropic.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 1.1.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>data generated internally at Anthropic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Claude Opus 4.5 was trained on a proprietary mix of publicly available information from the internet up to May 2025, non-public data from third parties, data provided by data-labeling services and paid contractors, data from Claude users who have opted in to have their data used for training, and data generated internally at Anthropic.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 1.1.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Dataset <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We scanned our training corpus for exact substring matches of the evaluations we benchmark and removed documents that contain five or more”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 2.2 (Decontamination) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This is effective for reducing direct contamination of multiple-choice questions and answers in evaluations such as MMLU or GPQA.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/gpqa.html">GPQA (Graduate-Level Google-Proof Q&amp;A)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We scanned our training corpus for exact substring matches of the evaluations we benchmark and removed documents that contain five or more”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 2.2 (Decontamination) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This is effective for reducing direct contamination of multiple-choice questions and answers in evaluations such as MMLU or GPQA.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Contamination analyses</h2>
+  <p class="muted small">Analyses that found benchmark test data in this model's training data, or in a corpus it uses.</p>
+  <ul class="rows">
+    <li>
+      <a href="../datasets/aime-2025.html">AIME 2025</a>
+      <span class="muted">· training data</span>
+<p class="small">Developer found rephrased AIME questions, official solutions and model answers in the training corpus despite decontamination; the AIME 2025 score may be inflated (example answer suggesting memorisation)</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Our investigation found that rephrased AIME questions, official solutions, and model-generated answers persisted in the training corpus despite our targeted efforts to remove them.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“However, we have some concerns that contamination may have inflated this score, as discussed in Section 2.2.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 2.17 (AIME 2025) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a>
+      <span class="muted">· training data</span>
+<p class="small">Third-party (OpenAI) elicitation study found strong contamination examples: Claude Opus 4.5 reproduced SWE-bench Verified gold-patch / task-specific details</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we tasked GPT-5 with probing a GPT-5.2-Chat, Claude Opus 4.5 and Gemini 3 Flash Preview for contamination.”</blockquote>
+  <figcaption><a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/">openai.com</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section &#39;Contamination&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“indicating that all of them have seen at least some of the problems and solutions during training”</blockquote>
+  <figcaption><a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/">openai.com</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We scanned our training corpus for exact substring matches of the evaluations we benchmark and removed documents that contain five or more”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 2.2 (Decontamination) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This is effective for reducing direct contamination of multiple-choice questions and answers in evaluations such as MMLU or GPQA.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· a contamination analysis found test examples in the training data (Third-party (OpenAI) elicitation study found strong contamination examples: Claude Opus 4.5 reproduced SWE-bench Verified gold-patch / task-specific details) [third-party study]</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“we tasked GPT-5 with probing a GPT-5.2-Chat, Claude Opus 4.5 and Gemini 3 Flash Preview for contamination.”</blockquote>
+  <figcaption><a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/">openai.com</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section &#39;Contamination&#39; · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“indicating that all of them have seen at least some of the problems and solutions during training”</blockquote>
+  <figcaption><a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/">openai.com</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· a contamination analysis found test examples in the training data (Developer found rephrased AIME questions, official solutions and model answers in the training corpus despite decontamination; the AIME 2025 score may be inflated (example answer suggesting memorisation))</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Our investigation found that rephrased AIME questions, official solutions, and model-generated answers persisted in the training corpus despite our targeted efforts to remove them.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“However, we have some concerns that contamination may have inflated this score, as discussed in Section 2.2.”</blockquote>
+  <figcaption><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">assets.anthropic.com</a>
+<span class="muted">· model card · Section 2.17 (AIME 2025) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Included (point release) because its system card introduced Anthropic&#39;s documented decontamination methodology (Section 2.2: exact-substring removal, 20-gram fuzzy decontamination, canary filtering, manual inspection), which later cards reference. The card states manual inspection &#39;confirmed low levels of contamination for many evaluations (e.g. Humanity&#39;s Last Exam)&#39; and that decontamination was &#39;significantly improved with Claude Opus 4.5&#39;. The docs give a training data cutoff of Aug 2025 while the system card describes internet data &#39;up to May 2025&#39;.
+
+Decontamination statements not shown as cells (they name no benchmark tracked here, or none at all): Terminal-Bench.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">System Card: Claude Opus 4.5</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://platform.claude.com/docs/en/models/opus-4-5/overview.md">Claude docs: Claude Opus 4.5 model page</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://www.anthropic.com/transparency">Anthropic Transparency Hub: Model Report</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/">Why we no longer evaluate SWE-bench Verified (OpenAI, February 23, 2026)</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

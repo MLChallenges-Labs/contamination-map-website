@@ -15,6 +15,7 @@
       <nav class="domains" aria-label="Domain">
         <a href="../index.html" class="active">Time series</a>
         <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
       </nav>
       <a class="nav-link" href="../methodology.html">Methodology</a>
     </div>
@@ -34,7 +35,7 @@
 </dl>
 
 <section>
-  <h2>Pre-training disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
 <p>Level determined for <strong>81%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 1, Training data seen: 0, Related data seen: 1, Not seen: 28, Unknown: 7">
 <span class="lvl-seen_split_unclear" style="flex-grow: 1" title="Seen, split unclear: 1"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 28" title="Not seen: 28"></span><span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
 <ul class="legend" aria-label="Contamination levels">
@@ -53,11 +54,11 @@
 </section>
 
 <section>
-  <h2>Pre-training corpora</h2>
+  <h2>Training corpora</h2>
   <ul class="rows">
     <li>
       <strong>GIFT-Eval Pretrain (GiftEvalPretrain)</strong>
-      <span class="muted">· 86 datasets (complete list)</span>
+      <span class="muted">· 86 sources (complete list) · pre-training</span>
  · <a href="https://huggingface.co/datasets/Salesforce/GiftEvalPretrain">homepage</a>      <details><summary>Evidence that TiRex-2-gifteval-pretrain (TiRex-2-gp) uses it</summary><figure class="evidence">
   <blockquote>“in the pretraining corpus (for comparison against TiRex-2-g).”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2/raw/main/README.md">huggingface.co</a>
@@ -69,8 +70,8 @@
 <span class="muted">· model card · model card · retrieved 2026-10-15</span></figcaption>
 </figure>
 </details>
-      <details><summary>Datasets in this corpus</summary><ul class="rows"><li>
-<em>BDG-2 Panther</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>BDG-2 Panther</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bdg-2_panther.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Panther”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -79,7 +80,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Fox</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Fox</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bdg-2_fox.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Fox BDG-2 Rat”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -88,7 +89,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Rat</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Rat</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bdg-2_rat.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Rat BDG-2 Bear”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -97,7 +98,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Bear</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Bear</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bdg-2_bear.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Bear”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -106,7 +107,7 @@
 </details>
 </li>
 <li>
-<em>Low Carbon London</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Low Carbon London</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): lcl.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Low Carbon London”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -115,7 +116,7 @@
 </details>
 </li>
 <li>
-<em>SMART</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>SMART</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): smart.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“SMART IDEAL”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -124,7 +125,7 @@
 </details>
 </li>
 <li>
-<em>IDEAL</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>IDEAL</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): ideal.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“IDEAL Sceaux”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -133,7 +134,7 @@
 </details>
 </li>
 <li>
-<em>Sceaux</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Sceaux</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): sceaux.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Sceaux Borealis”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -142,7 +143,7 @@
 </details>
 </li>
 <li>
-<em>Borealis</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Borealis</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): borealis.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Borealis Buildings900K”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -151,7 +152,7 @@
 </details>
 </li>
 <li>
-<em>Buildings900K</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Buildings900K</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): buildings_900k.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Buildings900K”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -160,7 +161,7 @@
 </details>
 </li>
 <li>
-<em>CMIP6</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>CMIP6</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): cmip6_1850 ... cmip6_2010 (33 folders, every 5 years).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CMIP6 ERA5”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -169,7 +170,7 @@
 </details>
 </li>
 <li>
-<em>ERA5</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA5</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): era5_1989 ... era5_2018 (30 yearly folders).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“ERA5 Azure VM Traces 2017”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -178,7 +179,7 @@
 </details>
 </li>
 <li>
-<em>Azure VM Traces 2017</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Azure VM Traces 2017</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): azure_vm_traces_2017.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Azure VM Traces 2017”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -187,7 +188,7 @@
 </details>
 </li>
 <li>
-<em>Borg Cluster Data 2011</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Borg Cluster Data 2011</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): borg_cluster_data_2011.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Borg Cluster Data 2011”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -196,7 +197,7 @@
 </details>
 </li>
 <li>
-<em>Alibaba Cluster Trace 2018</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Alibaba Cluster Trace 2018</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): alibaba_cluster_trace_2018.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Alibaba Cluster Trace 2018”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -205,7 +206,7 @@
 </details>
 </li>
 <li>
-<em>Taxi</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Taxi</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): taxi_30min.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Taxi Uber TLC Daily”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -214,7 +215,7 @@
 </details>
 </li>
 <li>
-<em>Uber TLC Daily</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Uber TLC Daily</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): uber_tlc_daily.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Uber TLC Daily”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -223,7 +224,7 @@
 </details>
 </li>
 <li>
-<em>Uber TLC Hourly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Uber TLC Hourly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): uber_tlc_hourly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Uber TLC Hourly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -232,7 +233,7 @@
 </details>
 </li>
 <li>
-<em>Wiki-Rolling</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wiki-Rolling</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): wiki-rolling_nips.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wiki-Rolling”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -241,7 +242,7 @@
 </details>
 </li>
 <li>
-<em>M5</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M5</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): m5.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M5 LargeST”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -259,7 +260,7 @@
 </details>
 </li>
 <li>
-<em>PEMS03</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS03</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): PEMS03.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS03 PEMS04”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -268,7 +269,7 @@
 </details>
 </li>
 <li>
-<em>PEMS04</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS04</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): PEMS04.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS04 PEMS07”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -277,7 +278,7 @@
 </details>
 </li>
 <li>
-<em>PEMS07</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS07</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): PEMS07.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS07 PEMS08”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -286,7 +287,7 @@
 </details>
 </li>
 <li>
-<em>PEMS08</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS08</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): PEMS08.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS08 PEMS Bay”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -295,7 +296,7 @@
 </details>
 </li>
 <li>
-<em>PEMS Bay</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS Bay</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): PEMS_BAY.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS Bay Los-Loop”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -304,7 +305,7 @@
 </details>
 </li>
 <li>
-<em>Los-Loop</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Los-Loop</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): LOS_LOOP.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Los-Loop Beijing Subway”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -313,7 +314,7 @@
 </details>
 </li>
 <li>
-<em>Beijing Subway</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Beijing Subway</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): BEIJING_SUBWAY_30MIN.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Beijing Subway”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -322,7 +323,7 @@
 </details>
 </li>
 <li>
-<em>SHMetro</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>SHMetro</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): SHMETRO.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“SHMetro HZMetro”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -331,7 +332,7 @@
 </details>
 </li>
 <li>
-<em>HZMetro</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>HZMetro</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): HZMETRO.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“HZMetro Q-Traffic”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -340,7 +341,7 @@
 </details>
 </li>
 <li>
-<em>Q-Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Q-Traffic</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): Q-TRAFFIC.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Q-Traffic Subseasonal”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -349,7 +350,7 @@
 </details>
 </li>
 <li>
-<em>Subseasonal</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Subseasonal</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): subseasonal.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Subseasonal”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -358,7 +359,7 @@
 </details>
 </li>
 <li>
-<em>Subseasonal Precipitation</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Subseasonal Precipitation</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): subseasonal_precip.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Subseasonal Precipitation”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -367,7 +368,7 @@
 </details>
 </li>
 <li>
-<em>Covid19 Energy</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Covid19 Energy</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): covid19_energy.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Covid19 Energy”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -376,7 +377,7 @@
 </details>
 </li>
 <li>
-<em>GEF12</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GEF12</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): gfc12_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GEF12 GEF14”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -385,7 +386,7 @@
 </details>
 </li>
 <li>
-<em>GEF14</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GEF14</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): gfc14_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GEF14 GEF17”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -394,7 +395,7 @@
 </details>
 </li>
 <li>
-<em>GEF17</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GEF17</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): gfc17_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GEF17 PDB Spanish”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -403,7 +404,7 @@
 </details>
 </li>
 <li>
-<em>PDB</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PDB</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): pdb.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PDB Spanish”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -412,7 +413,7 @@
 </details>
 </li>
 <li>
-<em>Spanish</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Spanish</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): spain.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Spanish BDG-2 Hog”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -421,7 +422,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Hog</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Hog</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): hog.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Hog BDG-2 Bull”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -430,7 +431,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Bull</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Bull</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bull.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Bull”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -439,7 +440,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Cockatoo</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Cockatoo</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): cockatoo.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Cockatoo”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -448,7 +449,7 @@
 </details>
 </li>
 <li>
-<em>ELF</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ELF</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): elf.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“ELF London Smart Meters”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -457,7 +458,7 @@
 </details>
 </li>
 <li>
-<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>London Smart Meters</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): london_smart_meters_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“London Smart Meters”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -466,7 +467,7 @@
 </details>
 </li>
 <li>
-<em>Wind Farms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wind Farms</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): wind_farms_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Farms”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -475,7 +476,7 @@
 </details>
 </li>
 <li>
-<em>Wind Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wind Power</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): wind_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -484,7 +485,7 @@
 </details>
 </li>
 <li>
-<em>Solar Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Solar Power</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): solar_power. AEMO 4-second solar power (Monash), not the LSTNet Alabama solar dataset in the GIFT-Eval test set.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Solar Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -493,7 +494,7 @@
 </details>
 </li>
 <li>
-<em>Oikolab Weather</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Oikolab Weather</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): oikolab_weather.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Oikolab Weather”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -502,7 +503,7 @@
 </details>
 </li>
 <li>
-<em>Elecdemand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Elecdemand</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): elecdemand.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Elecdemand”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -511,7 +512,7 @@
 </details>
 </li>
 <li>
-<em>Covid Mobility</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Covid Mobility</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): covid_mobility.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Covid Mobility”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -520,7 +521,7 @@
 </details>
 </li>
 <li>
-<em>Kaggle Web Traffic Weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Kaggle Web Traffic Weekly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): kaggle_web_traffic_weekly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Kaggle Web Traffic Weekly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -529,7 +530,7 @@
 </details>
 </li>
 <li>
-<em>Extended Web Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Extended Web Traffic</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): extended_web_traffic_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Extended Web Traffic”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -538,7 +539,7 @@
 </details>
 </li>
 <li>
-<em>M1 Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M1 Yearly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): m1_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M1 Yearly M1 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -547,7 +548,7 @@
 </details>
 </li>
 <li>
-<em>M1 Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M1 Quarterly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): m1_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M1 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -556,7 +557,7 @@
 </details>
 </li>
 <li>
-<em>M1 Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M1 Monthly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): m1_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M1 Monthly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -565,7 +566,7 @@
 </details>
 </li>
 <li>
-<em>M3 Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M3 Yearly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): monash_m3_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Yearly M3 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -574,7 +575,7 @@
 </details>
 </li>
 <li>
-<em>M3 Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M3 Quarterly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): monash_m3_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -583,7 +584,7 @@
 </details>
 </li>
 <li>
-<em>M3 Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M3 Monthly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): monash_m3_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Monthly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -592,7 +593,7 @@
 </details>
 </li>
 <li>
-<em>M3 Other</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M3 Other</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): monash_m3_other.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Other NN5 Daily”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -601,7 +602,7 @@
 </details>
 </li>
 <li>
-<em>NN5 Daily</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>NN5 Daily</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): nn5_daily_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“NN5 Daily NN5 Weekly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -610,7 +611,7 @@
 </details>
 </li>
 <li>
-<em>NN5 Weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>NN5 Weekly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): nn5_weekly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“NN5 Weekly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -619,7 +620,7 @@
 </details>
 </li>
 <li>
-<em>Tourism Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Tourism Yearly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): tourism_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Tourism Yearly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -628,7 +629,7 @@
 </details>
 </li>
 <li>
-<em>Tourism Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Tourism Quarterly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): tourism_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Tourism Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -637,7 +638,7 @@
 </details>
 </li>
 <li>
-<em>Tourism Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Tourism Monthly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): tourism_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Tourism Monthly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -646,7 +647,7 @@
 </details>
 </li>
 <li>
-<em>CIF 2016</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>CIF 2016</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): cif_2016_12, cif_2016_6.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CIF 2016 Traffic Weekly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -673,7 +674,7 @@
 </details>
 </li>
 <li>
-<em>Australian Electricity Demand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Australian Electricity Demand</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): australian_electricity_demand.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Australian Electricity Demand”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -682,7 +683,7 @@
 </details>
 </li>
 <li>
-<em>Rideshare</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Rideshare</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): rideshare_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Rideshare Sunspot”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -691,7 +692,7 @@
 </details>
 </li>
 <li>
-<em>Sunspot</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Sunspot</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): sunspot_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Sunspot Vehicle Trips”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -700,7 +701,7 @@
 </details>
 </li>
 <li>
-<em>Vehicle Trips</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Vehicle Trips</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): vehicle_trips_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Vehicle Trips”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -709,7 +710,7 @@
 </details>
 </li>
 <li>
-<em>Weather</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Weather</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): weather. Monash &#39;weather&#39; (Australian BOM, 3,010 daily series; Table 14 source column: Monash), NOT the Jena weather data used in GIFT-Eval and long-horizon.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Weather FRED MD”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -718,7 +719,7 @@
 </details>
 </li>
 <li>
-<em>FRED MD</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>FRED MD</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): fred_md.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“FRED MD Pedestrian Counts”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -727,7 +728,7 @@
 </details>
 </li>
 <li>
-<em>Pedestrian Counts</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Pedestrian Counts</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): pedestrian_counts.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Pedestrian Counts”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -736,7 +737,7 @@
 </details>
 </li>
 <li>
-<em>Bitcoin</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Bitcoin</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bitcoin_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Bitcoin KDD Cup 2022”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -745,7 +746,7 @@
 </details>
 </li>
 <li>
-<em>KDD Cup 2022</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>KDD Cup 2022</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): kdd2022. Not the KDD Cup 2018 air-quality dataset that is in the GIFT-Eval test set.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“KDD Cup 2022”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -754,7 +755,7 @@
 </details>
 </li>
 <li>
-<em>GoDaddy</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GoDaddy</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): godaddy.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GoDaddy Favorita Sales”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -763,7 +764,7 @@
 </details>
 </li>
 <li>
-<em>Favorita Sales</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Favorita Sales</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): favorita_sales.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Favorita Sales”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -772,7 +773,7 @@
 </details>
 </li>
 <li>
-<em>Favorita Transactions</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Favorita Transactions</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): favorita_transactions.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Favorita Transactions”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -781,7 +782,7 @@
 </details>
 </li>
 <li>
-<em>China Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>China Air Quality</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): china_air_quality.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“China Air Quality”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -790,7 +791,7 @@
 </details>
 </li>
 <li>
-<em>Beijing Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Beijing Air Quality</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): beijing_air_quality.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Beijing Air Quality”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -799,7 +800,7 @@
 </details>
 </li>
 <li>
-<em>Residential Load Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Residential Load Power</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): residential_load_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Residential Load Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -808,7 +809,7 @@
 </details>
 </li>
 <li>
-<em>Residential PV Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Residential PV Power</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): residential_pv_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Residential PV Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -826,7 +827,7 @@
 </details>
 </li>
 <li>
-<em>CDC Fluview WHO NREVSS</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>CDC Fluview WHO NREVSS</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): cdc_fluview_who_nrevss.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CDC Fluview WHO NREVSS”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -835,7 +836,7 @@
 </details>
 </li>
 <li>
-<em>Project Tycho</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Project Tycho</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): project_tycho.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Project Tycho”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -849,7 +850,7 @@
 </section>
 
 <section>
-  <h2>Other declared pre-training data</h2>
+  <h2>Other declared training data</h2>
   <ul class="rows"><li>
 <em>autogluon/chronos_datasets</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
 <p class="small">Exact subset not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
@@ -886,11 +887,12 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
   </ul>
 </section>
 
+
 <section>
   <h2>Benchmark cells</h2>
   <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
   <div class="cell-detail" id="gift-eval--jena-weather">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -898,7 +900,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-application">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -906,7 +908,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-service">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -914,7 +916,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-l2c">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -922,7 +924,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -930,7 +932,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bitbrains-rnd">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -938,7 +940,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--recruit-restaurant">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -946,7 +948,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--ett1">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -954,7 +956,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--ett2">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -962,7 +964,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--loop-seattle">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -970,7 +972,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--sz-taxi">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -978,7 +980,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m-dense">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -986,7 +988,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--lstnet-solar">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -994,7 +996,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hierarchical-sales">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1002,7 +1004,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-yearly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1010,7 +1012,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-quarterly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1018,7 +1020,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-monthly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1026,7 +1028,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-weekly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1034,7 +1036,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-daily">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1042,7 +1044,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-hourly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1050,7 +1052,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hospital">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1058,7 +1060,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--covid-deaths">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1066,7 +1068,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--us-births">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1074,7 +1076,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--saugeen-river-flow">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1082,7 +1084,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--temperature-rain">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1090,7 +1092,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--kdd-cup-2018">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1098,7 +1100,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--car-parts">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1106,7 +1108,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (1)</summary><figure class="evidence">
   <blockquote>“trained on datasets that do not overlap with Gift-Eval but the training included Gift-Eval-Pretrain.”</blockquote>
   <figcaption><a href="https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain/raw/main/README.md">huggingface.co</a>
@@ -1115,19 +1117,19 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </details>  </div>
   <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
   <div class="cell-detail" id="long-horizon--etth1">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--etth2">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--ettm1">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--ettm2">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--electricity-321">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--traffic-862">
     <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· the dataset was used; the source does not say which part (via GIFT-Eval Pretrain (GiftEvalPretrain))</span></p>
@@ -1148,10 +1150,10 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--weather-jena-2020">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--exchange-rate">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--ili">
     <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· related dataset CDC FluView ILINet (LOTSA) was used (via GIFT-Eval Pretrain (GiftEvalPretrain))</span></p>

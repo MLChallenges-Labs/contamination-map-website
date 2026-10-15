@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · BLOOM</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html" class="active">Text / LLM</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../text/index.html">Text / LLM</a> / Model</p>
+<h1>BLOOM</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>BigScience</dd>
+  <dt>Family</dt><dd>BLOOM</dd>
+  <dt>Released</dt><dd>2022-07-11 <span class="muted small">(Model card &#39;Release Date Estimate: Monday, 11.July.2022&#39; (https://huggingface.co/bigscience/bloom/raw/main/README.md). arXiv v1 of 2211.05100 is 2022-11-09.)</span></dd>
+<dt>Checkpoints</dt><dd>bigscience/bloom, bigscience/bloom-560m, bigscience/bloom-1b1, bigscience/bloom-1b7, bigscience/bloom-3b, bigscience/bloom-7b1</dd>  <dt>Weights</dt><dd>Open · BigScience BLOOM RAIL License v1.0 (bigscience-bloom-rail-1.0)</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2211.05100v4">Paper</a><a href="https://huggingface.co/bigscience/bloom/raw/main/README.md">Model card</a><a href="https://github.com/bigscience-workshop/Megatron-DeepSpeed">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>0%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 15">
+<span class="lvl-unknown" style="flex-grow: 15" title="Unknown: 15"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">15</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“BLOOM was trained on the ROOTS corpus (Laurençon et al., 2022), a composite collection of 498 Hugging Face datasets (Lhoest et al., 2021) amounting to 1.61 terabytes of text that span 46 natural languages and 13 programming languages.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2211.05100v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“direct access to the 223 (out of 498) components that we are able to distribute taking into account their licensing status, privacy risks, and agreements with their original custodians”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2211.05100v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.1.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>ROOTS (Responsible Open-science Open-collaboration Text Sources)</strong>
+      <span class="muted">· 16 sources · pre-training</span>
+ · <a href="https://huggingface.co/bigscience-data">homepage</a>      <details><summary>Evidence that BLOOM uses it</summary><figure class="evidence">
+  <blockquote>“BLOOM was trained on the ROOTS corpus (Laurençon et al., 2022), a composite collection of 498 Hugging Face datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2211.05100v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The ROOTS dataset contains around 341 billion tokens of text, so we aimed to train all models for the equivalent amount of tokens.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2211.05100v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>BigScience Catalogue (crowdsourced language resources)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Includes existing NLP datasets (QA, summarization, dialogue). Individual sources listed in ROOTS Appendix E, Table 2; a few are listed below.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“The first part of our corpus, accounting for 62% of the final dataset size (in bytes), was made up of a collection of monolingual and multilingual language resources”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Section 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“downloading and extracting the text field from a variety of NLP datasets in various formats (including e.g. question answering, summarization, or dialogue datasets)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2211.05100v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.1.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Pseudo-Crawled Data</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Pages from 614 seed domains (539 with text) retrieved from Common Crawl; 147 pseudo-crawl-based datasets after filtering.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we retrieved pages corresponding to the target domain names from 18 snapshots archived by Common Crawl in 2020 and 2021 in Web ARChive (WARC) format”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>GitHub Code</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">GitHub on BigQuery dump; per ROOTS, filtered to GPL licenses only due to a bug.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“using the same language selection as AlphaCode (Li et al., 2022)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The catalogue was further complemented with a dataset of programming languages collected from the GitHub data collection on Google’s BigQuery”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2211.05100v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.1.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>OSCAR</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Filtered OSCAR 21.09 (Common Crawl February 2021).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we chose OSCAR version 21.09 (Ortiz Suárez et al., 2020), based on the Common Crawl snapshot of February 2021, to make up the remaining 38% of our final dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we further sourced data from OSCAR version 21.09, corresponding to the February 2021 snapshot of the Common Crawl”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2211.05100v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.1.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Stack Exchange</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Stack Exchange”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>S2ORC</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“S2ORC”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>The Pile: EuroParl</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“The Pile: EuroParl”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>The Pile: USPTO</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“The Pile: USPTO”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Project Gutenberg</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Project Gutenberg”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wikipedia</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Multilingual Wikipedia.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Wikipedia”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Opensubtitles2016</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Opensubtitles2016”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>DuReader</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Chinese reading-comprehension (QA) dataset; split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“DuReader”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>IndoNLI</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Indonesian NLI dataset; split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“IndoNLI”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>XQUAD-ca</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Catalan version of XQuAD (an evaluation set); split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“XQUAD-ca”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ViquiQuAD</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Catalan QA dataset; split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“ViquiQuAD”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>VilaQuAD</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Catalan QA dataset; split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“VilaQuAD”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.03915v1">arxiv.org</a>
+<span class="muted">· paper · Appendix E, Table 2 (List of datasets used in crowdsourced dataset) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Pretrained base models only. The multitask-finetuned BLOOMZ models (trained on xP3) are separate releases and not covered here. Model card lists individual data cards / an interactive corpus map for ROOTS; not all components are public. No decontamination statement found in the BLOOM paper or ROOTS paper.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2211.05100v4">BLOOM: A 176B-Parameter Open-Access Multilingual Language Model</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/bigscience/bloom/raw/main/README.md">bigscience/bloom model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/bigscience/bloom-560m/raw/main/README.md">bigscience/bloom-560m model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2303.03915v1">The BigScience ROOTS Corpus: A 1.6TB Composite Multilingual Dataset</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/api/models/bigscience/bloom">HF API metadata for bigscience/bloom</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

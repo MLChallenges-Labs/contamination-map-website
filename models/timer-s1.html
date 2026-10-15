@@ -15,6 +15,7 @@
       <nav class="domains" aria-label="Domain">
         <a href="../index.html" class="active">Time series</a>
         <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
       </nav>
       <a class="nav-link" href="../methodology.html">Methodology</a>
     </div>
@@ -34,7 +35,7 @@
 </dl>
 
 <section>
-  <h2>Pre-training disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
 <p>Level determined for <strong>81%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 1, Training data seen: 18, Related data seen: 1, Not seen: 10, Unknown: 7">
 <span class="lvl-seen_split_unclear" style="flex-grow: 1" title="Seen, split unclear: 1"></span><span class="lvl-train_seen" style="flex-grow: 18" title="Training data seen: 18"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 10" title="Not seen: 10"></span><span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
 <ul class="legend" aria-label="Contamination levels">
@@ -58,18 +59,18 @@
 </section>
 
 <section>
-  <h2>Pre-training corpora</h2>
+  <h2>Training corpora</h2>
   <ul class="rows">
     <li>
       <strong>TimeBench</strong>
-      <span class="muted">· 12 datasets</span>
+      <span class="muted">· 12 sources · pre-training</span>
       <details><summary>Evidence that Timer-S1 uses it</summary><figure class="evidence">
   <blockquote>“Timer-S1 is first pre-trained on TimeBench, a dataset comprising over one trillion time series points.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
 <span class="muted">· paper · Section 1 · retrieved 2026-10-15</span></figcaption>
 </figure>
 </details>
-      <details><summary>Datasets in this corpus</summary><ul class="rows"><li>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
 <em>Chronos</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
 <p class="small">94B points; Ansari et al. (2024) -- the Chronos training data (corpus not given a shared id here).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
@@ -79,7 +80,7 @@
 </details>
 </li>
 <li>
-<em>ECG</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ECG</em>  <span class="muted">· split: unknown</span>
 <p class="small">48B points; cited as (2000) = Goldberger et al. 2000 (PhysioNet); specific ECG databases not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
@@ -115,7 +116,7 @@
 </details>
 </li>
 <li>
-<em>Synthetic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Synthetic</em>  <span class="muted">· split: unknown</span>
 <p class="small">0.5B points (0.05%); generated following KernelSynth (Ansari et al., 2024).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
@@ -124,7 +125,7 @@
 </details>
 </li>
 <li>
-<em>ERA5 3h</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA5 3h</em>  <span class="muted">· split: unknown</span>
 <p class="small">129B points; ERA5 reanalysis (2021 citation).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
@@ -133,7 +134,7 @@
 </details>
 </li>
 <li>
-<em>ERA 12h</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA 12h</em>  <span class="muted">· split: unknown</span>
 <p class="small">32B points; ERA5 at 12-hour frequency (written &#39;ERA 12h&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
@@ -142,7 +143,7 @@
 </details>
 </li>
 <li>
-<em>ERA5 Daily</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA5 Daily</em>  <span class="muted">· split: unknown</span>
 <p class="small">406B points (39.35%).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
@@ -151,7 +152,7 @@
 </details>
 </li>
 <li>
-<em>ERA5 Weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA5 Weekly</em>  <span class="muted">· split: unknown</span>
 <p class="small">58B points.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
@@ -160,7 +161,7 @@
 </details>
 </li>
 <li>
-<em>ERA5 Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA5 Monthly</em>  <span class="muted">· split: unknown</span>
 <p class="small">13.5B points.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
@@ -169,7 +170,7 @@
 </details>
 </li>
 <li>
-<em>ERA5 Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA5 Quarterly</em>  <span class="muted">· split: unknown</span>
 <p class="small">4.5B points.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
@@ -181,15 +182,15 @@
     </li>
     <li>
       <strong>LOTSA (Large-scale Open Time Series Archive)</strong>
-      <span class="muted">· 104 datasets (complete list)</span>
+      <span class="muted">· 104 sources (complete list) · pre-training</span>
  · <a href="https://huggingface.co/datasets/Salesforce/lotsa_data">homepage</a>      <details><summary>Evidence that Timer-S1 uses it</summary><figure class="evidence">
   <blockquote>“incorporate publicly released time series from research efforts including Chronos [2] and LOTSA [55]”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
 <span class="muted">· paper · Section 4.1 Data · retrieved 2026-10-15</span></figcaption>
 </figure>
 </details>
-      <details><summary>Datasets in this corpus</summary><ul class="rows"><li>
-<em>BDG-2 Panther</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>BDG-2 Panther</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: bdg-2_panther.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Panther”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -198,7 +199,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Fox</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Fox</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: bdg-2_fox.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Fox”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -207,7 +208,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Rat</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Rat</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: bdg-2_rat.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Rat”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -216,7 +217,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Bear</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Bear</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: bdg-2_bear.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Bear”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -225,7 +226,7 @@
 </details>
 </li>
 <li>
-<em>Low Carbon London</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Low Carbon London</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: lcl.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Low Carbon London”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -234,7 +235,7 @@
 </details>
 </li>
 <li>
-<em>SMART</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>SMART</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: smart.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Low Carbon London SMART”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -243,7 +244,7 @@
 </details>
 </li>
 <li>
-<em>IDEAL</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>IDEAL</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: ideal.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“IDEAL”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -252,7 +253,7 @@
 </details>
 </li>
 <li>
-<em>Sceaux</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Sceaux</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: sceaux.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Sceaux”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -261,7 +262,7 @@
 </details>
 </li>
 <li>
-<em>Borealis</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Borealis</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: borealis.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Borealis”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -270,7 +271,7 @@
 </details>
 </li>
 <li>
-<em>Buildings900K</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>Buildings900K</em>  <span class="muted">· split: full</span>
 <p class="small">Both the BuildingsBench pre-train and test splits (by PUMA) are included. HF config(s) in Salesforce/lotsa_data: buildings_900k.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Buildings900K”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -284,7 +285,7 @@
 </details>
 </li>
 <li>
-<em>CMIP6</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>CMIP6</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: cmip6 (+ cmip6_1850 ... cmip6_2010).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CMIP6 ERA5”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -293,7 +294,7 @@
 </details>
 </li>
 <li>
-<em>ERA5</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA5</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: era5 (+ era5_1989 ... era5_2018).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CMIP6 ERA5”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -302,7 +303,7 @@
 </details>
 </li>
 <li>
-<em>Azure VM Traces 2017</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Azure VM Traces 2017</em>  <span class="muted">· split: train</span>
 <p class="small">Train split is the CloudOps TSF pre-train/test split of Woo et al. (2023), not GIFT-Eval or long-horizon. HF config(s) in Salesforce/lotsa_data: azure_vm_traces_2017.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Azure VM Traces 2017”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -316,7 +317,7 @@
 </details>
 </li>
 <li>
-<em>Borg Cluster Data 2011</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Borg Cluster Data 2011</em>  <span class="muted">· split: train</span>
 <p class="small">Train split is the CloudOps TSF pre-train/test split of Woo et al. (2023), not GIFT-Eval or long-horizon. HF config(s) in Salesforce/lotsa_data: borg_cluster_data_2011.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Borg Cluster Data 2011”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -330,7 +331,7 @@
 </details>
 </li>
 <li>
-<em>Alibaba Cluster Trace 2018</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Alibaba Cluster Trace 2018</em>  <span class="muted">· split: train</span>
 <p class="small">Train split is the CloudOps TSF pre-train/test split of Woo et al. (2023), not GIFT-Eval or long-horizon. HF config(s) in Salesforce/lotsa_data: alibaba_cluster_trace_2018.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Alibaba Cluster Trace 2018”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -344,7 +345,7 @@
 </details>
 </li>
 <li>
-<em>Taxi</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Taxi</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: taxi_30min.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Taxi Uber TLC Daily”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -353,7 +354,7 @@
 </details>
 </li>
 <li>
-<em>Uber TLC Daily</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Uber TLC Daily</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: uber_tlc_daily.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Uber TLC Daily”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -362,7 +363,7 @@
 </details>
 </li>
 <li>
-<em>Uber TLC Hourly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Uber TLC Hourly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: uber_tlc_hourly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Uber TLC Hourly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -371,7 +372,7 @@
 </details>
 </li>
 <li>
-<em>Wiki-Rolling</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wiki-Rolling</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: wiki-rolling_nips.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wiki-Rolling”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -380,7 +381,7 @@
 </details>
 </li>
 <li>
-<em>M5</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M5</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: m5.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wiki-Rolling M5”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -403,7 +404,7 @@
 </details>
 </li>
 <li>
-<em>PEMS03</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS03</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: PEMS03.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS03”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -412,7 +413,7 @@
 </details>
 </li>
 <li>
-<em>PEMS04</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS04</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: PEMS04.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS04”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -421,7 +422,7 @@
 </details>
 </li>
 <li>
-<em>PEMS07</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS07</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: PEMS07.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS07”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -430,7 +431,7 @@
 </details>
 </li>
 <li>
-<em>PEMS08</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS08</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: PEMS08.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS08”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -439,7 +440,7 @@
 </details>
 </li>
 <li>
-<em>PEMS Bay</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS Bay</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: PEMS_BAY.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS Bay”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -448,7 +449,7 @@
 </details>
 </li>
 <li>
-<em>Los-Loop</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Los-Loop</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: LOS_LOOP.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Los-Loop”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -475,7 +476,7 @@
 </details>
 </li>
 <li>
-<em>Beijing Subway</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Beijing Subway</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: BEIJING_SUBWAY_30MIN.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Beijing Subway”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -484,7 +485,7 @@
 </details>
 </li>
 <li>
-<em>SHMetro</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>SHMetro</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: SHMETRO.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“SHMetro”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -493,7 +494,7 @@
 </details>
 </li>
 <li>
-<em>HZMetro</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>HZMetro</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: HZMETRO.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“HZMetro”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -511,7 +512,7 @@
 </details>
 </li>
 <li>
-<em>Q-Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Q-Traffic</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: Q-TRAFFIC.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Q-Traffic”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -520,7 +521,7 @@
 </details>
 </li>
 <li>
-<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>London Smart Meters</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: london_smart_meters_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“London Smart Meters”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -539,7 +540,7 @@
 </details>
 </li>
 <li>
-<em>Wind Farms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>Wind Farms</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: wind_farms_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Farms”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -558,7 +559,7 @@
 </details>
 </li>
 <li>
-<em>Wind Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>Wind Power</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: wind_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -577,7 +578,7 @@
 </details>
 </li>
 <li>
-<em>Solar Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>Solar Power</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: solar_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Solar Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -596,7 +597,7 @@
 </details>
 </li>
 <li>
-<em>Oikolab Weather</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>Oikolab Weather</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: oikolab_weather.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Oikolab Weather”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -615,7 +616,7 @@
 </details>
 </li>
 <li>
-<em>Elecdemand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Elecdemand</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: elecdemand.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Elecdemand”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -629,7 +630,7 @@
 </details>
 </li>
 <li>
-<em>Covid Mobility</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>Covid Mobility</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: covid_mobility.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Covid Mobility”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -648,7 +649,7 @@
 </details>
 </li>
 <li>
-<em>Kaggle Web Traffic Weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>Kaggle Web Traffic Weekly</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: kaggle_web_traffic_weekly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Kaggle Web Traffic Weekly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -667,7 +668,7 @@
 </details>
 </li>
 <li>
-<em>Extended Web Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>Extended Web Traffic</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: extended_web_traffic_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Extended Web Traffic”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -686,7 +687,7 @@
 </details>
 </li>
 <li>
-<em>M1 Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>M1 Yearly</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: m1_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M1 Yearly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -705,7 +706,7 @@
 </details>
 </li>
 <li>
-<em>M1 Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>M1 Quarterly</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: m1_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M1 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -724,7 +725,7 @@
 </details>
 </li>
 <li>
-<em>M1 Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>M1 Monthly</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: m1_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M1 Monthly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -738,7 +739,7 @@
 </details>
 </li>
 <li>
-<em>M3 Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>M3 Yearly</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: monash_m3_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Yearly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -757,7 +758,7 @@
 </details>
 </li>
 <li>
-<em>M3 Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>M3 Quarterly</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: monash_m3_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -776,7 +777,7 @@
 </details>
 </li>
 <li>
-<em>M3 Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>M3 Monthly</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: monash_m3_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Monthly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -790,7 +791,7 @@
 </details>
 </li>
 <li>
-<em>M3 Other</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>M3 Other</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: monash_m3_other.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Other”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -898,7 +899,7 @@
 </details>
 </li>
 <li>
-<em>NN5 Daily</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>NN5 Daily</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: nn5_daily_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“NN5 Daily”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -912,7 +913,7 @@
 </details>
 </li>
 <li>
-<em>NN5 Weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>NN5 Weekly</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: nn5_weekly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“NN5 Weekly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -926,7 +927,7 @@
 </details>
 </li>
 <li>
-<em>Tourism Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<em>Tourism Yearly</em>  <span class="muted">· split: full</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: tourism_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Tourism Yearly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -945,7 +946,7 @@
 </details>
 </li>
 <li>
-<em>Tourism Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Tourism Quarterly</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: tourism_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Tourism Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -959,7 +960,7 @@
 </details>
 </li>
 <li>
-<em>Tourism Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Tourism Monthly</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: tourism_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Tourism Monthly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -973,7 +974,7 @@
 </details>
 </li>
 <li>
-<em>CIF 2016</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>CIF 2016</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: cif_2016_12, cif_2016_6.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CIF 2016”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1015,7 +1016,7 @@
 </details>
 </li>
 <li>
-<em>Australian Electricity Demand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Australian Electricity Demand</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: australian_electricity_demand.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Australian Electricity Demand”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1029,7 +1030,7 @@
 </details>
 </li>
 <li>
-<em>Rideshare</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Rideshare</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: rideshare_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Rideshare”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1057,7 +1058,7 @@
 </details>
 </li>
 <li>
-<em>Sunspot</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Sunspot</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: sunspot_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Sunspot”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1085,7 +1086,7 @@
 </details>
 </li>
 <li>
-<em>Vehicle Trips</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Vehicle Trips</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: vehicle_trips_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Vehicle Trips”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1099,7 +1100,7 @@
 </details>
 </li>
 <li>
-<em>Weather</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Weather</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. This is Monash &#39;Weather&#39;, not the 10-minute Weather dataset of the long-horizon benchmark. HF config(s) in Salesforce/lotsa_data: weather.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Vehicle Trips Weather”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1132,7 +1133,7 @@
 </details>
 </li>
 <li>
-<em>FRED MD</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>FRED MD</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: fred_md.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“FRED MD”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1146,7 +1147,7 @@
 </details>
 </li>
 <li>
-<em>Pedestrian Counts</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Pedestrian Counts</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: pedestrian_counts.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Pedestrian Counts”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1202,7 +1203,7 @@
 </details>
 </li>
 <li>
-<em>Bitcoin</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Bitcoin</em>  <span class="muted">· split: train</span>
 <p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: bitcoin_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Bitcoin”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1230,7 +1231,7 @@
 </details>
 </li>
 <li>
-<em>Covid19 Energy</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Covid19 Energy</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: covid19_energy.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Covid19 Energy”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1239,7 +1240,7 @@
 </details>
 </li>
 <li>
-<em>GEF12</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GEF12</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: gfc12_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GEF12”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1248,7 +1249,7 @@
 </details>
 </li>
 <li>
-<em>GEF14</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GEF14</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: gfc14_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GEF14”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1257,7 +1258,7 @@
 </details>
 </li>
 <li>
-<em>GEF17</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GEF17</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: gfc17_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GEF17”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1266,7 +1267,7 @@
 </details>
 </li>
 <li>
-<em>PDB</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PDB</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: pdb.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GEF17 PDB”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1275,7 +1276,7 @@
 </details>
 </li>
 <li>
-<em>Spanish</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Spanish</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: spain.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Spanish”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1284,7 +1285,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Hog</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Hog</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: hog.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Hog”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1293,7 +1294,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Bull</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Bull</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: bull.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Bull”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1302,7 +1303,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Cockatoo</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Cockatoo</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: cockatoo.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Cockatoo”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1311,7 +1312,7 @@
 </details>
 </li>
 <li>
-<em>ELF</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ELF</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: elf.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Cockatoo ELF”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1320,7 +1321,7 @@
 </details>
 </li>
 <li>
-<em>Subseasonal</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Subseasonal</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: subseasonal.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Subseasonal Subseasonal Precipitation”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1329,7 +1330,7 @@
 </details>
 </li>
 <li>
-<em>Subseasonal Precipitation</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Subseasonal Precipitation</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: subseasonal_precip.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Subseasonal Subseasonal Precipitation”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1338,7 +1339,7 @@
 </details>
 </li>
 <li>
-<em>KDD Cup 2022</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>KDD Cup 2022</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: kdd2022.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“KDD Cup 2022”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1347,7 +1348,7 @@
 </details>
 </li>
 <li>
-<em>GoDaddy</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GoDaddy</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: godaddy.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GoDaddy”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1356,7 +1357,7 @@
 </details>
 </li>
 <li>
-<em>Favorita Sales</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Favorita Sales</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: favorita_sales.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Favorita Sales”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1365,7 +1366,7 @@
 </details>
 </li>
 <li>
-<em>Favorita Transactions</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Favorita Transactions</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: favorita_transactions.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Favorita Transactions”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1392,7 +1393,7 @@
 </details>
 </li>
 <li>
-<em>China Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>China Air Quality</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: china_air_quality.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“China Air Quality”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1401,7 +1402,7 @@
 </details>
 </li>
 <li>
-<em>Beijing Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Beijing Air Quality</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: beijing_air_quality.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Beijing Air Quality”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1410,7 +1411,7 @@
 </details>
 </li>
 <li>
-<em>Residential Load Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Residential Load Power</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: residential_load_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Residential Load Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1419,7 +1420,7 @@
 </details>
 </li>
 <li>
-<em>Residential PV Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Residential PV Power</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: residential_pv_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Residential PV Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1437,7 +1438,7 @@
 </details>
 </li>
 <li>
-<em>CDC Fluview WHO NREVSS</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>CDC Fluview WHO NREVSS</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: cdc_fluview_who_nrevss.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CDC Fluview WHO NREVSS”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1446,7 +1447,7 @@
 </details>
 </li>
 <li>
-<em>Project Tycho</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Project Tycho</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF config(s) in Salesforce/lotsa_data: project_tycho.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Project Tycho”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
@@ -1458,7 +1459,7 @@
     </li>
     <li>
       <strong>GIFT-Eval Pretrain (GiftEvalPretrain)</strong>
-      <span class="muted">· 86 datasets (complete list)</span>
+      <span class="muted">· 86 sources (complete list) · pre-training</span>
  · <a href="https://huggingface.co/datasets/Salesforce/GiftEvalPretrain">homepage</a>      <details><summary>Evidence that Timer-S1 uses it</summary><figure class="evidence">
   <blockquote>“First, we adopt the datasets for short-term tasks in GIFT-Eval Pretrain [1] for post-training.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -1475,8 +1476,8 @@
 <span class="muted">· model card · YAML metadata `datasets` · retrieved 2026-10-15</span></figcaption>
 </figure>
 </details>
-      <details><summary>Datasets in this corpus</summary><ul class="rows"><li>
-<em>BDG-2 Panther</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>BDG-2 Panther</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bdg-2_panther.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Panther”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1485,7 +1486,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Fox</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Fox</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bdg-2_fox.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Fox BDG-2 Rat”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1494,7 +1495,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Rat</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Rat</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bdg-2_rat.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Rat BDG-2 Bear”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1503,7 +1504,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Bear</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Bear</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bdg-2_bear.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Bear”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1512,7 +1513,7 @@
 </details>
 </li>
 <li>
-<em>Low Carbon London</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Low Carbon London</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): lcl.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Low Carbon London”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1521,7 +1522,7 @@
 </details>
 </li>
 <li>
-<em>SMART</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>SMART</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): smart.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“SMART IDEAL”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1530,7 +1531,7 @@
 </details>
 </li>
 <li>
-<em>IDEAL</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>IDEAL</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): ideal.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“IDEAL Sceaux”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1539,7 +1540,7 @@
 </details>
 </li>
 <li>
-<em>Sceaux</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Sceaux</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): sceaux.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Sceaux Borealis”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1548,7 +1549,7 @@
 </details>
 </li>
 <li>
-<em>Borealis</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Borealis</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): borealis.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Borealis Buildings900K”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1557,7 +1558,7 @@
 </details>
 </li>
 <li>
-<em>Buildings900K</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Buildings900K</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): buildings_900k.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Buildings900K”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1566,7 +1567,7 @@
 </details>
 </li>
 <li>
-<em>CMIP6</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>CMIP6</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): cmip6_1850 ... cmip6_2010 (33 folders, every 5 years).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CMIP6 ERA5”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1575,7 +1576,7 @@
 </details>
 </li>
 <li>
-<em>ERA5</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA5</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): era5_1989 ... era5_2018 (30 yearly folders).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“ERA5 Azure VM Traces 2017”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1584,7 +1585,7 @@
 </details>
 </li>
 <li>
-<em>Azure VM Traces 2017</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Azure VM Traces 2017</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): azure_vm_traces_2017.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Azure VM Traces 2017”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1593,7 +1594,7 @@
 </details>
 </li>
 <li>
-<em>Borg Cluster Data 2011</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Borg Cluster Data 2011</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): borg_cluster_data_2011.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Borg Cluster Data 2011”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1602,7 +1603,7 @@
 </details>
 </li>
 <li>
-<em>Alibaba Cluster Trace 2018</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Alibaba Cluster Trace 2018</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): alibaba_cluster_trace_2018.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Alibaba Cluster Trace 2018”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1611,7 +1612,7 @@
 </details>
 </li>
 <li>
-<em>Taxi</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Taxi</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): taxi_30min.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Taxi Uber TLC Daily”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1620,7 +1621,7 @@
 </details>
 </li>
 <li>
-<em>Uber TLC Daily</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Uber TLC Daily</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): uber_tlc_daily.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Uber TLC Daily”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1629,7 +1630,7 @@
 </details>
 </li>
 <li>
-<em>Uber TLC Hourly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Uber TLC Hourly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): uber_tlc_hourly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Uber TLC Hourly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1638,7 +1639,7 @@
 </details>
 </li>
 <li>
-<em>Wiki-Rolling</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wiki-Rolling</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): wiki-rolling_nips.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wiki-Rolling”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1647,7 +1648,7 @@
 </details>
 </li>
 <li>
-<em>M5</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M5</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): m5.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M5 LargeST”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1665,7 +1666,7 @@
 </details>
 </li>
 <li>
-<em>PEMS03</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS03</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): PEMS03.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS03 PEMS04”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1674,7 +1675,7 @@
 </details>
 </li>
 <li>
-<em>PEMS04</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS04</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): PEMS04.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS04 PEMS07”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1683,7 +1684,7 @@
 </details>
 </li>
 <li>
-<em>PEMS07</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS07</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): PEMS07.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS07 PEMS08”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1692,7 +1693,7 @@
 </details>
 </li>
 <li>
-<em>PEMS08</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS08</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): PEMS08.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS08 PEMS Bay”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1701,7 +1702,7 @@
 </details>
 </li>
 <li>
-<em>PEMS Bay</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PEMS Bay</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): PEMS_BAY.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PEMS Bay Los-Loop”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1710,7 +1711,7 @@
 </details>
 </li>
 <li>
-<em>Los-Loop</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Los-Loop</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): LOS_LOOP.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Los-Loop Beijing Subway”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1719,7 +1720,7 @@
 </details>
 </li>
 <li>
-<em>Beijing Subway</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Beijing Subway</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): BEIJING_SUBWAY_30MIN.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Beijing Subway”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1728,7 +1729,7 @@
 </details>
 </li>
 <li>
-<em>SHMetro</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>SHMetro</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): SHMETRO.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“SHMetro HZMetro”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1737,7 +1738,7 @@
 </details>
 </li>
 <li>
-<em>HZMetro</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>HZMetro</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): HZMETRO.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“HZMetro Q-Traffic”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1746,7 +1747,7 @@
 </details>
 </li>
 <li>
-<em>Q-Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Q-Traffic</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): Q-TRAFFIC.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Q-Traffic Subseasonal”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1755,7 +1756,7 @@
 </details>
 </li>
 <li>
-<em>Subseasonal</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Subseasonal</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): subseasonal.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Subseasonal”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1764,7 +1765,7 @@
 </details>
 </li>
 <li>
-<em>Subseasonal Precipitation</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Subseasonal Precipitation</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): subseasonal_precip.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Subseasonal Precipitation”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1773,7 +1774,7 @@
 </details>
 </li>
 <li>
-<em>Covid19 Energy</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Covid19 Energy</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): covid19_energy.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Covid19 Energy”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1782,7 +1783,7 @@
 </details>
 </li>
 <li>
-<em>GEF12</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GEF12</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): gfc12_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GEF12 GEF14”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1791,7 +1792,7 @@
 </details>
 </li>
 <li>
-<em>GEF14</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GEF14</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): gfc14_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GEF14 GEF17”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1800,7 +1801,7 @@
 </details>
 </li>
 <li>
-<em>GEF17</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GEF17</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): gfc17_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GEF17 PDB Spanish”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1809,7 +1810,7 @@
 </details>
 </li>
 <li>
-<em>PDB</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PDB</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): pdb.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PDB Spanish”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1818,7 +1819,7 @@
 </details>
 </li>
 <li>
-<em>Spanish</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Spanish</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): spain.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Spanish BDG-2 Hog”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1827,7 +1828,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Hog</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Hog</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): hog.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Hog BDG-2 Bull”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1836,7 +1837,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Bull</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Bull</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bull.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Bull”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1845,7 +1846,7 @@
 </details>
 </li>
 <li>
-<em>BDG-2 Cockatoo</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BDG-2 Cockatoo</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): cockatoo.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BDG-2 Cockatoo”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1854,7 +1855,7 @@
 </details>
 </li>
 <li>
-<em>ELF</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ELF</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): elf.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“ELF London Smart Meters”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1863,7 +1864,7 @@
 </details>
 </li>
 <li>
-<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>London Smart Meters</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): london_smart_meters_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“London Smart Meters”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1872,7 +1873,7 @@
 </details>
 </li>
 <li>
-<em>Wind Farms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wind Farms</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): wind_farms_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Farms”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1881,7 +1882,7 @@
 </details>
 </li>
 <li>
-<em>Wind Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wind Power</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): wind_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1890,7 +1891,7 @@
 </details>
 </li>
 <li>
-<em>Solar Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Solar Power</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): solar_power. AEMO 4-second solar power (Monash), not the LSTNet Alabama solar dataset in the GIFT-Eval test set.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Solar Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1899,7 +1900,7 @@
 </details>
 </li>
 <li>
-<em>Oikolab Weather</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Oikolab Weather</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): oikolab_weather.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Oikolab Weather”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1908,7 +1909,7 @@
 </details>
 </li>
 <li>
-<em>Elecdemand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Elecdemand</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): elecdemand.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Elecdemand”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1917,7 +1918,7 @@
 </details>
 </li>
 <li>
-<em>Covid Mobility</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Covid Mobility</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): covid_mobility.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Covid Mobility”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1926,7 +1927,7 @@
 </details>
 </li>
 <li>
-<em>Kaggle Web Traffic Weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Kaggle Web Traffic Weekly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): kaggle_web_traffic_weekly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Kaggle Web Traffic Weekly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1935,7 +1936,7 @@
 </details>
 </li>
 <li>
-<em>Extended Web Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Extended Web Traffic</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): extended_web_traffic_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Extended Web Traffic”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1944,7 +1945,7 @@
 </details>
 </li>
 <li>
-<em>M1 Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M1 Yearly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): m1_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M1 Yearly M1 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1953,7 +1954,7 @@
 </details>
 </li>
 <li>
-<em>M1 Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M1 Quarterly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): m1_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M1 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1962,7 +1963,7 @@
 </details>
 </li>
 <li>
-<em>M1 Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M1 Monthly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): m1_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M1 Monthly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1971,7 +1972,7 @@
 </details>
 </li>
 <li>
-<em>M3 Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M3 Yearly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): monash_m3_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Yearly M3 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1980,7 +1981,7 @@
 </details>
 </li>
 <li>
-<em>M3 Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M3 Quarterly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): monash_m3_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1989,7 +1990,7 @@
 </details>
 </li>
 <li>
-<em>M3 Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M3 Monthly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): monash_m3_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Monthly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -1998,7 +1999,7 @@
 </details>
 </li>
 <li>
-<em>M3 Other</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>M3 Other</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): monash_m3_other.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“M3 Other NN5 Daily”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2007,7 +2008,7 @@
 </details>
 </li>
 <li>
-<em>NN5 Daily</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>NN5 Daily</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): nn5_daily_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“NN5 Daily NN5 Weekly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2016,7 +2017,7 @@
 </details>
 </li>
 <li>
-<em>NN5 Weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>NN5 Weekly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): nn5_weekly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“NN5 Weekly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2025,7 +2026,7 @@
 </details>
 </li>
 <li>
-<em>Tourism Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Tourism Yearly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): tourism_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Tourism Yearly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2034,7 +2035,7 @@
 </details>
 </li>
 <li>
-<em>Tourism Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Tourism Quarterly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): tourism_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Tourism Quarterly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2043,7 +2044,7 @@
 </details>
 </li>
 <li>
-<em>Tourism Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Tourism Monthly</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): tourism_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Tourism Monthly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2052,7 +2053,7 @@
 </details>
 </li>
 <li>
-<em>CIF 2016</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>CIF 2016</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): cif_2016_12, cif_2016_6.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CIF 2016 Traffic Weekly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2079,7 +2080,7 @@
 </details>
 </li>
 <li>
-<em>Australian Electricity Demand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Australian Electricity Demand</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): australian_electricity_demand.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Australian Electricity Demand”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2088,7 +2089,7 @@
 </details>
 </li>
 <li>
-<em>Rideshare</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Rideshare</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): rideshare_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Rideshare Sunspot”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2097,7 +2098,7 @@
 </details>
 </li>
 <li>
-<em>Sunspot</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Sunspot</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): sunspot_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Sunspot Vehicle Trips”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2106,7 +2107,7 @@
 </details>
 </li>
 <li>
-<em>Vehicle Trips</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Vehicle Trips</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): vehicle_trips_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Vehicle Trips”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2115,7 +2116,7 @@
 </details>
 </li>
 <li>
-<em>Weather</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Weather</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): weather. Monash &#39;weather&#39; (Australian BOM, 3,010 daily series; Table 14 source column: Monash), NOT the Jena weather data used in GIFT-Eval and long-horizon.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Weather FRED MD”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2124,7 +2125,7 @@
 </details>
 </li>
 <li>
-<em>FRED MD</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>FRED MD</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): fred_md.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“FRED MD Pedestrian Counts”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2133,7 +2134,7 @@
 </details>
 </li>
 <li>
-<em>Pedestrian Counts</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Pedestrian Counts</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): pedestrian_counts.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Pedestrian Counts”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2142,7 +2143,7 @@
 </details>
 </li>
 <li>
-<em>Bitcoin</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Bitcoin</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): bitcoin_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Bitcoin KDD Cup 2022”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2151,7 +2152,7 @@
 </details>
 </li>
 <li>
-<em>KDD Cup 2022</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>KDD Cup 2022</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): kdd2022. Not the KDD Cup 2018 air-quality dataset that is in the GIFT-Eval test set.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“KDD Cup 2022”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2160,7 +2161,7 @@
 </details>
 </li>
 <li>
-<em>GoDaddy</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>GoDaddy</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): godaddy.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“GoDaddy Favorita Sales”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2169,7 +2170,7 @@
 </details>
 </li>
 <li>
-<em>Favorita Sales</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Favorita Sales</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): favorita_sales.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Favorita Sales”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2178,7 +2179,7 @@
 </details>
 </li>
 <li>
-<em>Favorita Transactions</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Favorita Transactions</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): favorita_transactions.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Favorita Transactions”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2187,7 +2188,7 @@
 </details>
 </li>
 <li>
-<em>China Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>China Air Quality</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): china_air_quality.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“China Air Quality”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2196,7 +2197,7 @@
 </details>
 </li>
 <li>
-<em>Beijing Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Beijing Air Quality</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): beijing_air_quality.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Beijing Air Quality”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2205,7 +2206,7 @@
 </details>
 </li>
 <li>
-<em>Residential Load Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Residential Load Power</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): residential_load_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Residential Load Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2214,7 +2215,7 @@
 </details>
 </li>
 <li>
-<em>Residential PV Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Residential PV Power</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): residential_pv_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Residential PV Power”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2232,7 +2233,7 @@
 </details>
 </li>
 <li>
-<em>CDC Fluview WHO NREVSS</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>CDC Fluview WHO NREVSS</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): cdc_fluview_who_nrevss.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CDC Fluview WHO NREVSS”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2241,7 +2242,7 @@
 </details>
 </li>
 <li>
-<em>Project Tycho</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Project Tycho</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF folder(s): project_tycho.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Project Tycho”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
@@ -2253,15 +2254,15 @@
     </li>
     <li>
       <strong>Unified Time Series Dataset (UTSD)</strong>
-      <span class="muted">· 32 datasets (complete list)</span>
+      <span class="muted">· 32 sources (complete list) · pre-training</span>
  · <a href="https://huggingface.co/datasets/thuml/UTSD">homepage</a>      <details><summary>Evidence that Timer-S1 uses it</summary><figure class="evidence">
   <blockquote>“thuml/UTSD”</blockquote>
   <figcaption><a href="https://huggingface.co/thuml/Timer-S1/raw/main/README.md">huggingface.co</a>
 <span class="muted">· model card · YAML metadata `datasets` · retrieved 2026-10-15</span></figcaption>
 </figure>
 </details>
-      <details><summary>Datasets in this corpus</summary><ul class="rows"><li>
-<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>London Smart Meters</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“London Smart Meters | 166.50M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2270,7 +2271,7 @@
 </details>
 </li>
 <li>
-<em>Wind Farms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wind Farms</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Farms | 7.40M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2279,7 +2280,7 @@
 </details>
 </li>
 <li>
-<em>Aus. Electricity Demand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Aus. Electricity Demand</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Aus. Electricity Demand | 1.16M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2288,7 +2289,7 @@
 </details>
 </li>
 <li>
-<em>AustraliaRainfall</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>AustraliaRainfall</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“AustraliaRainfall | 11.54M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2297,7 +2298,7 @@
 </details>
 </li>
 <li>
-<em>BeijingPM25Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BeijingPM25Quality</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BeijingPM25Quality | 3.66M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2306,7 +2307,7 @@
 </details>
 </li>
 <li>
-<em>BenzeneConcentration</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BenzeneConcentration</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BenzeneConcentration | 16.34M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2315,7 +2316,7 @@
 </details>
 </li>
 <li>
-<em>MotorImagery</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>MotorImagery</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“MotorImagery | 72.58M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2324,7 +2325,7 @@
 </details>
 </li>
 <li>
-<em>SelfRegulationSCP1</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>SelfRegulationSCP1</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“SelfRegulationSCP1 | 3.02M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2333,7 +2334,7 @@
 </details>
 </li>
 <li>
-<em>SelfRegulationSCP2</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>SelfRegulationSCP2</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“SelfRegulationSCP2 | 3.06M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2342,7 +2343,7 @@
 </details>
 </li>
 <li>
-<em>AtrialFibrillation</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>AtrialFibrillation</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“AtrialFibrillation | 0.04M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2351,7 +2352,7 @@
 </details>
 </li>
 <li>
-<em>PigArtPressure</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PigArtPressure</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PigArtPressure | 0.62M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2360,7 +2361,7 @@
 </details>
 </li>
 <li>
-<em>PigCVP</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>PigCVP</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“PigCVP | 0.62M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2369,7 +2370,7 @@
 </details>
 </li>
 <li>
-<em>IEEEPPG</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>IEEEPPG</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“IEEEPPG | 15.48M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2378,7 +2379,7 @@
 </details>
 </li>
 <li>
-<em>BIDMC32HR</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>BIDMC32HR</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“BIDMC32HR | 63.59M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2387,7 +2388,7 @@
 </details>
 </li>
 <li>
-<em>TDBrain</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>TDBrain</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“TDBrain | 72.30M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2396,7 +2397,7 @@
 </details>
 </li>
 <li>
-<em>SensorData</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>SensorData</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“SensorData | 165.4M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2405,7 +2406,7 @@
 </details>
 </li>
 <li>
-<em>Phoneme</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Phoneme</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Phoneme | 2.16M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2414,7 +2415,7 @@
 </details>
 </li>
 <li>
-<em>EigenWorms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>EigenWorms</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“EigenWorms | 27.95M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2423,7 +2424,7 @@
 </details>
 </li>
 <li>
-<em>ERA5 Surface</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA5 Surface</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF card splits ERA5 into Surface/Pressure; Timer paper Table 2 lists a single &#39;ERA5*&#39; row (96458.81M points, i.e. far larger than UTSD) -- UTSD holds only a subset.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“ERA5 Surface | 58.44M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2432,7 +2433,7 @@
 </details>
 </li>
 <li>
-<em>ERA5 Pressure</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>ERA5 Pressure</em>  <span class="muted">· split: unknown</span>
 <p class="small">HF card splits ERA5 into Surface/Pressure; Timer paper Table 2 lists a single &#39;ERA5*&#39; row (96458.81M points, i.e. far larger than UTSD) -- UTSD holds only a subset.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“ERA5 Pressure | 116.88M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2450,7 +2451,7 @@
 </details>
 </li>
 <li>
-<em>StarLightCurves</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>StarLightCurves</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“StarLightCurves | 9.46M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2486,7 +2487,7 @@
 </details>
 </li>
 <li>
-<em>Sunspot</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Sunspot</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Sunspot | 0.07M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2495,7 +2496,7 @@
 </details>
 </li>
 <li>
-<em>Worms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Worms</em>  <span class="muted">· split: unknown</span>
 <p class="small">Listed in the HF card table; in Timer paper Table 2 &#39;Worms&#39; is NOT marked with the UTSD asterisk.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Worms | 0.23M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2504,7 +2505,7 @@
 </details>
 </li>
 <li>
-<em>Pedestrian Counts</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Pedestrian Counts</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Pedestrian Counts | 3.13M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2513,7 +2514,7 @@
 </details>
 </li>
 <li>
-<em>Web Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Web Traffic</em>  <span class="muted">· split: unknown</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Web Traffic | 116.49M”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
@@ -2522,7 +2523,7 @@
 </details>
 </li>
 <li>
-<em>China Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>China Air Quality</em>  <span class="muted">· split: unknown</span>
 <p class="small">Marked with the UTSD asterisk in Timer paper Table 2 but absent from the HF UTSD card table.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“C HINA A IR Q UALITY *”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02368v3">arxiv.org</a>
@@ -2531,7 +2532,7 @@
 </details>
 </li>
 <li>
-<em>Beijing Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Beijing Air Quality</em>  <span class="muted">· split: unknown</span>
 <p class="small">Marked with the UTSD asterisk in Timer paper Table 2 but absent from the HF UTSD card table.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“B EIJING A IR Q UALITY *”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02368v3">arxiv.org</a>
@@ -2540,7 +2541,7 @@
 </details>
 </li>
 <li>
-<em>Bitcoin</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Bitcoin</em>  <span class="muted">· split: unknown</span>
 <p class="small">Marked with the UTSD asterisk in Timer paper Table 2 but absent from the HF UTSD card table.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“B ITCOIN *”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2402.02368v3">arxiv.org</a>
@@ -2574,11 +2575,12 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
   </ul>
 </section>
 
+
 <section>
   <h2>Benchmark cells</h2>
   <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
   <div class="cell-detail" id="gift-eval--jena-weather">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Notably, all instances that could potentially lead to test data leakage in GIFT-Eval [1] are carefully removed.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -2591,7 +2593,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-application">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Notably, all instances that could potentially lead to test data leakage in GIFT-Eval [1] are carefully removed.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -2604,7 +2606,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-service">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Notably, all instances that could potentially lead to test data leakage in GIFT-Eval [1] are carefully removed.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -2617,7 +2619,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-l2c">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Notably, all instances that could potentially lead to test data leakage in GIFT-Eval [1] are carefully removed.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -2630,7 +2632,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Notably, all instances that could potentially lead to test data leakage in GIFT-Eval [1] are carefully removed.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -2643,7 +2645,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bitbrains-rnd">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Notably, all instances that could potentially lead to test data leakage in GIFT-Eval [1] are carefully removed.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -2679,7 +2681,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--ett1">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Notably, all instances that could potentially lead to test data leakage in GIFT-Eval [1] are carefully removed.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -2692,7 +2694,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--ett2">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Notably, all instances that could potentially lead to test data leakage in GIFT-Eval [1] are carefully removed.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -2774,7 +2776,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--lstnet-solar">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Notably, all instances that could potentially lead to test data leakage in GIFT-Eval [1] are carefully removed.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -3184,7 +3186,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Notably, all instances that could potentially lead to test data leakage in GIFT-Eval [1] are carefully removed.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2603.04791v3">arxiv.org</a>
@@ -3198,19 +3200,19 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </details>  </div>
   <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
   <div class="cell-detail" id="long-horizon--etth1">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--etth2">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--ettm1">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--ettm2">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--electricity-321">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--traffic-862">
     <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
@@ -3231,10 +3233,10 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--weather-jena-2020">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--exchange-rate">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--ili">
     <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· related dataset CDC FluView ILINet (LOTSA) was used (via LOTSA (Large-scale Open Time Series Archive))</span></p>

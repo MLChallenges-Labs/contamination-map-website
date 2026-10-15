@@ -144,7 +144,8 @@ table.map { width: auto; border-collapse: separate; border-spacing: 2px; padding
 table.map th { font-weight: 500; font-size: 0.8125rem; white-space: nowrap; }
 table.map th.corner { position: sticky; left: 0; background: var(--surface); z-index: 1; text-align: left; vertical-align: bottom; }
 table.map th.group { text-align: left; padding: 0 0 0.25rem 6px; border-bottom: 1px solid var(--line); font-weight: 600; }
-table.map th.group a { display: block; width: 0; overflow: visible; color: var(--ink); text-decoration: none; }
+table.map th.group { vertical-align: bottom; }
+table.map th.group a { display: block; min-width: 3rem; white-space: normal; line-height: 1.25; color: var(--ink); text-decoration: none; }
 table.map th.group a:hover { text-decoration: underline; }
 table.map th.col { vertical-align: bottom; height: 10.5rem; padding: 0 0 0.35rem; }
 table.map th.col a { writing-mode: vertical-rl; transform: rotate(180deg); display: inline-block; color: var(--ink-2); text-decoration: none; font-size: 0.75rem; line-height: 16px; }
@@ -171,3 +172,5 @@ table.map tr.fs > * { border-top: 6px solid var(--surface); background-clip: pad
 .by:hover .by-logo { border-color: var(--muted); }
 .by-logo img { display: block; height: 24px; width: auto; }
 .site-footer .build { margin: 1rem 0 0; }
+.third-party { display: inline-block; padding: 0 0.4rem; border-radius: 4px; background: #f3e8d6; color: #6b3d0a; font-size: 0.75rem; font-weight: 600; }
+.facts dd details { margin-top: 0.15rem; }

@@ -15,6 +15,7 @@
       <nav class="domains" aria-label="Domain">
         <a href="../index.html" class="active">Time series</a>
         <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
       </nav>
       <a class="nav-link" href="../methodology.html">Methodology</a>
     </div>
@@ -34,7 +35,7 @@
 </dl>
 
 <section>
-  <h2>Pre-training disclosure: <span class="disc disc-full_list">Full list</span></h2>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
 <p>Level determined for <strong>100%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 7, Training data seen: 0, Related data seen: 4, Not seen: 26, Unknown: 0">
 <span class="lvl-seen_split_unclear" style="flex-grow: 7" title="Seen, split unclear: 7"></span><span class="lvl-related" style="flex-grow: 4" title="Related data seen: 4"></span><span class="lvl-not_seen" style="flex-grow: 26" title="Not seen: 26"></span></div>
 <ul class="legend" aria-label="Contamination levels">
@@ -59,7 +60,7 @@
 
 
 <section>
-  <h2>Other declared pre-training data</h2>
+  <h2>Other declared training data</h2>
   <ul class="rows"><li>
 <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a>  <span class="muted">· split: train</span>
 <p class="small">Appendix A: 862 hourly series of SF Bay Area freeway occupancy 2015-2016 (Godahewa et al., 2021), i.e. the same source data as the long-horizon Traffic dataset. Train split as defined in the (Monash/GluonTS) dataset, not the Informer split.</p>  <details><summary>Evidence</summary><figure class="evidence">
@@ -75,7 +76,7 @@
 </details>
 </li>
 <li>
-<em>Uber TLC Hourly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Uber TLC Hourly</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Uber TLC Hourly”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -89,7 +90,7 @@
 </details>
 </li>
 <li>
-<em>Australian Electricity Demand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Australian Electricity Demand</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Australian Electricity Demand”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -117,7 +118,7 @@
 </details>
 </li>
 <li>
-<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>London Smart Meters</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“London Smart Meters”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -145,7 +146,7 @@
 </details>
 </li>
 <li>
-<em>Wind Farms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Wind Farms</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Farms”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -215,7 +216,7 @@
 </details>
 </li>
 <li>
-<em>Sunspot</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Sunspot</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Sunspot Beijing Multisite”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -229,7 +230,7 @@
 </details>
 </li>
 <li>
-<em>Beijing Multisite</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Beijing Multisite</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Beijing Multisite”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -243,7 +244,7 @@
 </details>
 </li>
 <li>
-<em>UCI</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>UCI</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“UCI CPU Limit Minute”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -257,7 +258,7 @@
 </details>
 </li>
 <li>
-<em>CPU Limit Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>CPU Limit Minute</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CPU Limit Minute”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -271,7 +272,7 @@
 </details>
 </li>
 <li>
-<em>CPU Usage Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>CPU Usage Minute</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“CPU Usage Minute”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -285,7 +286,7 @@
 </details>
 </li>
 <li>
-<em>Function Delay Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Function Delay Minute</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Function Delay Minute”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -299,7 +300,7 @@
 </details>
 </li>
 <li>
-<em>Instances Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Instances Minute</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Instances Minute”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -313,7 +314,7 @@
 </details>
 </li>
 <li>
-<em>Memory Limit Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Memory Limit Minute</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Memory Limit Minute”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -327,7 +328,7 @@
 </details>
 </li>
 <li>
-<em>Memory Usage Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Memory Usage Minute</em>  <span class="muted">· split: train</span>
   <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Memory Usage Minute”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -377,11 +378,12 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
   </ul>
 </section>
 
+
 <section>
   <h2>Benchmark cells</h2>
   <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
   <div class="cell-detail" id="gift-eval--jena-weather">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -394,7 +396,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-application">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -407,7 +409,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-service">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -420,7 +422,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-l2c">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -433,7 +435,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -446,7 +448,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bitbrains-rnd">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -459,7 +461,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--recruit-restaurant">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -518,7 +520,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--loop-seattle">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -531,7 +533,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--sz-taxi">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -544,7 +546,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m-dense">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -570,7 +572,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hierarchical-sales">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -583,7 +585,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-yearly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -596,7 +598,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-quarterly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -609,7 +611,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-monthly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -622,7 +624,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-weekly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -635,7 +637,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-daily">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -648,7 +650,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-hourly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -661,7 +663,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hospital">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -674,7 +676,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--covid-deaths">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -687,7 +689,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--us-births">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -700,7 +702,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--saugeen-river-flow">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -713,7 +715,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--temperature-rain">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -739,7 +741,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--car-parts">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -874,7 +876,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--weather-jena-2020">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -887,7 +889,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--exchange-rate">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“Exchange Rate”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
@@ -900,7 +902,7 @@ Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span cl
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--ili">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>

@@ -15,6 +15,7 @@
       <nav class="domains" aria-label="Domain">
         <a href="../index.html" class="active">Time series</a>
         <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
       </nav>
       <a class="nav-link" href="../methodology.html">Methodology</a>
     </div>
@@ -34,7 +35,7 @@
 </dl>
 
 <section>
-  <h2>Pre-training disclosure: <span class="disc disc-full_list">Full list</span></h2>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
 <p>Level determined for <strong>35%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 9, Training data seen: 0, Related data seen: 0, Not seen: 4, Unknown: 24">
 <span class="lvl-seen_split_unclear" style="flex-grow: 9" title="Seen, split unclear: 9"></span><span class="lvl-not_seen" style="flex-grow: 4" title="Not seen: 4"></span><span class="lvl-unknown" style="flex-grow: 24" title="Unknown: 24"></span></div>
 <ul class="legend" aria-label="Contamination levels">
@@ -59,9 +60,9 @@
 
 
 <section>
-  <h2>Other declared pre-training data</h2>
+  <h2>Other declared training data</h2>
   <ul class="rows"><li>
-<em>Google Trends</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Google Trends</em>  <span class="muted">· split: unknown</span>
 <p class="small">~22k head queries; hourly Jan 2018-Dec 2019, daily/weekly/monthly Jan 2007-Dec 2021 (Table 1 rows: Trends hourly/daily/weekly/monthly). Not publicly released.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“We download the search interest over time for these queries in hourly, daily, weekly and monthly granularities to form our dataset.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.10688v4">arxiv.org</a>
@@ -75,7 +76,7 @@
 </details>
 </li>
 <li>
-<em>Wiki Pageviews</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wiki Pageviews</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 1 rows: Wiki hourly/daily/weekly/monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“We download all pageview data from Jan. 2012 to Nov. 2023, clean and aggregate the views by page into hourly, daily, weekly and monthly granularities, and filter out pageview time-series with excessive zeros.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.10688v4">arxiv.org</a>
@@ -89,7 +90,7 @@
 </details>
 </li>
 <li>
-<em>Synthetic Data</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Synthetic Data</em>  <span class="muted">· split: unknown</span>
 <p class="small">ARMA, seasonal (sines/cosines), trends, step functions; generator described in Appendix A.8.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“We create 3M synthetic time-series each of length 2048 time-points.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.10688v4">arxiv.org</a>
@@ -242,7 +243,7 @@
 </details>
 </li>
 <li>
-<em>Favorita Sales</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Favorita Sales</em>  <span class="muted">· split: unknown</span>
 <p class="small">Appears only as a row of Table 1; not described in the text.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Favorita Sales”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.10688v4">arxiv.org</a>
@@ -315,50 +316,51 @@ Dataset <a href="../datasets/ettm2.html">ETTm2</a>      <span class="muted">· e
   </ul>
 </section>
 
+
 <section>
   <h2>Benchmark cells</h2>
   <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
   <div class="cell-detail" id="gift-eval--jena-weather">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--bizitobs-application">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--bizitobs-service">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--bizitobs-l2c">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--bitbrains-rnd">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--recruit-restaurant">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--ett1">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--ett2">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--loop-seattle">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--sz-taxi">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--m-dense">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--lstnet-solar">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--hierarchical-sales">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--m4-yearly">
     <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
@@ -439,25 +441,25 @@ Dataset <a href="../datasets/ettm2.html">ETTm2</a>      <span class="muted">· e
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hospital">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--covid-deaths">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--us-births">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--saugeen-river-flow">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--temperature-rain">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--kdd-cup-2018">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--car-parts">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
     <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
@@ -469,7 +471,7 @@ Dataset <a href="../datasets/ettm2.html">ETTm2</a>      <span class="muted">· e
 </details>  </div>
   <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
   <div class="cell-detail" id="long-horizon--etth1">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“These datasets have been intentionally held out from our pretraining data.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.10688v4">arxiv.org</a>
@@ -482,7 +484,7 @@ Dataset <a href="../datasets/ettm2.html">ETTm2</a>      <span class="muted">· e
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--etth2">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“These datasets have been intentionally held out from our pretraining data.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.10688v4">arxiv.org</a>
@@ -495,7 +497,7 @@ Dataset <a href="../datasets/ettm2.html">ETTm2</a>      <span class="muted">· e
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--ettm1">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“These datasets have been intentionally held out from our pretraining data.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.10688v4">arxiv.org</a>
@@ -508,7 +510,7 @@ Dataset <a href="../datasets/ettm2.html">ETTm2</a>      <span class="muted">· e
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--ettm2">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· the authors state the dataset was excluded from training</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“These datasets have been intentionally held out from our pretraining data.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.10688v4">arxiv.org</a>
@@ -537,13 +539,13 @@ Dataset <a href="../datasets/ettm2.html">ETTm2</a>      <span class="muted">· e
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--weather-jena-2020">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--exchange-rate">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--ili">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
 </section>
 

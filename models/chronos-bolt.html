@@ -15,6 +15,7 @@
       <nav class="domains" aria-label="Domain">
         <a href="../index.html" class="active">Time series</a>
         <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
       </nav>
       <a class="nav-link" href="../methodology.html">Methodology</a>
     </div>
@@ -34,7 +35,7 @@
 </dl>
 
 <section>
-  <h2>Pre-training disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
 <p>Level determined for <strong>24%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 8, Training data seen: 0, Related data seen: 1, Not seen: 0, Unknown: 28">
 <span class="lvl-seen_split_unclear" style="flex-grow: 8" title="Seen, split unclear: 8"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 28" title="Unknown: 28"></span></div>
 <ul class="legend" aria-label="Contamination levels">
@@ -58,11 +59,11 @@
 </section>
 
 <section>
-  <h2>Pre-training corpora</h2>
+  <h2>Training corpora</h2>
   <ul class="rows">
     <li>
       <strong>Chronos training corpus (real-world datasets)</strong>
-      <span class="muted">· 28 datasets (complete list)</span>
+      <span class="muted">· 28 sources (complete list) · pre-training</span>
  · <a href="https://huggingface.co/datasets/autogluon/chronos_datasets">homepage</a>      <details><summary>Evidence that Chronos-Bolt uses it</summary><figure class="evidence">
   <blockquote>“The real datasets used for training Chronos-Bolt are the same as Chronos.”</blockquote>
   <figcaption><a href="https://github.com/amazon-science/chronos-forecasting/issues/245">github.com</a>
@@ -74,8 +75,8 @@
 <span class="muted">· website · Comment by abdulfatir, 22 Dec 2024 · retrieved 2026-10-15</span></figcaption>
 </figure>
 </details>
-      <details><summary>Datasets in this corpus</summary><ul class="rows"><li>
-<em>Brazilian Cities Temperature</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>Brazilian Cities Temperature</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Brazilian Cities Temperature”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -89,7 +90,7 @@
 </details>
 </li>
 <li>
-<em>Mexico City Bikes</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Mexico City Bikes</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Mexico City Bikes”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -131,7 +132,7 @@
 </details>
 </li>
 <li>
-<em>Spanish Energy and Weather</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Spanish Energy and Weather</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Spanish Energy and Weather”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -145,7 +146,7 @@
 </details>
 </li>
 <li>
-<em>Taxi (Hourly)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Taxi (Hourly)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Taxi (Hourly)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -159,7 +160,7 @@
 </details>
 </li>
 <li>
-<em>USHCN</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>USHCN</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“USHCN”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -173,7 +174,7 @@
 </details>
 </li>
 <li>
-<em>Weatherbench (Daily)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Weatherbench (Daily)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Weatherbench (Daily)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -187,7 +188,7 @@
 </details>
 </li>
 <li>
-<em>Weatherbench (Hourly)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Weatherbench (Hourly)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Weatherbench (Hourly)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -201,7 +202,7 @@
 </details>
 </li>
 <li>
-<em>Weatherbench (Weekly)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Weatherbench (Weekly)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Weatherbench (Weekly)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -215,7 +216,7 @@
 </details>
 </li>
 <li>
-<em>Wiki Daily (100k)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wiki Daily (100k)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wiki Daily (100k)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -229,7 +230,7 @@
 </details>
 </li>
 <li>
-<em>Wind Farms (Daily)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wind Farms (Daily)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Farms (Daily)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -243,7 +244,7 @@
 </details>
 </li>
 <li>
-<em>Wind Farms (Hourly)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wind Farms (Hourly)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Pretraining-only dataset (not part of Chronos Benchmark I/II). The paper does not state explicitly that the full series were used, but describes no held-out portion for this group.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Farms (Hourly)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -313,7 +314,7 @@
 </details>
 </li>
 <li>
-<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>London Smart Meters</em>  <span class="muted">· split: train</span>
 <p class="small">Chronos Benchmark I (in-domain) dataset: used for training except the last H observations of each series (H is task-specific, Table 3), which are held out for testing. This is the Chronos paper&#39;s own split, not GIFT-Eval&#39;s or long-horizon&#39;s.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“London Smart Meters”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -383,7 +384,7 @@
 </details>
 </li>
 <li>
-<em>Pedestrian Counts</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Pedestrian Counts</em>  <span class="muted">· split: train</span>
 <p class="small">Chronos Benchmark I (in-domain) dataset: used for training except the last H observations of each series (H is task-specific, Table 3), which are held out for testing. This is the Chronos paper&#39;s own split, not GIFT-Eval&#39;s or long-horizon&#39;s.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Pedestrian Counts”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -397,7 +398,7 @@
 </details>
 </li>
 <li>
-<em>Rideshare</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Rideshare</em>  <span class="muted">· split: train</span>
 <p class="small">Chronos Benchmark I (in-domain) dataset: used for training except the last H observations of each series (H is task-specific, Table 3), which are held out for testing. This is the Chronos paper&#39;s own split, not GIFT-Eval&#39;s or long-horizon&#39;s.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Rideshare”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -411,7 +412,7 @@
 </details>
 </li>
 <li>
-<em>Taxi (30 Min.)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Taxi (30 Min.)</em>  <span class="muted">· split: train</span>
 <p class="small">Chronos Benchmark I (in-domain) dataset: used for training except the last H observations of each series (H is task-specific, Table 3), which are held out for testing. This is the Chronos paper&#39;s own split, not GIFT-Eval&#39;s or long-horizon&#39;s.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Taxi (30 Min.)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -439,7 +440,7 @@
 </details>
 </li>
 <li>
-<em>Uber TLC (Daily)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Uber TLC (Daily)</em>  <span class="muted">· split: train</span>
 <p class="small">Chronos Benchmark I (in-domain) dataset: used for training except the last H observations of each series (H is task-specific, Table 3), which are held out for testing. This is the Chronos paper&#39;s own split, not GIFT-Eval&#39;s or long-horizon&#39;s.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Uber TLC (Daily)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -453,7 +454,7 @@
 </details>
 </li>
 <li>
-<em>Uber TLC (Hourly)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<em>Uber TLC (Hourly)</em>  <span class="muted">· split: train</span>
 <p class="small">Chronos Benchmark I (in-domain) dataset: used for training except the last H observations of each series (H is task-specific, Table 3), which are held out for testing. This is the Chronos paper&#39;s own split, not GIFT-Eval&#39;s or long-horizon&#39;s.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Uber TLC (Hourly)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2403.07815v3">arxiv.org</a>
@@ -473,44 +474,45 @@
 
 
 
+
 <section>
   <h2>Benchmark cells</h2>
   <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
   <div class="cell-detail" id="gift-eval--jena-weather">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--bizitobs-application">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--bizitobs-service">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--bizitobs-l2c">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--bitbrains-rnd">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--recruit-restaurant">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--ett1">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--ett2">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--loop-seattle">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--sz-taxi">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--m-dense">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--lstnet-solar">
     <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· related dataset NREL Solar Power Data for Integration Studies (2006) was used (via Chronos training corpus (real-world datasets))</span></p>
@@ -546,13 +548,13 @@
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hierarchical-sales">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--m4-yearly">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--m4-quarterly">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--m4-monthly">
     <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via Chronos training corpus (real-world datasets))</span></p>
@@ -647,16 +649,16 @@
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hospital">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--covid-deaths">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--us-births">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--saugeen-river-flow">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--temperature-rain">
     <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via Chronos training corpus (real-world datasets))</span></p>
@@ -705,7 +707,7 @@
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--car-parts">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
     <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via Chronos training corpus (real-world datasets))</span></p>
@@ -732,16 +734,16 @@
 </details>  </div>
   <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
   <div class="cell-detail" id="long-horizon--etth1">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--etth2">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--ettm1">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--ettm2">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--electricity-321">
     <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via Chronos training corpus (real-world datasets))</span></p>
@@ -767,16 +769,16 @@
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--traffic-862">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--weather-jena-2020">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--exchange-rate">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="long-horizon--ili">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
 </section>
 

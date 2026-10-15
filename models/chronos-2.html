@@ -15,6 +15,7 @@
       <nav class="domains" aria-label="Domain">
         <a href="../index.html" class="active">Time series</a>
         <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
       </nav>
       <a class="nav-link" href="../methodology.html">Methodology</a>
     </div>
@@ -34,7 +35,7 @@
 </dl>
 
 <section>
-  <h2>Pre-training disclosure: <span class="disc disc-full_list">Full list</span></h2>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
 <p>Level determined for <strong>100%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 7, Related data seen: 3, Not seen: 27, Unknown: 0">
 <span class="lvl-train_seen" style="flex-grow: 7" title="Training data seen: 7"></span><span class="lvl-related" style="flex-grow: 3" title="Related data seen: 3"></span><span class="lvl-not_seen" style="flex-grow: 27" title="Not seen: 27"></span></div>
 <ul class="legend" aria-label="Contamination levels">
@@ -79,7 +80,7 @@
 
 
 <section>
-  <h2>Other declared pre-training data</h2>
+  <h2>Other declared training data</h2>
   <ul class="rows"><li>
 <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 15min, 1H, 1W, 1D; source cited: Godahewa et al. (2021). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions). Table 6 lists 15min/1H/1W/1D versions; matched to the UCI source, of which the long-horizon Electricity is a derived version.</p>  <details><summary>Evidence</summary><figure class="evidence">
@@ -165,7 +166,7 @@
 </details>
 </li>
 <li>
-<em>Mexico City Bikes</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Mexico City Bikes</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 1H, 1D, 1W; source cited: Ansari et al. (2024). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Mexico City Bikes”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -179,7 +180,7 @@
 </details>
 </li>
 <li>
-<em>Pedestrian Counts</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Pedestrian Counts</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 1H, 1D, 1W; source cited: Godahewa et al. (2021). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Pedestrian Counts”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -207,7 +208,7 @@
 </details>
 </li>
 <li>
-<em>Taxi</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Taxi</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 30min, 1H; source cited: Salinas et al. (2019). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Taxi”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -221,7 +222,7 @@
 </details>
 </li>
 <li>
-<em>Uber TLC</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Uber TLC</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 1H, 1D; source cited: FiveThirtyEight (2025). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Uber TLC”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -235,7 +236,7 @@
 </details>
 </li>
 <li>
-<em>USHCN</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>USHCN</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 1D, 1W; source cited: Ansari et al. (2024). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“USHCN”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -249,7 +250,7 @@
 </details>
 </li>
 <li>
-<em>Weatherbench</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Weatherbench</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 1H, 1D, 1W; source cited: Rasp et al. (2020). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Weatherbench”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -263,7 +264,7 @@
 </details>
 </li>
 <li>
-<em>Wiki</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wiki</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 1H, 1D, 1W; source cited: Ansari et al. (2024). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wiki”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -277,7 +278,7 @@
 </details>
 </li>
 <li>
-<em>Wind Farms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Wind Farms</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 1H, 1D; source cited: Godahewa et al. (2021). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Wind Farms”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -305,7 +306,7 @@
 </details>
 </li>
 <li>
-<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>London Smart Meters</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 30min, 1D; source cited: Godahewa et al. (2021). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“London Smart Meters”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -319,7 +320,7 @@
 </details>
 </li>
 <li>
-<em>Alibaba Cluster Trace (2018)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Alibaba Cluster Trace (2018)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 5min, 1H; source cited: Woo et al. (2023). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Alibaba Cluster Trace (2018)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -333,7 +334,7 @@
 </details>
 </li>
 <li>
-<em>Azure VM Traces (2017)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Azure VM Traces (2017)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 5min, 1H; source cited: Woo et al. (2023). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Azure VM Traces (2017)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -347,7 +348,7 @@
 </details>
 </li>
 <li>
-<em>Borg Cluster Data (2011)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Borg Cluster Data (2011)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 5min, 1H; source cited: Woo et al. (2023). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Borg Cluster Data (2011)”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -375,7 +376,7 @@
 </details>
 </li>
 <li>
-<em>Q-Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Q-Traffic</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 15min, 1H; source cited: Jiang et al. (2023). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Q-Traffic”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -389,7 +390,7 @@
 </details>
 </li>
 <li>
-<em>Buildings 900K</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Buildings 900K</em>  <span class="muted">· split: unknown</span>
 <p class="small">Table 6 frequencies: 1H, 1D; source cited: Emami et al. (2023). Drawn from the Chronos and/or GIFT-Eval pretraining corpora; per the paper, GIFT-Eval test portions were excluded and partial overlap with GIFT-Eval training portions exists (see model-level exclusions).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“Buildings 900K”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -403,7 +404,7 @@
 </details>
 </li>
 <li>
-<em>TSI (Trend, Seasonality, and Irregularity)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>TSI (Trend, Seasonality, and Irregularity)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Synthetic univariate generator.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“TSI (Trend, Seasonality, and Irregularity): based on Bahrpeyma et al. (2021), this generator produces diverse synthetic series by randomly constructing and combining different trend, seasonality, and irregularity components.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -412,7 +413,7 @@
 </details>
 </li>
 <li>
-<em>TCM (Temporal Causal Model)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>TCM (Temporal Causal Model)</em>  <span class="muted">· split: unknown</span>
 <p class="small">Synthetic univariate generator.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“TCM (Temporal Causal Model): this generator samples random causal graphs from a temporal causal model (Runge et al., 2023), from which time series are generated via autoregression.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -421,7 +422,7 @@
 </details>
 </li>
 <li>
-<em>KernelSynth</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>KernelSynth</em>  <span class="muted">· split: unknown</span>
 <p class="small">Used as a base generator for the multivariatizers (multivariate/covariate synthetic tasks).</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“As base univariate generators, we employed a diverse set including autoregressive (AR) models, exponential smoothing (ETS) models, TSI, and KernelSynth (Ansari et al., 2024).”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -430,7 +431,7 @@
 </details>
 </li>
 <li>
-<em>Multivariatizers (cotemporaneous and sequential) over AR, ETS, TSI and KernelSynth base generators</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<em>Multivariatizers (cotemporaneous and sequential) over AR, ETS, TSI and KernelSynth base generators</em>  <span class="muted">· split: unknown</span>
 <p class="small">Synthetic multivariate and covariate-informed tasks.</p>  <details><summary>Evidence</summary><figure class="evidence">
   <blockquote>“For multivariate and covariate-informed tasks, we relied entirely on synthetic data.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -471,11 +472,12 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
   </ul>
 </section>
 
+
 <section>
   <h2>Benchmark cells</h2>
   <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
   <div class="cell-detail" id="gift-eval--jena-weather">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -493,7 +495,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-application">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -511,7 +513,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-service">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -529,7 +531,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bizitobs-l2c">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -547,7 +549,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -565,7 +567,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--bitbrains-rnd">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -583,7 +585,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--recruit-restaurant">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -601,7 +603,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--ett1">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -619,7 +621,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--ett2">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -637,7 +639,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--loop-seattle">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -655,7 +657,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--sz-taxi">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -673,7 +675,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m-dense">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -729,7 +731,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hierarchical-sales">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -747,7 +749,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-yearly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -765,7 +767,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--m4-quarterly">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -895,7 +897,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--hospital">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -913,7 +915,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--covid-deaths">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -931,7 +933,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--us-births">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -949,7 +951,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--saugeen-river-flow">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -1023,7 +1025,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="gift-eval--car-parts">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“When constructing the pretraining corpus for Chronos-2, we carefully ensured that it did not overlap with the test portions of any GIFT-Eval task at any sampling frequency.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -1070,7 +1072,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </details>  </div>
   <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
   <div class="cell-detail" id="long-horizon--etth1">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (6)</summary><figure class="evidence">
   <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -1103,7 +1105,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--etth2">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (6)</summary><figure class="evidence">
   <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -1136,7 +1138,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--ettm1">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (6)</summary><figure class="evidence">
   <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -1169,7 +1171,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--ettm2">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (6)</summary><figure class="evidence">
   <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -1248,7 +1250,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--weather-jena-2020">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (6)</summary><figure class="evidence">
   <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -1281,7 +1283,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--exchange-rate">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (6)</summary><figure class="evidence">
   <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
@@ -1314,7 +1316,7 @@ Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class=
 </figure>
 </details>  </div>
   <div class="cell-detail" id="long-horizon--ili">
-    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· absent from the complete list of training data</span></p>
 <details><summary>Evidence (6)</summary><figure class="evidence">
   <blockquote>“We incorporated select datasets from the Chronos (Ansari et al., 2024) and GIFT-Eval (Aksu et al., 2024) pretraining corpora into Chronos-2’s training corpus.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2510.15821v1">arxiv.org</a>
