@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Methodology</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="index.html">Time series</a>
+        <a href="tabular/index.html">Tabular</a>
+      </nav>
+      <a class="nav-link" href="methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Methodology</h1>
+<p class="lede">The map only states what can be traced to a public source. Every non-“Unknown” cell links to a verbatim quote from a paper, model card, dataset card or repository.</p>
+
+<section>
+  <h2>Contamination levels</h2>
+  <dl class="levels">
+    <dt><span class="swatch lvl-test_seen">Test</span> Test data seen</dt>
+    <dd>The benchmark&#39;s test data was in the pre-training data.</dd>
+    <dt><span class="swatch lvl-seen_split_unclear">Seen</span> Seen, split unclear</dt>
+    <dd>The dataset was used, but the source does not say which part, so the test data may have been seen.</dd>
+    <dt><span class="swatch lvl-train_seen">Train</span> Training data seen</dt>
+    <dd>Only the benchmark&#39;s training portion of the dataset was used.</dd>
+    <dt><span class="swatch lvl-related">Rel.</span> Related data seen</dt>
+    <dd>A related dataset was used: a subset, superset, resampled version or the same underlying source.</dd>
+    <dt><span class="swatch lvl-not_seen">No</span> Not seen</dt>
+    <dd>The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded.</dd>
+    <dt><span class="swatch lvl-unknown">?</span> Unknown</dt>
+    <dd>Not enough information has been disclosed to tell.</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>What is recorded</h2>
+  <ul>
+    <li><strong>Datasets</strong>, with the names they go by in papers, and how they relate to each other (subset, resampled version, same underlying source).</li>
+    <li><strong>Benchmarks</strong>: the datasets they evaluate on and how their test portion is defined.</li>
+    <li><strong>Models</strong>: what their authors disclose about pre-training data, the shared corpora they use, and any data they say they excluded.</li>
+  </ul>
+  <p>Each model gets a disclosure level:</p>
+  <dl class="levels">
+    <dt>Full list</dt><dd>The authors publish the complete list of pre-training datasets.</dd>
+    <dt>Partial list</dt><dd>Some datasets are named, but the list is not complete.</dd>
+    <dt>Vague</dt><dd>Only a general description (“public datasets from many domains”).</dd>
+    <dt>None</dt><dd>Nothing is disclosed.</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>How a cell's level is assigned</h2>
+  <p>For each benchmark dataset and model, every declared pre-training dataset is compared with the benchmark dataset:</p>
+  <ol>
+    <li>The <strong>same dataset</strong>, used in full → <span class="badge lvl-test_seen">Test data seen</span></li>
+    <li>The same dataset, used with an unstated split, or with a training split defined by another benchmark → <span class="badge lvl-seen_split_unclear">Seen, split unclear</span></li>
+    <li>The same dataset, restricted to this benchmark's training split → <span class="badge lvl-train_seen">Training data seen</span></li>
+    <li>A <strong>related dataset</strong> (subset, superset, resampled version, same source) → <span class="badge lvl-related">Related data seen</span></li>
+  </ol>
+  <p>When several declarations match, the strongest exposure wins (the order above). If the authors state that the test portion was held out, “Test data seen” and “Seen, split unclear” become “Training data seen”. If a statement that data was excluded conflicts with a declaration that it was used, the exposure is kept and the conflict is shown with both quotes.</p>
+  <p>When nothing matches:</p>
+  <ul>
+    <li>if the authors state the dataset (or its test portion) was excluded → <span class="badge lvl-not_seen">Not seen</span>;</li>
+    <li>if the model has a <strong>full list</strong> of pre-training data, every entry in it has been matched to a known dataset or reviewed as unrelated, and the dataset is not there → <span class="badge lvl-not_seen">Not seen</span>;</li>
+    <li>otherwise → <span class="badge lvl-unknown">Unknown</span>. Absence from a partial or vague disclosure is never read as “not seen”.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>The map reflects what is <em>declared</em>. Undeclared or mis-declared data cannot be detected from documents alone.</li>
+    <li>Dataset names are ambiguous (for example, several “Electricity” datasets exist). Entries are matched by hand, and relations between datasets are only recorded with a source.</li>
+    <li>Sources change. Each quote records the date it was retrieved.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Data</h2>
+  <p>The full matrix is available as <a href="data/matrix.csv">CSV</a> and <a href="data/matrix.json">JSON</a>, with the source URLs for each cell.</p>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      Built 2026-10-15 ·
+      <a href="data/matrix.csv">matrix.csv</a> ·
+      <a href="data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+    </div>
+  </footer>
+</body>
+</html>

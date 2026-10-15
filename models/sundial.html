@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Sundial (Timer 3.0)</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html" class="active">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../index.html">Time series</a> / Model</p>
+<h1>Sundial (Timer 3.0)</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Tsinghua University (THUML)</dd>
+  <dt>Family</dt><dd>Timer · version Sundial (ICML 2025); HF release sundial-base-128m</dd>
+  <dt>Released</dt><dd>2025-02-02 <span class="muted small">(arXiv v1 submission date, https://arxiv.org/abs/2502.00816 (HF repo thuml/sundial-base-128m created 2025-05-13))</span></dd>
+<dt>Checkpoints</dt><dd>thuml/sundial-base-128m</dd>  <dt>Weights</dt><dd>Open · Apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2502.00816v4">Paper</a><a href="https://huggingface.co/thuml/sundial-base-128m/raw/main/README.md">Model card</a><a href="https://github.com/thuml/Sundial">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Pre-training disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>91%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 4, Training data seen: 0, Related data seen: 0, Not seen: 30, Unknown: 3">
+<span class="lvl-seen_split_unclear" style="flex-grow: 4" title="Seen, split unclear: 4"></span><span class="lvl-not_seen" style="flex-grow: 30" title="Not seen: 30"></span><span class="lvl-unknown" style="flex-grow: 3" title="Unknown: 3"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">4</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">30</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">3</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“we collected substantial real-world time series from various domains such as finance, IoT, meteorology, and healthcare (Goldberger et al., 2000).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Pre-training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>TimeBench</strong>
+      <span class="muted">· 12 datasets</span>
+      <details><summary>Evidence that Sundial (Timer 3.0) uses it</summary><figure class="evidence">
+  <blockquote>“Key statistics of TimeBench, the pre-training dataset of Sundial.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“which is pre-trained on TimeBench (**10^12** time points)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/thuml/Sundial/main/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · README intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Datasets in this corpus</summary><ul class="rows"><li>
+<em>Chronos</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">94B points; Ansari et al. (2024) -- the Chronos training data (corpus not given a shared id here).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ECG</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">48B points; cited as (2000) = Goldberger et al. 2000 (PhysioNet); specific ECG databases not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Finance</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">10.5B points; &#39;(Ours)&#39; -- in-house collection, not enumerated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>IoT</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">5.8B points; &#39;(Ours)&#39; -- in-house collection, not enumerated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>LOSTA</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">230B points; = LOTSA (Woo et al., 2024), shared corpus id &#39;lotsa&#39; (misspelt &#39;LOSTA&#39; in source).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Synthetic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">0.5B points (0.05%); generated following KernelSynth (Ansari et al., 2024).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ERA5 3h</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">129B points; ERA5 reanalysis (2021 citation).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ERA 12h</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">32B points; ERA5 at 12-hour frequency (written &#39;ERA 12h&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ERA5 Daily</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">406B points (39.35%).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ERA5 Weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">58B points.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ERA5 Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">13.5B points.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ERA5 Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">4.5B points.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Chronos ECG Finance IoT LOSTA Synthetic ERA5 3h ERA 12h ERA5 Daily ERA5 Weekly ERA5 Monthly ERA5 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+    <li>
+      <strong>Unified Time Series Dataset (UTSD)</strong>
+      <span class="muted">· 32 datasets (complete list)</span>
+ · <a href="https://huggingface.co/datasets/thuml/UTSD">homepage</a>      <details><summary>Evidence that Sundial (Timer 3.0) uses it</summary><figure class="evidence">
+  <blockquote>“thuml/UTSD”</blockquote>
+  <figcaption><a href="https://huggingface.co/thuml/sundial-base-128m/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · YAML metadata `datasets` · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Datasets in this corpus</summary><ul class="rows"><li>
+<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“London Smart Meters | 166.50M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wind Farms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Wind Farms | 7.40M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Aus. Electricity Demand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Aus. Electricity Demand | 1.16M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>AustraliaRainfall</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“AustraliaRainfall | 11.54M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>BeijingPM25Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BeijingPM25Quality | 3.66M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>BenzeneConcentration</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BenzeneConcentration | 16.34M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>MotorImagery</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“MotorImagery | 72.58M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SelfRegulationSCP1</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“SelfRegulationSCP1 | 3.02M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SelfRegulationSCP2</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“SelfRegulationSCP2 | 3.06M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>AtrialFibrillation</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“AtrialFibrillation | 0.04M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PigArtPressure</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PigArtPressure | 0.62M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PigCVP</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PigCVP | 0.62M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>IEEEPPG</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“IEEEPPG | 15.48M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>BIDMC32HR</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BIDMC32HR | 63.59M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>TDBrain</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“TDBrain | 72.30M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SensorData</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“SensorData | 165.4M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Phoneme</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Phoneme | 2.16M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>EigenWorms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“EigenWorms | 27.95M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ERA5 Surface</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF card splits ERA5 into Surface/Pressure; Timer paper Table 2 lists a single &#39;ERA5*&#39; row (96458.81M points, i.e. far larger than UTSD) -- UTSD holds only a subset.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“ERA5 Surface | 58.44M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ERA5 Pressure</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF card splits ERA5 into Surface/Pressure; Timer paper Table 2 lists a single &#39;ERA5*&#39; row (96458.81M points, i.e. far larger than UTSD) -- UTSD holds only a subset.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“ERA5 Pressure | 116.88M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/temperature-rain.html">Temperature Rain</a>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Temperature Rain | 23.25M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>StarLightCurves</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“StarLightCurves | 9.46M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Saugen River Flow | 0.02M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“KDD Cup 2018 | 2.94M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/us-births.html">US Births</a>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“US Births | 0.00M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Sunspot</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Sunspot | 0.07M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Worms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Listed in the HF card table; in Timer paper Table 2 &#39;Worms&#39; is NOT marked with the UTSD asterisk.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Worms | 0.23M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Pedestrian Counts</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Pedestrian Counts | 3.13M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Web Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Web Traffic | 116.49M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>China Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Marked with the UTSD asterisk in Timer paper Table 2 but absent from the HF UTSD card table.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“C HINA A IR Q UALITY *”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02368v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 2 (asterisk = originally belongs to UTSD) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Beijing Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Marked with the UTSD asterisk in Timer paper Table 2 but absent from the HF UTSD card table.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“B EIJING A IR Q UALITY *”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02368v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 2 (asterisk = originally belongs to UTSD) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Bitcoin</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Marked with the UTSD asterisk in Timer paper Table 2 but absent from the HF UTSD card table.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“B ITCOIN *”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02368v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 2 (asterisk = originally belongs to UTSD) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/ettm1.html">ETTm1</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/ettm2.html">ETTm2</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/etth1.html">ETTh1</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/etth2.html">ETTh2</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
+  <div class="cell-detail" id="gift-eval--jena-weather">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-application">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-service">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-l2c">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-rnd">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--recruit-restaurant">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--ett1">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--ett2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--loop-seattle">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--sz-taxi">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m-dense">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--lstnet-solar">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--hierarchical-sales">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-yearly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-quarterly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-monthly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-weekly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-daily">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-hourly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--hospital">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--covid-deaths">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--us-births">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD)); this contradicts a statement that the data was excluded</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“thuml/UTSD”</blockquote>
+  <figcaption><a href="https://huggingface.co/thuml/sundial-base-128m/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · YAML metadata `datasets` · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“US Births | 0.00M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--saugeen-river-flow">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD)); this contradicts a statement that the data was excluded</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“thuml/UTSD”</blockquote>
+  <figcaption><a href="https://huggingface.co/thuml/sundial-base-128m/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · YAML metadata `datasets` · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Saugen River Flow | 0.02M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--temperature-rain">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD)); this contradicts a statement that the data was excluded</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“thuml/UTSD”</blockquote>
+  <figcaption><a href="https://huggingface.co/thuml/sundial-base-128m/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · YAML metadata `datasets` · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Temperature Rain | 23.25M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--kdd-cup-2018">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD)); this contradicts a statement that the data was excluded</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“thuml/UTSD”</blockquote>
+  <figcaption><a href="https://huggingface.co/thuml/sundial-base-128m/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · YAML metadata `datasets` · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“KDD Cup 2018 | 2.94M”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/thuml/UTSD/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description table · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--car-parts">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“All evaluated datasets are excluded from the pre-training dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we experiment on GIFT-Eval (Aksu et al., 2024) and FEV leaderboard (Ansari et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
+  <div class="cell-detail" id="long-horizon--etth1">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--etth2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ettm1">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ettm2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--electricity-321">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--traffic-862">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--weather-jena-2020">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“To prevent data leakage, we exclude all datasets evaluated in Section 5.1 to make sure that Sundial conducts zero-shot forecasting.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Zero-shot forecasting results of time series foundation models on long-term forecasting datasets (Time-Series-Library)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.00816v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--exchange-rate">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--ili">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Paper describes Small/Base/Large sizes; only Base (128M) is released. Model card metadata lists datasets thuml/UTSD, Salesforce/lotsa_data, autogluon/chronos_datasets. In Sundial Table 1, Time-MoE&#39;s ECL and TimesFM&#39;s ECL/Weather cells are dashes (pre-training data).
+
+TimeBench includes LOTSA and the Chronos data; the authors state all evaluated datasets were excluded from it, so LOTSA is not linked directly.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2502.00816v4">Sundial: A Family of Highly Capable Time Series Foundation Models (arXiv v4)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/thuml/sundial-base-128m/raw/main/README.md">thuml/sundial-base-128m model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/thuml/Sundial/main/README.md">thuml/Sundial README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/SalesforceAIResearch/gift-eval/main/results/sundial_base_128m/config.json">GIFT-Eval results config for sundial_base_128m</a>
+<span class="muted">· leaderboard · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Granite-TimeSeries-TTM-R2</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html" class="active">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../index.html">Time series</a> / Model</p>
+<h1>Granite-TimeSeries-TTM-R2</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>IBM Research</dd>
+  <dt>Family</dt><dd>Tiny Time Mixers (TTM) · version R2</dd>
+  <dt>Released</dt><dd>2024-10-08 <span class="muted small">(HF repo creation (createdAt) of ibm-granite/granite-timeseries-ttm-r2 (first weights commit &#39;512-96-r2&#39; on 2024-10-09), https://huggingface.co/api/models/ibm-granite/granite-timeseries-ttm-r2)</span></dd>
+<dt>Checkpoints</dt><dd>ibm-granite/granite-timeseries-ttm-r2, ibm-granite/granite-timeseries-ttm-r2@main, ibm-granite/granite-timeseries-ttm-r2@512-192-r2, ibm-granite/granite-timeseries-ttm-r2@512-336-r2, ibm-granite/granite-timeseries-ttm-r2@512-720-r2, ibm-granite/granite-timeseries-ttm-r2@1024-96-r2, ibm-granite/granite-timeseries-ttm-r2@1024-192-r2, ibm-granite/granite-timeseries-ttm-r2@1024-336-r2, ibm-granite/granite-timeseries-ttm-r2@1024-720-r2, ibm-granite/granite-timeseries-ttm-r2@1536-96-r2, ibm-granite/granite-timeseries-ttm-r2@1536-192-r2, ibm-granite/granite-timeseries-ttm-r2@1536-336-r2, ibm-granite/granite-timeseries-ttm-r2@1536-720-r2</dd>  <dt>Weights</dt><dd>Open · apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2401.03955v8">Paper</a><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">Model card</a><a href="https://github.com/ibm-granite/granite-tsfm">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Pre-training disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>100%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 4, Training data seen: 0, Related data seen: 0, Not seen: 33, Unknown: 0">
+<span class="lvl-seen_split_unclear" style="flex-grow: 4" title="Seen, split unclear: 4"></span><span class="lvl-not_seen" style="flex-grow: 33" title="Not seen: 33"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">4</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">33</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">0</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Other declared pre-training data</h2>
+  <ul class="rows"><li>
+<em>Australian Electricity Demand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Australian Electricity Demand: https://zenodo.org/records/4659727”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Australian Weather</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Zenodo 4654822 is the Monash &#39;Weather Dataset&#39; (Australian daily weather), not the long-horizon Weather dataset.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Australian Weather: https://zenodo.org/records/4654822”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Bitcoin</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Bitcoin: https://zenodo.org/records/5122101”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“KDD Cup 2018: https://zenodo.org/records/4656756”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“London Smart Meters: https://zenodo.org/records/4656091”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Saugeen River Flow: https://zenodo.org/records/4656058”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Solar Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Solar Power: https://zenodo.org/records/4656027”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Sunspots</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Sunspots: https://zenodo.org/records/4654722”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a>  <span class="muted">· split: unknown</span>
+<p class="small">Matched via the cited Zenodo record 4656144 (Monash Solar 10 Minutes, the 137 Alabama plants of Lai et al.).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Solar: https://zenodo.org/records/4656144”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/us-births.html">US Births</a>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“US Births: https://zenodo.org/records/4656049”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wind Farms Production</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Wind Farms Production: https://zenodo.org/records/4654858”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wind Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Wind Power: https://zenodo.org/records/4656032”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMSD3</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMSD3, PEMSD4, PEMSD7, PEMSD8, PEMS_BAY: https://drive.google.com/drive/folders/1g5v2Gq1tkOq8XO0HDCZ9nOTtRpB6-gPe”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMSD4</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMSD3, PEMSD4, PEMSD7, PEMSD8, PEMS_BAY: https://drive.google.com/drive/folders/1g5v2Gq1tkOq8XO0HDCZ9nOTtRpB6-gPe”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMSD7</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMSD3, PEMSD4, PEMSD7, PEMSD8, PEMS_BAY: https://drive.google.com/drive/folders/1g5v2Gq1tkOq8XO0HDCZ9nOTtRpB6-gPe”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMSD8</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMSD3, PEMSD4, PEMSD7, PEMSD8, PEMS_BAY: https://drive.google.com/drive/folders/1g5v2Gq1tkOq8XO0HDCZ9nOTtRpB6-gPe”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS_BAY</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMSD3, PEMSD4, PEMSD7, PEMSD8, PEMS_BAY: https://drive.google.com/drive/folders/1g5v2Gq1tkOq8XO0HDCZ9nOTtRpB6-gPe”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>LOS_LOOP</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“LOS_LOOP: https://drive.google.com/drive/folders/1g5v2Gq1tkOq8XO0HDCZ9nOTtRpB6-gPe”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Dataset <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Please note that, the last three datasets in the Libcity section have been excluded from the pre-training process for the model releases intended for enterprise-use.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2401.03955v8">arxiv.org</a>
+<span class="muted">· paper · Appendix C.1 / Table 8 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Please note that, the last three datasets in the Libcity section have been excluded from the pre-training process for the model releases intended for enterprise-use.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2401.03955v8">arxiv.org</a>
+<span class="muted">· paper · Appendix C.1 / Table 8 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
+  <div class="cell-detail" id="gift-eval--jena-weather">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-application">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-service">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-l2c">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-rnd">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--recruit-restaurant">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--ett1">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--ett2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--loop-seattle">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“Please note that, the last three datasets in the Libcity section have been excluded from the pre-training process for the model releases intended for enterprise-use.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2401.03955v8">arxiv.org</a>
+<span class="muted">· paper · Appendix C.1 / Table 8 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--sz-taxi">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“Please note that, the last three datasets in the Libcity section have been excluded from the pre-training process for the model releases intended for enterprise-use.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2401.03955v8">arxiv.org</a>
+<span class="muted">· paper · Appendix C.1 / Table 8 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m-dense">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--lstnet-solar">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“Solar: https://zenodo.org/records/4656144”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--hierarchical-sales">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-yearly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-quarterly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-monthly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-weekly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-daily">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-hourly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--hospital">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--covid-deaths">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--us-births">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“US Births: https://zenodo.org/records/4656049”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--saugeen-river-flow">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“Saugeen River Flow: https://zenodo.org/records/4656058”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--temperature-rain">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--kdd-cup-2018">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“KDD Cup 2018: https://zenodo.org/records/4656756”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section (r2 list) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--car-parts">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
+  <div class="cell-detail" id="long-horizon--etth1">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--etth2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ettm1">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ettm2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--electricity-321">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--traffic-862">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--weather-jena-2020">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--exchange-rate">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ili">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The r2 TTM models were trained on a collection of datasets as follows:”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data section · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TTM r2 comprises TTM variants pre-trained on larger pretraining datasets (\~700M samples).”</blockquote>
+  <figcaption><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Branches without the r2.1 suffix. Model card: pre-training data &#39;differs slightly&#39; from the paper. The listed datasets are a subset of paper Table 8 (enterprise release drops LOOP_SEATTLE, SZ_TAXI, Q-TRAFFIC; also kaggle_web_traffic and nn5_daily from Table 8 do not appear in the r2 list). The paper&#39;s Weather/Electricity/Traffic/ETT exclusion is stated for the paper&#39;s pretraining set, not restated in this card. GIFT-Eval leaderboard configs for TTM-R2-Pretrained/Finetuned mark &#34;testdata_leakage&#34;: &#34;Yes&#34; (the leaderboard notebook used TTM-r2 models from this repo, possibly r2.1 branches).
+
+Other stated exclusions, not tracked here: Q-TRAFFIC (all).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/raw/main/README.md">Granite-TimeSeries-TTM-R2 model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2401.03955v8">Tiny Time Mixers (TTMs) (arXiv v8)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/SalesforceAIResearch/gift-eval/main/results/TTM-R2-Pretrained/config.json">GIFT-Eval leaderboard config for TTM-R2-Pretrained</a>
+<span class="muted">· leaderboard · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/SalesforceAIResearch/gift-eval/main/results/TTM-R2-Finetuned/config.json">GIFT-Eval leaderboard config for TTM-R2-Finetuned</a>
+<span class="muted">· leaderboard · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+    </div>
+  </footer>
+</body>
+</html>

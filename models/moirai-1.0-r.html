@@ -1,0 +1,2351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Moirai-1.0-R</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html" class="active">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../index.html">Time series</a> / Model</p>
+<h1>Moirai-1.0-R</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Salesforce AI Research</dd>
+  <dt>Family</dt><dd>Moirai · version 1.0-R</dd>
+  <dt>Released</dt><dd>2024-02-04 <span class="muted small">(arXiv v1 submission date (https://arxiv.org/abs/2402.02592v1); HF repos Salesforce/moirai-1.0-R-* created 2024-02-11 (HF API); uni2ts README lists the model release under &#39;Mar 2024&#39;)</span></dd>
+<dt>Checkpoints</dt><dd>Salesforce/moirai-1.0-R-small, Salesforce/moirai-1.0-R-base, Salesforce/moirai-1.0-R-large</dd>  <dt>Weights</dt><dd>Open · cc-by-nc-4.0 (weights, per HF model card); uni2ts code is Apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2402.02592v2">Paper</a><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">Model card</a><a href="https://github.com/SalesforceAIResearch/uni2ts">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Pre-training disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>100%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 17, Training data seen: 0, Related data seen: 1, Not seen: 17, Unknown: 0">
+<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-seen_split_unclear" style="flex-grow: 17" title="Seen, split unclear: 17"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 17" title="Not seen: 17"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">2</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">17</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">1</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">17</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">0</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“LOTSA is a collection of time series datasets curated for pre-training of LTMs. In the following, we describe its constituent datasets and their respective sources, listing any pre-processing and data splitting performed.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Pre-training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>LOTSA (Large-scale Open Time Series Archive)</strong>
+      <span class="muted">· 104 datasets (complete list)</span>
+ · <a href="https://huggingface.co/datasets/Salesforce/lotsa_data">homepage</a>      <details><summary>Evidence that Moirai-1.0-R uses it</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Datasets in this corpus</summary><ul class="rows"><li>
+<em>BDG-2 Panther</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: bdg-2_panther.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BDG-2 Panther”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 8 (BuildingsBench) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>BDG-2 Fox</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: bdg-2_fox.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BDG-2 Fox”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 8 (BuildingsBench) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>BDG-2 Rat</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: bdg-2_rat.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BDG-2 Rat”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 8 (BuildingsBench) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>BDG-2 Bear</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: bdg-2_bear.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BDG-2 Bear”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 8 (BuildingsBench) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Low Carbon London</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: lcl.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Low Carbon London”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 8 (BuildingsBench) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SMART</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: smart.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Low Carbon London SMART”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 8 (BuildingsBench) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>IDEAL</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: ideal.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“IDEAL”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 8 (BuildingsBench) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Sceaux</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: sceaux.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Sceaux”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 8 (BuildingsBench) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Borealis</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: borealis.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Borealis”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 8 (BuildingsBench) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Buildings900K</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">Both the BuildingsBench pre-train and test splits (by PUMA) are included. HF config(s) in Salesforce/lotsa_data: buildings_900k.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Buildings900K”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 8 (BuildingsBench) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Emami et al. (2023) introduce a pre-train/test split based on Public Use Microdata Area, but we use include both splits in LOTSA for pre-training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, BuildingsBench paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>CMIP6</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: cmip6 (+ cmip6_1850 ... cmip6_2010).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“CMIP6 ERA5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 9 (ClimateLearn) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ERA5</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: era5 (+ era5_1989 ... era5_2018).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“CMIP6 ERA5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 9 (ClimateLearn) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Azure VM Traces 2017</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train split is the CloudOps TSF pre-train/test split of Woo et al. (2023), not GIFT-Eval or long-horizon. HF config(s) in Salesforce/lotsa_data: azure_vm_traces_2017.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Azure VM Traces 2017”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 10 (CloudOps TSF) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We follow their pre-train/test split and only include the pre-train time series in LOTSA, holding out the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, CloudOps TSF paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Borg Cluster Data 2011</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train split is the CloudOps TSF pre-train/test split of Woo et al. (2023), not GIFT-Eval or long-horizon. HF config(s) in Salesforce/lotsa_data: borg_cluster_data_2011.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Borg Cluster Data 2011”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 10 (CloudOps TSF) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We follow their pre-train/test split and only include the pre-train time series in LOTSA, holding out the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, CloudOps TSF paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Alibaba Cluster Trace 2018</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train split is the CloudOps TSF pre-train/test split of Woo et al. (2023), not GIFT-Eval or long-horizon. HF config(s) in Salesforce/lotsa_data: alibaba_cluster_trace_2018.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Alibaba Cluster Trace 2018”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 10 (CloudOps TSF) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We follow their pre-train/test split and only include the pre-train time series in LOTSA, holding out the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, CloudOps TSF paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Taxi</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: taxi_30min.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Taxi Uber TLC Daily”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 11 (GluonTS) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Uber TLC Daily</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: uber_tlc_daily.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Uber TLC Daily”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 11 (GluonTS) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Uber TLC Hourly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: uber_tlc_hourly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Uber TLC Hourly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 11 (GluonTS) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wiki-Rolling</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: wiki-rolling_nips.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Wiki-Rolling”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 11 (GluonTS) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>M5</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: m5.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Wiki-Rolling M5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 11 (GluonTS) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/largest.html">LargeST (PeMS California)</a>  <span class="muted">· split: unknown</span>
+<p class="small">Same PeMS source as PEMS03/04/07/08, PEMS Bay and long-horizon Traffic (per the paper). HF config(s) in Salesforce/lotsa_data: largest (+ largest_2017 ... largest_2021).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“LargeST Transport 5T”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 12 (LargeST) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Since we use such a large amount of dataset from the same source, we can no longer consider forecasting on any of these datasets as an out-of-distribution or zero-shot forecasting task anymore, and thus omit the Traffic dataset of the LSF benchmark from our evaluations.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, LargeST paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS03</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: PEMS03.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMS03”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS04</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: PEMS04.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMS04”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS07</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: PEMS07.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMS07”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS08</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: PEMS08.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMS08”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS Bay</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: PEMS_BAY.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMS Bay”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Los-Loop</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: LOS_LOOP.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Los-Loop”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a>  <span class="muted">· split: unknown</span>
+<p class="small">GIFT-Eval paper Table 23 lists this dataset among those &#39;that LOTSA collection and our GIFT-Eval has in common&#39;. HF config(s) in Salesforce/lotsa_data: LOOP_SEATTLE.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Loop Seattle”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a>  <span class="muted">· split: unknown</span>
+<p class="small">GIFT-Eval paper Table 23 lists this dataset among those &#39;that LOTSA collection and our GIFT-Eval has in common&#39;. HF config(s) in Salesforce/lotsa_data: SZ_TAXI.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“SZ-Taxi”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Beijing Subway</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: BEIJING_SUBWAY_30MIN.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Beijing Subway”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SHMetro</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: SHMETRO.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“SHMetro”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>HZMetro</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: HZMETRO.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“HZMetro”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/m-dense.html">M_DENSE (LibCity)</a>  <span class="muted">· split: unknown</span>
+<p class="small">No HF config named Rotterdam; the HF dataset and the uni2ts LibCity builder list &#39;M_DENSE&#39; in its place (13 LibCity entries in both). See open_questions. Matched to M_DENSE: the published LOTSA data and the uni2ts LibCity builder list M_DENSE in place of &#39;Rotterdam&#39;, and the GIFT-Eval paper (Table 23) lists m_dense among datasets shared with LOTSA. To be confirmed.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Rotterdam”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Q-Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: Q-TRAFFIC.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Q-Traffic”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: london_smart_meters_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“London Smart Meters”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“London Smart Meters, Wind Farms, Wind Power, Solar Power, Oikolab Weather, Covid Mobility: Originally not included in the Monash benchmark.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wind Farms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: wind_farms_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Wind Farms”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“London Smart Meters, Wind Farms, Wind Power, Solar Power, Oikolab Weather, Covid Mobility: Originally not included in the Monash benchmark.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wind Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: wind_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Wind Power”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“London Smart Meters, Wind Farms, Wind Power, Solar Power, Oikolab Weather, Covid Mobility: Originally not included in the Monash benchmark.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Solar Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: solar_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Solar Power”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“London Smart Meters, Wind Farms, Wind Power, Solar Power, Oikolab Weather, Covid Mobility: Originally not included in the Monash benchmark.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Oikolab Weather</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: oikolab_weather.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Oikolab Weather”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“London Smart Meters, Wind Farms, Wind Power, Solar Power, Oikolab Weather, Covid Mobility: Originally not included in the Monash benchmark.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Elecdemand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: elecdemand.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Elecdemand”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Covid Mobility</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: covid_mobility.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Covid Mobility”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“London Smart Meters, Wind Farms, Wind Power, Solar Power, Oikolab Weather, Covid Mobility: Originally not included in the Monash benchmark.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Kaggle Web Traffic Weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: kaggle_web_traffic_weekly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Kaggle Web Traffic Weekly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Extended Web Traffic, Kaggle Web Traffic Weekly: We include the extended version of Web Traffic which contains overlap with the original Web Traffic dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Extended Web Traffic</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: extended_web_traffic_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Extended Web Traffic”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Extended Web Traffic, Kaggle Web Traffic Weekly: We include the extended version of Web Traffic which contains overlap with the original Web Traffic dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>M1 Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: m1_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M1 Yearly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M1 Yearly, M1 Quarterly, M3 Yearly, M3 Quarterly, M4 Yearly, M4 Quarterly, Tourism Yearly: Some time series in these datasets are too short after train/test splits, thus we do not split them”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>M1 Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: m1_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M1 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M1 Yearly, M1 Quarterly, M3 Yearly, M3 Quarterly, M4 Yearly, M4 Quarterly, Tourism Yearly: Some time series in these datasets are too short after train/test splits, thus we do not split them”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>M1 Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: m1_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M1 Monthly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>M3 Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: monash_m3_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M3 Yearly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M1 Yearly, M1 Quarterly, M3 Yearly, M3 Quarterly, M4 Yearly, M4 Quarterly, Tourism Yearly: Some time series in these datasets are too short after train/test splits, thus we do not split them”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>M3 Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: monash_m3_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M3 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M1 Yearly, M1 Quarterly, M3 Yearly, M3 Quarterly, M4 Yearly, M4 Quarterly, Tourism Yearly: Some time series in these datasets are too short after train/test splits, thus we do not split them”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>M3 Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: monash_m3_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M3 Monthly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>M3 Other</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: monash_m3_other.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M3 Other”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/m4-yearly.html">M4 Yearly</a>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: m4_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M4 Yearly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M1 Yearly, M1 Quarterly, M3 Yearly, M3 Quarterly, M4 Yearly, M4 Quarterly, Tourism Yearly: Some time series in these datasets are too short after train/test splits, thus we do not split them”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/m4-quarterly.html">M4 Quarterly</a>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: m4_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M4 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M1 Yearly, M1 Quarterly, M3 Yearly, M3 Quarterly, M4 Yearly, M4 Quarterly, Tourism Yearly: Some time series in these datasets are too short after train/test splits, thus we do not split them”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/m4-monthly.html">M4 Monthly</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: m4_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M4 Monthly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/m4-weekly.html">M4 Weekly</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: m4_weekly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M4 Weekly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/m4-hourly.html">M4 Hourly</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: m4_hourly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M4 Hourly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/m4-daily.html">M4 Daily</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: m4_daily.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“M4 Daily”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>NN5 Daily</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: nn5_daily_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“NN5 Daily”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>NN5 Weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: nn5_weekly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“NN5 Weekly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Tourism Yearly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: full</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: tourism_yearly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Tourism Yearly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M1 Yearly, M1 Quarterly, M3 Yearly, M3 Quarterly, M4 Yearly, M4 Quarterly, Tourism Yearly: Some time series in these datasets are too short after train/test splits, thus we do not split them”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Tourism Quarterly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: tourism_quarterly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Tourism Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Tourism Monthly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: tourism_monthly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Tourism Monthly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>CIF 2016</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: cif_2016_12, cif_2016_6.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“CIF 2016”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/monash-traffic-weekly.html">Traffic Weekly (Monash)</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: traffic_weekly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Traffic Weekly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. Monash Traffic Hourly; whether it is the same series as long-horizon &#39;Traffic&#39; is not stated by the Moirai paper (see open_questions). HF config(s) in Salesforce/lotsa_data: traffic_hourly.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Traffic Hourly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Australian Electricity Demand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: australian_electricity_demand.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Australian Electricity Demand”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Rideshare</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: rideshare_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Rideshare”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: saugeenday.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Saugeen”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Sunspot</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: sunspot_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Sunspot”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/temperature-rain.html">Temperature Rain</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: temperature_rain_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Temperature Rain”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Vehicle Trips</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: vehicle_trips_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Vehicle Trips”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Weather</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. This is Monash &#39;Weather&#39;, not the 10-minute Weather dataset of the long-horizon benchmark. HF config(s) in Salesforce/lotsa_data: weather.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Vehicle Trips Weather”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Note that the “Weather” from Monash is a different dataset from that used in the out-of-distribution evaluations.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/car-parts.html">Car Parts</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: car_parts_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Car Parts”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>FRED MD</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: fred_md.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“FRED MD”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Pedestrian Counts</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: pedestrian_counts.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Pedestrian Counts”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/hospital.html">Hospital</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: hospital.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Hospital”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/covid-deaths.html">COVID Deaths</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: covid_deaths.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“COVID Deaths”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: kdd_cup_2018_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“KDD Cup 2018”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Bitcoin</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: bitcoin_with_missing.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Bitcoin”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/us-births.html">US Births</a>  <span class="muted">· split: train</span>
+<p class="small">Train region only: the final Monash forecast horizon (Godahewa et al., 2021) is held out as test. HF config(s) in Salesforce/lotsa_data: us_births.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“US Births”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Covid19 Energy</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: covid19_energy.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Covid19 Energy”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 15 (ProEnFo) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>GEF12</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: gfc12_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“GEF12”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 15 (ProEnFo) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>GEF14</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: gfc14_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“GEF14”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 15 (ProEnFo) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>GEF17</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: gfc17_load.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“GEF17”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 15 (ProEnFo) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PDB</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: pdb.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“GEF17 PDB”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 15 (ProEnFo) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Spanish</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: spain.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Spanish”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 15 (ProEnFo) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>BDG-2 Hog</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: hog.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BDG-2 Hog”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 15 (ProEnFo) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>BDG-2 Bull</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: bull.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BDG-2 Bull”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 15 (ProEnFo) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>BDG-2 Cockatoo</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: cockatoo.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BDG-2 Cockatoo”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 15 (ProEnFo) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ELF</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: elf.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BDG-2 Cockatoo ELF”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 15 (ProEnFo) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Subseasonal</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: subseasonal.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Subseasonal Subseasonal Precipitation”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 16 (SubseasonalClimateUSA) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Subseasonal Precipitation</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: subseasonal_precip.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Subseasonal Subseasonal Precipitation”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 16 (SubseasonalClimateUSA) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>KDD Cup 2022</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: kdd2022.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“KDD Cup 2022”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>GoDaddy</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: godaddy.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“GoDaddy”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Favorita Sales</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: favorita_sales.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Favorita Sales”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Favorita Transactions</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: favorita_transactions.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Favorita Transactions”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a>  <span class="muted">· split: unknown</span>
+<p class="small">GIFT-Eval paper Table 23 lists this dataset among those &#39;that LOTSA collection and our GIFT-Eval has in common&#39;. HF config(s) in Salesforce/lotsa_data: restaurant.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Restaurant”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a>  <span class="muted">· split: unknown</span>
+<p class="small">GIFT-Eval paper Table 23 lists this dataset among those &#39;that LOTSA collection and our GIFT-Eval has in common&#39;. HF config(s) in Salesforce/lotsa_data: hierarchical_sales.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Hierarchical Sales”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>China Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: china_air_quality.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“China Air Quality”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Beijing Air Quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: beijing_air_quality.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Beijing Air Quality”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Residential Load Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: residential_load_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Residential Load Power”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Residential PV Power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: residential_pv_power.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Residential PV Power”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/cdc-fluview-ilinet.html">CDC FluView ILINet (LOTSA)</a>  <span class="muted">· split: unknown</span>
+<p class="small">CDC ILINet source; the paper does not say whether this overlaps the long-horizon &#39;ILI&#39; dataset (see open_questions). HF config(s) in Salesforce/lotsa_data: cdc_fluview_ilinet.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“CDC Fluview ILINet”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>CDC Fluview WHO NREVSS</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: cdc_fluview_who_nrevss.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“CDC Fluview WHO NREVSS”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Project Tycho</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">HF config(s) in Salesforce/lotsa_data: project_tycho.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Project Tycho”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Dataset <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We omit Electricity (Trindade, 2015) and Solar (Lai et al., 2018) datasets for out-of-distribution evaluation.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Electricity dataset (Trindade, 2015) is also included in BuildingsBench but we omit it from LOTSA and use it for out-of-distribution evaluation instead.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, BuildingsBench paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We omit Electricity (Trindade, 2015) and Solar (Lai et al., 2018) datasets for out-of-distribution evaluation.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Walmart (Walmart Competition Admin, 2014) Weather”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 18 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/etth1.html">ETTh1</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETTh1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/etth2.html">ETTh2</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETTh2”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/ettm1.html">ETTm1</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETTm1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/ettm2.html">ETTm2</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETTm2”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Electricity”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Weather”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
+  <div class="cell-detail" id="gift-eval--jena-weather">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“LOTSA is a collection of time series datasets curated for pre-training of LTMs. In the following, we describe its constituent datasets and their respective sources, listing any pre-processing and data splitting performed.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-application">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“LOTSA is a collection of time series datasets curated for pre-training of LTMs. In the following, we describe its constituent datasets and their respective sources, listing any pre-processing and data splitting performed.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-service">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“LOTSA is a collection of time series datasets curated for pre-training of LTMs. In the following, we describe its constituent datasets and their respective sources, listing any pre-processing and data splitting performed.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-l2c">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“LOTSA is a collection of time series datasets curated for pre-training of LTMs. In the following, we describe its constituent datasets and their respective sources, listing any pre-processing and data splitting performed.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“LOTSA is a collection of time series datasets curated for pre-training of LTMs. In the following, we describe its constituent datasets and their respective sources, listing any pre-processing and data splitting performed.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-rnd">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“LOTSA is a collection of time series datasets curated for pre-training of LTMs. In the following, we describe its constituent datasets and their respective sources, listing any pre-processing and data splitting performed.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--recruit-restaurant">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· the dataset was used; the source does not say which part (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Restaurant”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--ett1">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“LOTSA is a collection of time series datasets curated for pre-training of LTMs. In the following, we describe its constituent datasets and their respective sources, listing any pre-processing and data splitting performed.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--ett2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“LOTSA is a collection of time series datasets curated for pre-training of LTMs. In the following, we describe its constituent datasets and their respective sources, listing any pre-processing and data splitting performed.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--loop-seattle">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· the dataset was used; the source does not say which part (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Loop Seattle”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--sz-taxi">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· the dataset was used; the source does not say which part (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“SZ-Taxi”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m-dense">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· the dataset was used; the source does not say which part (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Rotterdam”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 13 (LibCity) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--lstnet-solar">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“We omit Electricity (Trindade, 2015) and Solar (Lai et al., 2018) datasets for out-of-distribution evaluation.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--hierarchical-sales">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· the dataset was used; the source does not say which part (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Hierarchical Sales”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-yearly">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· the whole dataset was used (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M4 Yearly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M1 Yearly, M1 Quarterly, M3 Yearly, M3 Quarterly, M4 Yearly, M4 Quarterly, Tourism Yearly: Some time series in these datasets are too short after train/test splits, thus we do not split them”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-quarterly">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· the whole dataset was used (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M4 Quarterly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the following datasets, we include their entirety in LOTSA without a held-out test set for the following reasons:”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M1 Yearly, M1 Quarterly, M3 Yearly, M3 Quarterly, M4 Yearly, M4 Quarterly, Tourism Yearly: Some time series in these datasets are too short after train/test splits, thus we do not split them”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash exceptions list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-monthly">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M4 Monthly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-weekly">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M4 Weekly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-daily">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M4 Daily”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-hourly">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“M4 Hourly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--hospital">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Hospital”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--covid-deaths">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“COVID Deaths”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--us-births">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“US Births”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--saugeen-river-flow">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Saugeen”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--temperature-rain">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Temperature Rain”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--kdd-cup-2018">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“KDD Cup 2018”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--car-parts">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Car Parts”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We omit Electricity (Trindade, 2015) and Solar (Lai et al., 2018) datasets for out-of-distribution evaluation.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Electricity dataset (Trindade, 2015) is also included in BuildingsBench but we omit it from LOTSA and use it for out-of-distribution evaluation instead.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, BuildingsBench paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
+  <div class="cell-detail" id="long-horizon--etth1">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETTh1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--etth2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETTh2”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ettm1">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETTm1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ettm2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETTm2”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--electricity-321">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Electricity”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--traffic-862">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Traffic Hourly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 14 (Monash) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“apart from the exceptions listed below, we only include the train region in LOTSA, by holding out the final forecast horizon as the test set.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Monash paragraph · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--weather-jena-2020">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Walmart (Walmart Competition Admin, 2014) Weather”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 18 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“datasets used in the following have not been included in LOTSA.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We evaluate on a subset of the popular long sequence forecasting benchmark (Wu et al., 2021), omitting datasets which have datasets from the same source present in our pre-training data and cannot be considered zero-shot.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2, Long Sequence Forecasting · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Weather”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--exchange-rate">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“LOTSA is a collection of time series datasets curated for pre-training of LTMs. In the following, we describe its constituent datasets and their respective sources, listing any pre-processing and data splitting performed.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ili">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· related dataset CDC FluView ILINet (LOTSA) was used (via LOTSA (Large-scale Open Time Series Archive))</span></p>
+<details><summary>Evidence (7)</summary><figure class="evidence">
+  <blockquote>“Trained on LOTSA, which is a dataset of datasets, we introduce the notion of sub-datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The Moirai-1.0-R series have been trained on the Large-scale Open Time Series Archive (LOTSA)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · LOTSA Data v1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data)”</blockquote>
+  <figcaption><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CDC Fluview ILINet”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 17 (Others) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“includes the weekly recorded influenza-like illness (ILI) patients data from Centers for Disease Control and Prevention of the United States between 2002 and 2021”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2106.13008v5">arxiv.org</a>
+<span class="muted">· paper · Section 4 (Datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“https://gis.cdc.gov/grasp/fluview/fluportaldashboard.html”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2106.13008v5">arxiv.org</a>
+<span class="muted">· paper · Section 4, footnote 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CDC Fluview ILINet CDC Fluview WHO NREVSS”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
+<span class="muted">· paper · Table 14 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Sizes small/base/large (14m/91m/311m per card). LSF Traffic was omitted from evaluation because LOTSA contains LargeST/PeMS data from the same source. Weights were later patched on HF (uni2ts PR #111) to fix a projection-layer ordering issue; training data unchanged.
+
+Other stated exclusions, not tracked here: Walmart (all); Istanbul Traffic (all); Turkey Power (all); Monash Time Series Forecasting Repository (test region) (test); CloudOps TSF (Azure VM Traces 2017, Borg Cluster Data 2011, Alibaba Cluster Trace 2018) test set (test).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2402.02592v2">Unified Training of Universal Time Series Forecasting Transformers, arXiv 2402.02592v2</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/Salesforce/moirai-1.0-R-small/raw/main/README.md">Salesforce/moirai-1.0-R-small model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/Salesforce/moirai-1.0-R-base/raw/main/README.md">Salesforce/moirai-1.0-R-base model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/Salesforce/moirai-1.0-R-large/raw/main/README.md">Salesforce/moirai-1.0-R-large model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/project/moirai-1/README.md">uni2ts project/moirai-1 README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/SalesforceAIResearch/uni2ts/main/README.md">uni2ts README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+    </div>
+  </footer>
+</body>
+</html>

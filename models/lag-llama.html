@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Lag-Llama</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html" class="active">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../index.html">Time series</a> / Model</p>
+<h1>Lag-Llama</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Lag-Llama authors (ServiceNow Research, Mila, Morgan Stanley et al.)</dd>
+  <dt>Family</dt><dd>Lag-Llama</dd>
+  <dt>Released</dt><dd>2023-10-12 <span class="muted small">(arXiv v1 submission date (https://arxiv.org/abs/2310.08278); open weights released 2024-02-07 per the model card (&#39;7-Feb-2024: We released Lag-Llama, with open-source model checkpoints&#39;).)</span></dd>
+<dt>Checkpoints</dt><dd>time-series-foundation-models/Lag-Llama</dd>  <dt>Weights</dt><dd>Open · apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2310.08278v3">Paper</a><a href="https://huggingface.co/time-series-foundation-models/Lag-Llama/raw/main/README.md">Model card</a><a href="https://github.com/time-series-foundation-models/lag-llama">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Pre-training disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>100%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 7, Training data seen: 0, Related data seen: 4, Not seen: 26, Unknown: 0">
+<span class="lvl-seen_split_unclear" style="flex-grow: 7" title="Seen, split unclear: 7"></span><span class="lvl-related" style="flex-grow: 4" title="Related data seen: 4"></span><span class="lvl-not_seen" style="flex-grow: 26" title="Not seen: 26"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">7</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">4</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">26</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">0</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Other declared pre-training data</h2>
+  <ul class="rows"><li>
+<a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a>  <span class="muted">· split: train</span>
+<p class="small">Appendix A: 862 hourly series of SF Bay Area freeway occupancy 2015-2016 (Godahewa et al., 2021), i.e. the same source data as the long-horizon Traffic dataset. Train split as defined in the (Monash/GluonTS) dataset, not the Informer split.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“San Francisco Traffic”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Uber TLC Hourly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Uber TLC Hourly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Australian Electricity Demand</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Australian Electricity Demand”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a>  <span class="muted">· split: train</span>
+<p class="small">Appendix A: 321 clients, hourly, 2012-2014 (Godahewa et al., 2021), i.e. the same source data as the long-horizon Electricity dataset. Train split as defined in the (Monash/GluonTS) dataset, not necessarily the Informer split.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Electricity Hourly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>London Smart Meters</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“London Smart Meters”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a>  <span class="muted">· split: train</span>
+<p class="small">Appendix A: 137 series of 10-minute solar power production in Alabama during 2006 (Monash solar_10_minutes). Appendix A: 137 Alabama plants, 10-minute (Monash solar_10_minutes).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Solar Wind Farms”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wind Farms</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Wind Farms”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/etth1.html">ETTh1</a>  <span class="muted">· split: train</span>
+<p class="small">Train split &#39;as defined in the dataset&#39;; the paper does not say this is the Informer/long-horizon split.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“ETT H1 ETT H2”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/etth2.html">ETTh2</a>  <span class="muted">· split: train</span>
+<p class="small">Train split &#39;as defined in the dataset&#39;; the paper does not say this is the Informer/long-horizon split.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“ETT H2 ETT M1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/ettm1.html">ETTm1</a>  <span class="muted">· split: train</span>
+<p class="small">Train split &#39;as defined in the dataset&#39;; the paper does not say this is the Informer/long-horizon split.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“ETT M1 ETT M2”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“KDD Cup 2018”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Sunspot</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Sunspot Beijing Multisite”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Beijing Multisite</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Beijing Multisite”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>UCI</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“UCI CPU Limit Minute”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>CPU Limit Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“CPU Limit Minute”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>CPU Usage Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“CPU Usage Minute”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Function Delay Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Function Delay Minute”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Instances Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Instances Minute”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Memory Limit Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Memory Limit Minute”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Memory Usage Minute</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Memory Usage Minute”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Dataset <a href="../datasets/ettm2.html">ETTm2</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“ETT M2 Banking &amp; Econ”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Unseen row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3: Datasets used in the pretraining corpus and the unseen datasets on which we evaluate”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/exchange-rate.html">Exchange-Rate</a>      <span class="muted">· entirely excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Exchange Rate”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Unseen row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3: Datasets used in the pretraining corpus and the unseen datasets on which we evaluate”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
+  <div class="cell-detail" id="gift-eval--jena-weather">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-application">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-service">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-l2c">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-rnd">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--recruit-restaurant">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--ett1">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· related dataset ETTh1 was used</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“ETT H1 ETT H2”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“From Informer (Zhou et al., 2021) we utilize ETT1 and ETT2 datasets, which denote electricity transformer temperature”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
+<span class="muted">· paper · Appendix D · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETTh1&amp;ETTh2 7 17,420”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2205.13504v3">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--ett2">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· related dataset ETTh2 was used</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“ETT H2 ETT M1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“From Informer (Zhou et al., 2021) we utilize ETT1 and ETT2 datasets, which denote electricity transformer temperature”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
+<span class="muted">· paper · Appendix D · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETTh1&amp;ETTh2 7 17,420”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2205.13504v3">arxiv.org</a>
+<span class="muted">· paper · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--loop-seattle">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--sz-taxi">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m-dense">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--lstnet-solar">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Solar Wind Farms”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--hierarchical-sales">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-yearly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-quarterly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-monthly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-weekly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-daily">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-hourly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--hospital">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--covid-deaths">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--us-births">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--saugeen-river-flow">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--temperature-rain">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--kdd-cup-2018">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“KDD Cup 2018”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--car-parts">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· related dataset Electricity (ECL, 321 clients) was used</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“Electricity Hourly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The raw dataset is in https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · Electricity consumption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Because the some dimensions are equal to 0. So we eliminate the records in 2011. Final we get data contains electircity consumption of 321 clients from 2012 to 2014.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · Electricity consumption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2106.13008v5">arxiv.org</a>
+<span class="muted">· paper · Section 4, footnote 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
+  <div class="cell-detail" id="long-horizon--etth1">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“ETT H1 ETT H2”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--etth2">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“ETT H2 ETT M1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ettm1">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“ETT M1 ETT M2”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ettm2">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· related dataset ETTh2 was used; the authors state this dataset was excluded</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“ETT H2 ETT M1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we also provide the hourly-level variants for fast development (marked by *h*), i.e. ETT-small-h1 and ETT-small-h2.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · ETT-small · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ETT M2 Banking &amp; Econ”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Unseen row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3: Datasets used in the pretraining corpus and the unseen datasets on which we evaluate”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--electricity-321">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Electricity Hourly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--traffic-862">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· a training split was used; its overlap with this benchmark&#39;s test data is not established</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“San Francisco Traffic”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Pretraining row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When pretraining, we train on a combined dataset formed out of the train split of each dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix B · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--weather-jena-2020">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--exchange-rate">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· the authors state the dataset was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Exchange Rate”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 (Unseen row) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3: Datasets used in the pretraining corpus and the unseen datasets on which we evaluate”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A, Table 3 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--ili">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· absent from the complete list of pre-training data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“We collate a diverse corpus of 27 time series datasets from several sources across six different semantically grouped domains”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 3 further presents if a dataset was present in the pretraining or downstream testing corpora in our work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.08278v3">arxiv.org</a>
+<span class="muted">· paper · Appendix A · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Pretraining used only the train split of each of the 20 pretraining datasets (Appendix B); the split is &#39;as defined in the dataset&#39; (GluonTS/Monash-style), not stated to be the Informer long-horizon split. ETTh1/ETTh2/ETTm1 and the Monash versions of Electricity (321 clients) and Traffic (862 series) were in pretraining; ETTm2, Weather (Monash, Australian), Exchange Rate, Pedestrian Counts, Beijing PM2.5 and two Huawei cloud series were held out as unseen. No synthetic data. No newer Lag-Llama release found as of 2026-10-15.
+
+Other stated exclusions, not tracked here: Pedestrian Counts (all); Weather (all); Beijing PM2.5 (all); Requests Minute (all); Platform Delay Minute (all).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2310.08278v3">Lag-Llama: Towards Foundation Models for Probabilistic Time Series Forecasting (arXiv v3)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/time-series-foundation-models/Lag-Llama/raw/main/README.md">Lag-Llama model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · TiRex 1.1 (gifteval)</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html" class="active">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../index.html">Time series</a> / Model</p>
+<h1>TiRex 1.1 (gifteval)</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>NXAI</dd>
+  <dt>Family</dt><dd>TiRex · version 1.1-gifteval</dd>
+  <dt>Released</dt><dd>2025-10-06 <span class="muted small">(HF repo NX-AI/TiRex-1.1-gifteval initial commit 2025-10-06 (HF commit history / API createdAt).)</span></dd>
+<dt>Checkpoints</dt><dd>NX-AI/TiRex-1.1-gifteval</dd>  <dt>Weights</dt><dd>Open · NXAI community license (license: other, nx-ai-community-license)</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2505.23719v2">Paper</a><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">Model card</a><a href="https://github.com/NX-AI/tirex">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Pre-training disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>81%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 2, Not seen: 28, Unknown: 7">
+<span class="lvl-related" style="flex-grow: 2" title="Related data seen: 2"></span><span class="lvl-not_seen" style="flex-grow: 28" title="Not seen: 28"></span><span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">2</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">28</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">7</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“datasets overlapping with GiftEval have been removed”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Other declared pre-training data</h2>
+  <ul class="rows"><li>
+<em>chronos_datasets (GiftEval-overlapping datasets removed)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Exact retained Chronos datasets not listed; solar and solar_1h filtered to remove the Alabama data included in GIFT-Eval solar.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[chronos_datasets](https://huggingface.co/datasets/autogluon/chronos_datasets)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“datasets overlapping with GiftEval have been removed”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>azure vm traces 2017</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“azure vm traces 2017”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>borg cluster data 2011</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“borg cluster data 2011”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>bdg-2 panther</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“bdg-2 panther”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>bdg-2 fox</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“bdg-2 fox bdg-2 rat”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>bdg-2 rat</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“bdg-2 rat bdg-2 bear”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>bdg-2 bear</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“bdg-2 bear”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>lcl</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“lcl smart ideal”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>smart</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“smart ideal”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ideal</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“ideal sceaux”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>sceaux</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“sceaux borealis”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>borealis</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“borealis buildings 900k”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>buildings 900k</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“buildings 900k”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/largest.html">LargeST (PeMS California)</a>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“largest 2017”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/largest.html">LargeST (PeMS California)</a>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“largest 2018”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/largest.html">LargeST (PeMS California)</a>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“largest 2019”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/largest.html">LargeST (PeMS California)</a>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“largest 2020”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/largest.html">LargeST (PeMS California)</a>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“largest 2021”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS03</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMS03 PEMS04”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS04</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMS04 PEMS07”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS07</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMS07 PEMS08”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS08</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMS08 PEMS BAY”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PEMS BAY</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“PEMS BAY LOS LOOP”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>LOS LOOP</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“LOS LOOP BEIJING SUBWAY 30MIN”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>BEIJING SUBWAY 30MIN</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“BEIJING SUBWAY 30MIN”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SHMETRO</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“SHMETRO HZMETRO”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>HZMETRO</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“HZMETRO Q-TRAFFIC”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Q-TRAFFIC</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Q-TRAFFIC subseasonal”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>subseasonal</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“subseasonal”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>subseasonal precip</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“subseasonal precip”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>wind power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“wind power”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>solar power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“solar power”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>kaggle web traffic weekly</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“kaggle web traffic weekly”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>kdd2022</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“kdd2022 godaddy”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>godaddy</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“godaddy favorita sales”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>favorita sales</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“favorita sales”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>china air quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“china air quality”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>beijing air quality</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“beijing air quality”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>residential load power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“residential load power”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>residential pv power</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“residential pv power”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/cdc-fluview-ilinet.html">CDC FluView ILINet (LOTSA)</a>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“cdc fluview ilinet”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>cdc fluview who</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Card points to the TiRex paper for the GIFT-Eval Pretrain subset (Table 6).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“cdc fluview who”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Benchmark <a href="../benchmarks/gift-eval.html">GIFT-Eval</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/gift-eval.html">GIFT-Eval</a></h3>
+  <div class="cell-detail" id="gift-eval--jena-weather">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/jena-weather.html">Jena Weather (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-application">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-application.html">BizITObs - Application</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-service">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-service.html">BizITObs - Service</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bizitobs-l2c">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bizitobs-l2c.html">BizITObs - L2C</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-fast-storage">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-fast-storage.html">Bitbrains - Fast Storage</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--bitbrains-rnd">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/bitbrains-rnd.html">Bitbrains - rnd</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--recruit-restaurant">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/recruit-restaurant.html">Restaurant (Recruit Restaurant Visitor Forecasting)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--ett1">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett1.html">ETT1 (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--ett2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/ett2.html">ETT2 (GIFT-Eval)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--loop-seattle">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/loop-seattle.html">Loop Seattle (LibCity)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--sz-taxi">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/sz-taxi.html">SZ-Taxi (LibCity)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m-dense">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m-dense.html">M_DENSE (LibCity)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--lstnet-solar">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/lstnet-solar.html">Solar (LSTNet, 137 Alabama PV plants)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--hierarchical-sales">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hierarchical-sales.html">Hierarchical Sales (Mancuso et al., 2020)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-yearly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-yearly.html">M4 Yearly</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-quarterly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-quarterly.html">M4 Quarterly</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-monthly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-monthly.html">M4 Monthly</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-weekly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-weekly.html">M4 Weekly</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-daily">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-daily.html">M4 Daily</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--m4-hourly">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/m4-hourly.html">M4 Hourly</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--hospital">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hospital.html">Hospital</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--covid-deaths">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/covid-deaths.html">COVID Deaths</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--us-births">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/us-births.html">US Births</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--saugeen-river-flow">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/saugeen-river-flow.html">Saugeen River Flow</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--temperature-rain">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/temperature-rain.html">Temperature Rain</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--kdd-cup-2018">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/kdd-cup-2018.html">KDD Cup 2018</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--car-parts">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/car-parts.html">Car Parts</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="gift-eval--uci-electricity-load-diagrams">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/uci-electricity-load-diagrams.html">ElectricityLoadDiagrams20112014 (UCI)</a> <span class="muted">· the authors state its test portion was excluded from pre-training</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“the pretraining dataset has been cleaned to remove overlaps with the GIFT-Eval test dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“have been filtered for data from Alabama which is included in GiftEval `solar`)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <h3><a href="../benchmarks/long-horizon.html">Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI)</a></h3>
+  <div class="cell-detail" id="long-horizon--etth1">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth1.html">ETTh1</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--etth2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/etth2.html">ETTh2</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--ettm1">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm1.html">ETTm1</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--ettm2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ettm2.html">ETTm2</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--electricity-321">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/electricity-321.html">Electricity (ECL, 321 clients)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--traffic-862">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/traffic-862.html">Traffic (PeMS San Francisco Bay, 862 sensors)</a> <span class="muted">· related dataset LargeST (PeMS California) was used</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“largest 2017”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The PeMS is a popular source of data for many traffic forecasting datasets such as PEMS03, PEMS04, PEMS07, PEMS08, and PEMS Bay, as well as the popular Traffic dataset from (Lai et al., 2018).”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2402.02592v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A, LargeST · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="long-horizon--weather-jena-2020">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/weather-jena-2020.html">Weather (Jena, 2020; Autoformer)</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--exchange-rate">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/exchange-rate.html">Exchange-Rate</a> <span class="muted">· pre-training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="long-horizon--ili">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/ili.html">ILI (CDC influenza-like illness, national)</a> <span class="muted">· related dataset CDC FluView ILINet (LOTSA) was used</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“cdc fluview ilinet”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2505.23719v2">arxiv.org</a>
+<span class="muted">· paper · TiRex paper Appendix C.2, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“[GiftEvalPretrain](https://huggingface.co/datasets/Salesforce/GiftEvalPretrain) (Subset - details in the paper)”</blockquote>
+  <figcaption><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“includes the weekly recorded influenza-like illness (ILI) patients data from Centers for Disease Control and Prevention of the United States between 2002 and 2021”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2106.13008v5">arxiv.org</a>
+<span class="muted">· paper · Section 4 (Datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“https://gis.cdc.gov/grasp/fluview/fluportaldashboard.html”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2106.13008v5">arxiv.org</a>
+<span class="muted">· paper · Section 4, footnote 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CDC Fluview ILINet CDC Fluview WHO NREVSS”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2410.10393v2">arxiv.org</a>
+<span class="muted">· paper · Table 14 (dataset column) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">1.1 adds inference-only long-period normalisation; this checkpoint is retrained on a corpus with GIFT-Eval-overlapping Chronos datasets removed. Training data per card: chronos_datasets (minus GIFT-Eval overlaps), GIFT-Eval Pretrain subset, synthetic data. Used in Toto 2.0 Family-and-Friends ensemble. The NX-AI/TiRex repo itself was not re-released as 1.1 (no such commit).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://huggingface.co/NX-AI/TiRex-1.1-gifteval/raw/main/README.md">TiRex-1.1-gifteval model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2505.23719v2">TiRex paper (arXiv v2)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      Built 2026-10-15 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+    </div>
+  </footer>
+</body>
+</html>
