@@ -338,6 +338,155 @@
   <p class="muted small">Hover a cell for the reason; click it for the evidence.</p>
 </section>
 
+<section id="scores-openvlm-llm-multimodal">
+  <h2>Scores <span class="muted">· OpenVLM Leaderboard (OpenCompass, VLMEvalKit)</span></h2>
+  <p class="muted small">Accuracy (%), mean over every dataset; higher is better. From <a href="http://opencompass.openxlab.space/assets/OpenVLM.json">OpenVLM Leaderboard (OpenCompass, VLMEvalKit)</a> at OpenVLM.json (<a href="https://huggingface.co/spaces/opencompass/open_vlm_leaderboard/blob/bf5c5b7a5b33642cdd28945629150a7d525e03bf/README.md">Apache-2.0</a>), retrieved 2026-10-16. OpenCompass evaluated every model with VLMEvalKit (zero-shot, same prompts; GPT-3.5/GPT-4-Turbo used only as answer extractor when heuristic matching fails). Only entries with META Verified = Yes are imported. Columns: MMMU_VAL (validation, 900), MathVista (testmini, 1,000), AI2D (AI2D_TEST, 3,088), ChartQA_TEST (2,500, relaxed accuracy); ChartQA was run for fewer models. DocVQA, MMMU-Pro and CharXiv are not on this leaderboard. The licence is the Apache-2.0 declared by the leaderboard Space (which serves this JSON) and by the VLMEval/OpenVLMRecords prediction dataset; the JSON file itself carries no separate licence. The JSON was last regenerated 2025-09-17, so newer models (Qwen3-VL, InternVL3.5, LLaVA-OneVision-1.5, Molmo2) are absent. The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">Accuracy (%)</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="model">
+        <td class="num">1</td>
+        <td><a href="../models/pixtral-12b.html">Pixtral 12B</a></td>
+        <td class="num">64.650</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 100.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">2</td>
+        <td><a href="../models/gemma-3.html">Gemma 3</a></td>
+        <td class="num">59.025</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 91.29930394431554%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">3</td>
+        <td><a href="../models/gpt-4o.html">GPT-4o</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">4</td>
+        <td><a href="../models/gpt-5.html">GPT-5</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">5</td>
+        <td><a href="../models/claude-3-5-sonnet.html">Claude 3.5 Sonnet</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">6</td>
+        <td><a href="../models/claude-3-7-sonnet.html">Claude 3.7 Sonnet</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">7</td>
+        <td><a href="../models/claude-3.html">Claude 3 (Opus, Sonnet, Haiku)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">8</td>
+        <td><a href="../models/gemini-1-5.html">Gemini 1.5 (Pro, Flash)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">9</td>
+        <td><a href="../models/internvl3.html">InternVL3</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 3, Training data seen: 0, Related data seen: 1, Not seen: 0, Unknown: 3">
+<span class="lvl-seen_split_unclear" style="flex-grow: 3" title="Seen, split unclear: 3"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 3" title="Unknown: 3"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">10</td>
+        <td><a href="../models/llama-3.2-vision.html">Llama 3.2-Vision (11B, 90B)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">11</td>
+        <td><a href="../models/llava-onevision.html">LLaVA-OneVision</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 3, Related data seen: 1, Not seen: 0, Unknown: 3">
+<span class="lvl-train_seen" style="flex-grow: 3" title="Training data seen: 3"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 3" title="Unknown: 3"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">12</td>
+        <td><a href="../models/molmo.html">Molmo (0924)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 3, Related data seen: 1, Not seen: 0, Unknown: 3">
+<span class="lvl-train_seen" style="flex-grow: 3" title="Training data seen: 3"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 3" title="Unknown: 3"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">13</td>
+        <td><a href="../models/qwen2.5-vl.html">Qwen2.5-VL</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
 
 <section><h2>Notes</h2><p class="notes">lmms-eval (EvolvingLMMs-Lab) is used as the reference for &#39;usual&#39; splits; individual model reports may differ (e.g., DocVQA val vs test, MMMU val vs test). The &#39;input_types&#39; field is not in src/cmap/schemas.py Benchmark yet (extra=&#39;forbid&#39;); added on request.</p></section><section>
   <h2>Sources</h2>

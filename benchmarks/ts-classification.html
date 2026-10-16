@@ -147,6 +147,125 @@
   <p class="muted small">Hover a cell for the reason; click it for the evidence.</p>
 </section>
 
+<section id="scores-mantisv2-paper">
+  <h2>Scores <span class="muted">· MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27</span></h2>
+  <p class="muted small">Accuracy (frozen encoder + logistic regression), mean over every dataset of the archive (128 UCR univariate datasets; 27 UEA multivariate datasets); higher is better. From <a href="https://arxiv.org/abs/2602.17868v1">MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27</a> at arXiv 2602.1 (<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>), retrieved 2026-10-16. The authors ran every model themselves under one protocol: zero-shot feature extraction (frozen encoder, best intermediate layer chosen once per model on UCR, channels encoded independently and concatenated for UEA), then a classifier trained on each dataset&#39;s train split and accuracy reported on its test split. acc_logreg uses StandardScaler + LogisticRegression (single run; the protocol of the paper&#39;s final comparison); acc_rf uses a 200-tree Random Forest (mean of 3 runs; Section 5 of the paper). UCR = all 128 UCR datasets; UEA-27 = UEA minus AtrialFibrillation, StandWalkJump and PenDigits, with InsectWingbeat subsampled to 1000 train / 1000 test. TabPFN and TabICL treat each timestamp as a feature; TabICL failed on InsectWingbeatSubset (NaN), so it has no overall score. Numbers were parsed programmatically from the arXiv LaTeX source tables; the per-model means reproduce the paper&#39;s &#34;Average&#34; rows exactly. The ICML 2026 version of the Mantis paper (arXiv 2502.15637v2) reports the same Random-Forest numbers for its &#34;Mantis&#34; column (= MantisV2). The authors are the Mantis developers, so this is a self-reported comparison. Mantis-8M (V1) and UniTS are not in this source (UniTS was dropped by the authors for low performance). Note: this comparison was run and published by the authors of MantisV2, one of the compared models. The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">Accuracy (frozen encoder + logistic regression)</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="model">
+        <td class="num">1</td>
+        <td><a href="../models/mantis-v2.html">MantisV2</a></td>
+        <td class="num">0.822</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 100.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">2</td>
+        <td>TiConvNext <span class="small">· baseline</span></td>
+        <td class="num">0.817</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 99.43549298604745%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">3</td>
+        <td><a href="../models/mantis-plus.html">Mantis+ (MantisPlus)</a></td>
+        <td class="num">0.816</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 99.2162677232597%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">4</td>
+        <td>TiViT-H <span class="small">· baseline</span></td>
+        <td class="num">0.812</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 98.80207090559735%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">5</td>
+        <td><a href="../models/chronos-2.html">Chronos-2</a></td>
+        <td class="num">0.807</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 98.17924510530348%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">6</td>
+        <td><a href="../models/tirex.html">TiRex</a></td>
+        <td class="num">0.804</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 97.76175166714808%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">7</td>
+        <td><a href="../models/moment-1.html">MOMENT-1</a></td>
+        <td class="num">0.784</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.41345900259962%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 2, Related data seen: 0, Not seen: 0, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 2" title="Training data seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">8</td>
+        <td><a href="../models/nutime.html">NuTime</a></td>
+        <td class="num">0.783</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.29996106848179%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 2, Related data seen: 0, Not seen: 0, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 2" title="Training data seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">9</td>
+        <td>TabPFN <span class="small">· baseline</span></td>
+        <td class="num">0.762</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 92.67318246323484%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">10</td>
+        <td>Catch22+ <span class="small">· baseline</span></td>
+        <td class="num">0.754</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 91.71794742989188%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">11</td>
+        <td>TabICL <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
 
 <section><h2>Notes</h2><p class="notes">Grouping used on this site.</p></section><section>
   <h2>Sources</h2>

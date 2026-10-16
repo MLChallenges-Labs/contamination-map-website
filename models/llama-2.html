@@ -258,7 +258,7 @@
   <h2>Benchmark cells</h2>
   <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
   <div class="cell-detail" id="llm-classic--mmlu">
-    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (MMLU-Humanities (L=50): 709 of 4,705 samples (15%) &#39;not clean&#39; (&gt;=20% token contamination) and 520 (11%) &#39;dirty&#39; (&gt;=80%); flagged as boosted by contamination. MMLU-Overall for 70B: 2,180 of 14,042 (15.5%) not clean, 1,536 (10.9%) dirty, with a small effect on the overall score (-0.9 clean-vs-mean delta).)</span></p>
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (MMLU-Humanities (L=50): 709 of 4,705 samples (15%) &#39;not clean&#39; (&gt;=20% token contamination) and 520 (11%) &#39;dirty&#39; (&gt;=80%); flagged as boosted by contamination. MMLU-Overall for 70B: 2,180 of 14,042 (15.5%) not clean, 1,536 (10.9%) dirty, with a small effect on the overall score (-0.9 clean-vs-mean delta).)</span> <span class="score-chip">Accuracy (%) 55.7</span></p>
 <details><summary>Evidence (4)</summary><figure class="evidence">
   <blockquote>“We observe that only HellaSwag and MMLU-Humanities appear to have been boosted due to contamination in the training data, with the 70B model appearing to have gained a greater benefit than the 7B model, as one might expect.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2307.09288v2">arxiv.org</a>
@@ -281,7 +281,7 @@
 </figure>
 </details>  </div>
   <div class="cell-detail" id="llm-classic--gsm8k">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Accuracy (%) 28.1</span></p>
   </div>
   <div class="cell-detail" id="llm-classic--math">
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
@@ -290,7 +290,7 @@
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="llm-classic--arc-challenge">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Accuracy (%) 67.3</span></p>
   </div>
   <div class="cell-detail" id="llm-classic--hellaswag">
     <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (With min. match length L=40: 2,651 of 10,042 samples (26%) &#39;not clean&#39; (&gt;=20% of tokens in 10+-token n-grams found in pre-training data) and 848 (8.4%) &#39;dirty&#39; (&gt;=80%); dirty samples scored 92.2 vs 82.5 sampling mean for 70B (Z=7.42). Authors conclude HellaSwag scores appear boosted by contamination, 70B more than 7B.)</span></p>
@@ -319,14 +319,14 @@
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="llm-classic--winogrande">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Accuracy (%) 74.9</span></p>
   </div>
   <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
   <div class="cell-detail" id="llm-recent--gpqa-diamond">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Accuracy (fraction) 0.263</span></p>
   </div>
   <div class="cell-detail" id="llm-recent--mmlu-pro">
-    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· a contamination analysis found test examples of the related dataset MMLU (Measuring Massive Multitask Language Understanding) (MMLU-Humanities (L=50): 709 of 4,705 samples (15%) &#39;not clean&#39; (&gt;=20% token contamination) and 520 (11%) &#39;dirty&#39; (&gt;=80%); flagged as boosted by contamination. MMLU-Overall for 70B: 2,180 of 14,042 (15.5%) not clean, 1,536 (10.9%) dirty, with a small effect on the overall score (-0.9 clean-vs-mean delta).)</span></p>
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· a contamination analysis found test examples of the related dataset MMLU (Measuring Massive Multitask Language Understanding) (MMLU-Humanities (L=50): 709 of 4,705 samples (15%) &#39;not clean&#39; (&gt;=20% token contamination) and 520 (11%) &#39;dirty&#39; (&gt;=80%); flagged as boosted by contamination. MMLU-Overall for 70B: 2,180 of 14,042 (15.5%) not clean, 1,536 (10.9%) dirty, with a small effect on the overall score (-0.9 clean-vs-mean delta).)</span> <span class="score-chip">Accuracy (%) 23.9</span></p>
 <details><summary>Evidence (6)</summary><figure class="evidence">
   <blockquote>“We observe that only HellaSwag and MMLU-Humanities appear to have been boosted due to contamination in the training data, with the 70B model appearing to have gained a greater benefit than the 7B model, as one might expect.”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2307.09288v2">arxiv.org</a>

@@ -786,7 +786,7 @@ Dataset <a href="../datasets/gpqa.html">GPQA (Graduate-Level Google-Proof Q&amp;
   <h2>Benchmark cells</h2>
   <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
   <div class="cell-detail" id="llm-classic--mmlu">
-    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (DCLM&#39;s MMLU overlap rule (question last sentence + one answer option on the same page; recall-oriented, likely overestimate) flagged 0.007% of DCLM-Baseline documents (vs 0.001% Dolma-V1.7, 0.009% FineWeb-Edu). Removing the flagged overlaps did not lower MMLU accuracy at 7B-2x scale (51.8 -&gt; 52.7).) (via DCLM-Baseline 1.0)</span></p>
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (DCLM&#39;s MMLU overlap rule (question last sentence + one answer option on the same page; recall-oriented, likely overestimate) flagged 0.007% of DCLM-Baseline documents (vs 0.001% Dolma-V1.7, 0.009% FineWeb-Edu). Removing the flagged overlaps did not lower MMLU accuracy at 7B-2x scale (51.8 -&gt; 52.7).) (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 67.5</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“The majority of this dataset comes from DCLM-Baseline with no additional filtering”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/allenai/olmo-mix-1124/raw/main/README.md">huggingface.co</a>
@@ -804,7 +804,7 @@ Dataset <a href="../datasets/gpqa.html">GPQA (Graduate-Level Google-Proof Q&amp;
 </figure>
 </details>  </div>
   <div class="cell-detail" id="llm-classic--gsm8k">
-    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· in fine-tuning data: only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span></p>
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· in fine-tuning data: only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span> <span class="score-chip">Accuracy (%) 75.1</span></p>
 <details><summary>Evidence (5)</summary><figure class="evidence">
   <blockquote>“dataset comprising GSM8K, MATH training sets, and prompts with constraints from Lambert et al. (2024).”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2501.00656v3">arxiv.org</a>
@@ -858,7 +858,7 @@ Dataset <a href="../datasets/gpqa.html">GPQA (Graduate-Level Google-Proof Q&amp;
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="llm-classic--arc-challenge">
-    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (32.6% of ARC-Challenge test questions are &#39;dirty&#39; in DCLM-baseline (17x more than in Pile-train).) [third-party study] (via DCLM-Baseline 1.0)</span></p>
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (32.6% of ARC-Challenge test questions are &#39;dirty&#39; in DCLM-baseline (17x more than in Pile-train).) [third-party study] (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 83.5</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“The majority of this dataset comes from DCLM-Baseline with no additional filtering”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/allenai/olmo-mix-1124/raw/main/README.md">huggingface.co</a>
@@ -897,14 +897,14 @@ Dataset <a href="../datasets/gpqa.html">GPQA (Graduate-Level Google-Proof Q&amp;
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="llm-classic--winogrande">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Accuracy (%) 81.5</span></p>
   </div>
   <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
   <div class="cell-detail" id="llm-recent--gpqa-diamond">
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="llm-recent--mmlu-pro">
-    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</span></p>
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 35.1</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“The majority of this dataset comes from DCLM-Baseline with no additional filtering”</blockquote>
   <figcaption><a href="https://huggingface.co/datasets/allenai/olmo-mix-1124/raw/main/README.md">huggingface.co</a>

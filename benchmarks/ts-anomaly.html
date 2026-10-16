@@ -531,6 +531,245 @@
   <p class="muted small">Hover a cell for the reason; click it for the evidence.</p>
 </section>
 
+<section id="scores-tsb-ad">
+  <h2>Scores <span class="muted">· TSB-AD benchmark results and leaderboard (VUS-PR)</span></h2>
+  <p class="muted small">VUS-PR, mean over every subset of the TSB-AD evaluation series (whole TSB-AD-U / TSB-AD-M eval track, or the series of one source dataset), mean VUS-PR over its series; higher is better. From <a href="https://github.com/TheDatumOrg/TSB-AD/tree/ed74348e7876c9268b7a737c77f2f5f56f7fa458/benchmark_exp">TSB-AD benchmark results and leaderboard (VUS-PR)</a> at ed74348e7876 (<a href="https://github.com/TheDatumOrg/TSB-AD/blob/ed74348e7876c9268b7a737c77f2f5f56f7fa458/LICENSE">Apache-2.0</a>), retrieved 2026-10-16. TSB-AD (Liu and Paparrizos, NeurIPS 2024) evaluates every detector with one protocol: z-scored series, hyperparameters tuned once on the separate tuning split, scored with the updated VUS-PR implementation (TSB_AD/evaluation/metrics.py) on the fixed evaluation lists Datasets/File_List/TSB-AD-U-Eva.csv (350 univariate series) and TSB-AD-M-Eva.csv (180 multivariate series). Per-series VUS-PR values were read programmatically from benchmark_exp/benchmark_eval_results/{uni,multi}_mergedTable_VUS-PR.csv (maintainers&#39; runs) and, for TSPulse and Time-RCD, from the community-submission files in benchmark_exp/leaderboard_results/ (same evaluation lists and metric code; maintainers verify submissions before adding them to the leaderboard). We averaged them: the TSB-AD-U / TSB-AD-M rows are the official leaderboard means (they match https://thedatumorg.github.io/TSB-AD/#leaderboard to 2 d.p.); member-dataset rows (SMD, MSL, SMAP, SWaT, Yahoo, NAB, UCR) are means over that source&#39;s series in the univariate track only, and PSM (only in the multivariate track) is one series. Several member subsets are tiny (SWaT and PSM: 1 series), so read those cells with care. TSB-AD runs the forecasting foundation models (MOMENT, TimesFM, Chronos, Lag-Llama) only on the univariate track, so they have no TSB-AD-M or PSM score and no overall score. &#34;Sub-PCA&#34; (univariate track) and &#34;PCA&#34; (multivariate track) are separate entries, as in the source; the leaderboard page merges them as &#34;PCA&#34;. DADA is not in TSB-AD. The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">VUS-PR</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="model">
+        <td class="num">1</td>
+        <td><a href="../models/tspulse-r1.html">TSPulse r1</a></td>
+        <td class="num">0.471</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 100.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 10, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 10" title="Not seen: 10"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">2</td>
+        <td><a href="../models/time-rcd.html">Time-RCD (TimeRCD)</a></td>
+        <td class="num">0.450</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.49725338819486%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 10, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 10" title="Not seen: 10"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">3</td>
+        <td>CNN <span class="small">· baseline</span></td>
+        <td class="num">0.355</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 75.29321936838532%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">4</td>
+        <td>KMeansAD <span class="small">· baseline</span></td>
+        <td class="num">0.353</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 74.76722730068505%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">5</td>
+        <td>LSTMAD <span class="small">· baseline</span></td>
+        <td class="num">0.325</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 68.99191923476637%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">6</td>
+        <td>USAD <span class="small">· baseline</span></td>
+        <td class="num">0.290</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 61.57712782879806%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">7</td>
+        <td>AutoEncoder <span class="small">· baseline</span></td>
+        <td class="num">0.281</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 59.60889944643577%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">8</td>
+        <td>IForest <span class="small">· baseline</span></td>
+        <td class="num">0.275</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 58.28331459840083%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">9</td>
+        <td>TimesNet <span class="small">· baseline</span></td>
+        <td class="num">0.245</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 52.01170756537784%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">10</td>
+        <td>OmniAnomaly <span class="small">· baseline</span></td>
+        <td class="num">0.237</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 50.27678211626969%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">11</td>
+        <td>OFA <span class="small">· baseline</span></td>
+        <td class="num">0.225</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 47.77831979469342%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">12</td>
+        <td><a href="../models/moment-1.html">MOMENT-1</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 5, Related data seen: 2, Not seen: 0, Unknown: 2">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-train_seen" style="flex-grow: 5" title="Training data seen: 5"></span><span class="lvl-related" style="flex-grow: 2" title="Related data seen: 2"></span><span class="lvl-unknown" style="flex-grow: 2" title="Unknown: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">13</td>
+        <td><a href="../models/timesfm-1-0.html">TimesFM 1.0</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 10">
+<span class="lvl-unknown" style="flex-grow: 10" title="Unknown: 10"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">14</td>
+        <td><a href="../models/chronos-t5.html">Chronos (T5)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 10, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 10" title="Not seen: 10"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">15</td>
+        <td><a href="../models/lag-llama.html">Lag-Llama</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 10, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 10" title="Not seen: 10"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">16</td>
+        <td>Sub-PCA <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">17</td>
+        <td>PCA <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">18</td>
+        <td>KShapeAD <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">19</td>
+        <td>POLY <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">20</td>
+        <td>Series2Graph <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">21</td>
+        <td>MatrixProfile <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">22</td>
+        <td>Sub-KNN <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">23</td>
+        <td>SAND <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">24</td>
+        <td>CBLOF <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">25</td>
+        <td>MCD <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">26</td>
+        <td>OCSVM <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
 
 <section><h2>Notes</h2><p class="notes">Grouping used on this site. Wu &amp; Keogh (2021) argue the Yahoo, Numenta, NASA (MSL/SMAP) and OMNI (SMD) datasets are flawed and should be abandoned; TSB-AD (2024) curates series from them.</p></section><section>
   <h2>Sources</h2>

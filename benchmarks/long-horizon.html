@@ -483,6 +483,105 @@
   <p class="muted small">Hover a cell for the reason; click it for the evidence.</p>
 </section>
 
+<section id="scores-probts-tsfm">
+  <h2>Scores <span class="muted">· ProbTS benchmark: time-series foundation models on diverse prediction horizons (NMAE)</span></h2>
+  <p class="muted small">NMAE, mean over every configuration (dataset / prediction horizon 24, 48, 96, 192, 336, 720); lower is better. From <a href="https://github.com/microsoft/ProbTS/blob/6975a97669955b5debcfa71007244b8ed7f50161/docs/benchmark/foundation_model/README.md">ProbTS benchmark: time-series foundation models on diverse prediction horizons (NMAE)</a> at 6975a9766995 (<a href="https://github.com/microsoft/ProbTS/blob/6975a97669955b5debcfa71007244b8ed7f50161/LICENSE">MIT</a>), retrieved 2026-10-16. Zero-shot foundation models and supervised baselines (CSDI, DLinear, PatchTST, iTransformer trained per dataset) were all run by the ProbTS authors (Zhang et al., NeurIPS 2024 Datasets and Benchmarks) with input length 96 and horizons 24-720 on the long-term (LTSF) versions of ETTh1/ETTh2/ETTm1/ETTm2, Weather (21-variable Jena 2020) and Electricity (321 clients). The metric is NMAE, the mean of 5 seeds. A &#39;-&#39; in the source means the model was pre-trained on that dataset, so the authors did not evaluate it there (e.g. TimesFM and UniTS on Weather and Electricity, Chronos and Lag-Llama on Electricity), or that the baseline did not run (CSDI, PatchTST on some Electricity horizons). Those rows are absent, so the affected models have no overall score. Traffic, Exchange and ILI are not in this table: ProbTS reports them only as short-term (*_nips) or not at all. The numbers in the MIT-licensed repository appear only as an image (docs/benchmark/foundation_model/figs/fm_var_hor.jpg, Table 3). They were copied programmatically from the same table in the paper&#39;s arXiv LaTeX source (arXiv 2310.07446, tables/ts_fm_diverse_horizons.tex) and checked row by row against the MIT image; the two are identical. The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">NMAE</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="baseline">
+        <td class="num">1</td>
+        <td>iTransformer <span class="small">· baseline</span></td>
+        <td class="num">0.194</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 83.16690442225394%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">2</td>
+        <td>DLinear <span class="small">· baseline</span></td>
+        <td class="num">0.209</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 89.45553970518306%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">3</td>
+        <td><a href="../models/moirai-1.0-r.html">Moirai-1.0-R</a></td>
+        <td class="num">0.234</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 100.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 1, Training data seen: 0, Related data seen: 1, Not seen: 7, Unknown: 0">
+<span class="lvl-seen_split_unclear" style="flex-grow: 1" title="Seen, split unclear: 1"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 7" title="Not seen: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">4</td>
+        <td><a href="../models/chronos-t5.html">Chronos (T5)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 1, Training data seen: 0, Related data seen: 0, Not seen: 8, Unknown: 0">
+<span class="lvl-seen_split_unclear" style="flex-grow: 1" title="Seen, split unclear: 1"></span><span class="lvl-not_seen" style="flex-grow: 8" title="Not seen: 8"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">5</td>
+        <td><a href="../models/timesfm-1-0.html">TimesFM 1.0</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 2, Training data seen: 0, Related data seen: 0, Not seen: 4, Unknown: 3">
+<span class="lvl-seen_split_unclear" style="flex-grow: 2" title="Seen, split unclear: 2"></span><span class="lvl-not_seen" style="flex-grow: 4" title="Not seen: 4"></span><span class="lvl-unknown" style="flex-grow: 3" title="Unknown: 3"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">6</td>
+        <td><a href="../models/units.html">UniTS</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 6, Related data seen: 1, Not seen: 2, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 6" title="Training data seen: 6"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">7</td>
+        <td>ForecastPFN <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">8</td>
+        <td>CSDI <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">9</td>
+        <td>PatchTST <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
 
 <section><h2>Notes</h2><p class="notes">Computed (not stated by the sources): for ETT the test window is hours 11,520-14,400 from 2016-07-01, i.e. about 2017-10-24 to 2018-02-21. GIFT-Eval&#39;s test split is the end of each series (ETT up to 2018-06; UCI electricity to end 2014; Jena 2020 year-end), so the long-horizon ETT, Electricity and Weather test periods fall inside GIFT-Eval&#39;s published TRAIN portion of ett1/ett2, electricity and jena_weather. Models trained on GIFT-Eval train splits (allowed for leaderboard type &#39;pretrained&#39;) may therefore have seen long-horizon test data.</p></section><section>
   <h2>Sources</h2>

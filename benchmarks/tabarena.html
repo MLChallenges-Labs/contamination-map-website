@@ -1071,6 +1071,213 @@
   <p class="muted small">Hover a cell for the reason; click it for the evidence.</p>
 </section>
 
+<section id="scores-tabarena-leaderboard">
+  <h2>Scores <span class="muted">· TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv)</span></h2>
+  <p class="muted small">Normalized error (TabArena), mean over every dataset (mean over TabArena&#39;s 9 or 30 outer splits); lower is better. From <a href="https://github.com/autogluon/tabarena/blob/a6688200ae466b2f255b35feeac8ae72a2c968c8/examples/plots/run_export_results_per_split.py">TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv)</a> at a6688200ae46 (<a href="https://github.com/autogluon/tabarena/blob/a6688200ae466b2f255b35feeac8ae72a2c968c8/LICENSE">Apache-2.0</a>), retrieved 2026-10-16. Per-split results of the current TabArena-v0.1 leaderboard (TabArenaContext at repo commit a668820, 2026-10-16; 107 leaderboard entries; HF space TabArena/leaderboard is also Apache-2.0), exported with TabArena&#39;s own run_export_results_per_split.py (per-split results are not hosted; the script downloads the processed results from data.tabarena.ai) and averaged over outer splits per dataset. Fixed OpenML tasks, 3-fold outer CV x 3 or x 10 repeats, 8-fold inner bagging; metric is 1-AUC for 30 binary, log-loss for 8 multiclass and RMSE for 13 regression datasets. First metric = TabArena&#39;s per-dataset normalised error, recomputed exactly as compute_normalized_error_dynamic: (error - best)/(median - best) over all 107 leaderboard entries (incl. imputed ones), clipped to [0,1]; it depends on the roster at this commit and ties at 1.0 for entries worse than the median, so rank by &#39;error&#39; within a dataset when that matters (per-entry means reproduce the leaderboard&#39;s normalized-error column). Foundation models use the &#39;(default)&#39; variant, i.e. the released checkpoint with TabArena&#39;s default inference settings (most have no tuned variant); baselines use the leaderboard&#39;s &#39;(tuned + ensemble)&#39; variant and AutoGluon 1.6 extreme (4h). Results TabArena imputed with RandomForest (TabPFNv2 and Mitra v1 on 18 datasets outside their size limits, TabICL v1.1 on 15 regression/large datasets) are omitted. TabArena&#39;s Elo/rank are aggregate, not per dataset, so not included. Real-TabPFN (v2 finetuned) and non-real TabPFN-2.5 were not evaluated stand-alone; TabICL v1 (20250208) was not evaluated. The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">Normalized error (TabArena)</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="model">
+        <td class="num">1</td>
+        <td><a href="../models/limix-2.html">LimiX-2</a></td>
+        <td class="num">0.098</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 10.889497278607346%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">2</td>
+        <td><a href="../models/tabpfn-3-5.html">TabPFN-3.5</a></td>
+        <td class="num">0.221</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 24.57804779616278%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">3</td>
+        <td><a href="../models/mitra-v2.html">Mitra-v2</a></td>
+        <td class="num">0.309</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 34.424362736008554%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">4</td>
+        <td>AutoGluon 1.6 (extreme, 4h) <span class="small">· baseline</span></td>
+        <td class="num">0.369</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 41.02398534047404%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">5</td>
+        <td><a href="../models/tabpfn-3.html">TabPFN-3</a></td>
+        <td class="num">0.477</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 53.02625407663529%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">6</td>
+        <td><a href="../models/tabicl-v2.html">TabICLv2</a></td>
+        <td class="num">0.523</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 58.15774260751956%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">7</td>
+        <td><a href="../models/tabpfn-2-6.html">TabPFN-2.6</a></td>
+        <td class="num">0.559</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 62.13828383198264%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">8</td>
+        <td><a href="../models/tabdpt-v1-3.html">TabDPT v1.3</a></td>
+        <td class="num">0.611</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 67.99707682071532%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 51">
+<span class="lvl-unknown" style="flex-grow: 51" title="Unknown: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">9</td>
+        <td><a href="../models/real-tabpfn-2-5.html">Real-TabPFN-2.5</a></td>
+        <td class="num">0.649</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 72.2234705118836%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">10</td>
+        <td>REALMLP GPU (tuned + ensemble) <span class="small">· baseline</span></td>
+        <td class="num">0.728</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 80.93825329130355%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">11</td>
+        <td><a href="../models/tabdpt-v1-2.html">TabDPT-Turbo (TabDPT v1.2)</a></td>
+        <td class="num">0.729</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 81.13153216042583%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">12</td>
+        <td><a href="../models/limix-v1.html">LimiX</a></td>
+        <td class="num">0.782</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 86.95171300487561%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">13</td>
+        <td>TA-TABM (tuned + ensemble) <span class="small">· baseline</span></td>
+        <td class="num">0.797</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 88.70300280319806%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">14</td>
+        <td><a href="../models/tabdpt-v1.html">TabDPT</a></td>
+        <td class="num">0.823</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 91.53761411851966%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 7, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 44">
+<span class="lvl-seen_split_unclear" style="flex-grow: 7" title="Seen, split unclear: 7"></span><span class="lvl-unknown" style="flex-grow: 44" title="Unknown: 44"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">15</td>
+        <td>CAT (tuned + ensemble) <span class="small">· baseline</span></td>
+        <td class="num">0.851</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 94.62767639969024%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">16</td>
+        <td>GBM (tuned + ensemble) <span class="small">· baseline</span></td>
+        <td class="num">0.856</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 95.26575844504313%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">17</td>
+        <td>XGB (tuned + ensemble) <span class="small">· baseline</span></td>
+        <td class="num">0.899</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 100.0%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">18</td>
+        <td><a href="../models/tabpfn-v2.html">TabPFN v2</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">19</td>
+        <td><a href="../models/tabicl-v1-1.html">TabICL v1.1</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">20</td>
+        <td><a href="../models/mitra-v1.html">Mitra</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 51, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 51" title="Not seen: 51"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
 
 <section><h2>Notes</h2><p class="notes">As of 2026-10-15 the repository README describes TabArena-v0.1 (51 datasets) as the IID benchmark and BeyondArena (142 datasets incl. temporal and grouped tasks, arXiv 2606.30410) as a complementary benchmark that &#39;will superseed TabArena-v0.1 in the future&#39;. BeyondArena is not covered here. TabArena-v0.1 datasets are re-uploads to OpenML with new ids, so other papers usually cite older OpenML ids for the same data.</p></section><section>
   <h2>Sources</h2>

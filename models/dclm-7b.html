@@ -251,7 +251,7 @@
   <h2>Benchmark cells</h2>
   <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
   <div class="cell-detail" id="llm-classic--mmlu">
-    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (DCLM&#39;s MMLU overlap rule (question last sentence + one answer option on the same page; recall-oriented, likely overestimate) flagged 0.007% of DCLM-Baseline documents (vs 0.001% Dolma-V1.7, 0.009% FineWeb-Edu). Removing the flagged overlaps did not lower MMLU accuracy at 7B-2x scale (51.8 -&gt; 52.7).) (via DCLM-Baseline 1.0)</span></p>
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (DCLM&#39;s MMLU overlap rule (question last sentence + one answer option on the same page; recall-oriented, likely overestimate) flagged 0.007% of DCLM-Baseline documents (vs 0.001% Dolma-V1.7, 0.009% FineWeb-Edu). Removing the flagged overlaps did not lower MMLU accuracy at 7B-2x scale (51.8 -&gt; 52.7).) (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 64.4</span></p>
 <details><summary>Evidence (4)</summary><figure class="evidence">
   <blockquote>“DCLM-Baseline-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset”</blockquote>
   <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>
@@ -274,7 +274,7 @@
 </figure>
 </details>  </div>
   <div class="cell-detail" id="llm-classic--gsm8k">
-    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Via ProofPile2: Llemma Table 6 lists 30-gram hits between GSM8k test problems and OpenWebMath documents (2 test examples, 3 documents; 0 for solutions); CONDA 2024 report lists gsm8k as contaminated in EleutherAI/proof-pile-2.) [third-party study]</span></p>
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Via ProofPile2: Llemma Table 6 lists 30-gram hits between GSM8k test problems and OpenWebMath documents (2 test examples, 3 documents; 0 for solutions); CONDA 2024 report lists gsm8k as contaminated in EleutherAI/proof-pile-2.) [third-party study]</span> <span class="score-chip">Accuracy (%) 46.1</span></p>
 <details><summary>Evidence (2)</summary><figure class="evidence">
   <blockquote>“OpenWebMath GSM8k”</blockquote>
   <figcaption><a href="https://arxiv.org/pdf/2310.10631v3">arxiv.org</a>
@@ -313,7 +313,7 @@
 </figure>
 </details>  </div>
   <div class="cell-detail" id="llm-classic--arc-challenge">
-    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (32.6% of ARC-Challenge test questions are &#39;dirty&#39; in DCLM-baseline (17x more than in Pile-train).) [third-party study] (via DCLM-Baseline 1.0)</span></p>
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (32.6% of ARC-Challenge test questions are &#39;dirty&#39; in DCLM-baseline (17x more than in Pile-train).) [third-party study] (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 79.8</span></p>
 <details><summary>Evidence (4)</summary><figure class="evidence">
   <blockquote>“DCLM-Baseline-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset”</blockquote>
   <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>
@@ -362,14 +362,14 @@
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="llm-classic--winogrande">
-    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Accuracy (%) 77.3</span></p>
   </div>
   <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
   <div class="cell-detail" id="llm-recent--gpqa-diamond">
     <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
   </div>
   <div class="cell-detail" id="llm-recent--mmlu-pro">
-    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</span></p>
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 31.3</span></p>
 <details><summary>Evidence (3)</summary><figure class="evidence">
   <blockquote>“DCLM-Baseline-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset”</blockquote>
   <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>

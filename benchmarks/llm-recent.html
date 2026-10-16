@@ -702,6 +702,853 @@
   <p class="muted small">Hover a cell for the reason; click it for the evidence.</p>
 </section>
 
+<section id="scores-epoch-llm-recent">
+  <h2>Scores <span class="muted">· Epoch AI Benchmarking Hub (Epoch&#39;s own runs)</span></h2>
+  <p class="muted small">Accuracy (fraction), mean over every dataset (one run per model version and dataset); higher is better. From <a href="https://epoch.ai/data/benchmark_data.zip">Epoch AI Benchmarking Hub (Epoch&#39;s own runs)</a> at benchmark_da (<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>), retrieved 2026-10-16. Only Epoch&#39;s own evaluations are used (gpqa_diamond.csv, swe_bench_verified.csv); the *_external.csv files in the same archive collect numbers from other papers and are not used. GPQA Diamond: all 198 questions, simple-evals style prompt asking for &#39;ANSWER: LETTER&#39;, strict parsing, accuracy averaged over samples (https://epoch.ai/benchmarks/gpqa-diamond). SWE-bench Verified: Epoch scaffold v2.0 (since 2026-02-12; bash + text_editor/apply_patch tools, token budget), on 484 of the 500 Verified instances that run on Epoch&#39;s infrastructure, so it is a 96.8% subset of the registry dataset (https://epoch.ai/benchmarks/swe-bench-verified). &#39;score&#39; is Epoch&#39;s headline column &#39;Best score (across scorers)&#39;, equal to mean_score except for 5 GPQA rows. Entry names carry the reasoning setting (_high, _max, _16K thinking budget, _none = thinking off); the primary entry of each model is the one scored on most of this source&#39;s datasets, then the highest reasoning setting, then the latest snapshot. Two SWE-bench model versions with two runs keep the latest run (neither maps to a registry model). Scores are fractions in [0, 1]. Other Epoch entries not listed belong to models absent from the registry. The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">Accuracy (fraction)</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="model">
+        <td class="num">1</td>
+        <td><a href="../models/deepseek-v4.html">DeepSeek-V4 (Pro / Flash)</a></td>
+        <td class="num">0.836</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 100.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">2</td>
+        <td><a href="../models/gemini-3-pro.html">Gemini 3 Pro</a></td>
+        <td class="num">0.828</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 98.96064626386692%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">3</td>
+        <td><a href="../models/gpt-5-2.html">GPT-5.2</a></td>
+        <td class="num">0.810</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 96.81298238585754%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 6">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">4</td>
+        <td><a href="../models/gpt-5.html">GPT-5</a></td>
+        <td class="num">0.799</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.48184247424788%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">5</td>
+        <td><a href="../models/claude-opus-4-5.html">Claude Opus 4.5</a></td>
+        <td class="num">0.787</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 94.0512101465643%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 5">
+<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">6</td>
+        <td><a href="../models/o3.html">OpenAI o3</a></td>
+        <td class="num">0.716</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 85.55810791805352%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 5">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">7</td>
+        <td><a href="../models/gemini-2-5.html">Gemini 2.5 (Pro, Flash)</a></td>
+        <td class="num">0.714</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 85.3909802634663%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">8</td>
+        <td><a href="../models/claude-4.html">Claude Opus 4 and Claude Sonnet 4</a></td>
+        <td class="num">0.699</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 83.60107568583496%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">9</td>
+        <td><a href="../models/claude-3-7-sonnet.html">Claude 3.7 Sonnet</a></td>
+        <td class="num">0.635</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 75.90928269143072%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">10</td>
+        <td><a href="../models/gpt-4o.html">GPT-4o</a></td>
+        <td class="num">0.394</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 47.15082828661657%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">11</td>
+        <td><a href="../models/claude-3-5-sonnet.html">Claude 3.5 Sonnet</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">12</td>
+        <td><a href="../models/claude-3.html">Claude 3 (Opus, Sonnet, Haiku)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">13</td>
+        <td><a href="../models/claude-fable-5.html">Claude Fable 5 / Claude Mythos 5</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">14</td>
+        <td><a href="../models/claude-opus-5.html">Claude Opus 5</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">15</td>
+        <td><a href="../models/claude-sonnet-5.html">Claude Sonnet 5</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">16</td>
+        <td><a href="../models/deepseek-r1.html">DeepSeek-R1</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 7, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 7" title="Not seen: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">17</td>
+        <td><a href="../models/deepseek-r1-0528.html">DeepSeek-R1-0528</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">18</td>
+        <td><a href="../models/deepseek-r1-distill.html">DeepSeek-R1-Distill</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">19</td>
+        <td><a href="../models/deepseek-v3.html">DeepSeek-V3</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">20</td>
+        <td><a href="../models/deepseek-v3-0324.html">DeepSeek-V3-0324</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">21</td>
+        <td><a href="../models/deepseek-v3.2.html">DeepSeek-V3.2</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">22</td>
+        <td><a href="../models/deepseek-v4.1-flash.html">DeepSeek-V4.1-Flash</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">23</td>
+        <td><a href="../models/gemini-1-5.html">Gemini 1.5 (Pro, Flash)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">24</td>
+        <td><a href="../models/gemini-4-argon.html">Gemini 4 Argon</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">25</td>
+        <td><a href="../models/gemma-2.html">Gemma 2</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">26</td>
+        <td><a href="../models/gemma-3.html">Gemma 3</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">27</td>
+        <td><a href="../models/gemma-4.html">Gemma 4</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">28</td>
+        <td><a href="../models/gpt-4.html">GPT-4</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 2, Not seen: 3, Unknown: 2">
+<span class="lvl-related" style="flex-grow: 2" title="Related data seen: 2"></span><span class="lvl-not_seen" style="flex-grow: 3" title="Not seen: 3"></span><span class="lvl-unknown" style="flex-grow: 2" title="Unknown: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">29</td>
+        <td><a href="../models/gpt-6-astra.html">GPT-6 Astra</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">30</td>
+        <td><a href="../models/gpt-oss.html">gpt-oss</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">31</td>
+        <td><a href="../models/llama-2.html">Llama 2</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 3, Unknown: 3">
+<span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 3" title="Not seen: 3"></span><span class="lvl-unknown" style="flex-grow: 3" title="Unknown: 3"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">32</td>
+        <td><a href="../models/llama-3.html">Meta Llama 3</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">33</td>
+        <td><a href="../models/llama-3.1.html">Llama 3.1</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 2, Unknown: 3">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 3" title="Unknown: 3"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">34</td>
+        <td><a href="../models/llama-3.2.html">Llama 3.2 (1B, 3B)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">35</td>
+        <td><a href="../models/llama-3.2-vision.html">Llama 3.2-Vision (11B, 90B)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">36</td>
+        <td><a href="../models/llama-3.3.html">Llama 3.3 70B</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">37</td>
+        <td><a href="../models/llama-4.html">Llama 4 (Scout, Maverick)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">38</td>
+        <td><a href="../models/mixtral-8x7b.html">Mixtral 8x7B</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">39</td>
+        <td><a href="../models/o1.html">OpenAI o1</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">40</td>
+        <td><a href="../models/phi-3.html">Phi-3 (mini / small / medium)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">41</td>
+        <td><a href="../models/phi-4.html">Phi-4</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">42</td>
+        <td><a href="../models/qwen2.5.html">Qwen2.5</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 5">
+<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">43</td>
+        <td><a href="../models/qwen3.html">Qwen3</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">44</td>
+        <td><a href="../models/qwen3-2507.html">Qwen3-2507 (Instruct-2507 / Thinking-2507)</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">45</td>
+        <td><a href="../models/qwen3.5.html">Qwen3.5</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">46</td>
+        <td><a href="../models/qwen3.6.html">Qwen3.6</a></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
+<section id="scores-matharena-llm-recent">
+  <h2>Scores <span class="muted">· MathArena (AIME 2025 model outputs)</span></h2>
+  <p class="muted small">Accuracy (%), mean over every dataset (30 problems x 4 attempts per model); higher is better. From <a href="https://huggingface.co/datasets/MathArena/aime_2025_outputs/tree/16e93d3bb9b0a25ea9422893464d46b3c5ff0ae9">MathArena (AIME 2025 model outputs)</a> at 16e93d3bb9b0 (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA-4.0</a>), retrieved 2026-10-16. MathArena ran every model itself on AIME 2025 I+II (30 problems, MathArena/aime_2025), 4 attempts per problem, same instruction (&#39;Put your final answer within \boxed{}. The answer is an integer between 0 and 999 inclusive.&#39;), automatic answer parsing; per-model API settings (max_tokens, temperature, reasoning effort) follow each model config in eth-sri/matharena configs/models. Accuracy = share of correct attempts, computed here from the per-attempt &#39;correct&#39; field of the outputs parquet. Licence is CC BY-NC-SA 4.0 (non-commercial, share-alike): republishing the numbers is allowed for non-commercial use with attribution and the same licence. MathArena publishes no AIME 2024 outputs (only problem sets), so aime-2024 is not covered. Entries not listed belong to models absent from the registry. The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">Accuracy (%)</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="model">
+        <td class="num">1</td>
+        <td><a href="../models/gpt-5-2.html">GPT-5.2</a></td>
+        <td class="num">100.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 100.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 6">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">2</td>
+        <td><a href="../models/gpt-5.html">GPT-5</a></td>
+        <td class="num">95.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">3</td>
+        <td><a href="../models/gemini-3-pro.html">Gemini 3 Pro</a></td>
+        <td class="num">95.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">4</td>
+        <td><a href="../models/deepseek-v3.2.html">DeepSeek-V3.2</a></td>
+        <td class="num">94.170</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 94.17%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">5</td>
+        <td><a href="../models/deepseek-v3.2-exp.html">DeepSeek-V3.2-Exp</a></td>
+        <td class="num">91.670</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 91.67%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">6</td>
+        <td><a href="../models/deepseek-v3.1.html">DeepSeek-V3.1</a></td>
+        <td class="num">90.830</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 90.83%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">7</td>
+        <td><a href="../models/gpt-oss.html">gpt-oss</a></td>
+        <td class="num">90.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 90.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">8</td>
+        <td><a href="../models/deepseek-r1-0528.html">DeepSeek-R1-0528</a></td>
+        <td class="num">89.170</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 89.17%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">9</td>
+        <td><a href="../models/o3.html">OpenAI o3</a></td>
+        <td class="num">89.170</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 89.17%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 5">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">10</td>
+        <td><a href="../models/gemini-2-5.html">Gemini 2.5 (Pro, Flash)</a></td>
+        <td class="num">88.330</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 88.33%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">11</td>
+        <td><a href="../models/o1.html">OpenAI o1</a></td>
+        <td class="num">81.670</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 81.67%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">12</td>
+        <td><a href="../models/qwen3.html">Qwen3</a></td>
+        <td class="num">80.830</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 80.83%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">13</td>
+        <td><a href="../models/phi-4-reasoning.html">Phi-4-reasoning / Phi-4-reasoning-plus</a></td>
+        <td class="num">74.170</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 74.17%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">14</td>
+        <td><a href="../models/claude-4.html">Claude Opus 4 and Claude Sonnet 4</a></td>
+        <td class="num">70.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 70.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">15</td>
+        <td><a href="../models/deepseek-r1.html">DeepSeek-R1</a></td>
+        <td class="num">70.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 70.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 7, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 7" title="Not seen: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">16</td>
+        <td><a href="../models/deepseek-r1-distill.html">DeepSeek-R1-Distill</a></td>
+        <td class="num">55.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 55.00000000000001%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">17</td>
+        <td><a href="../models/deepseek-v3-0324.html">DeepSeek-V3-0324</a></td>
+        <td class="num">50.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 50.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">18</td>
+        <td><a href="../models/claude-3-7-sonnet.html">Claude 3.7 Sonnet</a></td>
+        <td class="num">49.170</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 49.17%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">19</td>
+        <td><a href="../models/deepseek-v3.html">DeepSeek-V3</a></td>
+        <td class="num">25.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 25.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">20</td>
+        <td><a href="../models/llama-4.html">Llama 4 (Scout, Maverick)</a></td>
+        <td class="num">22.500</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 22.5%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">21</td>
+        <td><a href="../models/gpt-4o.html">GPT-4o</a></td>
+        <td class="num">11.670</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 11.67%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 5">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">22</td>
+        <td><a href="../models/claude-3-5-sonnet.html">Claude 3.5 Sonnet</a></td>
+        <td class="num">3.330</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 3.3300000000000005%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
+<section id="scores-olmo2-llm-recent">
+  <h2>Scores <span class="muted">· OLMo 2 paper, base-model comparison (OLMES)</span></h2>
+  <p class="muted small">Accuracy (%), mean over every dataset; higher is better. From <a href="https://arxiv.org/pdf/2501.00656v3">OLMo 2 paper, base-model comparison (OLMES)</a> at arXiv 2501.0 (<a href="http://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>), retrieved 2026-10-16. Transcribed programmatically from the pdftotext layout of the CC BY 4.0 paper (Table 6, plus Table 22 for the 1-2B models) and checked against the PDF table; AI2 evaluated all listed base models itself with OLMES (standardised prompts and few-shot examples, MCF/CF formulation chosen per OLMES). MMLU-Pro test (12,032 questions), 5-shot, multiple-choice formulation (paper Table 20), a held-out task for OLMo 2 development. Base-model protocol, so scores are lower than chat/CoT numbers reported elsewhere. The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">Accuracy (%)</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="model">
+        <td class="num">1</td>
+        <td><a href="../models/qwen3.html">Qwen3</a></td>
+        <td class="num">60.700</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 100.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">2</td>
+        <td><a href="../models/qwen2.5.html">Qwen2.5</a></td>
+        <td class="num">59.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 97.1993410214168%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 5">
+<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">3</td>
+        <td><a href="../models/gemma-3.html">Gemma 3</a></td>
+        <td class="num">52.900</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 87.1499176276771%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">4</td>
+        <td><a href="../models/llama-3.1.html">Llama 3.1</a></td>
+        <td class="num">47.100</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 77.59472817133442%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 2, Unknown: 3">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 3" title="Unknown: 3"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">5</td>
+        <td><a href="../models/gemma-2.html">Gemma 2</a></td>
+        <td class="num">44.700</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 73.64085667215816%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">6</td>
+        <td><a href="../models/olmo-2-1124.html">OLMo 2 (November 2024)</a></td>
+        <td class="num">35.100</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 57.825370675453044%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 2, Unknown: 3">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 3" title="Unknown: 3"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">7</td>
+        <td><a href="../models/dclm-7b.html">DCLM-7B (DCLM-Baseline-7B)</a></td>
+        <td class="num">31.300</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 51.565074135090605%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 0, Unknown: 5">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">8</td>
+        <td><a href="../models/llama-2.html">Llama 2</a></td>
+        <td class="num">23.900</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 39.373970345963755%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 3, Unknown: 3">
+<span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 3" title="Not seen: 3"></span><span class="lvl-unknown" style="flex-grow: 3" title="Unknown: 3"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">9</td>
+        <td><a href="../models/smollm2.html">SmolLM2</a></td>
+        <td class="num">22.000</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 36.24382207578253%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 1, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 0, Unknown: 5">
+<span class="lvl-test_seen" style="flex-grow: 1" title="Test data seen: 1"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 5" title="Unknown: 5"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">10</td>
+        <td><a href="../models/olmo-1.html">OLMo (February 2024)</a></td>
+        <td class="num">12.100</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 19.934102141680395%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 3, Unknown: 4">
+<span class="lvl-not_seen" style="flex-grow: 3" title="Not seen: 3"></span><span class="lvl-unknown" style="flex-grow: 4" title="Unknown: 4"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">11</td>
+        <td><a href="../models/amber.html">LLM360 Amber</a></td>
+        <td class="num">11.700</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 19.275123558484346%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
 
 <section><h2>Notes</h2><p class="notes">Membership chosen by this site.</p></section><section>
   <h2>Sources</h2>
