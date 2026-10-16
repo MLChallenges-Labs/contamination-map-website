@@ -1395,6 +1395,324 @@
   <p class="muted small">Hover a cell for the reason; click it for the evidence.</p>
 </section>
 
+<section id="scores-gift-eval">
+  <h2>Scores</h2>
+  <p class="muted small">CRPS relative to Seasonal Naive (lower is better; 1 = as good as Seasonal Naive), geometric mean over every configuration (dataset / frequency / horizon). From the <a href="https://github.com/SalesforceAIResearch/gift-eval/tree/8e6da595ac943be01e0848a02b9157af84731284/results">GIFT-Eval leaderboard results</a> at commit 8e6da59 (Apache-2.0), retrieved 2026-10-16. The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">Relative CRPS</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="model">
+        <td class="num">1</td>
+        <td><a href="../models/timesfm-3-0.html">TimesFM 3.0</a></td>
+        <td class="num">0.456</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 28.480026488963272%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 28">
+<span class="lvl-unknown" style="flex-grow: 28" title="Unknown: 28"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">2</td>
+        <td><a href="../models/toto-2.0-2.5b-ft.html">Toto-2.0-2.5B-FT</a></td>
+        <td class="num">0.463</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 28.965573967865797%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 28, Related data seen: 0, Not seen: 0, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 28" title="Training data seen: 28"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">3</td>
+        <td><a href="../models/tirex-2-gifteval-pretrain.html">TiRex-2-gifteval-pretrain (TiRex-2-gp)</a></td>
+        <td class="num">0.467</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 29.184010702334373%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 28, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 28" title="Not seen: 28"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">4</td>
+        <td><a href="../models/toto-2.0.html">Toto 2.0</a></td>
+        <td class="num">0.476</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 29.742826430050428%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 28, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 28" title="Not seen: 28"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">5</td>
+        <td><a href="../models/tirex-2-gifteval-zs.html">TiRex-2-gifteval-zs (TiRex-2-g)</a></td>
+        <td class="num">0.478</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 29.878701006470347%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 27, Unknown: 0">
+<span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 27" title="Not seen: 27"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">6</td>
+        <td><a href="../models/timer-s1.html">Timer-S1</a></td>
+        <td class="num">0.485</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 30.331171876497397%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 18, Related data seen: 0, Not seen: 10, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 18" title="Training data seen: 18"></span><span class="lvl-not_seen" style="flex-grow: 10" title="Not seen: 10"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">7</td>
+        <td><a href="../models/chronos-2.html">Chronos-2</a></td>
+        <td class="num">0.485</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 30.338495464852826%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 7, Related data seen: 1, Not seen: 20, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 7" title="Training data seen: 7"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 20" title="Not seen: 20"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">8</td>
+        <td><a href="../models/tirex-1.1-gifteval.html">TiRex 1.1 (gifteval)</a></td>
+        <td class="num">0.488</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 30.528980825945457%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 28, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 28" title="Not seen: 28"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">9</td>
+        <td><a href="../models/timesfm-2-5.html">TimesFM 2.5</a></td>
+        <td class="num">0.490</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 30.64300579683936%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 28">
+<span class="lvl-unknown" style="flex-grow: 28" title="Unknown: 28"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">10</td>
+        <td><a href="../models/chronos-2-synth.html">Chronos-2-Synth</a></td>
+        <td class="num">0.496</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 30.989705935065103%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 28, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 28" title="Not seen: 28"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">11</td>
+        <td><a href="../models/moirai-2.0-r.html">Moirai-2.0-R</a></td>
+        <td class="num">0.516</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 32.27738945306263%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 28, Related data seen: 0, Not seen: 0, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 28" title="Training data seen: 28"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">12</td>
+        <td><a href="../models/toto-1.0.html">Toto-Open-Base-1.0</a></td>
+        <td class="num">0.517</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 32.32869999001274%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 28, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 28" title="Not seen: 28"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">13</td>
+        <td><a href="../models/ttm-r3.html">TTM-R3</a></td>
+        <td class="num">0.520</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 32.47074550436406%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 28, Related data seen: 0, Not seen: 0, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 28" title="Training data seen: 28"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">14</td>
+        <td><a href="../models/timesfm-2-0.html">TimesFM 2.0</a></td>
+        <td class="num">0.550</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 34.401651444836325%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 17, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 9">
+<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-seen_split_unclear" style="flex-grow: 17" title="Seen, split unclear: 17"></span><span class="lvl-unknown" style="flex-grow: 9" title="Unknown: 9"></span></div>
+</td>
+        <td>Yes</td>
+      </tr>
+      <tr class="model">
+        <td class="num">15</td>
+        <td><a href="../models/sundial.html">Sundial (Timer 3.0)</a></td>
+        <td class="num">0.559</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 34.93985806339878%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 4, Training data seen: 0, Related data seen: 0, Not seen: 24, Unknown: 0">
+<span class="lvl-seen_split_unclear" style="flex-grow: 4" title="Seen, split unclear: 4"></span><span class="lvl-not_seen" style="flex-grow: 24" title="Not seen: 24"></span></div>
+</td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">16</td>
+        <td><a href="../models/chronos-bolt.html">Chronos-Bolt</a></td>
+        <td class="num">0.574</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 35.89400307685102%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 7, Training data seen: 0, Related data seen: 1, Not seen: 0, Unknown: 20">
+<span class="lvl-seen_split_unclear" style="flex-grow: 7" title="Seen, split unclear: 7"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 20" title="Unknown: 20"></span></div>
+</td>
+        <td>Yes</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">17</td>
+        <td>PatchTST <span class="small">· baseline</span></td>
+        <td class="num">0.587</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 36.690578077088425%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">18</td>
+        <td>TFT <span class="small">· baseline</span></td>
+        <td class="num">0.605</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 37.79660031471666%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">19</td>
+        <td><a href="../models/chronos-t5.html">Chronos (T5)</a></td>
+        <td class="num">0.647</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 40.458439718771054%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 7, Training data seen: 0, Related data seen: 1, Not seen: 20, Unknown: 0">
+<span class="lvl-seen_split_unclear" style="flex-grow: 7" title="Seen, split unclear: 7"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-not_seen" style="flex-grow: 20" title="Not seen: 20"></span></div>
+</td>
+        <td>Yes</td>
+      </tr>
+      <tr class="model">
+        <td class="num">20</td>
+        <td><a href="../models/timesfm-1-0.html">TimesFM 1.0</a></td>
+        <td class="num">0.680</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 42.523109777099236%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 7, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 21">
+<span class="lvl-seen_split_unclear" style="flex-grow: 7" title="Seen, split unclear: 7"></span><span class="lvl-unknown" style="flex-grow: 21" title="Unknown: 21"></span></div>
+</td>
+        <td>Yes</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">21</td>
+        <td>TIDE <span class="small">· baseline</span></td>
+        <td class="num">0.772</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 48.219138202527326%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">22</td>
+        <td>N-BEATS <span class="small">· baseline</span></td>
+        <td class="num">0.816</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 50.99591000648621%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">23</td>
+        <td>DLinear <span class="small">· baseline</span></td>
+        <td class="num">0.846</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 52.851574826663494%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">24</td>
+        <td>DeepAR <span class="small">· baseline</span></td>
+        <td class="num">0.853</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 53.318571232995694%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+      <tr class="model">
+        <td class="num">25</td>
+        <td><a href="../models/granite-ttm-r2.html">Granite-TimeSeries-TTM-R2</a></td>
+        <td class="num">0.873</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 54.59030253320246%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 4, Training data seen: 0, Related data seen: 0, Not seen: 24, Unknown: 0">
+<span class="lvl-seen_split_unclear" style="flex-grow: 4" title="Seen, split unclear: 4"></span><span class="lvl-not_seen" style="flex-grow: 24" title="Not seen: 24"></span></div>
+</td>
+        <td>Yes</td>
+      </tr>
+      <tr class="model">
+        <td class="num">26</td>
+        <td><a href="../models/lag-llama.html">Lag-Llama</a></td>
+        <td class="num">0.880</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 55.02727306093165%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 2, Training data seen: 0, Related data seen: 3, Not seen: 23, Unknown: 0">
+<span class="lvl-seen_split_unclear" style="flex-grow: 2" title="Seen, split unclear: 2"></span><span class="lvl-related" style="flex-grow: 3" title="Related data seen: 3"></span><span class="lvl-not_seen" style="flex-grow: 23" title="Not seen: 23"></span></div>
+</td>
+        <td>Yes</td>
+      </tr>
+      <tr class="model">
+        <td class="num">27</td>
+        <td><a href="../models/granite-ttm-r1.html">Granite-TimeSeries-TTM-R1</a></td>
+        <td class="num">0.891</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 55.705474795185374%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 4, Training data seen: 0, Related data seen: 0, Not seen: 24, Unknown: 0">
+<span class="lvl-seen_split_unclear" style="flex-grow: 4" title="Seen, split unclear: 4"></span><span class="lvl-not_seen" style="flex-grow: 24" title="Not seen: 24"></span></div>
+</td>
+        <td>Yes</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">28</td>
+        <td>Auto Arima <span class="small">· baseline</span></td>
+        <td class="num">0.912</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 56.98033146510628%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">29</td>
+        <td>Seasonal Naive <span class="small">· baseline</span></td>
+        <td class="num">1.000</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 62.5%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">30</td>
+        <td>Auto Theta <span class="small">· baseline</span></td>
+        <td class="num">1.244</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 77.72823287201555%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">31</td>
+        <td>Naive <span class="small">· baseline</span></td>
+        <td class="num">1.591</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 99.45203773740985%"></span><i class="ref" style="left: 62.5%"></i></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">32</td>
+        <td>Auto ETS <span class="small">· baseline</span></td>
+        <td class="num">7.489</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 100.0%"></span><i class="ref" style="left: 62.5%"></i><em class="off">off scale</em></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>No</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
+
 <section><h2>Notes</h2><p class="notes">Leaderboard: &#39;TestData Leakage is a binary indicator specifying whether any test data was present in the training set.&#39; (README update log 2025-08-05); submitters must answer Yes &#39;If your training data includes any dataset that is part of our test corpus&#39; but &#39;Models trained solely on our provided training split&#39; do not count as leaking. Model types: &#39;pretrained&#39; = &#39;The pretraining corpus may include GIFT-Eval train splits.&#39;; &#39;zero-shot&#39; = pretraining data &#39;has no common datasets with GiftEval data pool (both train and test)&#39;; &#39;fine-tuned&#39; = further training on GIFT-Eval train/validation data. As of repo commit 577a65cf (2026-10-09), 20 of 143 result folders self-report testdata_leakage = Yes (see open_questions; self-reported, not facts about the models): Chronos_base, Chronos_large, Chronos_small, chronos_bolt_base, chronos_bolt_small, TimesFM, timesfm_2_0_500m, Lag-Llama, TTM-R1-Pretrained, TTM-R2-Pretrained, TTM-R2-Finetuned, MoiraiAgent-leaking, Super-Linear, Tabby-Pretrain, Tabby, TEMPO_ENSEMBLE, TSOrchestra-test, TimeTron-v2-33M, Fracast-0, RAES-Conductance-Ensemble. GIFT-Eval Table 23 lists the GIFT-Eval test datasets shared with LOTSA: hierarchical_sales, loop_seattle, m_dense, restaurant, sz_taxi. Salesforce/GiftEvalParquet (2026) re-publishes the test windows (history + future) per config; Salesforce/GiftEvalCTX (2026) is a derived contextual benchmark on 20 GIFT-Eval datasets.
 
 Version used: arXiv 2410.10393v2 (2024-11-11); HF dataset Salesforce/GiftEval revision 30841734ac5c (last modified 2025-01-21)</p></section><section>
@@ -1418,7 +1736,7 @@ Version used: arXiv 2410.10393v2 (2024-11-11); HF dataset Salesforce/GiftEval re
         <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
       </a>
       <p class="build">
-      Built 2026-10-15 ·
+      Built 2026-10-16 ·
       <a href="../data/matrix.csv">matrix.csv</a> ·
       <a href="../data/matrix.json">matrix.json</a> ·
       Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.

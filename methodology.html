@@ -96,6 +96,12 @@
 </section>
 
 <section>
+  <h2>Scores mode</h2>
+  <p>The map can also show benchmark scores instead of contamination levels. Scores come from one public leaderboard per benchmark (for GIFT-Eval: relative CRPS against Seasonal Naive, from its repository at a fixed commit), so that every score in a column was produced the same way. Each square is shaded by the model's rank among the models scored on that dataset; its contamination level stays visible as a corner mark. Benchmarks without such a leaderboard stay empty rather than mixing numbers from papers that used different settings.</p>
+  <p>A leaderboard entry is linked to a model only when the checkpoint it links to is the released model; entries that cannot be matched (for example results from a retrained or fine-tuned variant) are left out, with the reason recorded in the score file.</p>
+</section>
+
+<section>
   <h2>Limitations</h2>
   <ul>
     <li>The map reflects what is <em>declared</em>. Undeclared or mis-declared data cannot be detected from documents alone.</li>
@@ -116,7 +122,7 @@
         <span class="by-logo"><img src="static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
       </a>
       <p class="build">
-      Built 2026-10-15 ·
+      Built 2026-10-16 ·
       <a href="data/matrix.csv">matrix.csv</a> ·
       <a href="data/matrix.json">matrix.json</a> ·
       Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.

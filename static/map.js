@@ -23,6 +23,12 @@
     reason.className = "tip-reason";
     reason.textContent = a.dataset.reason;
     tip.append(head, pair, reason);
+    if (a.dataset.score) {
+      const score = document.createElement("div");
+      score.className = "tip-score";
+      score.textContent = a.dataset.score;
+      tip.append(score);
+    }
     tip.hidden = false;
   }
 
@@ -75,5 +81,35 @@
       place(r.right, r.bottom);
     });
     map.addEventListener("focusout", leave);
+  });
+})();
+
+// Contamination / Scores switch. Every page load starts in Contamination mode.
+(function () {
+  const switches = document.querySelectorAll(".mode-switch");
+  if (!switches.length) return;
+
+  function apply(mode) {
+    document.querySelectorAll("table.map").forEach(function (map) {
+      map.classList.toggle("mode-scores", mode === "scores");
+      map.classList.toggle("mode-contamination", mode !== "scores");
+    });
+    document.querySelectorAll(".mode-switch button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.mode === mode));
+    });
+    document.querySelectorAll(".legend-scores").forEach(function (el) {
+      el.hidden = mode !== "scores";
+    });
+    document.querySelectorAll(".legend-contamination").forEach(function (el) {
+      el.hidden = mode === "scores";
+    });
+  }
+
+  switches.forEach(function (sw) {
+    sw.addEventListener("click", function (e) {
+      const button = e.target.closest("button[data-mode]");
+      if (!button) return;
+      apply(button.dataset.mode);
+    });
   });
 })();
