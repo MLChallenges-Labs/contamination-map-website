@@ -66,7 +66,7 @@
     <li>The <strong>same dataset</strong>, used in full or its test split used for training → <span class="badge lvl-test_seen">Test data seen</span></li>
     <li>The same dataset, used with an unstated split, or with a training split defined by another benchmark → <span class="badge lvl-seen_split_unclear">Seen, split unclear</span></li>
     <li>The same dataset, restricted to this benchmark's training split → <span class="badge lvl-train_seen">Training data seen</span></li>
-    <li>A <strong>related dataset</strong> (subset, superset, resampled version, same source) → <span class="badge lvl-related">Related data seen</span></li>
+    <li>A <strong>related dataset</strong> (subset, superset, resampled version, same source), or training data <strong>selected to resemble</strong> the dataset (for example web images retrieved because they look like its training images) → <span class="badge lvl-related">Related data seen</span></li>
   </ol>
   <p>When several declarations match, the strongest exposure wins (the order above). If the authors state that the test portion was held out, “Test data seen” and “Seen, split unclear” become “Training data seen”. If a statement that data was excluded conflicts with a declaration that it was used, the exposure is kept and the conflict is shown with both quotes.</p>
   <p>When nothing matches:</p>
@@ -122,7 +122,7 @@
         <span class="by-logo"><img src="static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
       </a>
       <p class="build">
-      Built 2026-10-16 ·
+      Built 2026-10-17 ·
       <a href="data/matrix.csv">matrix.csv</a> ·
       <a href="data/matrix.json">matrix.json</a> ·
       Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.

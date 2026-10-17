@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · EVA-02-CLIP-E/14 and E/14+ (LAION-2B)</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html" class="active">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../vision/index.html">Vision</a> / Model</p>
+<h1>EVA-02-CLIP-E/14 and E/14+ (LAION-2B)</h1>
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>BAAI</dd>
+  <dt>Family</dt><dd>EVA-CLIP · version EVA-02-CLIP</dd>
+  <dt>Released</dt><dd>2023-03-27 <span class="muted small">(arXiv submission date (https://arxiv.org/abs/2303.15389v1, single version).)</span></dd>
+<dt>Checkpoints</dt><dd>EVA02-E-14 / laion2b_s4b_b115k, EVA02-E-14-plus / laion2b_s9b_b144k, EVA02_CLIP_E_psz14_s4B, EVA02_CLIP_E_psz14_plus_s9B</dd>  <dt>Weights</dt><dd>Open · MIT (per Hugging Face QuanSun/EVA-CLIP metadata)</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2303.15389v1">Paper</a><a href="https://github.com/baaivision/EVA/tree/master/EVA-CLIP">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>0%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 22">
+<span class="lvl-unknown" style="flex-grow: 22" title="Unknown: 22"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">22</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“`EVA02_CLIP_E_psz14_s4B` | `EVA02_E_psz14` | `laion/CLIP-ViT-H-14-laion2B-s32B-b79K` | 4.7B | `fp16`”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · Model zoo table · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“`EVA02_CLIP_E_psz14_plus_s9B` | `EVA02_E_psz14` | `laion/CLIP-ViT-bigG-14-laion2B-39B-b160k` | 5.0B | `bf16`”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · Model zoo table · retrieved 2026-10-16</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Built on</h2>
+  <p class="muted small">Everything these base models may have seen is inherited by EVA-02-CLIP-E/14 and E/14+ (LAION-2B).</p>
+  <ul class="rows">
+    <li>
+      <a href="openclip-laion2b.html"><strong>OpenCLIP (LAION-2B checkpoints)</strong></a>
+      <span class="muted">· disclosure: Full list</span>
+<p class="small">Text encoder only: initialised from laion/CLIP-ViT-H-14-laion2B-s32B-b79K (E/14) and laion/CLIP-ViT-bigG-14-laion2B-39B-b160k (E/14+), both listed under openclip-laion2b.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we initialized the vision encoder with pre-trained weights from EVA [20, 19] and the text encoder with pre-trained weights from either OpenAI CLIP [39] or OpenCLIP [27].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.15389v1">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Settings) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“`EVA02_CLIP_E_psz14_s4B` | `EVA02_E_psz14` | `laion/CLIP-ViT-H-14-laion2B-s32B-b79K` | 4.7B | `fp16`”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · Model zoo table · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“`EVA02_CLIP_E_psz14_plus_s9B` | `EVA02_E_psz14` | `laion/CLIP-ViT-bigG-14-laion2B-39B-b160k` | 5.0B | `bf16`”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · Model zoo table · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>LAION-2B (LAION-2B-en, English subset of LAION-5B)</strong>
+      <span class="muted">· 1 source (complete list) · pre-training</span>
+ · <a href="https://laion.ai/blog/laion-5b/">homepage</a>      <details><summary>Evidence that EVA-02-CLIP-E/14 and E/14+ (LAION-2B) uses it</summary><figure class="evidence">
+  <blockquote>“`EVA02_CLIP_E_psz14_s4B` | `EVA02_E_psz14` | `laion/CLIP-ViT-H-14-laion2B-s32B-b79K` | 4.7B | `fp16`”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · Model zoo table · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“`EVA02_CLIP_E_psz14_plus_s9B` | `EVA02_E_psz14` | `laion/CLIP-ViT-bigG-14-laion2B-39B-b160k` | 5.0B | `bf16`”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · Model zoo table · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>Common Crawl (WAT files, HTML IMG tags with alt-text), English subset</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Collection-level entry: arbitrary public web images that passed a CLIP-similarity filter.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We constructed LAION-5B starting from Common Crawl, a public web archive [1].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2210.08402v1">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“2.32 billion English image-text pairs. We refer to this subset as LAION-2B-en or LAION-2B if the language is clear from context.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2210.08402v1">arxiv.org</a>
+<span class="muted">· paper · Section 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We removed all English image-text pairs with cosine similarity below 0.28, and all other pairs with similarity below 0.26.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2210.08402v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>pre-training data of base model EVA02_E_psz14 (EVA-02-E image encoder; not documented in the sources read)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">The image encoder is initialised from EVA02_E_psz14, a 4.4B-parameter EVA-02 model whose pre-training data is not given in the EVA-CLIP or EVA-02 papers.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“`EVA02_CLIP_E_psz14_s4B` | `EVA02_E_psz14` | `laion/CLIP-ViT-H-14-laion2B-s32B-b79K` | 4.7B | `fp16`”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · Model zoo table · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we initialized the vision encoder with pre-trained weights from EVA [20, 19] and the text encoder with pre-trained weights from either OpenAI CLIP [39] or OpenCLIP [27].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2303.15389v1">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Settings) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/imagenet-shifts.html">ImageNet and natural distribution shifts</a></h3>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-1k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/imagenet-1k.html">ImageNet-1k (ILSVRC 2012)</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.82</span></p>
+  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-v2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/imagenet-v2.html">ImageNetV2 (MatchedFrequency)</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.756</span></p>
+  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-sketch">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/imagenet-sketch.html">ImageNet-Sketch</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.716</span></p>
+  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-r">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/imagenet-r.html">ImageNet-R (Renditions)</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.946</span></p>
+  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-a">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/imagenet-a.html">ImageNet-A</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.822</span></p>
+  </div>
+  <div class="cell-detail" id="imagenet-shifts--objectnet">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/objectnet.html">ObjectNet</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.794</span></p>
+  </div>
+  <h3><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></h3>
+  <div class="cell-detail" id="zeroshot-transfer--cifar-10">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/cifar-10.html">CIFAR-10</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.993</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--cifar-100">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/cifar-100.html">CIFAR-100</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.932</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--food-101">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/food-101.html">Food-101</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.95</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--stanford-cars">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/stanford-cars.html">Stanford Cars</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.946</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--fgvc-aircraft">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/fgvc-aircraft.html">FGVC-Aircraft</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.536</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--oxford-pets">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/oxford-pets.html">Oxford-IIIT Pet</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.957</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--flowers-102">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/flowers-102.html">Oxford Flowers-102</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.843</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--dtd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/dtd.html">Describable Textures Dataset (DTD)</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.678</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--eurosat">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/eurosat.html">EuroSAT</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.757</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--sun397">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/sun397.html">SUN397</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.751</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--caltech-101">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/caltech-101.html">Caltech-101</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.954</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--gtsrb">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gtsrb.html">GTSRB</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.674</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--resisc45">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/resisc45.html">NWPU-RESISC45</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.749</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--country211">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/country211.html">Country211</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.356</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--stl-10">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/stl-10.html">STL-10</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.993</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--mnist">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mnist.html">MNIST</a> <span class="muted">· unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.746</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Split from eva-clip because the training data differ (LAION-2B rather than Merged-2B) and the text encoders come from OpenCLIP LAION-2B models rather than OpenAI CLIP.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2303.15389v1">EVA-CLIP: Improved Training Techniques for CLIP at Scale</a>
+<span class="muted">· paper · retrieved 2026-10-16</span></li><li><a href="https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md">EVA-CLIP README</a>
+<span class="muted">· readme · retrieved 2026-10-16</span></li><li><a href="https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py">OpenCLIP pretrained.py</a>
+<span class="muted">· code · retrieved 2026-10-16</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-17 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

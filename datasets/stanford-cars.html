@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Stanford Cars</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html" class="active">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../vision/index.html">Vision</a> / Dataset</p>
+<h1>Stanford Cars</h1>
+<p class="lede">16,185 images of 196 car classes at the level of make, model and year (e.g. 2012 Tesla Model S): 8,144 training and 8,041 test images, split roughly 50-50 per class. The 8,041-image test split is evaluated.</p>
+<dl class="facts">
+<dt>Also known as</dt><dd>StanfordCars, Cars Dataset, cars, wds/cars, vtab/cars</dd><dt>Domain</dt><dd>cars (fine-grained)</dd><dt>Homepage</dt><dd><a href="https://web.archive.org/web/20200305051018/http://ai.stanford.edu/~jkrause/cars/car_dataset.html">web.archive.org</a></dd></dl>
+
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/clip-openai.html#zeroshot-transfer--stanford-cars">OpenAI CLIP</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/datacomp-clip.html#zeroshot-transfer--stanford-cars">DataComp CLIP (DataComp-1B checkpoints)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state its test portion was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/dfn-clip-2b.html#zeroshot-transfer--stanford-cars">Apple DFN CLIP (DFN-2B checkpoints)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state its test portion was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/dfn-clip-5b.html#zeroshot-transfer--stanford-cars">Apple DFN CLIP (DFN-5B checkpoints)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/dinov2.html#zeroshot-transfer--stanford-cars">DINOv2</a></td>
+        <td><span class="badge lvl-related">Related data seen</span></td>
+        <td class="small">training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/dinov3.html#zeroshot-transfer--stanford-cars">DINOv3 (web / LVD-1689M models)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/eva-clip-e.html#zeroshot-transfer--stanford-cars">EVA-02-CLIP-E/14 and E/14+ (LAION-2B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/eva-clip.html#zeroshot-transfer--stanford-cars">EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B)</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/imagenet-wrn50.html#zeroshot-transfer--stanford-cars">WideResNet-50-2 (supervised ImageNet-1k, torchvision)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/metaclip-2.5b.html#zeroshot-transfer--stanford-cars">MetaCLIP (2.5B / fullcc checkpoints)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/metaclip-2.html#zeroshot-transfer--stanford-cars">Meta CLIP 2 (worldwide)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/metaclip-400m.html#zeroshot-transfer--stanford-cars">MetaCLIP (400M checkpoints)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/openclip-laion2b.html#zeroshot-transfer--stanford-cars">OpenCLIP (LAION-2B checkpoints)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/openclip-laion400m.html#zeroshot-transfer--stanford-cars">OpenCLIP (LAION-400M checkpoints)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/siglip-2.html#zeroshot-transfer--stanford-cars">SigLIP 2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></td>
+        <td><a href="../models/siglip.html#zeroshot-transfer--stanford-cars">SigLIP</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">The original page (ai.stanford.edu/~jkrause/cars/car_dataset.html) returned 404 on 2026-10-16; homepage points to a web-archive copy. The paper (3dRR-13 workshop at ICCV 2013, 8 Dec 2013) used 197 classes; the release has 196. Image provenance was not checked (TODO(verify)); published_from is left empty.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://web.archive.org/web/20200305051018/http://ai.stanford.edu/~jkrause/cars/car_dataset.html">Stanford Cars dataset page (Wayback Machine capture of 2020-03-05; the original page returns 404)</a>
+<span class="muted">· website · retrieved 2026-10-16</span></li><li><a href="https://raw.githubusercontent.com/LAION-AI/CLIP_benchmark/main/clip_benchmark/datasets/builder.py">CLIP_benchmark dataset builder (dataset names and splits loaded)</a>
+<span class="muted">· code · retrieved 2026-10-16</span></li><li><a href="https://raw.githubusercontent.com/mlfoundations/datacomp/main/tasklist.yml">DataComp evaluation task list (names, test-set sizes, metrics)</a>
+<span class="muted">· code · retrieved 2026-10-16</span></li><li><a href="https://arxiv.org/pdf/2103.00020v1">CLIP paper (Radford et al., 2021), Appendix A, Table 9: datasets, train/test sizes, metrics</a>
+<span class="muted">· paper · retrieved 2026-10-16</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-17 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

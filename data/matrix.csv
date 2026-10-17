@@ -1259,6 +1259,102 @@ gift-eval,uci-electricity-load-diagrams,ttm-r3,train_seen,"only the training spl
 gift-eval,uci-electricity-load-diagrams,ttm-research-r2,not_seen,absent from the complete list of training data,https://arxiv.org/pdf/2401.03955v8 https://huggingface.co/ibm-research/ttm-research-r2/raw/main/README.md
 gift-eval,uci-electricity-load-diagrams,units-few-shot-anomaly-detection,related,"via base model UniTS: related dataset Electricity (ECL, 321 clients) was used",https://raw.githubusercontent.com/mims-harvard/UniTS/main/scripts/few_shot_anomaly_detection/UniTS_finetune_few_shot_anomaly_detection.sh https://arxiv.org/pdf/2403.00131v3 https://raw.githubusercontent.com/mims-harvard/UniTS/main/exp/exp_pretrain.py https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/README.md https://arxiv.org/pdf/2106.13008v5
 gift-eval,uci-electricity-load-diagrams,units,related,"related dataset Electricity (ECL, 321 clients) was used",https://arxiv.org/pdf/2403.00131v3 https://raw.githubusercontent.com/mims-harvard/UniTS/main/exp/exp_pretrain.py https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/README.md https://arxiv.org/pdf/2106.13008v5
+imagenet-shifts,imagenet-1k,clip-openai,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-1k,datacomp-clip,related,training data was selected to resemble this dataset's training images (via DataComp-1B); the authors state this dataset's test portion was excluded,https://huggingface.co/laion/CLIP-ViT-L-14-DataComp.XL-s13B-b90K/raw/main/README.md https://huggingface.co/laion/CLIP-ViT-B-32-256x256-DataComp-s34B-b86K/raw/main/README.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://raw.githubusercontent.com/mlfoundations/datacomp/main/README.md https://arxiv.org/pdf/2304.14108v5
+imagenet-shifts,imagenet-1k,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+imagenet-shifts,imagenet-1k,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-1k,dinov2,related,training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded,https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2
+imagenet-shifts,imagenet-1k,dinov3,seen_split_unclear,the dataset was used; the source does not say which part,https://arxiv.org/pdf/2508.10104v1
+imagenet-shifts,imagenet-1k,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+imagenet-shifts,imagenet-1k,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+imagenet-shifts,imagenet-1k,imagenet-wrn50,train_seen,"only the training split was used, not the benchmark's test data",https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py https://arxiv.org/pdf/2106.08265v2
+imagenet-shifts,imagenet-1k,metaclip-2.5b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2309.16671v6
+imagenet-shifts,imagenet-1k,metaclip-2,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2507.22062v3
+imagenet-shifts,imagenet-1k,metaclip-400m,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2309.16671v6
+imagenet-shifts,imagenet-1k,openclip-laion2b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-1k,openclip-laion400m,test_seen,a contamination analysis found test examples in the pre-training data (1.02% of the ImageNet evaluation images had a pHash match in LAION-400M.) (via LAION-400M),https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2
+imagenet-shifts,imagenet-1k,siglip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-1k,siglip,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-v2,clip-openai,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-v2,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+imagenet-shifts,imagenet-v2,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+imagenet-shifts,imagenet-v2,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-v2,dinov2,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.07193v2
+imagenet-shifts,imagenet-v2,dinov3,related,related dataset ImageNet-1k (ILSVRC 2012) was used,https://arxiv.org/pdf/2508.10104v1 https://arxiv.org/pdf/1902.10811v2
+imagenet-shifts,imagenet-v2,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+imagenet-shifts,imagenet-v2,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+imagenet-shifts,imagenet-v2,imagenet-wrn50,related,related dataset ImageNet-1k (ILSVRC 2012) was used,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py https://arxiv.org/pdf/2106.08265v2 https://arxiv.org/pdf/1902.10811v2
+imagenet-shifts,imagenet-v2,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-v2,metaclip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-v2,metaclip-400m,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-v2,openclip-laion2b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-v2,openclip-laion400m,test_seen,a contamination analysis found test examples in the pre-training data (1.35% of the ImageNet-v2 evaluation images had a pHash match in LAION-400M.) (via LAION-400M),https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2
+imagenet-shifts,imagenet-v2,siglip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-v2,siglip,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-sketch,clip-openai,test_seen,"a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2103.00020v1
+imagenet-shifts,imagenet-sketch,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+imagenet-shifts,imagenet-sketch,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+imagenet-shifts,imagenet-sketch,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-sketch,dinov2,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.07193v2
+imagenet-shifts,imagenet-sketch,dinov3,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-sketch,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+imagenet-shifts,imagenet-sketch,eva-clip,test_seen,"via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1
+imagenet-shifts,imagenet-sketch,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+imagenet-shifts,imagenet-sketch,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-sketch,metaclip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-sketch,metaclip-400m,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-sketch,openclip-laion2b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-sketch,openclip-laion400m,test_seen,a contamination analysis found test examples in the pre-training data (5.15% of the ImageNet Sketch evaluation images had a pHash match in LAION-400M.) (via LAION-400M),https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2
+imagenet-shifts,imagenet-sketch,siglip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-sketch,siglip,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-r,clip-openai,related,"a contamination analysis found test examples of the related dataset ImageNet-Sketch (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2103.00020v1 https://arxiv.org/pdf/2006.16241v3
+imagenet-shifts,imagenet-r,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+imagenet-shifts,imagenet-r,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+imagenet-shifts,imagenet-r,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-r,dinov2,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.07193v2
+imagenet-shifts,imagenet-r,dinov3,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-r,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+imagenet-shifts,imagenet-r,eva-clip,related,"via base model OpenAI CLIP: a contamination analysis found test examples of the related dataset ImageNet-Sketch (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1 https://arxiv.org/pdf/2006.16241v3
+imagenet-shifts,imagenet-r,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+imagenet-shifts,imagenet-r,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-r,metaclip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-r,metaclip-400m,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-r,openclip-laion2b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-r,openclip-laion400m,test_seen,a contamination analysis found test examples in the pre-training data (3.80% of the ImageNet-R evaluation images had a pHash match in LAION-400M.) (via LAION-400M),https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2
+imagenet-shifts,imagenet-r,siglip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-r,siglip,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,clip-openai,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+imagenet-shifts,imagenet-a,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+imagenet-shifts,imagenet-a,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,dinov2,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.07193v2
+imagenet-shifts,imagenet-a,dinov3,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+imagenet-shifts,imagenet-a,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,metaclip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,metaclip-400m,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,openclip-laion2b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,openclip-laion400m,test_seen,a contamination analysis found test examples in the pre-training data (0.40% of the ImageNet-A evaluation images had a pHash match in LAION-400M.) (via LAION-400M),https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2
+imagenet-shifts,imagenet-a,siglip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,imagenet-a,siglip,unknown,training data not disclosed in enough detail,
+imagenet-shifts,objectnet,clip-openai,unknown,training data not disclosed in enough detail,
+imagenet-shifts,objectnet,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+imagenet-shifts,objectnet,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+imagenet-shifts,objectnet,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,objectnet,dinov2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,objectnet,dinov3,unknown,training data not disclosed in enough detail,
+imagenet-shifts,objectnet,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+imagenet-shifts,objectnet,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+imagenet-shifts,objectnet,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+imagenet-shifts,objectnet,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,objectnet,metaclip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,objectnet,metaclip-400m,unknown,training data not disclosed in enough detail,
+imagenet-shifts,objectnet,openclip-laion2b,unknown,training data not disclosed in enough detail,
+imagenet-shifts,objectnet,openclip-laion400m,test_seen,a contamination analysis found test examples in the pre-training data (0.10% of the ObjectNet evaluation images had a pHash match in LAION-400M.) (via LAION-400M),https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2
+imagenet-shifts,objectnet,siglip-2,unknown,training data not disclosed in enough detail,
+imagenet-shifts,objectnet,siglip,unknown,training data not disclosed in enough detail,
 industrial-ad,mvtec-ad,aa-clip-mvtec,seen_split_unclear,in fine-tuning data: the dataset was used; the source does not say which part,https://arxiv.org/pdf/2503.06661v1
 industrial-ad,mvtec-ad,aa-clip-visa,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
 industrial-ad,mvtec-ad,adaclip-all,test_seen,in fine-tuning data: its test split was used for training,https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/README.md https://raw.githubusercontent.com/caoyunkang/AdaCLIP/main/dataset/base_dataset.py
@@ -4983,3 +5079,259 @@ ts-classification,uea-archive,ttm-r3,unknown,training data not disclosed in enou
 ts-classification,uea-archive,ttm-research-r2,not_seen,absent from the complete list of training data,https://arxiv.org/pdf/2401.03955v8 https://huggingface.co/ibm-research/ttm-research-r2/raw/main/README.md
 ts-classification,uea-archive,units-few-shot-anomaly-detection,train_seen,"via base model UniTS: only the training split was used, not the benchmark's test data",https://raw.githubusercontent.com/mims-harvard/UniTS/main/scripts/few_shot_anomaly_detection/UniTS_finetune_few_shot_anomaly_detection.sh https://arxiv.org/pdf/2403.00131v3 https://raw.githubusercontent.com/mims-harvard/UniTS/main/exp/exp_pretrain.py
 ts-classification,uea-archive,units,train_seen,"only the training split was used, not the benchmark's test data",https://arxiv.org/pdf/2403.00131v3 https://raw.githubusercontent.com/mims-harvard/UniTS/main/exp/exp_pretrain.py
+zeroshot-transfer,cifar-10,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-10,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,cifar-10,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,cifar-10,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-10,dinov2,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.07193v2
+zeroshot-transfer,cifar-10,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-10,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,cifar-10,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,cifar-10,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,cifar-10,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-10,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-10,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-10,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-10,openclip-laion400m,test_seen,a contamination analysis found test examples in the pre-training data (0.03% of the CIFAR-10 evaluation images had a pHash match in LAION-400M.) (via LAION-400M),https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2
+zeroshot-transfer,cifar-10,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-10,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-100,clip-openai,test_seen,"a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2103.00020v1
+zeroshot-transfer,cifar-100,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,cifar-100,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,cifar-100,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-100,dinov2,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.07193v2
+zeroshot-transfer,cifar-100,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-100,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,cifar-100,eva-clip,test_seen,"via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1
+zeroshot-transfer,cifar-100,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,cifar-100,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-100,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-100,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-100,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-100,openclip-laion400m,test_seen,a contamination analysis found test examples in the pre-training data (0.02% of the CIFAR-100 evaluation images had a pHash match in LAION-400M.) (via LAION-400M),https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2
+zeroshot-transfer,cifar-100,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,cifar-100,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,food-101,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,food-101,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,food-101,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,food-101,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,food-101,dinov2,related,training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded,https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2
+zeroshot-transfer,food-101,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,food-101,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,food-101,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,food-101,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,food-101,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,food-101,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,food-101,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,food-101,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,food-101,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,food-101,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,food-101,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stanford-cars,clip-openai,test_seen,"a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2103.00020v1
+zeroshot-transfer,stanford-cars,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,stanford-cars,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,stanford-cars,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stanford-cars,dinov2,related,training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded,https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2
+zeroshot-transfer,stanford-cars,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stanford-cars,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,stanford-cars,eva-clip,test_seen,"via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1
+zeroshot-transfer,stanford-cars,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,stanford-cars,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stanford-cars,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stanford-cars,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stanford-cars,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stanford-cars,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stanford-cars,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stanford-cars,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,fgvc-aircraft,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,fgvc-aircraft,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,dinov2,related,training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded,https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2
+zeroshot-transfer,fgvc-aircraft,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,fgvc-aircraft,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,fgvc-aircraft,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,oxford-pets,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,oxford-pets,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,dinov2,related,training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded,https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2
+zeroshot-transfer,oxford-pets,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,oxford-pets,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,oxford-pets,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,flowers-102,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,flowers-102,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,dinov2,related,training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded,https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2
+zeroshot-transfer,flowers-102,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,flowers-102,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,flowers-102,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,dtd,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,dtd,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,dtd,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,dtd,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,dtd,dinov2,related,training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded,https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2
+zeroshot-transfer,dtd,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,dtd,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,dtd,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,dtd,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,dtd,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,dtd,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,dtd,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,dtd,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,dtd,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,dtd,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,dtd,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,eurosat,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,eurosat,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,dinov2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,eurosat,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,eurosat,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,sun397,clip-openai,test_seen,"a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2103.00020v1
+zeroshot-transfer,sun397,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,sun397,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,sun397,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,sun397,dinov2,related,training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded,https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2
+zeroshot-transfer,sun397,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,sun397,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,sun397,eva-clip,test_seen,"via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1
+zeroshot-transfer,sun397,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,sun397,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,sun397,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,sun397,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,sun397,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,sun397,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,sun397,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,sun397,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,caltech-101,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,caltech-101,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,dinov2,related,training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded,https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2
+zeroshot-transfer,caltech-101,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,caltech-101,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,caltech-101,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,gtsrb,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,gtsrb,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,dinov2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,gtsrb,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,gtsrb,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,resisc45,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,resisc45,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,dinov2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,resisc45,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,resisc45,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,country211,clip-openai,test_seen,"a contamination analysis found test examples in the pre-training data (21.5% of Country211 test examples were detected as near-duplicates of WIT training images (the largest overlap of the 35 datasets checked); overall zero-shot accuracy changed by only +0.2 points.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2103.00020v1
+zeroshot-transfer,country211,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,country211,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,country211,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,country211,dinov2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,country211,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,country211,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,country211,eva-clip,test_seen,"via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (21.5% of Country211 test examples were detected as near-duplicates of WIT training images (the largest overlap of the 35 datasets checked); overall zero-shot accuracy changed by only +0.2 points.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1
+zeroshot-transfer,country211,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,country211,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,country211,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,country211,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,country211,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,country211,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,country211,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,country211,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,stl-10,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,stl-10,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,dinov2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,dinov3,related,related dataset ImageNet-1k (ILSVRC 2012) was used,https://arxiv.org/pdf/2508.10104v1 https://cs.stanford.edu/~acoates/stl10/
+zeroshot-transfer,stl-10,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,imagenet-wrn50,related,related dataset ImageNet-1k (ILSVRC 2012) was used,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py https://arxiv.org/pdf/2106.08265v2 https://cs.stanford.edu/~acoates/stl10/
+zeroshot-transfer,stl-10,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,openclip-laion400m,related,a contamination analysis found test examples of the related dataset ImageNet-1k (ILSVRC 2012) (1.02% of the ImageNet evaluation images had a pHash match in LAION-400M.) (via LAION-400M),https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2 https://cs.stanford.edu/~acoates/stl10/
+zeroshot-transfer,stl-10,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,stl-10,siglip,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,clip-openai,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,datacomp-clip,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5
+zeroshot-transfer,mnist,dfn-clip-2b,not_seen,the authors state its test portion was excluded from training,https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3
+zeroshot-transfer,mnist,dfn-clip-5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,dinov2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,dinov3,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,eva-clip-e,unknown,unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail,
+zeroshot-transfer,mnist,eva-clip,unknown,unknown for its base model OpenAI CLIP: training data not disclosed in enough detail,
+zeroshot-transfer,mnist,imagenet-wrn50,not_seen,absent from the complete list of training data,https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py
+zeroshot-transfer,mnist,metaclip-2.5b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,metaclip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,metaclip-400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,openclip-laion2b,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,openclip-laion400m,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,siglip-2,unknown,training data not disclosed in enough detail,
+zeroshot-transfer,mnist,siglip,unknown,training data not disclosed in enough detail,

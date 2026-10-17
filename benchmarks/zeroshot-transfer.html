@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contamination map · Zero-shot transfer classification</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html"><img src="../static/favicon.svg" alt="" width="28" height="28">Contamination Map</a>
+      <nav class="domains" aria-label="Domain">
+        <a href="../index.html">Time series</a>
+        <a href="../tabular/index.html">Tabular</a>
+        <a href="../text/index.html">Text / LLM</a>
+        <a href="../vision/index.html" class="active">Vision</a>
+      </nav>
+      <a class="nav-link" href="../methodology.html">Methodology</a>
+    </div>
+  </header>
+  <main class="wrap">
+<p class="crumb"><a href="../vision/index.html">Vision</a> / Benchmark</p>
+<h1>Zero-shot transfer classification</h1>
+<p class="lede">Sixteen image-classification datasets outside ImageNet (objects, fine-grained categories, textures, scenes, satellite and aerial images, traffic signs, digits, geolocation) used to test whether image-text models transfer to new label sets without training on them. Grouping used on this site, not an official suite: it is the subset of the evaluation suite popularised by the CLIP paper (Table 9) that CLIP_benchmark and DataComp also run.</p><p class="links">
+</p>
+<p><strong>Test split:</strong> The test split of each dataset is scored, as listed per dataset. Several datasets have no official test split and suites differ: Caltech-101, EuroSAT, RESISC45 use the VTAB splits in CLIP_benchmark and DataComp (CLIP used its own sizes); SUN397 is scored on all 108,754 images in CLIP_benchmark / DataComp but on 19,850 test images in CLIP. Metrics: accuracy, except mean per-class accuracy for FGVC-Aircraft, Oxford-IIIT Pet, Caltech-101 and Flowers-102 (CLIP Table 9, DataComp).</p>
+<section>
+  <h2>Contamination matrix</h2>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">10</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">11</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">49</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">186</span></li>
+</ul>
+  <div class="table-wrap">
+  <table class="heatmap">
+    <thead>
+      <tr>
+        <th scope="col" class="corner">Dataset</th>
+<th scope="col" class="model"><a href="../models/dfn-clip-2b.html"><span>Apple DFN CLIP (DFN-2B checkpoints)</span></a></th><th scope="col" class="model"><a href="../models/dfn-clip-5b.html"><span>Apple DFN CLIP (DFN-5B checkpoints)</span></a></th><th scope="col" class="model"><a href="../models/datacomp-clip.html"><span>DataComp CLIP (DataComp-1B checkpoints)</span></a></th><th scope="col" class="model"><a href="../models/dinov2.html"><span>DINOv2</span></a></th><th scope="col" class="model"><a href="../models/dinov3.html"><span>DINOv3 (web / LVD-1689M models)</span></a></th><th scope="col" class="model"><a href="../models/eva-clip.html"><span>EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B)</span></a></th><th scope="col" class="model"><a href="../models/eva-clip-e.html"><span>EVA-02-CLIP-E/14 and E/14+ (LAION-2B)</span></a></th><th scope="col" class="model"><a href="../models/metaclip-2.html"><span>Meta CLIP 2 (worldwide)</span></a></th><th scope="col" class="model"><a href="../models/metaclip-2.5b.html"><span>MetaCLIP (2.5B / fullcc checkpoints)</span></a></th><th scope="col" class="model"><a href="../models/metaclip-400m.html"><span>MetaCLIP (400M checkpoints)</span></a></th><th scope="col" class="model"><a href="../models/clip-openai.html"><span>OpenAI CLIP</span></a></th><th scope="col" class="model"><a href="../models/openclip-laion2b.html"><span>OpenCLIP (LAION-2B checkpoints)</span></a></th><th scope="col" class="model"><a href="../models/openclip-laion400m.html"><span>OpenCLIP (LAION-400M checkpoints)</span></a></th><th scope="col" class="model"><a href="../models/siglip.html"><span>SigLIP</span></a></th><th scope="col" class="model"><a href="../models/siglip-2.html"><span>SigLIP 2</span></a></th><th scope="col" class="model"><a href="../models/imagenet-wrn50.html"><span>WideResNet-50-2 (supervised ImageNet-1k, torchvision)</span></a></th>      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><a href="../datasets/cifar-10.html">CIFAR-10</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--cifar-10" title="Apple DFN CLIP (DFN-2B checkpoints) × CIFAR-10: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--cifar-10" title="Apple DFN CLIP (DFN-5B checkpoints) × CIFAR-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--cifar-10" title="DataComp CLIP (DataComp-1B checkpoints) × CIFAR-10: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/dinov2.html#zeroshot-transfer--cifar-10" title="DINOv2 × CIFAR-10: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--cifar-10" title="DINOv3 (web / LVD-1689M models) × CIFAR-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--cifar-10" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × CIFAR-10: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--cifar-10" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × CIFAR-10: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--cifar-10" title="Meta CLIP 2 (worldwide) × CIFAR-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--cifar-10" title="MetaCLIP (2.5B / fullcc checkpoints) × CIFAR-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--cifar-10" title="MetaCLIP (400M checkpoints) × CIFAR-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--cifar-10" title="OpenAI CLIP × CIFAR-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--cifar-10" title="OpenCLIP (LAION-2B checkpoints) × CIFAR-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/openclip-laion400m.html#zeroshot-transfer--cifar-10" title="OpenCLIP (LAION-400M checkpoints) × CIFAR-10: Test data seen. a contamination analysis found test examples in the pre-training data (0.03% of the CIFAR-10 evaluation images had a pHash match in LAION-400M.) (via LAION-400M)">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--cifar-10" title="SigLIP × CIFAR-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--cifar-10" title="SigLIP 2 × CIFAR-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--cifar-10" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × CIFAR-10: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/cifar-100.html">CIFAR-100</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--cifar-100" title="Apple DFN CLIP (DFN-2B checkpoints) × CIFAR-100: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--cifar-100" title="Apple DFN CLIP (DFN-5B checkpoints) × CIFAR-100: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--cifar-100" title="DataComp CLIP (DataComp-1B checkpoints) × CIFAR-100: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/dinov2.html#zeroshot-transfer--cifar-100" title="DINOv2 × CIFAR-100: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--cifar-100" title="DINOv3 (web / LVD-1689M models) × CIFAR-100: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/eva-clip.html#zeroshot-transfer--cifar-100" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × CIFAR-100: Test data seen. via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--cifar-100" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × CIFAR-100: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--cifar-100" title="Meta CLIP 2 (worldwide) × CIFAR-100: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--cifar-100" title="MetaCLIP (2.5B / fullcc checkpoints) × CIFAR-100: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--cifar-100" title="MetaCLIP (400M checkpoints) × CIFAR-100: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/clip-openai.html#zeroshot-transfer--cifar-100" title="OpenAI CLIP × CIFAR-100: Test data seen. a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--cifar-100" title="OpenCLIP (LAION-2B checkpoints) × CIFAR-100: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/openclip-laion400m.html#zeroshot-transfer--cifar-100" title="OpenCLIP (LAION-400M checkpoints) × CIFAR-100: Test data seen. a contamination analysis found test examples in the pre-training data (0.02% of the CIFAR-100 evaluation images had a pHash match in LAION-400M.) (via LAION-400M)">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--cifar-100" title="SigLIP × CIFAR-100: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--cifar-100" title="SigLIP 2 × CIFAR-100: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--cifar-100" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × CIFAR-100: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/food-101.html">Food-101</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--food-101" title="Apple DFN CLIP (DFN-2B checkpoints) × Food-101: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--food-101" title="Apple DFN CLIP (DFN-5B checkpoints) × Food-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--food-101" title="DataComp CLIP (DataComp-1B checkpoints) × Food-101: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-related"><a href="../models/dinov2.html#zeroshot-transfer--food-101" title="DINOv2 × Food-101: Related data seen. training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded">Rel.</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--food-101" title="DINOv3 (web / LVD-1689M models) × Food-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--food-101" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × Food-101: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--food-101" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × Food-101: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--food-101" title="Meta CLIP 2 (worldwide) × Food-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--food-101" title="MetaCLIP (2.5B / fullcc checkpoints) × Food-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--food-101" title="MetaCLIP (400M checkpoints) × Food-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--food-101" title="OpenAI CLIP × Food-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--food-101" title="OpenCLIP (LAION-2B checkpoints) × Food-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--food-101" title="OpenCLIP (LAION-400M checkpoints) × Food-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--food-101" title="SigLIP × Food-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--food-101" title="SigLIP 2 × Food-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--food-101" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Food-101: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/stanford-cars.html">Stanford Cars</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--stanford-cars" title="Apple DFN CLIP (DFN-2B checkpoints) × Stanford Cars: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--stanford-cars" title="Apple DFN CLIP (DFN-5B checkpoints) × Stanford Cars: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--stanford-cars" title="DataComp CLIP (DataComp-1B checkpoints) × Stanford Cars: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-related"><a href="../models/dinov2.html#zeroshot-transfer--stanford-cars" title="DINOv2 × Stanford Cars: Related data seen. training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded">Rel.</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--stanford-cars" title="DINOv3 (web / LVD-1689M models) × Stanford Cars: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/eva-clip.html#zeroshot-transfer--stanford-cars" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × Stanford Cars: Test data seen. via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--stanford-cars" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × Stanford Cars: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--stanford-cars" title="Meta CLIP 2 (worldwide) × Stanford Cars: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--stanford-cars" title="MetaCLIP (2.5B / fullcc checkpoints) × Stanford Cars: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--stanford-cars" title="MetaCLIP (400M checkpoints) × Stanford Cars: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/clip-openai.html#zeroshot-transfer--stanford-cars" title="OpenAI CLIP × Stanford Cars: Test data seen. a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--stanford-cars" title="OpenCLIP (LAION-2B checkpoints) × Stanford Cars: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--stanford-cars" title="OpenCLIP (LAION-400M checkpoints) × Stanford Cars: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--stanford-cars" title="SigLIP × Stanford Cars: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--stanford-cars" title="SigLIP 2 × Stanford Cars: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--stanford-cars" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Stanford Cars: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/fgvc-aircraft.html">FGVC-Aircraft</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--fgvc-aircraft" title="Apple DFN CLIP (DFN-2B checkpoints) × FGVC-Aircraft: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--fgvc-aircraft" title="Apple DFN CLIP (DFN-5B checkpoints) × FGVC-Aircraft: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--fgvc-aircraft" title="DataComp CLIP (DataComp-1B checkpoints) × FGVC-Aircraft: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-related"><a href="../models/dinov2.html#zeroshot-transfer--fgvc-aircraft" title="DINOv2 × FGVC-Aircraft: Related data seen. training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded">Rel.</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--fgvc-aircraft" title="DINOv3 (web / LVD-1689M models) × FGVC-Aircraft: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--fgvc-aircraft" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × FGVC-Aircraft: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--fgvc-aircraft" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × FGVC-Aircraft: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--fgvc-aircraft" title="Meta CLIP 2 (worldwide) × FGVC-Aircraft: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--fgvc-aircraft" title="MetaCLIP (2.5B / fullcc checkpoints) × FGVC-Aircraft: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--fgvc-aircraft" title="MetaCLIP (400M checkpoints) × FGVC-Aircraft: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--fgvc-aircraft" title="OpenAI CLIP × FGVC-Aircraft: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--fgvc-aircraft" title="OpenCLIP (LAION-2B checkpoints) × FGVC-Aircraft: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--fgvc-aircraft" title="OpenCLIP (LAION-400M checkpoints) × FGVC-Aircraft: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--fgvc-aircraft" title="SigLIP × FGVC-Aircraft: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--fgvc-aircraft" title="SigLIP 2 × FGVC-Aircraft: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--fgvc-aircraft" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × FGVC-Aircraft: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/oxford-pets.html">Oxford-IIIT Pet</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--oxford-pets" title="Apple DFN CLIP (DFN-2B checkpoints) × Oxford-IIIT Pet: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--oxford-pets" title="Apple DFN CLIP (DFN-5B checkpoints) × Oxford-IIIT Pet: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--oxford-pets" title="DataComp CLIP (DataComp-1B checkpoints) × Oxford-IIIT Pet: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-related"><a href="../models/dinov2.html#zeroshot-transfer--oxford-pets" title="DINOv2 × Oxford-IIIT Pet: Related data seen. training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded">Rel.</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--oxford-pets" title="DINOv3 (web / LVD-1689M models) × Oxford-IIIT Pet: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--oxford-pets" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × Oxford-IIIT Pet: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--oxford-pets" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × Oxford-IIIT Pet: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--oxford-pets" title="Meta CLIP 2 (worldwide) × Oxford-IIIT Pet: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--oxford-pets" title="MetaCLIP (2.5B / fullcc checkpoints) × Oxford-IIIT Pet: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--oxford-pets" title="MetaCLIP (400M checkpoints) × Oxford-IIIT Pet: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--oxford-pets" title="OpenAI CLIP × Oxford-IIIT Pet: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--oxford-pets" title="OpenCLIP (LAION-2B checkpoints) × Oxford-IIIT Pet: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--oxford-pets" title="OpenCLIP (LAION-400M checkpoints) × Oxford-IIIT Pet: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--oxford-pets" title="SigLIP × Oxford-IIIT Pet: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--oxford-pets" title="SigLIP 2 × Oxford-IIIT Pet: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--oxford-pets" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Oxford-IIIT Pet: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/flowers-102.html">Oxford Flowers-102</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--flowers-102" title="Apple DFN CLIP (DFN-2B checkpoints) × Oxford Flowers-102: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--flowers-102" title="Apple DFN CLIP (DFN-5B checkpoints) × Oxford Flowers-102: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--flowers-102" title="DataComp CLIP (DataComp-1B checkpoints) × Oxford Flowers-102: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-related"><a href="../models/dinov2.html#zeroshot-transfer--flowers-102" title="DINOv2 × Oxford Flowers-102: Related data seen. training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded">Rel.</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--flowers-102" title="DINOv3 (web / LVD-1689M models) × Oxford Flowers-102: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--flowers-102" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × Oxford Flowers-102: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--flowers-102" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × Oxford Flowers-102: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--flowers-102" title="Meta CLIP 2 (worldwide) × Oxford Flowers-102: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--flowers-102" title="MetaCLIP (2.5B / fullcc checkpoints) × Oxford Flowers-102: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--flowers-102" title="MetaCLIP (400M checkpoints) × Oxford Flowers-102: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--flowers-102" title="OpenAI CLIP × Oxford Flowers-102: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--flowers-102" title="OpenCLIP (LAION-2B checkpoints) × Oxford Flowers-102: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--flowers-102" title="OpenCLIP (LAION-400M checkpoints) × Oxford Flowers-102: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--flowers-102" title="SigLIP × Oxford Flowers-102: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--flowers-102" title="SigLIP 2 × Oxford Flowers-102: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--flowers-102" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Oxford Flowers-102: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/dtd.html">Describable Textures Dataset (DTD)</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--dtd" title="Apple DFN CLIP (DFN-2B checkpoints) × Describable Textures Dataset (DTD): Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--dtd" title="Apple DFN CLIP (DFN-5B checkpoints) × Describable Textures Dataset (DTD): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--dtd" title="DataComp CLIP (DataComp-1B checkpoints) × Describable Textures Dataset (DTD): Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-related"><a href="../models/dinov2.html#zeroshot-transfer--dtd" title="DINOv2 × Describable Textures Dataset (DTD): Related data seen. training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded">Rel.</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--dtd" title="DINOv3 (web / LVD-1689M models) × Describable Textures Dataset (DTD): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--dtd" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × Describable Textures Dataset (DTD): Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--dtd" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × Describable Textures Dataset (DTD): Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--dtd" title="Meta CLIP 2 (worldwide) × Describable Textures Dataset (DTD): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--dtd" title="MetaCLIP (2.5B / fullcc checkpoints) × Describable Textures Dataset (DTD): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--dtd" title="MetaCLIP (400M checkpoints) × Describable Textures Dataset (DTD): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--dtd" title="OpenAI CLIP × Describable Textures Dataset (DTD): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--dtd" title="OpenCLIP (LAION-2B checkpoints) × Describable Textures Dataset (DTD): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--dtd" title="OpenCLIP (LAION-400M checkpoints) × Describable Textures Dataset (DTD): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--dtd" title="SigLIP × Describable Textures Dataset (DTD): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--dtd" title="SigLIP 2 × Describable Textures Dataset (DTD): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--dtd" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Describable Textures Dataset (DTD): Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/eurosat.html">EuroSAT</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--eurosat" title="Apple DFN CLIP (DFN-2B checkpoints) × EuroSAT: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--eurosat" title="Apple DFN CLIP (DFN-5B checkpoints) × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--eurosat" title="DataComp CLIP (DataComp-1B checkpoints) × EuroSAT: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#zeroshot-transfer--eurosat" title="DINOv2 × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--eurosat" title="DINOv3 (web / LVD-1689M models) × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--eurosat" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × EuroSAT: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--eurosat" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × EuroSAT: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--eurosat" title="Meta CLIP 2 (worldwide) × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--eurosat" title="MetaCLIP (2.5B / fullcc checkpoints) × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--eurosat" title="MetaCLIP (400M checkpoints) × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--eurosat" title="OpenAI CLIP × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--eurosat" title="OpenCLIP (LAION-2B checkpoints) × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--eurosat" title="OpenCLIP (LAION-400M checkpoints) × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--eurosat" title="SigLIP × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--eurosat" title="SigLIP 2 × EuroSAT: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--eurosat" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × EuroSAT: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/sun397.html">SUN397</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--sun397" title="Apple DFN CLIP (DFN-2B checkpoints) × SUN397: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--sun397" title="Apple DFN CLIP (DFN-5B checkpoints) × SUN397: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--sun397" title="DataComp CLIP (DataComp-1B checkpoints) × SUN397: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-related"><a href="../models/dinov2.html#zeroshot-transfer--sun397" title="DINOv2 × SUN397: Related data seen. training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded">Rel.</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--sun397" title="DINOv3 (web / LVD-1689M models) × SUN397: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/eva-clip.html#zeroshot-transfer--sun397" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × SUN397: Test data seen. via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--sun397" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × SUN397: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--sun397" title="Meta CLIP 2 (worldwide) × SUN397: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--sun397" title="MetaCLIP (2.5B / fullcc checkpoints) × SUN397: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--sun397" title="MetaCLIP (400M checkpoints) × SUN397: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/clip-openai.html#zeroshot-transfer--sun397" title="OpenAI CLIP × SUN397: Test data seen. a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--sun397" title="OpenCLIP (LAION-2B checkpoints) × SUN397: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--sun397" title="OpenCLIP (LAION-400M checkpoints) × SUN397: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--sun397" title="SigLIP × SUN397: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--sun397" title="SigLIP 2 × SUN397: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--sun397" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × SUN397: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/caltech-101.html">Caltech-101</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--caltech-101" title="Apple DFN CLIP (DFN-2B checkpoints) × Caltech-101: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--caltech-101" title="Apple DFN CLIP (DFN-5B checkpoints) × Caltech-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--caltech-101" title="DataComp CLIP (DataComp-1B checkpoints) × Caltech-101: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-related"><a href="../models/dinov2.html#zeroshot-transfer--caltech-101" title="DINOv2 × Caltech-101: Related data seen. training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded">Rel.</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--caltech-101" title="DINOv3 (web / LVD-1689M models) × Caltech-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--caltech-101" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × Caltech-101: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--caltech-101" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × Caltech-101: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--caltech-101" title="Meta CLIP 2 (worldwide) × Caltech-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--caltech-101" title="MetaCLIP (2.5B / fullcc checkpoints) × Caltech-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--caltech-101" title="MetaCLIP (400M checkpoints) × Caltech-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--caltech-101" title="OpenAI CLIP × Caltech-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--caltech-101" title="OpenCLIP (LAION-2B checkpoints) × Caltech-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--caltech-101" title="OpenCLIP (LAION-400M checkpoints) × Caltech-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--caltech-101" title="SigLIP × Caltech-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--caltech-101" title="SigLIP 2 × Caltech-101: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--caltech-101" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Caltech-101: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/gtsrb.html">GTSRB</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--gtsrb" title="Apple DFN CLIP (DFN-2B checkpoints) × GTSRB: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--gtsrb" title="Apple DFN CLIP (DFN-5B checkpoints) × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--gtsrb" title="DataComp CLIP (DataComp-1B checkpoints) × GTSRB: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#zeroshot-transfer--gtsrb" title="DINOv2 × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--gtsrb" title="DINOv3 (web / LVD-1689M models) × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--gtsrb" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × GTSRB: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--gtsrb" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × GTSRB: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--gtsrb" title="Meta CLIP 2 (worldwide) × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--gtsrb" title="MetaCLIP (2.5B / fullcc checkpoints) × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--gtsrb" title="MetaCLIP (400M checkpoints) × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--gtsrb" title="OpenAI CLIP × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--gtsrb" title="OpenCLIP (LAION-2B checkpoints) × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--gtsrb" title="OpenCLIP (LAION-400M checkpoints) × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--gtsrb" title="SigLIP × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--gtsrb" title="SigLIP 2 × GTSRB: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--gtsrb" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × GTSRB: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/resisc45.html">NWPU-RESISC45</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--resisc45" title="Apple DFN CLIP (DFN-2B checkpoints) × NWPU-RESISC45: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--resisc45" title="Apple DFN CLIP (DFN-5B checkpoints) × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--resisc45" title="DataComp CLIP (DataComp-1B checkpoints) × NWPU-RESISC45: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#zeroshot-transfer--resisc45" title="DINOv2 × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--resisc45" title="DINOv3 (web / LVD-1689M models) × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--resisc45" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × NWPU-RESISC45: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--resisc45" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × NWPU-RESISC45: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--resisc45" title="Meta CLIP 2 (worldwide) × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--resisc45" title="MetaCLIP (2.5B / fullcc checkpoints) × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--resisc45" title="MetaCLIP (400M checkpoints) × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--resisc45" title="OpenAI CLIP × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--resisc45" title="OpenCLIP (LAION-2B checkpoints) × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--resisc45" title="OpenCLIP (LAION-400M checkpoints) × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--resisc45" title="SigLIP × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--resisc45" title="SigLIP 2 × NWPU-RESISC45: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--resisc45" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × NWPU-RESISC45: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/country211.html">Country211</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--country211" title="Apple DFN CLIP (DFN-2B checkpoints) × Country211: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--country211" title="Apple DFN CLIP (DFN-5B checkpoints) × Country211: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--country211" title="DataComp CLIP (DataComp-1B checkpoints) × Country211: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#zeroshot-transfer--country211" title="DINOv2 × Country211: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--country211" title="DINOv3 (web / LVD-1689M models) × Country211: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/eva-clip.html#zeroshot-transfer--country211" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × Country211: Test data seen. via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (21.5% of Country211 test examples were detected as near-duplicates of WIT training images (the largest overlap of the 35 datasets checked); overall zero-shot accuracy changed by only +0.2 points.) (via WIT (WebImageText), OpenAI CLIP pre-training set)">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--country211" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × Country211: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--country211" title="Meta CLIP 2 (worldwide) × Country211: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--country211" title="MetaCLIP (2.5B / fullcc checkpoints) × Country211: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--country211" title="MetaCLIP (400M checkpoints) × Country211: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/clip-openai.html#zeroshot-transfer--country211" title="OpenAI CLIP × Country211: Test data seen. a contamination analysis found test examples in the pre-training data (21.5% of Country211 test examples were detected as near-duplicates of WIT training images (the largest overlap of the 35 datasets checked); overall zero-shot accuracy changed by only +0.2 points.) (via WIT (WebImageText), OpenAI CLIP pre-training set)">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--country211" title="OpenCLIP (LAION-2B checkpoints) × Country211: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--country211" title="OpenCLIP (LAION-400M checkpoints) × Country211: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--country211" title="SigLIP × Country211: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--country211" title="SigLIP 2 × Country211: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--country211" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Country211: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/stl-10.html">STL-10</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--stl-10" title="Apple DFN CLIP (DFN-2B checkpoints) × STL-10: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--stl-10" title="Apple DFN CLIP (DFN-5B checkpoints) × STL-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--stl-10" title="DataComp CLIP (DataComp-1B checkpoints) × STL-10: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#zeroshot-transfer--stl-10" title="DINOv2 × STL-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-related"><a href="../models/dinov3.html#zeroshot-transfer--stl-10" title="DINOv3 (web / LVD-1689M models) × STL-10: Related data seen. related dataset ImageNet-1k (ILSVRC 2012) was used">Rel.</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--stl-10" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × STL-10: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--stl-10" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × STL-10: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--stl-10" title="Meta CLIP 2 (worldwide) × STL-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--stl-10" title="MetaCLIP (2.5B / fullcc checkpoints) × STL-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--stl-10" title="MetaCLIP (400M checkpoints) × STL-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--stl-10" title="OpenAI CLIP × STL-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--stl-10" title="OpenCLIP (LAION-2B checkpoints) × STL-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-related"><a href="../models/openclip-laion400m.html#zeroshot-transfer--stl-10" title="OpenCLIP (LAION-400M checkpoints) × STL-10: Related data seen. a contamination analysis found test examples of the related dataset ImageNet-1k (ILSVRC 2012) (1.02% of the ImageNet evaluation images had a pHash match in LAION-400M.) (via LAION-400M)">Rel.</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--stl-10" title="SigLIP × STL-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--stl-10" title="SigLIP 2 × STL-10: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-related"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--stl-10" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × STL-10: Related data seen. related dataset ImageNet-1k (ILSVRC 2012) was used">Rel.</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/mnist.html">MNIST</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/dfn-clip-2b.html#zeroshot-transfer--mnist" title="Apple DFN CLIP (DFN-2B checkpoints) × MNIST: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dfn-clip-5b.html#zeroshot-transfer--mnist" title="Apple DFN CLIP (DFN-5B checkpoints) × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/datacomp-clip.html#zeroshot-transfer--mnist" title="DataComp CLIP (DataComp-1B checkpoints) × MNIST: Not seen. the authors state its test portion was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#zeroshot-transfer--mnist" title="DINOv2 × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#zeroshot-transfer--mnist" title="DINOv3 (web / LVD-1689M models) × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip.html#zeroshot-transfer--mnist" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × MNIST: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/eva-clip-e.html#zeroshot-transfer--mnist" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × MNIST: Unknown. unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.html#zeroshot-transfer--mnist" title="Meta CLIP 2 (worldwide) × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-2.5b.html#zeroshot-transfer--mnist" title="MetaCLIP (2.5B / fullcc checkpoints) × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metaclip-400m.html#zeroshot-transfer--mnist" title="MetaCLIP (400M checkpoints) × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#zeroshot-transfer--mnist" title="OpenAI CLIP × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#zeroshot-transfer--mnist" title="OpenCLIP (LAION-2B checkpoints) × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#zeroshot-transfer--mnist" title="OpenCLIP (LAION-400M checkpoints) × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#zeroshot-transfer--mnist" title="SigLIP × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#zeroshot-transfer--mnist" title="SigLIP 2 × MNIST: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#zeroshot-transfer--mnist" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MNIST: Not seen. absent from the complete list of training data">No</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="muted small">Hover a cell for the reason; click it for the evidence.</p>
+</section>
+
+<section id="scores-openclip-zeroshot-transfer">
+  <h2>Scores <span class="muted">· OpenCLIP pretrained-model zero-shot classification results</span></h2>
+  <p class="muted small">Zero-shot top-1 accuracy (0-1), mean over every dataset (one zero-shot top-1 accuracy per checkpoint and dataset); higher is better. From <a href="https://github.com/mlfoundations/open_clip/blob/7067b350050dc409bfdfdbb3f0cc6c9a1651c000/docs/openclip_classification_results.csv">OpenCLIP pretrained-model zero-shot classification results</a> at 7067b350050d (<a href="https://github.com/mlfoundations/open_clip/blob/7067b350050dc409bfdfdbb3f0cc6c9a1651c000/LICENSE">MIT</a>), retrieved 2026-10-16. Zero-shot classification (no fine-tuning) of every OpenCLIP-loadable checkpoint on the DataComp evaluation suite, run by the OpenCLIP maintainers &#39;following Gadre et al., 2023&#39; (docs/PRETRAINED.md); values are top-1 accuracy as fractions, copied programmatically from docs/openclip_classification_results.csv (unchanged since commit 29b90b8dde, 2023-11-22). Entries are &#39;&lt;architecture&gt; (&lt;pretrained tag&gt;)&#39;; each tag&#39;s weights are those linked in src/open_clip/pretrained.py at the pinned commit. Checkpoints released after 2023-11 (SigLIP 2, MetaCLIP 2, MetaCLIP bigG/14, DFN-2B 39B) are not in this file. The results file lives in the repository covered by its MIT licence (no separate licence for docs/). The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">Zero-shot top-1 accuracy (0-1)</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="model">
+        <td class="num">1</td>
+        <td><a href="../models/dfn-clip-5b.html">Apple DFN CLIP (DFN-5B checkpoints)</a></td>
+        <td class="num">0.818</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 100.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 16">
+<span class="lvl-unknown" style="flex-grow: 16" title="Unknown: 16"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">2</td>
+        <td><a href="../models/siglip.html">SigLIP</a></td>
+        <td class="num">0.806</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 98.48064715722894%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 16">
+<span class="lvl-unknown" style="flex-grow: 16" title="Unknown: 16"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">3</td>
+        <td><a href="../models/eva-clip-e.html">EVA-02-CLIP-E/14 and E/14+ (LAION-2B)</a></td>
+        <td class="num">0.801</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 97.884822513005%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 16">
+<span class="lvl-unknown" style="flex-grow: 16" title="Unknown: 16"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">4</td>
+        <td><a href="../models/datacomp-clip.html">DataComp CLIP (DataComp-1B checkpoints)</a></td>
+        <td class="num">0.781</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.51298210234434%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 16, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 16" title="Not seen: 16"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">5</td>
+        <td><a href="../models/metaclip-2.5b.html">MetaCLIP (2.5B / fullcc checkpoints)</a></td>
+        <td class="num">0.780</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.39152554025253%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 16">
+<span class="lvl-unknown" style="flex-grow: 16" title="Unknown: 16"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">6</td>
+        <td><a href="../models/openclip-laion2b.html">OpenCLIP (LAION-2B checkpoints)</a></td>
+        <td class="num">0.779</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.160070582304%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 16">
+<span class="lvl-unknown" style="flex-grow: 16" title="Unknown: 16"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">7</td>
+        <td><a href="../models/dfn-clip-2b.html">Apple DFN CLIP (DFN-2B checkpoints)</a></td>
+        <td class="num">0.778</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.08597444065052%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 16, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 16" title="Not seen: 16"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">8</td>
+        <td><a href="../models/eva-clip.html">EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B)</a></td>
+        <td class="num">0.758</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 92.66219034305749%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 4, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 12">
+<span class="lvl-test_seen" style="flex-grow: 4" title="Test data seen: 4"></span><span class="lvl-unknown" style="flex-grow: 12" title="Unknown: 12"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">9</td>
+        <td>ViT-L-14 (commonpool xl s13b b90k) <span class="small">· baseline</span></td>
+        <td class="num">0.731</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 89.31258641367035%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">10</td>
+        <td><a href="../models/clip-openai.html">OpenAI CLIP</a></td>
+        <td class="num">0.722</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 88.25003246480432%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 4, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 12">
+<span class="lvl-test_seen" style="flex-grow: 4" title="Test data seen: 4"></span><span class="lvl-unknown" style="flex-grow: 12" title="Unknown: 12"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">11</td>
+        <td><a href="../models/metaclip-400m.html">MetaCLIP (400M checkpoints)</a></td>
+        <td class="num">0.722</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 88.18968612263292%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 16">
+<span class="lvl-unknown" style="flex-grow: 16" title="Unknown: 16"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">12</td>
+        <td><a href="../models/openclip-laion400m.html">OpenCLIP (LAION-400M checkpoints)</a></td>
+        <td class="num">0.715</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 87.38914224167564%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 2, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 0, Unknown: 13">
+<span class="lvl-test_seen" style="flex-grow: 2" title="Test data seen: 2"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 13" title="Unknown: 13"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">13</td>
+        <td>RN50-quickgelu (cc12m) <span class="small">· baseline</span></td>
+        <td class="num">0.318</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 38.89283559059208%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">14</td>
+        <td>RN50-quickgelu (yfcc15m) <span class="small">· baseline</span></td>
+        <td class="num">0.274</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 33.53423318132165%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Excludes datasets of the CLIP/DataComp suites that are not in this grouping (e.g. Birdsnap, Pascal VOC 2007, FER2013, KITTI, PatchCamelyon, CLEVR, Rendered SST2, SVHN). Several sets are public web images (Country211 comes from YFCC100M, which CLIP&#39;s pre-training data partly contains), so web-scale pre-training can contain test images.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2103.00020v1">CLIP paper (Radford et al., 2021), Appendix A, Table 9: datasets, train/test sizes, metrics</a>
+<span class="muted">· paper · retrieved 2026-10-16</span></li><li><a href="https://arxiv.org/pdf/2103.00020v1">CLIP paper (Radford et al., 2021), Section 3.1 Zero-Shot Transfer</a>
+<span class="muted">· paper · retrieved 2026-10-16</span></li><li><a href="https://raw.githubusercontent.com/LAION-AI/CLIP_benchmark/main/clip_benchmark/datasets/builder.py">CLIP_benchmark dataset builder (dataset names and splits loaded)</a>
+<span class="muted">· code · retrieved 2026-10-16</span></li><li><a href="https://raw.githubusercontent.com/LAION-AI/CLIP_benchmark/main/clip_benchmark/datasets/webdatasets.txt">CLIP_benchmark webdatasets.txt (wds/... dataset names)</a>
+<span class="muted">· code · retrieved 2026-10-16</span></li><li><a href="https://raw.githubusercontent.com/LAION-AI/CLIP_benchmark/main/README.md">CLIP_benchmark README</a>
+<span class="muted">· readme · retrieved 2026-10-16</span></li><li><a href="https://raw.githubusercontent.com/mlfoundations/datacomp/main/tasklist.yml">DataComp evaluation task list (names, test-set sizes, metrics)</a>
+<span class="muted">· code · retrieved 2026-10-16</span></li>  </ul>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <span class="by-logo"><img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24"></span>
+      </a>
+      <p class="build">
+      Built 2026-10-17 ·
+      <a href="../data/matrix.csv">matrix.csv</a> ·
+      <a href="../data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

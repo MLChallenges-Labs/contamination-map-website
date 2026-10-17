@@ -10080,6 +10080,774 @@
   "sources": "https://arxiv.org/pdf/2403.00131v3 https://raw.githubusercontent.com/mims-harvard/UniTS/main/exp/exp_pretrain.py https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/README.md https://arxiv.org/pdf/2106.13008v5"
  },
  {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "datacomp-clip",
+  "level": "related",
+  "reason": "training data was selected to resemble this dataset's training images (via DataComp-1B); the authors state this dataset's test portion was excluded",
+  "sources": "https://huggingface.co/laion/CLIP-ViT-L-14-DataComp.XL-s13B-b90K/raw/main/README.md https://huggingface.co/laion/CLIP-ViT-B-32-256x256-DataComp-s34B-b86K/raw/main/README.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://raw.githubusercontent.com/mlfoundations/datacomp/main/README.md https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "dinov2",
+  "level": "related",
+  "reason": "training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded",
+  "sources": "https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "dinov3",
+  "level": "seen_split_unclear",
+  "reason": "the dataset was used; the source does not say which part",
+  "sources": "https://arxiv.org/pdf/2508.10104v1"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "imagenet-wrn50",
+  "level": "train_seen",
+  "reason": "only the training split was used, not the benchmark's test data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py https://arxiv.org/pdf/2106.08265v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "metaclip-2.5b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2309.16671v6"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "metaclip-2",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2507.22062v3"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "metaclip-400m",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2309.16671v6"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "openclip-laion400m",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (1.02% of the ImageNet evaluation images had a pHash match in LAION-400M.) (via LAION-400M)",
+  "sources": "https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-1k",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "dinov2",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "dinov3",
+  "level": "related",
+  "reason": "related dataset ImageNet-1k (ILSVRC 2012) was used",
+  "sources": "https://arxiv.org/pdf/2508.10104v1 https://arxiv.org/pdf/1902.10811v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "imagenet-wrn50",
+  "level": "related",
+  "reason": "related dataset ImageNet-1k (ILSVRC 2012) was used",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py https://arxiv.org/pdf/2106.08265v2 https://arxiv.org/pdf/1902.10811v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "openclip-laion400m",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (1.35% of the ImageNet-v2 evaluation images had a pHash match in LAION-400M.) (via LAION-400M)",
+  "sources": "https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-v2",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "clip-openai",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2103.00020v1"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "dinov2",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "eva-clip",
+  "level": "test_seen",
+  "reason": "via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "openclip-laion400m",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (5.15% of the ImageNet Sketch evaluation images had a pHash match in LAION-400M.) (via LAION-400M)",
+  "sources": "https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-sketch",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "clip-openai",
+  "level": "related",
+  "reason": "a contamination analysis found test examples of the related dataset ImageNet-Sketch (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2103.00020v1 https://arxiv.org/pdf/2006.16241v3"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "dinov2",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "eva-clip",
+  "level": "related",
+  "reason": "via base model OpenAI CLIP: a contamination analysis found test examples of the related dataset ImageNet-Sketch (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1 https://arxiv.org/pdf/2006.16241v3"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "openclip-laion400m",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (3.80% of the ImageNet-R evaluation images had a pHash match in LAION-400M.) (via LAION-400M)",
+  "sources": "https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-r",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "dinov2",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "openclip-laion400m",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (0.40% of the ImageNet-A evaluation images had a pHash match in LAION-400M.) (via LAION-400M)",
+  "sources": "https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "imagenet-a",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "openclip-laion400m",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (0.10% of the ObjectNet evaluation images had a pHash match in LAION-400M.) (via LAION-400M)",
+  "sources": "https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2"
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "imagenet-shifts",
+  "dataset": "objectnet",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
   "benchmark": "industrial-ad",
   "dataset": "mvtec-ad",
   "model": "aa-clip-mvtec",
@@ -39870,5 +40638,2053 @@
   "level": "train_seen",
   "reason": "only the training split was used, not the benchmark's test data",
   "sources": "https://arxiv.org/pdf/2403.00131v3 https://raw.githubusercontent.com/mims-harvard/UniTS/main/exp/exp_pretrain.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "dinov2",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "openclip-laion400m",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (0.03% of the CIFAR-10 evaluation images had a pHash match in LAION-400M.) (via LAION-400M)",
+  "sources": "https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-10",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "clip-openai",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2103.00020v1"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "dinov2",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "eva-clip",
+  "level": "test_seen",
+  "reason": "via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "openclip-laion400m",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (0.02% of the CIFAR-100 evaluation images had a pHash match in LAION-400M.) (via LAION-400M)",
+  "sources": "https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "cifar-100",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "dinov2",
+  "level": "related",
+  "reason": "training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded",
+  "sources": "https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "food-101",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "clip-openai",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2103.00020v1"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "dinov2",
+  "level": "related",
+  "reason": "training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded",
+  "sources": "https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "eva-clip",
+  "level": "test_seen",
+  "reason": "via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stanford-cars",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "dinov2",
+  "level": "related",
+  "reason": "training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded",
+  "sources": "https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "fgvc-aircraft",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "dinov2",
+  "level": "related",
+  "reason": "training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded",
+  "sources": "https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "oxford-pets",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "dinov2",
+  "level": "related",
+  "reason": "training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded",
+  "sources": "https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "flowers-102",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "dinov2",
+  "level": "related",
+  "reason": "training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded",
+  "sources": "https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "dtd",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "eurosat",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "clip-openai",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2103.00020v1"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "dinov2",
+  "level": "related",
+  "reason": "training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded",
+  "sources": "https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "eva-clip",
+  "level": "test_seen",
+  "reason": "via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper's Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "sun397",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "dinov2",
+  "level": "related",
+  "reason": "training data was selected to resemble this dataset's training images (via LVD-142M); the authors state this dataset's test portion was excluded",
+  "sources": "https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md https://arxiv.org/pdf/2304.07193v2"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "caltech-101",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "gtsrb",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "resisc45",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "clip-openai",
+  "level": "test_seen",
+  "reason": "a contamination analysis found test examples in the pre-training data (21.5% of Country211 test examples were detected as near-duplicates of WIT training images (the largest overlap of the 35 datasets checked); overall zero-shot accuracy changed by only +0.2 points.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2103.00020v1"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "eva-clip",
+  "level": "test_seen",
+  "reason": "via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (21.5% of Country211 test examples were detected as near-duplicates of WIT training images (the largest overlap of the 35 datasets checked); overall zero-shot accuracy changed by only +0.2 points.) (via WIT (WebImageText), OpenAI CLIP pre-training set)",
+  "sources": "https://arxiv.org/pdf/2303.15389v1 https://raw.githubusercontent.com/baaivision/EVA/master/EVA-CLIP/README.md https://arxiv.org/pdf/2103.00020v1"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "country211",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "dinov3",
+  "level": "related",
+  "reason": "related dataset ImageNet-1k (ILSVRC 2012) was used",
+  "sources": "https://arxiv.org/pdf/2508.10104v1 https://cs.stanford.edu/~acoates/stl10/"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "imagenet-wrn50",
+  "level": "related",
+  "reason": "related dataset ImageNet-1k (ILSVRC 2012) was used",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py https://arxiv.org/pdf/2106.08265v2 https://cs.stanford.edu/~acoates/stl10/"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "openclip-laion400m",
+  "level": "related",
+  "reason": "a contamination analysis found test examples of the related dataset ImageNet-1k (ILSVRC 2012) (1.02% of the ImageNet evaluation images had a pHash match in LAION-400M.) (via LAION-400M)",
+  "sources": "https://raw.githubusercontent.com/mlfoundations/open_clip/main/docs/PRETRAINED.md https://raw.githubusercontent.com/mlfoundations/open_clip/main/src/open_clip/pretrained.py https://arxiv.org/pdf/2212.07143v2 https://cs.stanford.edu/~acoates/stl10/"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "stl-10",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "clip-openai",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "datacomp-clip",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "dfn-clip-2b",
+  "level": "not_seen",
+  "reason": "the authors state its test portion was excluded from training",
+  "sources": "https://arxiv.org/pdf/2304.14108v5 https://arxiv.org/pdf/2309.17425v3"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "dfn-clip-5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "dinov2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "dinov3",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "eva-clip-e",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "eva-clip",
+  "level": "unknown",
+  "reason": "unknown for its base model OpenAI CLIP: training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "imagenet-wrn50",
+  "level": "not_seen",
+  "reason": "absent from the complete list of training data",
+  "sources": "https://raw.githubusercontent.com/pytorch/vision/main/torchvision/models/resnet.py"
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "metaclip-2.5b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "metaclip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "metaclip-400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "openclip-laion2b",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "openclip-laion400m",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "siglip-2",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
+ },
+ {
+  "benchmark": "zeroshot-transfer",
+  "dataset": "mnist",
+  "model": "siglip",
+  "level": "unknown",
+  "reason": "training data not disclosed in enough detail",
+  "sources": ""
  }
 ]
