@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../static/logo.svg">
+  <link rel="apple-touch-icon" href="../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/style.css">
+<link rel="stylesheet" href="../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../index.html"><img src="../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../index.html">Platform proposal</a>
+        <a href="../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../contamination-map/index.html">Time series</a>
+          <a href="../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../contamination-map/text/index.html">Text / LLM</a>
+          <a href="../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link active" href="../contamination-map/methodology.html">Methodology</a>
+      </div>
+<h1>Methodology</h1>
+<p class="lede">The map only states what can be traced to a public source. Every non-“Unknown” cell links to a verbatim quote from a paper, model card, dataset card or repository.</p>
+    </div>
+  </div>
+  <main class="container doc">
+
+<section>
+  <h2>Contamination levels</h2>
+  <dl class="levels">
+    <dt><span class="swatch lvl-test_seen">Test</span> Test data seen</dt>
+    <dd>The benchmark&#39;s test data was in the pre-training data.</dd>
+    <dt><span class="swatch lvl-seen_split_unclear">Seen</span> Seen, split unclear</dt>
+    <dd>The dataset was used, but the source does not say which part, so the test data may have been seen.</dd>
+    <dt><span class="swatch lvl-train_seen">Train</span> Training data seen</dt>
+    <dd>Only the benchmark&#39;s training portion of the dataset was used.</dd>
+    <dt><span class="swatch lvl-related">Rel.</span> Related data seen</dt>
+    <dd>A related dataset was used: a subset, superset, resampled version or the same underlying source.</dd>
+    <dt><span class="swatch lvl-not_seen">No</span> Not seen</dt>
+    <dd>The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded.</dd>
+    <dt><span class="swatch lvl-unknown">?</span> Unknown</dt>
+    <dd>Not enough information has been disclosed to tell.</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>What is recorded</h2>
+  <ul>
+    <li><strong>Datasets</strong>, with the names they go by in papers, and how they relate to each other (subset, resampled version, same underlying source).</li>
+    <li><strong>Benchmarks</strong>: the datasets they evaluate on and how their test portion is defined.</li>
+    <li><strong>Models</strong>: what their authors disclose about pre-training data, the shared corpora they use, and any data they say they excluded.</li>
+  </ul>
+  <p>Each model gets a disclosure level:</p>
+  <dl class="levels">
+    <dt>Full list</dt><dd>The authors publish the complete list of pre-training datasets.</dd>
+    <dt>Partial list</dt><dd>Some datasets are named, but the list is not complete.</dd>
+    <dt>Vague</dt><dd>Only a general description (“public datasets from many domains”).</dd>
+    <dt>None</dt><dd>Nothing is disclosed.</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>How a cell's level is assigned</h2>
+  <p>For each benchmark dataset and model, every declared pre-training dataset is compared with the benchmark dataset:</p>
+  <ol>
+    <li>The <strong>same dataset</strong>, used in full or its test split used for training → <span class="badge lvl-test_seen">Test data seen</span></li>
+    <li>The same dataset, used with an unstated split, or with a training split defined by another benchmark → <span class="badge lvl-seen_split_unclear">Seen, split unclear</span></li>
+    <li>The same dataset, restricted to this benchmark's training split → <span class="badge lvl-train_seen">Training data seen</span></li>
+    <li>A <strong>related dataset</strong> (subset, superset, resampled version, same source), or training data <strong>selected to resemble</strong> the dataset (for example web images retrieved because they look like its training images) → <span class="badge lvl-related">Related data seen</span></li>
+  </ol>
+  <p>When several declarations match, the strongest exposure wins (the order above). If the authors state that the test portion was held out, “Test data seen” and “Seen, split unclear” become “Training data seen”. If a statement that data was excluded conflicts with a declaration that it was used, the exposure is kept and the conflict is shown with both quotes.</p>
+  <p>When nothing matches:</p>
+  <ul>
+    <li>if the authors state the dataset (or its test portion) was excluded → <span class="badge lvl-not_seen">Not seen</span>;</li>
+    <li>if the benchmark's test items were all published after the model's stated training-data cutoff → <span class="badge lvl-not_seen">Not seen</span>;</li>
+    <li>if the model has a <strong>full list</strong> of training data, every entry in it has been matched to a known dataset or reviewed as unrelated, none of it is a broad web crawl, and the dataset is not there → <span class="badge lvl-not_seen">Not seen</span>;</li>
+    <li>otherwise → <span class="badge lvl-unknown">Unknown</span>. Absence from a partial or vague disclosure is never read as “not seen”.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Models built on other models</h2>
+  <p>Many models start from a pre-trained base model (for example an anomaly detector built on CLIP, or a distilled language model). They inherit whatever their base model may have seen: a cell shows the base model's exposure when it is stronger, and “Not seen” requires every base model to be “Not seen” as well.</p>
+</section>
+
+<section>
+  <h2>Language models</h2>
+  <p>Language models are mostly trained on web crawls rather than on named datasets, so their pages use three more kinds of evidence:</p>
+  <ul>
+    <li><strong>Contamination analyses.</strong> When the developer or a third party found benchmark test examples in a model's training data (for example by searching the corpus for overlapping text), the cell is <span class="badge lvl-test_seen">Test data seen</span>, with the reported extent. Evidence from anyone other than the developer is labelled <span class="third-party">third-party study</span>.</li>
+    <li><strong>Training stages.</strong> Pre-training and fine-tuning (instruction tuning, reinforcement learning, distillation) are tracked separately. Fine-tuning mixes often include benchmark training sets; such cells say “in fine-tuning data”. A decontamination step applied only to fine-tuning data says nothing about pre-training.</li>
+    <li><strong>Training-data cutoffs.</strong> When a developer states a cutoff date, benchmarks published later cannot be in pre-training. This assumes the stated cutoff is accurate; fine-tuning data collected later is not covered by it.</li>
+  </ul>
+  <p>Image benchmarks (MMMU, ChartQA, …) are only shown for models that accept images; text-only models have an empty slot there.</p>
+  <p>Broad web crawls (Common Crawl and the like) can contain benchmark test sets copied onto the web. A model trained on one is never marked “Not seen” just because the benchmark is absent from its list of sources.</p>
+</section>
+
+<section>
+  <h2>Scores mode</h2>
+  <p>The map can also show benchmark scores instead of contamination levels. Scores come from one public leaderboard per benchmark (for GIFT-Eval: relative CRPS against Seasonal Naive, from its repository at a fixed commit), so that every score in a column was produced the same way. Each square is shaded by the model's rank among the models scored on that dataset; its contamination level stays visible as a corner mark. Benchmarks without such a leaderboard stay empty rather than mixing numbers from papers that used different settings.</p>
+  <p>A leaderboard entry is linked to a model only when the checkpoint it links to is the released model; entries that cannot be matched (for example results from a retrained or fine-tuned variant) are left out, with the reason recorded in the score file.</p>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>The map reflects what is <em>declared</em>. Undeclared or mis-declared data cannot be detected from documents alone.</li>
+    <li>Dataset names are ambiguous (for example, several “Electricity” datasets exist). Entries are matched by hand, and relations between datasets are only recorded with a source.</li>
+    <li>Sources change. Each quote records the date it was retrieved.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Data</h2>
+  <p>The full matrix is available as <a href="data/matrix.csv">CSV</a> and <a href="data/matrix.json">JSON</a>, with the source URLs for each cell.</p>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

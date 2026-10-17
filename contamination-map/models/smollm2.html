@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmolLM2 · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Model</p>
+<h1>SmolLM2</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Hugging Face</dd>
+  <dt>Family</dt><dd>SmolLM · version 135M, 360M, 1.7B</dd>
+  <dt>Released</dt><dd>2024-10-30 <span class="muted small">(HF createdAt of HuggingFaceTB/SmolLM2-1.7B (https://huggingface.co/api/models/HuggingFaceTB/SmolLM2-1.7B); other sizes and Instruct repos created 2024-10-31; paper arXiv v1 2025-02-04)</span></dd>
+<dt>Checkpoints</dt><dd>HuggingFaceTB/SmolLM2-135M, HuggingFaceTB/SmolLM2-360M, HuggingFaceTB/SmolLM2-1.7B, HuggingFaceTB/SmolLM2-135M-Instruct, HuggingFaceTB/SmolLM2-360M-Instruct, HuggingFaceTB/SmolLM2-1.7B-Instruct</dd>  <dt>Weights</dt><dd>Open · apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2502.02737v1">Paper</a><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B">Model card</a><a href="https://github.com/huggingface/smollm">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>46%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 4, Seen, split unclear: 0, Training data seen: 2, Related data seen: 1, Not seen: 0, Unknown: 8">
+<span class="lvl-test_seen" style="flex-grow: 4" title="Test data seen: 4"></span><span class="lvl-train_seen" style="flex-grow: 2" title="Training data seen: 2"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 8" title="Unknown: 8"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">4</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">2</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">1</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">8</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“To support future research and development, we release SmolLM2 alongside the datasets and code used in its training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 7 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The data mixtures of the four pretraining phases are available in Figure 2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Table 9 shows the final composition of SmolTalk dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Appendix F · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>FineWeb-Edu</strong>
+      <span class="muted">· 1 source (complete list) · pre-training</span>
+ · <a href="https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu">homepage</a>      <details><summary>Evidence that SmolLM2 uses it</summary><figure class="evidence">
+  <blockquote>“We adopted a 60% FineWeb-Edu and 40% DCLM ratio (discussed in Section 2.2) for web data”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“It was trained on 11 trillion tokens using a diverse dataset combination: FineWeb-Edu, DCLM, The Stack, along with new mathematics and coding datasets that we curated and will release soon.”</blockquote>
+  <figcaption><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>FineWeb-Edu (filtered CommonCrawl dumps since 2013)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Along with the dataset, which includes all filtered CommonCrawl dumps since 2013, we also release the educational classifier used for the filtering”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · What is being released? · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We then built 📚 FineWeb-Edu by filtering out samples with scores lower than 3.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Filtering and results · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+    <li>
+      <strong>DCLM-Baseline 1.0</strong>
+      <span class="muted">· 1 source (complete list) · pre-training</span>
+ · <a href="https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0">homepage</a>      <details><summary>Evidence that SmolLM2 uses it</summary><figure class="evidence">
+  <blockquote>“DCLM comprises 3.8T tokens filtered using a fastText classifier”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adopted a 60% FineWeb-Edu and 40% DCLM ratio (discussed in Section 2.2) for web data”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>DCLM-Pool (Common Crawl)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Entire corpus is filtered Common Crawl (data prior to 2023).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“DCLM-Baseline is a subset of the DCLM-Pool, which is a corpus of 240 trillion tokens derived from Common Crawl.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Out-of-Scope Use · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“DCLM-P OOL is an unfiltered web-text corpus comprised of all Common Crawl [45] data prior to 2023.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+    <li>
+      <strong>SmolTalk</strong>
+      <span class="muted">· 15 sources (complete list) · fine-tuning</span>
+ · <a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk">homepage</a>      <details><summary>Evidence that SmolLM2 uses it</summary><figure class="evidence">
+  <blockquote>“We performed supervised fine-tuning of our base SmolLM2 on SmolTalk for 2 epochs”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 5.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“You can find the SFT dataset here: https://huggingface.co/datasets/HuggingFaceTB/smoltalk.”</blockquote>
+  <figcaption><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>Smol-Magpie-Ultra</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Smol-Magpie-Ultra*: the core component of our mix, consisting of 400K samples generated using the Magpie pipeline with /Llama-3.1-405B-Instruct.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Smol-contraints</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Decontaminated against IFEval.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Smol-contraints: a 36K-sample dataset that trains models to follow specific constraints”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Smol-rewrite</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Smol-rewrite: an 50k-sample collection focused on text rewriting tasks”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Smol-summarize</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Smol-summarize: an 100k-sample dataset specialized in email and news summarization.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>OpenHermes2.5 (100k samples)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">OpenHermes2.5 itself includes MetaMathQA according to the SmolLM2 paper.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“OpenHermes2.5: we added 100k samples from [OpenHermes2.5](https://huggingface.co/datasets/teknium/OpenHermes-2.5)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MetaMathQA (Yu et al., 2023), which is also included in OpenHermes2.5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 5.1.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>MetaMathQA (50k samples)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Augmented from GSM8K and MATH training sets (MetaMathQA card); see the gsm8k/math train entries below.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“MetaMathQA: we add this [dataset](https://huggingface.co/datasets/meta-math/MetaMathQA?) to improve the model on mathematics and reasoning, we include 50k random samples.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All MetaMathQA data are augmented from the training sets of GSM8K and MATH.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/meta-math/MetaMathQA/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · MetaMathQA card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a>  <span class="muted">· split: train of llm-classic · fine-tuning</span>
+<p class="small">Derived entry: MetaMathQA rewrites/augments GSM8K training questions.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“MetaMathQA: we add this [dataset](https://huggingface.co/datasets/meta-math/MetaMathQA?) to improve the model on mathematics and reasoning, we include 50k random samples.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“You can check the `original_question` in `meta-math/MetaMathQA`, each item is from the GSM8K or MATH train set.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/meta-math/MetaMathQA/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · MetaMathQA card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a>  <span class="muted">· split: train of llm-classic · fine-tuning</span>
+<p class="small">Derived entry: MetaMathQA rewrites/augments MATH training questions.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“MetaMathQA: we add this [dataset](https://huggingface.co/datasets/meta-math/MetaMathQA?) to improve the model on mathematics and reasoning, we include 50k random samples.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All MetaMathQA data are augmented from the training sets of GSM8K and MATH.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/meta-math/MetaMathQA/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · MetaMathQA card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>NuminaMath-CoT</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">NuminaMath-CoT&#39;s source breakdown includes gsm8k (7,345), math (7,478) and amc_aime (4,072) problems; its card does not state which benchmark splits these come from (counts are close to the GSM8K/MATH train sizes). 112k samples used in SmolTalk (SmolLM2 paper Table 9).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“NuminaMath-CoT: we find that this [dataset](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT) helps on mathematics, especially hard problems found in benchmarks such as MATH.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“gsm8k | 7345”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/AI-MO/NuminaMath-CoT/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Source breakdown · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“math | 7478”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/AI-MO/NuminaMath-CoT/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Source breakdown · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“amc_aime | 4072”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/AI-MO/NuminaMath-CoT/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Source breakdown · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Self-Oss-Starcoder2-Instruct</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Self-Oss-Starcoder2-Instruct: we use this [dataset](https://huggingface.co/datasets/bigcode/self-oss-instruct-sc2-exec-filter-50k) to improve coding capabilities.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SystemChats2.0</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“SystemChats2.0: to make the model support a variety of system prompt formats we add 30k samples from the [SystemChat-2.0]”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>LongAlign</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“so we add english samples (with less than 16k tokens) from the [LongAlign-10k](https://huggingface.co/datasets/THUDM/LongAlign-10k) dataset”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Everyday-conversations</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Everyday-conversations: this [dataset](https://huggingface.co/datasets/HuggingFaceTB/everyday-conversations-llama3.1-2k) includes multi-turn everyday conversations”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>APIGen-Function-Calling</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“APIGen-Function-Calling: we use 80k samples from [apigen-function-calling](https://huggingface.co/datasets/argilla/apigen-function-calling)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Explore-Instruct-Rewriting</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Explore-Instruct-Rewriting: 30k samples from this rewriting [dataset](https://huggingface.co/datasets/Wanfq/Explore_Instruct_Rewriting_32k).”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>StarCoderData</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For code data, following Aryabumi et al. (2024), we incorporated StarCoderData, consisting of 250B tokens across 80 programming languages”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Jupyter Notebooks from StarCoder2</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“also added Jupyter Notebooks from StarCoder2 (Lozhkov et al., 2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Stack-Edu</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Released by the developers (paper Section 3.4).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“constructed Stack-Edu, a filtered variant of StarCoder2Data focusing on educational and well-documented code.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>OpenWebMath (OWM)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“For stage 2 (6T to 8T tokens), we added OWM to the mixture at a 5% ratio”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>InfiMM-WebMath (text-only English portion)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“text-only English portion of InfiMM-WebMath with OWM”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>FineMath 4+</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">FineMath is Common Crawl math pages filtered by a classifier; decontaminated against GSM8K, MATH and MMLU.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we introduced our highest quality mathematical datasets, InfiWebMath-3+, and FineMath 4+.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>InfiWebMath-3+</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Decontaminated against GSM8K, MATH and MMLU.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we introduced our highest quality mathematical datasets, InfiWebMath-3+, and FineMath 4+.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a>  <span class="muted">· split: train of llm-classic</span>
+<p class="small">Decay stage (10T-11T tokens), 0.02% of the mixture; augmented GSM8K training questions.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“0.02% to AugGSM8K (Li et al., 2024a), an augmented version of the GSM8K benchmark&#39;s training set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Cosmopedia v2</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Component of smollm-corpus.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Cosmopedia v2 (Allal et al., 2024) at 4%, which provides 30B tokens of highquality synthetic textbooks, blog posts, and stories.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Dolma books subset (long-context extension)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“sourced from DCLM (10%), FineWeb-Edu (10%), and the books subset of Dolma (20%)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Smol-SmolTalk (HuggingFaceTB/smol-smoltalk)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">SFT data of SmolLM2-135M-Instruct and SmolLM2-360M-Instruct; subset of SmolTalk that excludes advanced math datasets.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“You can find the SFT dataset here: https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk”</blockquote>
+  <figcaption><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For post-training, we applied SFT using a filtered version of SmolTalk3 , removing complex instruction-following tasks (e.g., function calling) and hard examples from MagPie-Ultra”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>UltraFeedback (ultrafeedback_binarized)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">DPO data for all instruct sizes.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We then applied Direct Preference Optimization (DPO) using [UltraFeedback](https://huggingface.co/datasets/HuggingFaceH4/ultrafeedback_binarized).”</blockquote>
+  <figcaption><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“UltraFeedback proved the most consistently effective across benchmarks, improving MT-Bench, MMLU-Pro, and MATH.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 5.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Dataset <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a>      <span class="muted">· test portion excluded from pre-training data</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we decontaminate each dataset against GSM8K, MATH and MMLU using 13-gram matching and a minimum overlap ratio with the longest common subsequence of 0.6.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a>      <span class="muted">· test portion excluded from pre-training data</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we decontaminate each dataset against GSM8K, MATH and MMLU using 13-gram matching and a minimum overlap ratio with the longest common subsequence of 0.6.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>      <span class="muted">· test portion excluded from pre-training data</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we decontaminate each dataset against GSM8K, MATH and MMLU using 13-gram matching and a minimum overlap ratio with the longest common subsequence of 0.6.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Contamination analyses</h2>
+  <p class="muted small">Analyses that found benchmark test data in this model's training data, or in a corpus it uses.</p>
+  <ul class="rows">
+    <li>
+      <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">DCLM&#39;s MMLU overlap rule (question last sentence + one answer option on the same page; recall-oriented, likely overestimate) flagged 0.007% of DCLM-Baseline documents (vs 0.001% Dolma-V1.7, 0.009% FineWeb-Edu). Removing the flagged overlaps did not lower MMLU accuracy at 7B-2x scale (51.8 -&gt; 52.7).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“the percentage of documents in DCLM- BASELINE that are flagged by our MMLU-specific decontamination is roughly similar to that for other high-performing contemporary datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Note that because our flagging rule prioritizes recall over precision, these numbers are likely to be overestimates of the true contamination rates.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/hellaswag.html">HellaSwag</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">Overlaps between HellaSwag test examples and DCLM-Baseline pages were detected and removed for an ablation (fraction not reported in text); removal did not lower HellaSwag accuracy (77.9 -&gt; 78.4). In the 10-gram token-overlap analysis HellaSwag is the notable exception with a performance gap between full and &#39;clean&#39; subsets (Figure 12).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Specifically, we attempt to remove examples from these two test sets that exist in DCLM- BASELINE.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 4.6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“While Hellaswag appears to be a notable exception, we showed in Section 4.6 that removing contaminated Hellaswag examples from our training set does not decrease performance.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">27.70% of (downsampled) MMLU test questions are &#39;dirty&#39; in DCLM-baseline.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/mmlu-pro.html">MMLU-Pro</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">32.6% of ARC-Challenge test questions are &#39;dirty&#39; in DCLM-baseline (17x more than in Pile-train).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For example, ARC-Challenge has 17× more and MMLU has 1.1× more dirty entries.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (DCLM&#39;s MMLU overlap rule (question last sentence + one answer option on the same page; recall-oriented, likely overestimate) flagged 0.007% of DCLM-Baseline documents (vs 0.001% Dolma-V1.7, 0.009% FineWeb-Edu). Removing the flagged overlaps did not lower MMLU accuracy at 7B-2x scale (51.8 -&gt; 52.7).) (via DCLM-Baseline 1.0); this contradicts a statement that the data was excluded</span> <span class="score-chip">Accuracy (%) 50.9</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“DCLM comprises 3.8T tokens filtered using a fastText classifier”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adopted a 60% FineWeb-Edu and 40% DCLM ratio (discussed in Section 2.2) for web data”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“the percentage of documents in DCLM- BASELINE that are flagged by our MMLU-specific decontamination is roughly similar to that for other high-performing contemporary datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Note that because our flagging rule prioritizes recall over precision, these numbers are likely to be overestimates of the true contamination rates.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we decontaminate each dataset against GSM8K, MATH and MMLU using 13-gram matching and a minimum overlap ratio with the longest common subsequence of 0.6.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</span> <span class="score-chip">Accuracy (%) 30.3</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“0.02% to AugGSM8K (Li et al., 2024a), an augmented version of the GSM8K benchmark&#39;s training set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we decontaminate each dataset against GSM8K, MATH and MMLU using 13-gram matching and a minimum overlap ratio with the longest common subsequence of 0.6.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· in fine-tuning data: only the training split was used, not the benchmark&#39;s test data (via SmolTalk)</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“We performed supervised fine-tuning of our base SmolLM2 on SmolTalk for 2 epochs”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 5.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“You can find the SFT dataset here: https://huggingface.co/datasets/HuggingFaceTB/smoltalk.”</blockquote>
+  <figcaption><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MetaMathQA: we add this [dataset](https://huggingface.co/datasets/meta-math/MetaMathQA?) to improve the model on mathematics and reasoning, we include 50k random samples.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All MetaMathQA data are augmented from the training sets of GSM8K and MATH.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/meta-math/MetaMathQA/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · MetaMathQA card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (32.6% of ARC-Challenge test questions are &#39;dirty&#39; in DCLM-baseline (17x more than in Pile-train).) [third-party study] (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 62</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“DCLM comprises 3.8T tokens filtered using a fastText classifier”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adopted a 60% FineWeb-Edu and 40% DCLM ratio (discussed in Section 2.2) for web data”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For example, ARC-Challenge has 17× more and MMLU has 1.1× more dirty entries.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Overlaps between HellaSwag test examples and DCLM-Baseline pages were detected and removed for an ablation (fraction not reported in text); removal did not lower HellaSwag accuracy (77.9 -&gt; 78.4). In the 10-gram token-overlap analysis HellaSwag is the notable exception with a performance gap between full and &#39;clean&#39; subsets (Figure 12).) (via DCLM-Baseline 1.0)</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“DCLM comprises 3.8T tokens filtered using a fastText classifier”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adopted a 60% FineWeb-Edu and 40% DCLM ratio (discussed in Section 2.2) for web data”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Specifically, we attempt to remove examples from these two test sets that exist in DCLM- BASELINE.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 4.6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“While Hellaswag appears to be a notable exception, we showed in Section 4.6 that removing contaminated Hellaswag examples from our training set does not decrease performance.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Accuracy (%) 66.9</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 22</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“DCLM comprises 3.8T tokens filtered using a fastText classifier”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We adopted a 60% FineWeb-Edu and 40% DCLM ratio (discussed in Section 2.2) for web data”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· in fine-tuning data: related dataset MATH (Mathematics Aptitude Test of Heuristics) was used (via SmolTalk)</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We performed supervised fine-tuning of our base SmolLM2 on SmolTalk for 2 epochs”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2502.02737v1">arxiv.org</a>
+<span class="muted">· paper · Section 5.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“You can find the SFT dataset here: https://huggingface.co/datasets/HuggingFaceTB/smoltalk.”</blockquote>
+  <figcaption><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MetaMathQA: we add this [dataset](https://huggingface.co/datasets/meta-math/MetaMathQA?) to improve the model on mathematics and reasoning, we include 50k random samples.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset composition · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All MetaMathQA data are augmented from the training sets of GSM8K and MATH.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/meta-math/MetaMathQA/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · MetaMathQA card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We therefore evaluate our models only on the remaining 500 held-out problems. We selected these 500 test problems uniformly at random, and we believe they are representative of the test set as a whole.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/prm800k/main/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · MATH Splits · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This dataset contains a subset of 500 problems from the MATH benchmark that OpenAI created in their _Let&#39;s Verify Step by Step_ paper.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceH4/MATH-500/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">1.7B: 11T tokens in 4 stages + 8k context extension; 360M (4T) and 135M (2T) used a single-stage mix of the same source families (filtered DCLM, FineWeb-Edu, Stack-Edu, InfiMM-WebMath, FineMath, Cosmopedia) per paper Section 6. Instruct models: SFT on SmolTalk (1.7B) or Smol-SmolTalk (135M/360M), then DPO on UltraFeedback. SmolTalk includes MetaMathQA (GSM8K/MATH train-derived) and NuminaMath-CoT; AugGSM8K (GSM8K train-derived) was in the pre-training decay mix.
+
+Decontamination statements not shown as cells (they name no benchmark tracked here, or none at all): IFEval.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2502.02737v1">SmolLM2: When Smol Goes Big - Data-Centric Training of a Small Language Model (arXiv 2502.02737v1)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B/raw/main/README.md">SmolLM2-1.7B</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct/raw/main/README.md">SmolLM2-1.7B-Instruct</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-360M/raw/main/README.md">SmolLM2-360M</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-135M/raw/main/README.md">SmolLM2-135M</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct/raw/main/README.md">SmolLM2-360M-Instruct</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/raw/main/README.md">SmolLM2-135M-Instruct</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk/raw/main/README.md">SmolTalk</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MMLU-Pro · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Dataset</p>
+<h1>MMLU-Pro</h1>
+<p class="lede">12,032 test questions in 14 disciplines with (typically) ten answer options, plus a 70-question validation split used for few-shot prompts. 6,810 questions come from the original MMLU (after removing trivial and noisy ones) and 5,222 are newly added from STEM websites, TheoremQA and SciBench.</p>    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+<dt>Also known as</dt><dd>MMLU-Pro, MMLU Pro</dd><dt>Domain</dt><dd>knowledge</dd><dt>License</dt><dd>MIT (TIGER-Lab/MMLU-Pro HF card)</dd><dt>Homepage</dt><dd><a href="https://github.com/TIGER-AI-Lab/MMLU-Pro">github.com</a></dd></dl>
+
+<section>
+  <h2>Related datasets</h2>
+  <ul class="rows">
+    <li>
+      derived from <a href="mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>
+<p class="small">6,810 of 12,032 questions are filtered MMLU questions with distractors added (card table); the rest come from other sources.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“**Original MMLU Questions:** Part of the dataset comes from the original MMLU dataset. We remove the trivial and ambiguous questions.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · 2. Dataset Summary · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Additionally, MMLU-Pro eliminates the trivial and noisy questions in MMLU.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.01574v6">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/amber.html#llm-recent--mmlu-pro">LLM360 Amber</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/bloom.html#llm-recent--mmlu-pro">BLOOM</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-3-5-sonnet.html#llm-recent--mmlu-pro">Claude 3.5 Sonnet</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-3-7-sonnet.html#llm-recent--mmlu-pro">Claude 3.7 Sonnet</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-3.html#llm-recent--mmlu-pro">Claude 3 (Opus, Sonnet, Haiku)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-4.html#llm-recent--mmlu-pro">Claude Opus 4 and Claude Sonnet 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-fable-5.html#llm-recent--mmlu-pro">Claude Fable 5 / Claude Mythos 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-mythos-preview.html#llm-recent--mmlu-pro">Claude Mythos Preview</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-opus-4-5.html#llm-recent--mmlu-pro">Claude Opus 4.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-opus-5.html#llm-recent--mmlu-pro">Claude Opus 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/claude-sonnet-5.html#llm-recent--mmlu-pro">Claude Sonnet 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/dclm-7b-it.html#llm-recent--mmlu-pro">DCLM-7B-IT (DCLM-IT-7B)</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/dclm-7b.html#llm-recent--mmlu-pro">DCLM-7B (DCLM-Baseline-7B)</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1-0528.html#llm-recent--mmlu-pro">DeepSeek-R1-0528</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1-distill.html#llm-recent--mmlu-pro">DeepSeek-R1-Distill</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1.html#llm-recent--mmlu-pro">DeepSeek-R1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state its test portion was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3-0324.html#llm-recent--mmlu-pro">DeepSeek-V3-0324</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.1.html#llm-recent--mmlu-pro">DeepSeek-V3.1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.2-exp.html#llm-recent--mmlu-pro">DeepSeek-V3.2-Exp</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.2.html#llm-recent--mmlu-pro">DeepSeek-V3.2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.html#llm-recent--mmlu-pro">DeepSeek-V3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v4.1-flash.html#llm-recent--mmlu-pro">DeepSeek-V4.1-Flash</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v4.html#llm-recent--mmlu-pro">DeepSeek-V4 (Pro / Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-1-5.html#llm-recent--mmlu-pro">Gemini 1.5 (Pro, Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-2-5.html#llm-recent--mmlu-pro">Gemini 2.5 (Pro, Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-3-pro.html#llm-recent--mmlu-pro">Gemini 3 Pro</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemini-4-argon.html#llm-recent--mmlu-pro">Gemini 4 Argon</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-2.html#llm-recent--mmlu-pro">Gemma 2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-3.html#llm-recent--mmlu-pro">Gemma 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-3n.html#llm-recent--mmlu-pro">Gemma 3n</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gemma-4.html#llm-recent--mmlu-pro">Gemma 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-4.html#llm-recent--mmlu-pro">GPT-4</a></td>
+        <td><span class="badge lvl-related">Related data seen</span></td>
+        <td class="small">a contamination analysis found test examples of the related dataset MMLU (Measuring Massive Multitask Language Understanding) (~0.6% of 1000 sampled MMLU test examples matched GPT-4 pre-training data (50-character substring match))</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-4o.html#llm-recent--mmlu-pro">GPT-4o</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-5-2.html#llm-recent--mmlu-pro">GPT-5.2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-5.html#llm-recent--mmlu-pro">GPT-5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-6-astra.html#llm-recent--mmlu-pro">GPT-6 Astra</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/gpt-oss.html#llm-recent--mmlu-pro">gpt-oss</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/internvl3.5.html#llm-recent--mmlu-pro">InternVL3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen3: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/internvl3.html#llm-recent--mmlu-pro">InternVL3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen2.5: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/k2-65b.html#llm-recent--mmlu-pro">LLM360 K2-65B (K2 Diamond)</a></td>
+        <td><span class="badge lvl-related">Related data seen</span></td>
+        <td class="small">a contamination analysis found test examples of the related dataset MMLU (Measuring Massive Multitask Language Understanding) (MMLU test questions are also substantially &#39;dirty&#39; in Pile-train: DCLM-baseline (27.70%) has only 1.1x more dirty entries than Pile-train. Exact Pile-train rate is in Table 2 (not reliably extracted from the PDF text).) [third-party study] (via The Pile)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/k2-horizon.html#llm-recent--mmlu-pro">K2-Horizon</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/k2-v2.html#llm-recent--mmlu-pro">K2-V2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-2.html#llm-recent--mmlu-pro">Llama 2</a></td>
+        <td><span class="badge lvl-related">Related data seen</span></td>
+        <td class="small">a contamination analysis found test examples of the related dataset MMLU (Measuring Massive Multitask Language Understanding) (MMLU-Humanities (L=50): 709 of 4,705 samples (15%) &#39;not clean&#39; (&gt;=20% token contamination) and 520 (11%) &#39;dirty&#39; (&gt;=80%); flagged as boosted by contamination. MMLU-Overall for 70B: 2,180 of 14,042 (15.5%) not clean, 1,536 (10.9%) dirty, with a small effect on the overall score (-0.9 clean-vs-mean delta).)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.1.html#llm-recent--mmlu-pro">Llama 3.1</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the pre-training data (8-gram overlap gave contamination scores too high to estimate a performance gain, even at higher thresholds; percentage not reported (dash in Table 15).)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.2-vision.html#llm-recent--mmlu-pro">Llama 3.2-Vision (11B, 90B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.2.html#llm-recent--mmlu-pro">Llama 3.2 (1B, 3B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.3.html#llm-recent--mmlu-pro">Llama 3.3 70B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.html#llm-recent--mmlu-pro">Meta Llama 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llama-4.html#llm-recent--mmlu-pro">Llama 4 (Scout, Maverick)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llava-onevision-1.5.html#llm-recent--mmlu-pro">LLaVA-OneVision-1.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen3: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/llava-onevision.html#llm-recent--mmlu-pro">LLaVA-OneVision</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model SigLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/ministral-3.html#llm-recent--mmlu-pro">Ministral 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-7b.html#llm-recent--mmlu-pro">Mistral 7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-large-3.html#llm-recent--mmlu-pro">Mistral Large 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-medium-3.5.html#llm-recent--mmlu-pro">Mistral Medium 3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mistral-small-4.html#llm-recent--mmlu-pro">Mistral Small 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/mixtral-8x7b.html#llm-recent--mmlu-pro">Mixtral 8x7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/molmo.html#llm-recent--mmlu-pro">Molmo (0924)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/molmo2.html#llm-recent--mmlu-pro">Molmo2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen3: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/o1.html#llm-recent--mmlu-pro">OpenAI o1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/o3.html#llm-recent--mmlu-pro">OpenAI o3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-1.html#llm-recent--mmlu-pro">OLMo (February 2024)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-2-1124.html#llm-recent--mmlu-pro">OLMo 2 (November 2024)</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-3.1.html#llm-recent--mmlu-pro">Olmo 3.1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-3.html#llm-recent--mmlu-pro">Olmo 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/olmo-hybrid-7b.html#llm-recent--mmlu-pro">Olmo Hybrid 7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-3.5.html#llm-recent--mmlu-pro">Phi-3.5 (mini / MoE)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-3.html#llm-recent--mmlu-pro">Phi-3 (mini / small / medium)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini-flash-reasoning.html#llm-recent--mmlu-pro">Phi-4-mini-flash-reasoning</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini-reasoning.html#llm-recent--mmlu-pro">Phi-4-mini-reasoning</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini.html#llm-recent--mmlu-pro">Phi-4-mini</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-reasoning.html#llm-recent--mmlu-pro">Phi-4-reasoning / Phi-4-reasoning-plus</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-4.html#llm-recent--mmlu-pro">Phi-4</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state its test portion was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/phi-slimmoe.html#llm-recent--mmlu-pro">Phi-mini-MoE / Phi-tiny-MoE (SlimMoE)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/pixtral-12b.html#llm-recent--mmlu-pro">Pixtral 12B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/pixtral-large.html#llm-recent--mmlu-pro">Pixtral Large</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/pythia-deduped.html#llm-recent--mmlu-pro">Pythia (deduplicated)</a></td>
+        <td><span class="badge lvl-related">Related data seen</span></td>
+        <td class="small">a contamination analysis found test examples of the related dataset MMLU (Measuring Massive Multitask Language Understanding) (MMLU test questions are also substantially &#39;dirty&#39; in Pile-train: DCLM-baseline (27.70%) has only 1.1x more dirty entries than Pile-train. Exact Pile-train rate is in Table 2 (not reliably extracted from the PDF text).) [third-party study] (via The Pile)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/pythia.html#llm-recent--mmlu-pro">Pythia</a></td>
+        <td><span class="badge lvl-related">Related data seen</span></td>
+        <td class="small">a contamination analysis found test examples of the related dataset MMLU (Measuring Massive Multitask Language Understanding) (MMLU test questions are also substantially &#39;dirty&#39; in Pile-train: DCLM-baseline (27.70%) has only 1.1x more dirty entries than Pile-train. Exact Pile-train rate is in Table 2 (not reliably extracted from the PDF text).) [third-party study] (via The Pile)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen2.5-vl.html#llm-recent--mmlu-pro">Qwen2.5-VL</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen2.5: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen2.5.html#llm-recent--mmlu-pro">Qwen2.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-2507.html#llm-recent--mmlu-pro">Qwen3-2507 (Instruct-2507 / Thinking-2507)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-next.html#llm-recent--mmlu-pro">Qwen3-Next</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-vl.html#llm-recent--mmlu-pro">Qwen3-VL</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen3: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.5.html#llm-recent--mmlu-pro">Qwen3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.6.html#llm-recent--mmlu-pro">Qwen3.6</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.8-flash-next.html#llm-recent--mmlu-pro">Qwen3.8-Flash-Next</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.8.html#llm-recent--mmlu-pro">Qwen3.8</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.html#llm-recent--mmlu-pro">Qwen3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/smollm2.html#llm-recent--mmlu-pro">SmolLM2</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></td>
+        <td><a href="../models/smollm3.html#llm-recent--mmlu-pro">SmolLM3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Also incorporates questions from TheoremQA and SciBench (not registry datasets). Whether the MMLU-derived questions come from MMLU&#39;s test split only is not stated in the sources read.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2406.01574v6">MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark (arXiv v6)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro/raw/main/README.md">TIGER-Lab/MMLU-Pro dataset card</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/TIGER-AI-Lab/MMLU-Pro/main/README.md">TIGER-AI-Lab/MMLU-Pro README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

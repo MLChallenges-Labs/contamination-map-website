@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmolLM3 · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Model</p>
+<h1>SmolLM3</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Hugging Face</dd>
+  <dt>Family</dt><dd>SmolLM · version 3B</dd>
+  <dt>Released</dt><dd>2025-07-08 <span class="muted small">(HF createdAt of HuggingFaceTB/SmolLM3-3B (https://huggingface.co/api/models/HuggingFaceTB/SmolLM3-3B); SmolLM3-3B-Base repo created 2025-06-19)</span></dd>
+<dt>Training cutoff</dt><dd>2025-06-01<details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Knowledge Cutoff Date: June 2025”</blockquote>
+  <figcaption><a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B/raw/main/chat_template.jinja">huggingface.co</a>
+<span class="muted">· code · chat template system metadata · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“a metadata section that includes the date, knowledge cut-off date, and current reasoning mode.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Chat template · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details></dd><dt>Checkpoints</dt><dd>HuggingFaceTB/SmolLM3-3B-Base, HuggingFaceTB/SmolLM3-3B</dd>  <dt>Weights</dt><dd>Open · apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B">Model card</a><a href="https://github.com/huggingface/smollm">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>0%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 15">
+<span class="lvl-unknown" style="flex-grow: 15" title="Unknown: 15"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">15</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“Fully open model**: open weights + full training details including public data mixture and training configs”</blockquote>
+  <figcaption><a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Here you can find the training configs for [SmoLLM3-3B-Base](https://huggingface.co/HuggingFaceTB/SmolLM3-3B-Base) using [nanotron](https://github.com/huggingface/nanotron/) with exact training details and data mixtures.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smollm3-configs/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This dataset contains three subsets (Mid, SFT, Preference) that correspond to the three phases of Post-Training for [SmolLM3-3B]”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>FineWeb-Edu</strong>
+      <span class="muted">· 1 source (complete list) · pre-training</span>
+ · <a href="https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu">homepage</a>      <details><summary>Evidence that SmolLM3 uses it</summary><figure class="evidence">
+  <blockquote>“Web: 85% (12% multilingual) - FineWeb-Edu, DCLM, FineWeb2 and FineWeb2-HQ”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Stage 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>FineWeb-Edu (filtered CommonCrawl dumps since 2013)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Along with the dataset, which includes all filtered CommonCrawl dumps since 2013, we also release the educational classifier used for the filtering”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · What is being released? · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We then built 📚 FineWeb-Edu by filtering out samples with scores lower than 3.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Filtering and results · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+    <li>
+      <strong>SmolTalk2</strong>
+      <span class="muted">· 16 sources (complete list) · fine-tuning</span>
+ · <a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2">homepage</a>      <details><summary>Evidence that SmolLM3 uses it</summary><figure class="evidence">
+  <blockquote>“This dataset contains three subsets (Mid, SFT, Preference) that correspond to the three phases of Post-Training for [SmolLM3-3B]”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Post-training included midtraining on 140B reasoning tokens followed by supervised fine-tuning and alignment via Anchored Preference Optimization (APO).”</blockquote>
+  <figcaption><a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>Llama-Nemotron-Post-Training-Dataset (Mid, reasoning_r1)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Reasoning mid-training (SmolLM3 post-training phase 1).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[Llama-Nemotron-Post-Training-Dataset](https://huggingface.co/datasets/nvidia/Llama-Nemotron-Post-Training-Dataset): 3.64M rows”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Mid-Training · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>OpenThoughts3-1.2M</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Used in mid-training and in SFT (think and no_think variants).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M): 1.14M rows.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Mid-Training · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SmolTalk (re-generated/translated subsets: multilingual-8languages, everyday-conversations, systemchats-30k, smol-magpie-ultra, explore-instruct-rewriting, smol-rewrite, smol-summarize)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“(multilingual-8languages): 244736 rows generated with Qwen3-32B with the prompts in SmolTalk.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>LongAlign-64k-context-lang-annotated</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“LongAlign-64k-context-lang-annotated: 7526 rows generated with Qwen3-32B with the prompts in LongAlign-64k.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>smolagents-toolcalling-traces</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“smolagents-toolcalling-traces: 9079 rows.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Multi-Turn IF</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Multi-Turn IF: 28217 rows.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>s1k-1.1</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[s1k-1.1](https://huggingface.co/datasets/open-r1/s1K-1.1): 835 rows.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Aya dataset (Qwen3-32B think)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[Aya](https://huggingface.co/datasets/CohereLabs/aya_dataset): 15222 rows generated with Qwen3-32B with the prompts in Aya.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Table-GPT</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[Table-GPT](https://huggingface.co/datasets/LipengCS/Table-GPT): 13201 rows generated with Qwen3-32B with the prompts in Table-GPT.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Mixture of Thoughts (science)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[Mixture of Thoughts](https://huggingface.co/datasets/open-r1/Mixture-of-Thoughts) (science): 86110 rows where we remove the reasoning trace.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Tulu 3 SFT Personas IF</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[Tulu 3 SFT Personas IF](https://huggingface.co/datasets/allenai/tulu-3-sft-personas-instruction-following): 29970 rows.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>hermes-function-calling-v1</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[hermes-function-calling-v1](https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1): 8961 rows.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>OpenHermes-2.5</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Includes MetaMathQA (GSM8K/MATH-train-derived) per SmolLM2 paper.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[OpenHermes-2.5](https://huggingface.co/datasets/teknium/OpenHermes-2.5): 384900 rows.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>xlam-traces</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“xlam-traces_no_think”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · SFT stats table · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Tulu 3 8B Preference Mixture (no_think)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“[Tulu 3 8B Preference Mixture (`no_think`)](https://huggingface.co/datasets/allenai/llama-3.1-tulu-3-8b-preference-mixture): 231k rows.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Preference Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Tulu 3 8B Preference Mixture (think, Qwen3-32B chosen / Qwen3-0.6B rejected)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Tulu 3 8B Preference Mixture (`think`): 216k rows where we generate the chosen responses with Qwen3-32B and the rejected responses with Qwen3-0.6B.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Preference Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>FineWeb2 and FineWeb2-HQ</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Web: 85% (12% multilingual) - FineWeb-Edu, DCLM, FineWeb2 and FineWeb2-HQ”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Data mixture and training stages, Stage 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>The Stack v2 (16 programming languages)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Code: 12% - The Stack v2 (16 programming languages), StarCoder2 pull requests, Jupyter and Kaggle notebooks, GitHub issues, and StackExchange.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Stage 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>StarCoder2 pull requests, Jupyter and Kaggle notebooks, GitHub issues</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Code: 12% - The Stack v2 (16 programming languages), StarCoder2 pull requests, Jupyter and Kaggle notebooks, GitHub issues, and StackExchange.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Stage 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>StackExchange</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Code: 12% - The Stack v2 (16 programming languages), StarCoder2 pull requests, Jupyter and Kaggle notebooks, GitHub issues, and StackExchange.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Stage 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>FineMath3+ and InfiWebMath3+</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Math: 3% - FineMath3+ and InfiWebMath3+”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Stage 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Stack-Edu</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Code: 15% - Adding Stack-Edu”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Stage 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>FineMath4+, InfiWebMath4+ and MegaMath (Qwen Q&amp;A, Pro synthetic rewrites, text-code interleaved blocks)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Math: 10% - Introducing FineMath4+, InfiWebMath4+, and MegaMath (including Qwen Q&amp;A, Pro synthetic rewrites, and text-code interleaved blocks)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Stage 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>OpenMathReasoning (and other instruction/reasoning datasets in decay)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Stage 3 config also lists openmathinstruct-2, open-codereasoning-4k, natural_reasoning.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Math: 13% - upsampling math data and introducing instruction and reasoning datasets such as OpenMathReasoning”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Stage 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>cosmopedia2</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Cosmopedia v2 (smollm-corpus component).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“- /scratch/smollm3-data-part1/cosmopedia2”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smollm3-configs/raw/main/stage3_9T_11T.yaml">huggingface.co</a>
+<span class="muted">· code · stage 3 dataset list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>dolmino_math_synth_gsm_gsm8k</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Name indicates GSM8K-derived synthetic math from Dolmino; the config does not state which GSM8K split it derives from (see open_questions).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“- /scratch/smollm3-data-part1/dolmino_math_synth_gsm_gsm8k”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smollm3-configs/raw/main/stage3_9T_11T.yaml">huggingface.co</a>
+<span class="muted">· code · stage 3 dataset list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>tiny-gsm-mind (problem-solving, 2students)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">TinyGSM-based synthetic math conversations; relation to GSM8K items not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“- /scratch/smollm3-data-part1/tiny-gsm-mind-problem-solving”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smollm3-configs/raw/main/stage3_9T_11T.yaml">huggingface.co</a>
+<span class="muted">· code · stage 3 dataset list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>openmathinstruct-2</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“- /scratch/smollm3-data-part1/openmathinstruct-2”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smollm3-configs/raw/main/stage3_9T_11T.yaml">huggingface.co</a>
+<span class="muted">· code · stage 3 dataset list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>pes2o</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“- /scratch/smollm3-data-part1/pes2o”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smollm3-configs/raw/main/stage1_8T.yaml">huggingface.co</a>
+<span class="muted">· code · stage 1 dataset list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>wiki</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“- /scratch/smollm3-data-part1/wiki”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceTB/smollm3-configs/raw/main/stage1_8T.yaml">huggingface.co</a>
+<span class="muted">· code · stage 1 dataset list · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>DCLM</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Blog says &#39;DCLM&#39;; that it is DCLM-Baseline specifically is not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Web: 85% (12% multilingual) - FineWeb-Edu, DCLM, FineWeb2 and FineWeb2-HQ”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">raw.githubusercontent.com</a>
+<span class="muted">· website · Stage 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">11.2T tokens in three stages + 100B-token context extension; post-training: 140B-token reasoning mid-training, SFT (1.8B tokens, 4 epochs) and APO (SmolTalk2). The cutoff comes from the default system metadata in the chat template.
+
+Decontamination statements not shown as cells (they name no benchmark tracked here, or none at all): evaluation benchmarks (unspecified) - SmolTalk2 Mid/SFT/Preference.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://raw.githubusercontent.com/huggingface/blog/main/smollm3.md">SmolLM3: smol, multilingual, long-context reasoner (HF blog, raw markdown)</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B-Base/raw/main/README.md">SmolLM3-3B-Base</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B/raw/main/README.md">SmolLM3-3B</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B/raw/main/chat_template.jinja">SmolLM3-3B chat template</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/HuggingFaceTB/smollm3-configs/raw/main/README.md">SmolLM3 training configs</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/HuggingFaceTB/smollm3-configs/raw/main/stage1_8T.yaml">stage1_8T.yaml</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/HuggingFaceTB/smollm3-configs/raw/main/stage3_9T_11T.yaml">stage3_9T_11T.yaml</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2/raw/main/README.md">SmolTalk2</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

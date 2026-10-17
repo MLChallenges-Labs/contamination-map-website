@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mistral 7B · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Model</p>
+<h1>Mistral 7B</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Mistral AI</dd>
+  <dt>Family</dt><dd>Mistral · version v0.1</dd>
+  <dt>Released</dt><dd>2023-09-27 <span class="muted small">(Mistral AI blog &#39;Mistral 7B&#39; dated September 27, 2023 (https://mistral.ai/news/announcing-mistral-7b))</span></dd>
+<dt>Checkpoints</dt><dd>mistralai/Mistral-7B-v0.1, mistralai/Mistral-7B-Instruct-v0.1</dd>  <dt>Weights</dt><dd>Open · Apache 2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/abs/2310.06825">Paper</a><a href="https://huggingface.co/mistralai/Mistral-7B-v0.1/raw/main/README.md">Model card</a><a href="https://github.com/mistralai/mistral-inference">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-vague">Vague</span></h2>
+<p>Level determined for <strong>0%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 15">
+<span class="lvl-unknown" style="flex-grow: 15" title="Unknown: 15"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">15</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“To evaluate the generalization capabilities of Mistral 7B, we fine-tuned it on instruction datasets publicly available on the Hugging Face repository.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.06825v1">arxiv.org</a>
+<span class="muted">· paper · Section 4 Instruction Finetuning · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>instruction datasets publicly available on the Hugging Face repository</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Datasets not named; Hugging Face instruction datasets can include benchmark-derived data.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“To evaluate the generalization capabilities of Mistral 7B, we fine-tuned it on instruction datasets publicly available on the Hugging Face repository.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.06825v1">arxiv.org</a>
+<span class="muted">· paper · Section 4 Instruction Finetuning · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“using a variety of publicly available conversation datasets”</blockquote>
+  <figcaption><a href="https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model card intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">pass@1 (%) 28.7</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Pre-training data is not described at all in the paper, blog or model card; &#39;vague&#39; reflects only the fine-tuning description. Later Mistral 7B checkpoints (Instruct-v0.2, v0.3) are separate releases not covered here.
+
+Third-party signal on HellaSwag (indirect, not shown as a cell): Sample-specific contamination detected on HellaSwag (p &lt; 0.5%, estimated effect 3-8%).
+
+Third-party signal on GSM8K (Grade School Math 8K) (indirect, not shown as a cell): Sample-specific contamination detected on GSM8K (p &lt; 0.5%, estimated effect 3-8%).
+
+Third-party signal on TruthfulQA (indirect, not shown as a cell): 8.5 percentage points higher on TruthfulQA than on the retro-holdout. Performance gap on a fresh holdout is evidence of benchmark inflation/overfitting, not proof of test-set inclusion.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2310.06825v1">Mistral 7B (arXiv v1)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://mistral.ai/news/announcing-mistral-7b">Mistral 7B announcement blog</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/mistralai/Mistral-7B-v0.1/raw/main/README.md">Mistral-7B-v0.1 model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1/raw/main/README.md">Mistral-7B-Instruct-v0.1 model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

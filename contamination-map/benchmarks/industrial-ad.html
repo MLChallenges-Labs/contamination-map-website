@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Industrial anomaly detection · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html" class="active">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/vision/index.html">Vision</a> / Benchmark</p>
+<h1>Industrial anomaly detection</h1>
+<p class="lede">Industrial anomaly detection datasets; grouping used on this site, not an official suite.</p>    </div>
+  </div>
+  <main class="container doc">
+<p class="links">
+</p>
+<p><strong>Test split:</strong> Standard (unsupervised / 1-class) protocol: models are trained on the defect-free train split of each category and evaluated on the test split, which contains normal and anomalous images with pixel masks (MVTec AD; VisA 1-class: 90% of normal images train, 10% normal + all anomalous test; Real-IAD UIAD). MVTec AD 2 test ground truth is partly private (evaluation server). Zero-shot protocol: no training samples of the target dataset are used (WinCLIP uses CLIP &#39;without further tuning&#39;); methods that learn prompts/adapters use auxiliary data, and the common cross-dataset protocol trains on the TEST split of another dataset - e.g. AnomalyCLIP fine-tunes on MVTec AD test data to evaluate on all other datasets, and on VisA test data to evaluate on MVTec AD. KolektorSDD2&#39;s official train split also contains defective images.</p>
+<section>
+  <h2>Contamination matrix</h2>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">18</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">7</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">2</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">33</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">236</span></li>
+</ul>
+  <div class="table-wrap">
+  <table class="heatmap">
+    <thead>
+      <tr>
+        <th scope="col" class="corner">Dataset</th>
+<th scope="col" class="model"><a href="../models/aa-clip-mvtec.html"><span>AA-CLIP, trained on MVTec AD (for VisA results)</span></a></th><th scope="col" class="model"><a href="../models/aa-clip-visa.html"><span>AA-CLIP, trained on VisA</span></a></th><th scope="col" class="model"><a href="../models/adaclip-all.html"><span>AdaCLIP, trained on all 14 datasets (demo model)</span></a></th><th scope="col" class="model"><a href="../models/adaclip-mvtec-colondb.html"><span>AdaCLIP, trained on MVTec AD + ColonDB</span></a></th><th scope="col" class="model"><a href="../models/adaclip-visa-clinicdb.html"><span>AdaCLIP, trained on VisA + ClinicDB</span></a></th><th scope="col" class="model"><a href="../models/adaptclip-mvtec.html"><span>AdaptCLIP, trained on MVTec AD</span></a></th><th scope="col" class="model"><a href="../models/adaptclip-visa.html"><span>AdaptCLIP, trained on VisA</span></a></th><th scope="col" class="model"><a href="../models/anomaly-ov.html"><span>Anomaly-OneVision (Anomaly-OV)</span></a></th><th scope="col" class="model"><a href="../models/anomalyclip-mvtec.html"><span>AnomalyCLIP, trained on MVTec AD</span></a></th><th scope="col" class="model"><a href="../models/anomalyclip-visa.html"><span>AnomalyCLIP, trained on VisA</span></a></th><th scope="col" class="model"><a href="../models/anomalydino.html"><span>AnomalyDINO</span></a></th><th scope="col" class="model"><a href="../models/anomalygpt-supervised.html"><span>AnomalyGPT, supervised (demo model)</span></a></th><th scope="col" class="model"><a href="../models/anomalygpt-mvtec.html"><span>AnomalyGPT, unsupervised on MVTec AD</span></a></th><th scope="col" class="model"><a href="../models/anomalygpt-visa.html"><span>AnomalyGPT, unsupervised on VisA</span></a></th><th scope="col" class="model"><a href="../models/april-gan-mvtec.html"><span>APRIL-GAN (VAND 2023), trained on MVTec AD</span></a></th><th scope="col" class="model"><a href="../models/april-gan-visa.html"><span>APRIL-GAN (VAND 2023), trained on VisA</span></a></th><th scope="col" class="model"><a href="../models/dinov2.html"><span>DINOv2</span></a></th><th scope="col" class="model"><a href="../models/dinov3.html"><span>DINOv3 (web / LVD-1689M models)</span></a></th><th scope="col" class="model"><a href="../models/filo-mvtec.html"><span>FiLo, trained on MVTec AD</span></a></th><th scope="col" class="model"><a href="../models/filo-visa.html"><span>FiLo, trained on VisA</span></a></th><th scope="col" class="model"><a href="../models/inctrl-mvtec.html"><span>InCTRL, trained on MVTec AD</span></a></th><th scope="col" class="model"><a href="../models/inctrl-visa.html"><span>InCTRL, trained on VisA</span></a></th><th scope="col" class="model"><a href="../models/metauas.html"><span>MetaUAS</span></a></th><th scope="col" class="model"><a href="../models/musc.html"><span>MuSc</span></a></th><th scope="col" class="model"><a href="../models/clip-openai.html"><span>OpenAI CLIP</span></a></th><th scope="col" class="model"><a href="../models/openclip-laion2b.html"><span>OpenCLIP (LAION-2B checkpoints)</span></a></th><th scope="col" class="model"><a href="../models/openclip-laion400m.html"><span>OpenCLIP (LAION-400M checkpoints)</span></a></th><th scope="col" class="model"><a href="../models/sam-2.html"><span>SAM 2 / SAM 2.1</span></a></th><th scope="col" class="model"><a href="../models/saa-plus.html"><span>Segment Any Anomaly (SAA / SAA+)</span></a></th><th scope="col" class="model"><a href="../models/sam.html"><span>Segment Anything Model (SAM)</span></a></th><th scope="col" class="model"><a href="../models/siglip.html"><span>SigLIP</span></a></th><th scope="col" class="model"><a href="../models/siglip-2.html"><span>SigLIP 2</span></a></th><th scope="col" class="model"><a href="../models/univad.html"><span>UniVAD</span></a></th><th scope="col" class="model"><a href="../models/vcp-clip-mvtec.html"><span>VCP-CLIP, trained on MVTec-AD</span></a></th><th scope="col" class="model"><a href="../models/vcp-clip-visa.html"><span>VCP-CLIP, trained on VisA</span></a></th><th scope="col" class="model"><a href="../models/imagenet-wrn50.html"><span>WideResNet-50-2 (supervised ImageNet-1k, torchvision)</span></a></th><th scope="col" class="model"><a href="../models/winclip.html"><span>WinCLIP / WinCLIP+</span></a></th>      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><a href="../datasets/mvtec-ad.html">MVTec AD</a></th>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/aa-clip-mvtec.html#industrial-ad--mvtec-ad" title="AA-CLIP, trained on MVTec AD (for VisA results) × MVTec AD: Seen, split unclear. in fine-tuning data: the dataset was used; the source does not say which part">Seen</a></td>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--mvtec-ad" title="AA-CLIP, trained on VisA × MVTec AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/adaclip-all.html#industrial-ad--mvtec-ad" title="AdaCLIP, trained on all 14 datasets (demo model) × MVTec AD: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--mvtec-ad" title="AdaCLIP, trained on MVTec AD + ColonDB × MVTec AD: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--mvtec-ad" title="AdaCLIP, trained on VisA + ClinicDB × MVTec AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/adaptclip-mvtec.html#industrial-ad--mvtec-ad" title="AdaptCLIP, trained on MVTec AD × MVTec AD: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--mvtec-ad" title="AdaptCLIP, trained on VisA × MVTec AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/anomaly-ov.html#industrial-ad--mvtec-ad" title="Anomaly-OneVision (Anomaly-OV) × MVTec AD: Seen, split unclear. in fine-tuning data: the dataset was used; the source does not say which part">Seen</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/anomalyclip-mvtec.html#industrial-ad--mvtec-ad" title="AnomalyCLIP, trained on MVTec AD × MVTec AD: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--mvtec-ad" title="AnomalyCLIP, trained on VisA × MVTec AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--mvtec-ad" title="AnomalyDINO × MVTec AD: Unknown. unknown for its base model DINOv2: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/anomalygpt-supervised.html#industrial-ad--mvtec-ad" title="AnomalyGPT, supervised (demo model) × MVTec AD: Seen, split unclear. in fine-tuning data: the dataset was used; the source does not say which part">Seen</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/anomalygpt-mvtec.html#industrial-ad--mvtec-ad" title="AnomalyGPT, unsupervised on MVTec AD × MVTec AD: Training data seen. in fine-tuning data: only the training split was used, not the benchmark&#39;s test data">Train</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--mvtec-ad" title="AnomalyGPT, unsupervised on VisA × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/april-gan-mvtec.html#industrial-ad--mvtec-ad" title="APRIL-GAN (VAND 2023), trained on MVTec AD × MVTec AD: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--mvtec-ad" title="APRIL-GAN (VAND 2023), trained on VisA × MVTec AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#industrial-ad--mvtec-ad" title="DINOv2 × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#industrial-ad--mvtec-ad" title="DINOv3 (web / LVD-1689M models) × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/filo-mvtec.html#industrial-ad--mvtec-ad" title="FiLo, trained on MVTec AD × MVTec AD: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--mvtec-ad" title="FiLo, trained on VisA × MVTec AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/inctrl-mvtec.html#industrial-ad--mvtec-ad" title="InCTRL, trained on MVTec AD × MVTec AD: Test data seen. in fine-tuning data: the whole dataset was used">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/inctrl-visa.html#industrial-ad--mvtec-ad" title="InCTRL, trained on VisA × MVTec AD: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metauas.html#industrial-ad--mvtec-ad" title="MetaUAS × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/musc.html#industrial-ad--mvtec-ad" title="MuSc × MVTec AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--mvtec-ad" title="OpenAI CLIP × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#industrial-ad--mvtec-ad" title="OpenCLIP (LAION-2B checkpoints) × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#industrial-ad--mvtec-ad" title="OpenCLIP (LAION-400M checkpoints) × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam-2.html#industrial-ad--mvtec-ad" title="SAM 2 / SAM 2.1 × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--mvtec-ad" title="Segment Any Anomaly (SAA / SAA+) × MVTec AD: Unknown. unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam.html#industrial-ad--mvtec-ad" title="Segment Anything Model (SAM) × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#industrial-ad--mvtec-ad" title="SigLIP × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--mvtec-ad" title="SigLIP 2 × MVTec AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/univad.html#industrial-ad--mvtec-ad" title="UniVAD × MVTec AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/vcp-clip-mvtec.html#industrial-ad--mvtec-ad" title="VCP-CLIP, trained on MVTec-AD × MVTec AD: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--mvtec-ad" title="VCP-CLIP, trained on VisA × MVTec AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--mvtec-ad" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MVTec AD: Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/winclip.html#industrial-ad--mvtec-ad" title="WinCLIP / WinCLIP+ × MVTec AD: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a></th>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--mvtec-ad-2" title="AA-CLIP, trained on MVTec AD (for VisA results) × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--mvtec-ad-2" title="AA-CLIP, trained on VisA × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-all.html#industrial-ad--mvtec-ad-2" title="AdaCLIP, trained on all 14 datasets (demo model) × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--mvtec-ad-2" title="AdaCLIP, trained on MVTec AD + ColonDB × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--mvtec-ad-2" title="AdaCLIP, trained on VisA + ClinicDB × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--mvtec-ad-2" title="AdaptCLIP, trained on MVTec AD × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--mvtec-ad-2" title="AdaptCLIP, trained on VisA × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--mvtec-ad-2" title="Anomaly-OneVision (Anomaly-OV) × MVTec AD 2: Unknown. unknown for its base model LLaVA-OneVision: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--mvtec-ad-2" title="AnomalyCLIP, trained on MVTec AD × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--mvtec-ad-2" title="AnomalyCLIP, trained on VisA × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--mvtec-ad-2" title="AnomalyDINO × MVTec AD 2: Unknown. unknown for its base model DINOv2: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-supervised.html#industrial-ad--mvtec-ad-2" title="AnomalyGPT, supervised (demo model) × MVTec AD 2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--mvtec-ad-2" title="AnomalyGPT, unsupervised on MVTec AD × MVTec AD 2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--mvtec-ad-2" title="AnomalyGPT, unsupervised on VisA × MVTec AD 2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--mvtec-ad-2" title="APRIL-GAN (VAND 2023), trained on MVTec AD × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--mvtec-ad-2" title="APRIL-GAN (VAND 2023), trained on VisA × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#industrial-ad--mvtec-ad-2" title="DINOv2 × MVTec AD 2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#industrial-ad--mvtec-ad-2" title="DINOv3 (web / LVD-1689M models) × MVTec AD 2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--mvtec-ad-2" title="FiLo, trained on MVTec AD × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--mvtec-ad-2" title="FiLo, trained on VisA × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/inctrl-mvtec.html#industrial-ad--mvtec-ad-2" title="InCTRL, trained on MVTec AD × MVTec AD 2: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/inctrl-visa.html#industrial-ad--mvtec-ad-2" title="InCTRL, trained on VisA × MVTec AD 2: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metauas.html#industrial-ad--mvtec-ad-2" title="MetaUAS × MVTec AD 2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/musc.html#industrial-ad--mvtec-ad-2" title="MuSc × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--mvtec-ad-2" title="OpenAI CLIP × MVTec AD 2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/openclip-laion2b.html#industrial-ad--mvtec-ad-2" title="OpenCLIP (LAION-2B checkpoints) × MVTec AD 2: Not seen. its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-01-31)">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/openclip-laion400m.html#industrial-ad--mvtec-ad-2" title="OpenCLIP (LAION-400M checkpoints) × MVTec AD 2: Not seen. its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2021-12-31)">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam-2.html#industrial-ad--mvtec-ad-2" title="SAM 2 / SAM 2.1 × MVTec AD 2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--mvtec-ad-2" title="Segment Any Anomaly (SAA / SAA+) × MVTec AD 2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/sam.html#industrial-ad--mvtec-ad-2" title="Segment Anything Model (SAM) × MVTec AD 2: Not seen. its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-12-31)">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/siglip.html#industrial-ad--mvtec-ad-2" title="SigLIP × MVTec AD 2: Not seen. its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-12-31)">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/siglip-2.html#industrial-ad--mvtec-ad-2" title="SigLIP 2 × MVTec AD 2: Not seen. its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-12-31)">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/univad.html#industrial-ad--mvtec-ad-2" title="UniVAD × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--mvtec-ad-2" title="VCP-CLIP, trained on MVTec-AD × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--mvtec-ad-2" title="VCP-CLIP, trained on VisA × MVTec AD 2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--mvtec-ad-2" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MVTec AD 2: Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/winclip.html#industrial-ad--mvtec-ad-2" title="WinCLIP / WinCLIP+ × MVTec AD 2: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a></th>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--mvtec-loco-ad" title="AA-CLIP, trained on MVTec AD (for VisA results) × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--mvtec-loco-ad" title="AA-CLIP, trained on VisA × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-all.html#industrial-ad--mvtec-loco-ad" title="AdaCLIP, trained on all 14 datasets (demo model) × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--mvtec-loco-ad" title="AdaCLIP, trained on MVTec AD + ColonDB × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--mvtec-loco-ad" title="AdaCLIP, trained on VisA + ClinicDB × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--mvtec-loco-ad" title="AdaptCLIP, trained on MVTec AD × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--mvtec-loco-ad" title="AdaptCLIP, trained on VisA × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--mvtec-loco-ad" title="Anomaly-OneVision (Anomaly-OV) × MVTec LOCO AD: Unknown. unknown for its base model LLaVA-OneVision: unknown for its base model SigLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--mvtec-loco-ad" title="AnomalyCLIP, trained on MVTec AD × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--mvtec-loco-ad" title="AnomalyCLIP, trained on VisA × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--mvtec-loco-ad" title="AnomalyDINO × MVTec LOCO AD: Unknown. unknown for its base model DINOv2: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/anomalygpt-supervised.html#industrial-ad--mvtec-loco-ad" title="AnomalyGPT, supervised (demo model) × MVTec LOCO AD: Seen, split unclear. in fine-tuning data: the dataset was used; the source does not say which part">Seen</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--mvtec-loco-ad" title="AnomalyGPT, unsupervised on MVTec AD × MVTec LOCO AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--mvtec-loco-ad" title="AnomalyGPT, unsupervised on VisA × MVTec LOCO AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--mvtec-loco-ad" title="APRIL-GAN (VAND 2023), trained on MVTec AD × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--mvtec-loco-ad" title="APRIL-GAN (VAND 2023), trained on VisA × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#industrial-ad--mvtec-loco-ad" title="DINOv2 × MVTec LOCO AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#industrial-ad--mvtec-loco-ad" title="DINOv3 (web / LVD-1689M models) × MVTec LOCO AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--mvtec-loco-ad" title="FiLo, trained on MVTec AD × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--mvtec-loco-ad" title="FiLo, trained on VisA × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/inctrl-mvtec.html#industrial-ad--mvtec-loco-ad" title="InCTRL, trained on MVTec AD × MVTec LOCO AD: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/inctrl-visa.html#industrial-ad--mvtec-loco-ad" title="InCTRL, trained on VisA × MVTec LOCO AD: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metauas.html#industrial-ad--mvtec-loco-ad" title="MetaUAS × MVTec LOCO AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/musc.html#industrial-ad--mvtec-loco-ad" title="MuSc × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--mvtec-loco-ad" title="OpenAI CLIP × MVTec LOCO AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/openclip-laion2b.html#industrial-ad--mvtec-loco-ad" title="OpenCLIP (LAION-2B checkpoints) × MVTec LOCO AD: Not seen. its test items were published from 2022-02-22, after the model&#39;s stated training-data cutoff (2022-01-31)">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/openclip-laion400m.html#industrial-ad--mvtec-loco-ad" title="OpenCLIP (LAION-400M checkpoints) × MVTec LOCO AD: Not seen. its test items were published from 2022-02-22, after the model&#39;s stated training-data cutoff (2021-12-31)">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam-2.html#industrial-ad--mvtec-loco-ad" title="SAM 2 / SAM 2.1 × MVTec LOCO AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--mvtec-loco-ad" title="Segment Any Anomaly (SAA / SAA+) × MVTec LOCO AD: Unknown. unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam.html#industrial-ad--mvtec-loco-ad" title="Segment Anything Model (SAM) × MVTec LOCO AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#industrial-ad--mvtec-loco-ad" title="SigLIP × MVTec LOCO AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--mvtec-loco-ad" title="SigLIP 2 × MVTec LOCO AD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/univad.html#industrial-ad--mvtec-loco-ad" title="UniVAD × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--mvtec-loco-ad" title="VCP-CLIP, trained on MVTec-AD × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--mvtec-loco-ad" title="VCP-CLIP, trained on VisA × MVTec LOCO AD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--mvtec-loco-ad" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MVTec LOCO AD: Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/winclip.html#industrial-ad--mvtec-loco-ad" title="WinCLIP / WinCLIP+ × MVTec LOCO AD: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/visa.html">VisA</a></th>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--visa" title="AA-CLIP, trained on MVTec AD (for VisA results) × VisA: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/aa-clip-visa.html#industrial-ad--visa" title="AA-CLIP, trained on VisA × VisA: Seen, split unclear. in fine-tuning data: the dataset was used; the source does not say which part">Seen</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/adaclip-all.html#industrial-ad--visa" title="AdaCLIP, trained on all 14 datasets (demo model) × VisA: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--visa" title="AdaCLIP, trained on MVTec AD + ColonDB × VisA: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--visa" title="AdaCLIP, trained on VisA + ClinicDB × VisA: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--visa" title="AdaptCLIP, trained on MVTec AD × VisA: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/adaptclip-visa.html#industrial-ad--visa" title="AdaptCLIP, trained on VisA × VisA: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/anomaly-ov.html#industrial-ad--visa" title="Anomaly-OneVision (Anomaly-OV) × VisA: Seen, split unclear. in fine-tuning data: the dataset was used; the source does not say which part">Seen</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--visa" title="AnomalyCLIP, trained on MVTec AD × VisA: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/anomalyclip-visa.html#industrial-ad--visa" title="AnomalyCLIP, trained on VisA × VisA: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--visa" title="AnomalyDINO × VisA: Unknown. unknown for its base model DINOv2: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/anomalygpt-supervised.html#industrial-ad--visa" title="AnomalyGPT, supervised (demo model) × VisA: Seen, split unclear. in fine-tuning data: the dataset was used; the source does not say which part">Seen</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--visa" title="AnomalyGPT, unsupervised on MVTec AD × VisA: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/anomalygpt-visa.html#industrial-ad--visa" title="AnomalyGPT, unsupervised on VisA × VisA: Training data seen. in fine-tuning data: only the training split was used, not the benchmark&#39;s test data">Train</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--visa" title="APRIL-GAN (VAND 2023), trained on MVTec AD × VisA: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/april-gan-visa.html#industrial-ad--visa" title="APRIL-GAN (VAND 2023), trained on VisA × VisA: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#industrial-ad--visa" title="DINOv2 × VisA: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#industrial-ad--visa" title="DINOv3 (web / LVD-1689M models) × VisA: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--visa" title="FiLo, trained on MVTec AD × VisA: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/filo-visa.html#industrial-ad--visa" title="FiLo, trained on VisA × VisA: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/inctrl-mvtec.html#industrial-ad--visa" title="InCTRL, trained on MVTec AD × VisA: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/inctrl-visa.html#industrial-ad--visa" title="InCTRL, trained on VisA × VisA: Test data seen. in fine-tuning data: the whole dataset was used">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metauas.html#industrial-ad--visa" title="MetaUAS × VisA: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/musc.html#industrial-ad--visa" title="MuSc × VisA: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--visa" title="OpenAI CLIP × VisA: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/openclip-laion2b.html#industrial-ad--visa" title="OpenCLIP (LAION-2B checkpoints) × VisA: Not seen. its test items were published from 2022-07-28, after the model&#39;s stated training-data cutoff (2022-01-31)">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/openclip-laion400m.html#industrial-ad--visa" title="OpenCLIP (LAION-400M checkpoints) × VisA: Not seen. its test items were published from 2022-07-28, after the model&#39;s stated training-data cutoff (2021-12-31)">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam-2.html#industrial-ad--visa" title="SAM 2 / SAM 2.1 × VisA: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--visa" title="Segment Any Anomaly (SAA / SAA+) × VisA: Unknown. unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam.html#industrial-ad--visa" title="Segment Anything Model (SAM) × VisA: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#industrial-ad--visa" title="SigLIP × VisA: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--visa" title="SigLIP 2 × VisA: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/univad.html#industrial-ad--visa" title="UniVAD × VisA: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--visa" title="VCP-CLIP, trained on MVTec-AD × VisA: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/vcp-clip-visa.html#industrial-ad--visa" title="VCP-CLIP, trained on VisA × VisA: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--visa" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × VisA: Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/winclip.html#industrial-ad--visa" title="WinCLIP / WinCLIP+ × VisA: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/real-iad.html">Real-IAD</a></th>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--real-iad" title="AA-CLIP, trained on MVTec AD (for VisA results) × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--real-iad" title="AA-CLIP, trained on VisA × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-all.html#industrial-ad--real-iad" title="AdaCLIP, trained on all 14 datasets (demo model) × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--real-iad" title="AdaCLIP, trained on MVTec AD + ColonDB × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--real-iad" title="AdaCLIP, trained on VisA + ClinicDB × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--real-iad" title="AdaptCLIP, trained on MVTec AD × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--real-iad" title="AdaptCLIP, trained on VisA × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--real-iad" title="Anomaly-OneVision (Anomaly-OV) × Real-IAD: Unknown. unknown for its base model LLaVA-OneVision: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--real-iad" title="AnomalyCLIP, trained on MVTec AD × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--real-iad" title="AnomalyCLIP, trained on VisA × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--real-iad" title="AnomalyDINO × Real-IAD: Unknown. unknown for its base model DINOv2: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-supervised.html#industrial-ad--real-iad" title="AnomalyGPT, supervised (demo model) × Real-IAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--real-iad" title="AnomalyGPT, unsupervised on MVTec AD × Real-IAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--real-iad" title="AnomalyGPT, unsupervised on VisA × Real-IAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--real-iad" title="APRIL-GAN (VAND 2023), trained on MVTec AD × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--real-iad" title="APRIL-GAN (VAND 2023), trained on VisA × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#industrial-ad--real-iad" title="DINOv2 × Real-IAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#industrial-ad--real-iad" title="DINOv3 (web / LVD-1689M models) × Real-IAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--real-iad" title="FiLo, trained on MVTec AD × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--real-iad" title="FiLo, trained on VisA × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/inctrl-mvtec.html#industrial-ad--real-iad" title="InCTRL, trained on MVTec AD × Real-IAD: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/inctrl-visa.html#industrial-ad--real-iad" title="InCTRL, trained on VisA × Real-IAD: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metauas.html#industrial-ad--real-iad" title="MetaUAS × Real-IAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/musc.html#industrial-ad--real-iad" title="MuSc × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--real-iad" title="OpenAI CLIP × Real-IAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/openclip-laion2b.html#industrial-ad--real-iad" title="OpenCLIP (LAION-2B checkpoints) × Real-IAD: Not seen. its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-01-31)">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/openclip-laion400m.html#industrial-ad--real-iad" title="OpenCLIP (LAION-400M checkpoints) × Real-IAD: Not seen. its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2021-12-31)">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam-2.html#industrial-ad--real-iad" title="SAM 2 / SAM 2.1 × Real-IAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--real-iad" title="Segment Any Anomaly (SAA / SAA+) × Real-IAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/sam.html#industrial-ad--real-iad" title="Segment Anything Model (SAM) × Real-IAD: Not seen. its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-12-31)">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/siglip.html#industrial-ad--real-iad" title="SigLIP × Real-IAD: Not seen. its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-12-31)">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/siglip-2.html#industrial-ad--real-iad" title="SigLIP 2 × Real-IAD: Not seen. its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-12-31)">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/univad.html#industrial-ad--real-iad" title="UniVAD × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--real-iad" title="VCP-CLIP, trained on MVTec-AD × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--real-iad" title="VCP-CLIP, trained on VisA × Real-IAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--real-iad" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Real-IAD: Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/winclip.html#industrial-ad--real-iad" title="WinCLIP / WinCLIP+ × Real-IAD: Not seen. absent from the complete list of training data and from its base models&#39; data">No</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/mpdd.html">MPDD</a></th>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--mpdd" title="AA-CLIP, trained on MVTec AD (for VisA results) × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--mpdd" title="AA-CLIP, trained on VisA × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/adaclip-all.html#industrial-ad--mpdd" title="AdaCLIP, trained on all 14 datasets (demo model) × MPDD: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--mpdd" title="AdaCLIP, trained on MVTec AD + ColonDB × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--mpdd" title="AdaCLIP, trained on VisA + ClinicDB × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--mpdd" title="AdaptCLIP, trained on MVTec AD × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--mpdd" title="AdaptCLIP, trained on VisA × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--mpdd" title="Anomaly-OneVision (Anomaly-OV) × MPDD: Unknown. unknown for its base model LLaVA-OneVision: unknown for its base model SigLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--mpdd" title="AnomalyCLIP, trained on MVTec AD × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--mpdd" title="AnomalyCLIP, trained on VisA × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--mpdd" title="AnomalyDINO × MPDD: Unknown. unknown for its base model DINOv2: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-supervised.html#industrial-ad--mpdd" title="AnomalyGPT, supervised (demo model) × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--mpdd" title="AnomalyGPT, unsupervised on MVTec AD × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--mpdd" title="AnomalyGPT, unsupervised on VisA × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--mpdd" title="APRIL-GAN (VAND 2023), trained on MVTec AD × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--mpdd" title="APRIL-GAN (VAND 2023), trained on VisA × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#industrial-ad--mpdd" title="DINOv2 × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#industrial-ad--mpdd" title="DINOv3 (web / LVD-1689M models) × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--mpdd" title="FiLo, trained on MVTec AD × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--mpdd" title="FiLo, trained on VisA × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/inctrl-mvtec.html#industrial-ad--mpdd" title="InCTRL, trained on MVTec AD × MPDD: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/inctrl-visa.html#industrial-ad--mpdd" title="InCTRL, trained on VisA × MPDD: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metauas.html#industrial-ad--mpdd" title="MetaUAS × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/musc.html#industrial-ad--mpdd" title="MuSc × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--mpdd" title="OpenAI CLIP × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#industrial-ad--mpdd" title="OpenCLIP (LAION-2B checkpoints) × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#industrial-ad--mpdd" title="OpenCLIP (LAION-400M checkpoints) × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam-2.html#industrial-ad--mpdd" title="SAM 2 / SAM 2.1 × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--mpdd" title="Segment Any Anomaly (SAA / SAA+) × MPDD: Unknown. unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam.html#industrial-ad--mpdd" title="Segment Anything Model (SAM) × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#industrial-ad--mpdd" title="SigLIP × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--mpdd" title="SigLIP 2 × MPDD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/univad.html#industrial-ad--mpdd" title="UniVAD × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--mpdd" title="VCP-CLIP, trained on MVTec-AD × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--mpdd" title="VCP-CLIP, trained on VisA × MPDD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--mpdd" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MPDD: Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/winclip.html#industrial-ad--mpdd" title="WinCLIP / WinCLIP+ × MPDD: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/btad.html">BTAD</a></th>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--btad" title="AA-CLIP, trained on MVTec AD (for VisA results) × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--btad" title="AA-CLIP, trained on VisA × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-test_seen"><a href="../models/adaclip-all.html#industrial-ad--btad" title="AdaCLIP, trained on all 14 datasets (demo model) × BTAD: Test data seen. in fine-tuning data: its test split was used for training">Test</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--btad" title="AdaCLIP, trained on MVTec AD + ColonDB × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--btad" title="AdaCLIP, trained on VisA + ClinicDB × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--btad" title="AdaptCLIP, trained on MVTec AD × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--btad" title="AdaptCLIP, trained on VisA × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--btad" title="Anomaly-OneVision (Anomaly-OV) × BTAD: Unknown. unknown for its base model LLaVA-OneVision: unknown for its base model SigLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--btad" title="AnomalyCLIP, trained on MVTec AD × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--btad" title="AnomalyCLIP, trained on VisA × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--btad" title="AnomalyDINO × BTAD: Unknown. unknown for its base model DINOv2: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-supervised.html#industrial-ad--btad" title="AnomalyGPT, supervised (demo model) × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--btad" title="AnomalyGPT, unsupervised on MVTec AD × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--btad" title="AnomalyGPT, unsupervised on VisA × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--btad" title="APRIL-GAN (VAND 2023), trained on MVTec AD × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--btad" title="APRIL-GAN (VAND 2023), trained on VisA × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#industrial-ad--btad" title="DINOv2 × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#industrial-ad--btad" title="DINOv3 (web / LVD-1689M models) × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--btad" title="FiLo, trained on MVTec AD × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--btad" title="FiLo, trained on VisA × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/inctrl-mvtec.html#industrial-ad--btad" title="InCTRL, trained on MVTec AD × BTAD: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/inctrl-visa.html#industrial-ad--btad" title="InCTRL, trained on VisA × BTAD: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metauas.html#industrial-ad--btad" title="MetaUAS × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/musc.html#industrial-ad--btad" title="MuSc × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--btad" title="OpenAI CLIP × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#industrial-ad--btad" title="OpenCLIP (LAION-2B checkpoints) × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#industrial-ad--btad" title="OpenCLIP (LAION-400M checkpoints) × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam-2.html#industrial-ad--btad" title="SAM 2 / SAM 2.1 × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--btad" title="Segment Any Anomaly (SAA / SAA+) × BTAD: Unknown. unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam.html#industrial-ad--btad" title="Segment Anything Model (SAM) × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#industrial-ad--btad" title="SigLIP × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--btad" title="SigLIP 2 × BTAD: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/univad.html#industrial-ad--btad" title="UniVAD × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--btad" title="VCP-CLIP, trained on MVTec-AD × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--btad" title="VCP-CLIP, trained on VisA × BTAD: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--btad" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × BTAD: Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/winclip.html#industrial-ad--btad" title="WinCLIP / WinCLIP+ × BTAD: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/ksdd2.html">KolektorSDD2</a></th>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-mvtec.html#industrial-ad--ksdd2" title="AA-CLIP, trained on MVTec AD (for VisA results) × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/aa-clip-visa.html#industrial-ad--ksdd2" title="AA-CLIP, trained on VisA × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-all.html#industrial-ad--ksdd2" title="AdaCLIP, trained on all 14 datasets (demo model) × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--ksdd2" title="AdaCLIP, trained on MVTec AD + ColonDB × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--ksdd2" title="AdaCLIP, trained on VisA + ClinicDB × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-mvtec.html#industrial-ad--ksdd2" title="AdaptCLIP, trained on MVTec AD × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/adaptclip-visa.html#industrial-ad--ksdd2" title="AdaptCLIP, trained on VisA × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomaly-ov.html#industrial-ad--ksdd2" title="Anomaly-OneVision (Anomaly-OV) × KolektorSDD2: Unknown. unknown for its base model LLaVA-OneVision: unknown for its base model SigLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-mvtec.html#industrial-ad--ksdd2" title="AnomalyCLIP, trained on MVTec AD × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalyclip-visa.html#industrial-ad--ksdd2" title="AnomalyCLIP, trained on VisA × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalydino.html#industrial-ad--ksdd2" title="AnomalyDINO × KolektorSDD2: Unknown. unknown for its base model DINOv2: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-supervised.html#industrial-ad--ksdd2" title="AnomalyGPT, supervised (demo model) × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-mvtec.html#industrial-ad--ksdd2" title="AnomalyGPT, unsupervised on MVTec AD × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/anomalygpt-visa.html#industrial-ad--ksdd2" title="AnomalyGPT, unsupervised on VisA × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-mvtec.html#industrial-ad--ksdd2" title="APRIL-GAN (VAND 2023), trained on MVTec AD × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/april-gan-visa.html#industrial-ad--ksdd2" title="APRIL-GAN (VAND 2023), trained on VisA × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov2.html#industrial-ad--ksdd2" title="DINOv2 × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dinov3.html#industrial-ad--ksdd2" title="DINOv3 (web / LVD-1689M models) × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-mvtec.html#industrial-ad--ksdd2" title="FiLo, trained on MVTec AD × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/filo-visa.html#industrial-ad--ksdd2" title="FiLo, trained on VisA × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/inctrl-mvtec.html#industrial-ad--ksdd2" title="InCTRL, trained on MVTec AD × KolektorSDD2: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/inctrl-visa.html#industrial-ad--ksdd2" title="InCTRL, trained on VisA × KolektorSDD2: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/metauas.html#industrial-ad--ksdd2" title="MetaUAS × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/musc.html#industrial-ad--ksdd2" title="MuSc × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/clip-openai.html#industrial-ad--ksdd2" title="OpenAI CLIP × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion2b.html#industrial-ad--ksdd2" title="OpenCLIP (LAION-2B checkpoints) × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/openclip-laion400m.html#industrial-ad--ksdd2" title="OpenCLIP (LAION-400M checkpoints) × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam-2.html#industrial-ad--ksdd2" title="SAM 2 / SAM 2.1 × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/saa-plus.html#industrial-ad--ksdd2" title="Segment Any Anomaly (SAA / SAA+) × KolektorSDD2: Unknown. unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/sam.html#industrial-ad--ksdd2" title="Segment Anything Model (SAM) × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip.html#industrial-ad--ksdd2" title="SigLIP × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/siglip-2.html#industrial-ad--ksdd2" title="SigLIP 2 × KolektorSDD2: Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/univad.html#industrial-ad--ksdd2" title="UniVAD × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-mvtec.html#industrial-ad--ksdd2" title="VCP-CLIP, trained on MVTec-AD × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/vcp-clip-visa.html#industrial-ad--ksdd2" title="VCP-CLIP, trained on VisA × KolektorSDD2: Unknown. unknown for its base model OpenAI CLIP: training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/imagenet-wrn50.html#industrial-ad--ksdd2" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × KolektorSDD2: Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/winclip.html#industrial-ad--ksdd2" title="WinCLIP / WinCLIP+ × KolektorSDD2: Unknown. unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail">?</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="muted small">Hover a cell for the reason; click it for the evidence.</p>
+</section>
+
+
+<section><h2>Notes</h2><p class="notes">Grouping used on this site, not an official suite. MVTec AD 2 vs MVTec AD: separate datasets from the same group; no image re-use stated.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.pdf">MVTec AD (CVPR 2019): train normal-only, test normal + defective</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2207.14315v1">VisA paper: 1-class and 2-class protocols</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2403.12580v1">Real-IAD paper: UIAD and FUIAD protocols</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2503.21622v1">MVTec AD 2 paper: public/private test sets</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2303.14814v1">WinCLIP: Zero-/Few-Shot Anomaly Classification and Segmentation</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2310.18961v9">AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection (ICLR 2024)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

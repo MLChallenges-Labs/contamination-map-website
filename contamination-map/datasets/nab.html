@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numenta Anomaly Benchmark (NAB) · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html" class="active">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/index.html">Time series</a> / Dataset</p>
+<h1>Numenta Anomaly Benchmark (NAB)</h1>
+<p class="lede">58 labelled real-world and artificial time-series data files (1,000-22,000 points each, 365,551 points in total) from sources such as AWS server metrics, Twitter volume, advertisement clicks and traffic data, with hand-labelled anomaly windows and a scoring scheme for streaming detection. No train/test split: detectors run online over each file and the first 15% of each file is an unscored probationary period.</p>    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+<dt>Also known as</dt><dd>NAB, Numenta Anomaly Benchmark, Numenta, NAB v1.0, NAB v1.1</dd><dt>Domain</dt><dd>mixed (server metrics, web traffic, social media, sensors, artificial)</dd><dt>License</dt><dd>MIT (repository licence)</dd><dt>Test items from</dt><dd>2015-10-09<details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“October 9, 2015”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/1510.03336v1">arxiv.org</a>
+<span class="muted">· paper · title page · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The repository contains all the code, data, and detailed results reported in this paper.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/1510.03336v1">arxiv.org</a>
+<span class="muted">· paper · title page · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details></dd><dt>Homepage</dt><dd><a href="https://github.com/numenta/NAB">github.com</a></dd></dl>
+
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/chronos-2-synth.html#ts-anomaly--nab">Chronos-2-Synth</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/chronos-2.html#ts-anomaly--nab">Chronos-2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/chronos-bolt.html#ts-anomaly--nab">Chronos-Bolt</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/chronos-t5.html#ts-anomaly--nab">Chronos (T5)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/dada.html#ts-anomaly--nab">DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders)</a></td>
+        <td><span class="badge lvl-related">Related data seen</span></td>
+        <td class="small">a contamination analysis found test examples of the related dataset TSB-AD-U (TSB-AD univariate) (Third-party (TimeRCD authors): DADA&#39;s pre-training corpus (IOPS, MGAB, YAHOO) heavily overlaps their zero-shot test benchmarks drawn from TSB-AD.) [third-party study]</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/granite-ttm-r1.html#ts-anomaly--nab">Granite-TimeSeries-TTM-R1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/granite-ttm-r2-1.html#ts-anomaly--nab">Granite-TimeSeries-TTM-R2.1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/granite-ttm-r2.html#ts-anomaly--nab">Granite-TimeSeries-TTM-R2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/granite-ttm-r3.html#ts-anomaly--nab">Granite-TTM-R3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/lag-llama.html#ts-anomaly--nab">Lag-Llama</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/mantis-8m.html#ts-anomaly--nab">Mantis (Mantis-8M)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/mantis-plus.html#ts-anomaly--nab">Mantis+ (MantisPlus)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/mantis-v2.html#ts-anomaly--nab">MantisV2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/moirai-1.0-r.html#ts-anomaly--nab">Moirai-1.0-R</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/moirai-1.1-r.html#ts-anomaly--nab">Moirai-1.1-R</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/moirai-2.0-r.html#ts-anomaly--nab">Moirai-2.0-R</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/moirai-moe-1.0-r.html#ts-anomaly--nab">Moirai-MoE-1.0-R</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/moment-1.html#ts-anomaly--nab">MOMENT-1</a></td>
+        <td><span class="badge lvl-train_seen">Training data seen</span></td>
+        <td class="small">only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/nutime.html#ts-anomaly--nab">NuTime</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/sundial.html#ts-anomaly--nab">Sundial (Timer 3.0)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/time-moe.html#ts-anomaly--nab">Time-MoE</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/time-rcd.html#ts-anomaly--nab">Time-RCD (TimeRCD)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timer-s1.html#ts-anomaly--nab">Timer-S1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timer-xl.html#ts-anomaly--nab">Timer-XL (timer-base-84m)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timer.html#ts-anomaly--nab">Timer</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timeradar.html#ts-anomaly--nab">TimeRadar</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timesfm-1-0.html#ts-anomaly--nab">TimesFM 1.0</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timesfm-2-0.html#ts-anomaly--nab">TimesFM 2.0</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timesfm-2-5.html#ts-anomaly--nab">TimesFM 2.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/timesfm-3-0.html#ts-anomaly--nab">TimesFM 3.0</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex-1.1-gifteval.html#ts-anomaly--nab">TiRex 1.1 (gifteval)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex-2-fevbench.html#ts-anomaly--nab">TiRex-2-fevbench (TiRex-2-f)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex-2-gifteval-pretrain.html#ts-anomaly--nab">TiRex-2-gifteval-pretrain (TiRex-2-gp)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex-2-gifteval-zs.html#ts-anomaly--nab">TiRex-2-gifteval-zs (TiRex-2-g)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex-2.html#ts-anomaly--nab">TiRex-2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tirex.html#ts-anomaly--nab">TiRex</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/toto-1.0.html#ts-anomaly--nab">Toto-Open-Base-1.0</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/toto-2.0-2.5b-ft.html#ts-anomaly--nab">Toto-2.0-2.5B-FT</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/toto-2.0.html#ts-anomaly--nab">Toto 2.0</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/toto-2024.html#ts-anomaly--nab">Toto (2024 technical report)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/tspulse-r1.html#ts-anomaly--nab">TSPulse r1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/ttm-r3.html#ts-anomaly--nab">TTM-R3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/ttm-research-r2.html#ts-anomaly--nab">Tiny Time Mixer (TTM) Research-Use R2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/units-few-shot-anomaly-detection.html#ts-anomaly--nab">UniTS few-shot anomaly detection checkpoints</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data and from its base models&#39; data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/ts-anomaly.html">Time-series anomaly detection</a></td>
+        <td><a href="../models/units.html#ts-anomaly--nab">UniTS</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">published_from = date of the NAB v1.0 paper, which states the repository contains the data. The numenta/NAB repository was created 2014-05-06, so parts of the corpus may have been public earlier. Current repository version is NAB v1.1.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/1510.03336v4">Evaluating Real-time Anomaly Detection Algorithms - the Numenta Anomaly Benchmark (Lavin &amp; Ahmad, arXiv v4)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/numenta/NAB/master/README.md">NAB README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li><li><a href="https://api.github.com/repos/numenta/NAB">GitHub API metadata of numenta/NAB</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2009.13807v4">Wu &amp; Keogh, Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress (arXiv v4; IEEE TKDE)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

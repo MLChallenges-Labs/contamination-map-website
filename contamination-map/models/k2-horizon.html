@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>K2-Horizon · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Model</p>
+<h1>K2-Horizon</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>MBZUAI Institute of Foundation Models (IFM) / LLM360</dd>
+  <dt>Family</dt><dd>LLM360 K2 · version 0.9B, 3.7B, 7B, 32B, MoVA-36B-A4B, 375B-A23B</dd>
+  <dt>Released</dt><dd>2026-09-01 <span class="muted small">(HF createdAt of IFM/K2-Horizon-* repos, 2026-09-01 (e.g. https://huggingface.co/api/models/IFM/K2-Horizon-32B))</span></dd>
+<dt>Checkpoints</dt><dd>IFM/K2-Horizon-0.9B, IFM/K2-Horizon-3.7B, IFM/K2-Horizon-7B, IFM/K2-Horizon-32B, IFM/K2-Horizon-MoVA-36B-A4B, IFM/K2-Horizon-375B-A23B</dd>  <dt>Weights</dt><dd>Open · apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://huggingface.co/IFM/K2-Horizon-32B">Model card</a><a href="https://github.com/ifm-ai/xllm">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>0%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 0, Unknown: 15">
+<span class="lvl-unknown" style="flex-grow: 15" title="Unknown: 15"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">15</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“Fully open.** Training data/recipe and the training code are public.”</blockquote>
+  <figcaption><a href="https://huggingface.co/IFM/K2-Horizon-32B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Highlights · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Technical report | Not yet available | In Progress | End of September 2026”</blockquote>
+  <figcaption><a href="https://huggingface.co/IFM/K2-Horizon-32B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Release Artifacts · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Data | [Hugging Face](https://huggingface.co/datasets/IFM/TxT360-v2) | Available”</blockquote>
+  <figcaption><a href="https://huggingface.co/IFM/K2-Horizon-32B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Release Artifacts · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>IFM/TxT360-v2</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Subsets web-high-nltk-qa, web-high-medium, txt360-qa (web and QA text); card states information cutoff Q4 2024.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Data | [Hugging Face](https://huggingface.co/datasets/IFM/TxT360-v2) | Available”</blockquote>
+  <figcaption><a href="https://huggingface.co/IFM/K2-Horizon-32B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Release Artifacts · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Pre-training sources for the K2 Horizon training data release.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/IFM/TxT360-v2/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>IFM/K2-Horizon-Pretrain-Data</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Listed in model card metadata but the HF dataset repo is not publicly accessible (HTTP 401 on 2026-10-15).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“IFM/K2-Horizon-Pretrain-Data”</blockquote>
+  <figcaption><a href="https://huggingface.co/IFM/K2-Horizon-32B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · YAML metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>IFM/K2-Horizon-Midtrain-Data</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Listed in model card metadata but not publicly accessible (HTTP 401 on 2026-10-15). Mid-training recorded as pretraining stage.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“IFM/K2-Horizon-Midtrain-Data”</blockquote>
+  <figcaption><a href="https://huggingface.co/IFM/K2-Horizon-32B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · YAML metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>IFM/Pretrain-Behaviors</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Part of the K2 Horizon dataset series; synthetic behaviour data. Which stage/model uses it is not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Behavior-focused text covering reasoning, planning, data science, games, general content, and format rewriting.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/IFM/Pretrain-Behaviors/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>IFM/Math-Reasoning</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">K2 Horizon dataset series; stage not stated (recorded as pretraining by default). Problem sources not listed.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Mathematical problem-solving, rewriting, and dialogue data for reasoning-oriented language-model training.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/IFM/Math-Reasoning/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>IFM/Code-Reasoning</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">K2 Horizon dataset series; stage not stated (recorded as pretraining by default). Problem sources not listed.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Code problem-solving data with reasoning, direct-answer, and task-synthesis subsets.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/IFM/Code-Reasoning/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>IFM/SFT-Reasoning</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Subsets instruction-following and 3efforts-pretrain.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Instruction-following and reasoning data prepared for supervised fine-tuning.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/IFM/SFT-Reasoning/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Description · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>RL data (expert models: math, code, STEM, IF, search, tool use, knowledge work)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">RL prompt data not described or listed in any card.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We trained five expert models from the final checkpoint of Midtraining Stage 4: knowledge work, IF, search, tool use, and reasoning. We then merged the expert models.”</blockquote>
+  <figcaption><a href="https://huggingface.co/IFM/K2-Horizon-375B-A23B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Overview · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">One entry for the family: all six cards point to the same data release (IFM/TxT360-v2 and the K2 Horizon dataset series), but per-size recipes differ: 3.7B/7B/32B/MoVA cards list 22.9T pre-training tokens, 375B-A23B lists two phases (7.08T + 8.05T), 0.9B lists 5T plus multi-teacher distillation; post-training differs (SFT only for 32B and MoVA; RL experts + merge + SFT for 3.7B/7B/375B; RL + on-policy distillation for 0.9B). No technical report yet (cards dated 2026-09-28 say end of September 2026). The ifm.ai blog returned HTTP 403 to automated fetches, so nothing is quoted from it.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://huggingface.co/IFM/K2-Horizon-32B/raw/main/README.md">IFM/K2-Horizon-32B model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/IFM/K2-Horizon-0.9B/raw/main/README.md">IFM/K2-Horizon-0.9B model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/IFM/K2-Horizon-3.7B/raw/main/README.md">IFM/K2-Horizon-3.7B model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/IFM/K2-Horizon-7B/raw/main/README.md">IFM/K2-Horizon-7B model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B/raw/main/README.md">IFM/K2-Horizon-MoVA-36B-A4B model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/IFM/K2-Horizon-375B-A23B/raw/main/README.md">IFM/K2-Horizon-375B-A23B model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/IFM/TxT360-v2/raw/main/README.md">IFM/TxT360-v2</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/IFM/SFT-Reasoning/raw/main/README.md">IFM/SFT-Reasoning</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/IFM/Math-Reasoning/raw/main/README.md">IFM/Math-Reasoning</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/IFM/Code-Reasoning/raw/main/README.md">IFM/Code-Reasoning</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/IFM/Pretrain-Behaviors/raw/main/README.md">IFM/Pretrain-Behaviors</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

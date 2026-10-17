@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NATICUSdroid · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html" class="active">Tabular</a>
+          <a href="../../contamination-map/text/index.html">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/tabular/index.html">Tabular</a> / Dataset</p>
+<h1>NATICUSdroid</h1>
+<p class="lede">binary task, 7491 rows, 87 features (TabArena-v0.1 curated metadata).</p>    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+<dt>Also known as</dt><dd>OpenML 46969, OpenML task 363689</dd><dt>Domain</dt><dd>technology &amp; internet</dd><dt>License</dt><dd>CC BY 4.0</dd><dt>Homepage</dt><dd><a href="https://www.openml.org/d/46969">www.openml.org</a></dd></dl>
+
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/limix-2.html#tabarena--naticusdroid">LimiX-2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/limix-v1.html#tabarena--naticusdroid">LimiX</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/mitra-v1.html#tabarena--naticusdroid">Mitra</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/mitra-v2.html#tabarena--naticusdroid">Mitra-v2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/real-tabpfn-2-5.html#tabarena--naticusdroid">Real-TabPFN-2.5</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state the dataset was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/real-tabpfn.html#tabarena--naticusdroid">Real-TabPFN</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabdpt-v1-2.html#tabarena--naticusdroid">TabDPT-Turbo (TabDPT v1.2)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state the dataset was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabdpt-v1-3.html#tabarena--naticusdroid">TabDPT v1.3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabdpt-v1.html#tabarena--naticusdroid">TabDPT</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabicl-v1-1.html#tabarena--naticusdroid">TabICL v1.1</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabicl-v1.html#tabarena--naticusdroid">TabICL</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabicl-v2.html#tabarena--naticusdroid">TabICLv2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabpfn-2-5.html#tabarena--naticusdroid">TabPFN-2.5</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabpfn-2-6.html#tabarena--naticusdroid">TabPFN-2.6</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabpfn-3-5.html#tabarena--naticusdroid">TabPFN-3.5</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabpfn-3.html#tabarena--naticusdroid">TabPFN-3</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/tabarena.html">TabArena</a></td>
+        <td><a href="../models/tabpfn-v2.html#tabarena--naticusdroid">TabPFN v2</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">TabArena re-upload on OpenML (dataset 46969, task 363689). Original source per TabArena metadata: UCI (https://doi.org/10.24432/C5FS64).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://raw.githubusercontent.com/autogluon/tabarena/main/packages/tabarena/src/tabarena/benchmark/task/metadata/data/curated_tabarena_dataset_metadata.csv">TabArena curated dataset metadata (curated_tabarena_dataset_metadata.csv)</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li><li><a href="https://www.openml.org/api/v1/json/data/46969">OpenML dataset 46969 description (API)</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

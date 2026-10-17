@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI CLIP · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html" class="active">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/vision/index.html">Vision</a> / Model</p>
+<h1>OpenAI CLIP</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>OpenAI</dd>
+  <dt>Family</dt><dd>CLIP</dd>
+  <dt>Released</dt><dd>2021-02-26 <span class="muted small">(arXiv v1 submission date (https://arxiv.org/abs/2103.00020v1). The model card gives &#39;Model Date: January 2021&#39; and later checkpoint releases up to April 2022.)</span></dd>
+<dt>Checkpoints</dt><dd>RN50, RN101, RN50x4, RN50x16, RN50x64, ViT-B/32, ViT-B/16, ViT-L/14, ViT-L/14@336px</dd>  <dt>Weights</dt><dd>Open · MIT (code and weights)</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2103.00020v1">Paper</a><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">Model card</a><a href="https://github.com/openai/CLIP">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>20%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 5, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 0, Unknown: 24">
+<span class="lvl-test_seen" style="flex-grow: 5" title="Test data seen: 5"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 24" title="Unknown: 24"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">5</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">1</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">24</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“The model was trained on publicly available image-caption data.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We do not intend for this dataset to be used as the basis for any commercial or deployed model and will not be releasing the dataset.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Data Mission Statement · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>WIT (WebImageText), OpenAI CLIP pre-training set</strong>
+      <span class="muted">· 2 sources · pre-training</span>
+      <details><summary>Evidence that OpenAI CLIP uses it</summary><figure class="evidence">
+  <blockquote>“We refer to this dataset as WIT for WebImageText.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>publicly available sources on the Internet (web-crawled image-text pairs)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Collection-level entry. The crawl dates and the websites are not disclosed. The model card says OpenAI crawled &#39;a handful of websites&#39;.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we constructed a new dataset of 400 million (image, text) pairs collected form a variety of publicly available sources on the Internet.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“A large portion of the data comes from our crawling of the internet.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>YFCC100M (filtered subset)</em>  <span class="muted">· split: unknown</span>
+<p class="small">The model card says &#39;pre-existing image datasets such as YFCC100M&#39;, so other pre-existing datasets may be included but are not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“This is due to it being constructed out of YFCC100M, which our pre-training dataset contains a filtered subset of.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This was done through a combination of crawling a handful of websites and using commonly-used pre-existing image datasets such as”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+
+
+<section>
+  <h2>Contamination analyses</h2>
+  <p class="muted small">Analyses that found benchmark test data in this model's training data, or in a corpus it uses.</p>
+  <ul class="rows">
+    <li>
+      <a href="../datasets/country211.html">Country211</a>
+      <span class="muted">· pre-training data · in WIT (WebImageText), OpenAI CLIP pre-training set</span>
+<p class="small">21.5% of Country211 test examples were detected as near-duplicates of WIT training images (the largest overlap of the 35 datasets checked); overall zero-shot accuracy changed by only +0.2 points.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“The largest overlap is for Country211 at 21.5%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Despite this large overlap there is only a 0.2% increase in accuracy on Country211.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This is due to it being constructed out of YFCC100M, which our pre-training dataset contains a filtered subset of.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/stanford-cars.html">Stanford Cars</a>
+      <span class="muted">· pre-training data · in WIT (WebImageText), OpenAI CLIP pre-training set</span>
+<p class="small">Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Few statistically significant improvements in accuracy due to detected data overlap.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“FER2013 SUN SUN397 Birdsnap Stanford Cars”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (right panel point labels, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“From this we first record the degree of data contamination as the ratio of the number of examples in Overlap to the size of All.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/sun397.html">SUN397</a>
+      <span class="muted">· pre-training data · in WIT (WebImageText), OpenAI CLIP pre-training set</span>
+<p class="small">Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Few statistically significant improvements in accuracy due to detected data overlap.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“FER2013 SUN SUN397 Birdsnap Stanford Cars”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (right panel point labels, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CIFAR-100 10 SUN397 SUN 0 ImageNet Sketch”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (left panel point labels and y-axis ticks, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“From this we first record the degree of data contamination as the ratio of the number of examples in Overlap to the size of All.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/cifar-100.html">CIFAR-100</a>
+      <span class="muted">· pre-training data · in WIT (WebImageText), OpenAI CLIP pre-training set</span>
+<p class="small">Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Few statistically significant improvements in accuracy due to detected data overlap.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CIFAR-100 10 SUN397 SUN 0 ImageNet Sketch”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (left panel point labels and y-axis ticks, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“One possibility we noticed on CIFAR-100 is that, due to the very low resolution of its images, many duplicates were false positives of small objects such as birds or planes.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/imagenet-sketch.html">ImageNet-Sketch</a>
+      <span class="muted">· pre-training data · in WIT (WebImageText), OpenAI CLIP pre-training set</span>
+<p class="small">Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Few statistically significant improvements in accuracy due to detected data overlap.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CIFAR-100 10 SUN397 SUN 0 ImageNet Sketch”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (left panel point labels and y-axis ticks, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“From this we first record the degree of data contamination as the ratio of the number of examples in Overlap to the size of All.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/imagenet-shifts.html">ImageNet and natural distribution shifts</a></h3>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-1k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/imagenet-1k.html">ImageNet-1k (ILSVRC 2012)</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.766</span></p>
+  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-v2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/imagenet-v2.html">ImageNetV2 (MatchedFrequency)</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.709</span></p>
+  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-sketch">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/imagenet-sketch.html">ImageNet-Sketch</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.61</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“We refer to this dataset as WIT for WebImageText.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Few statistically significant improvements in accuracy due to detected data overlap.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CIFAR-100 10 SUN397 SUN 0 ImageNet Sketch”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (left panel point labels and y-axis ticks, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“From this we first record the degree of data contamination as the ratio of the number of examples in Overlap to the size of All.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-r">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/imagenet-r.html">ImageNet-R (Renditions)</a> <span class="muted">· a contamination analysis found test examples of the related dataset ImageNet-Sketch (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.89</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“We refer to this dataset as WIT for WebImageText.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Few statistically significant improvements in accuracy due to detected data overlap.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CIFAR-100 10 SUN397 SUN 0 ImageNet Sketch”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (left panel point labels and y-axis ticks, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“From this we first record the degree of data contamination as the ratio of the number of examples in Overlap to the size of All.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-R also includes the line drawings from [37], excluding horizontally mirrored duplicate images, pitch black images, and images from the incorrectly collected”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2006.16241v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 (ImageNet-Renditions), Data Collection · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Haohan Wang, Songwei Ge, Eric P. Xing, and Zachary C. Lipton. Learning robust global representations by penalizing local predictive power, 2019.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2006.16241v3">arxiv.org</a>
+<span class="muted">· paper · References, [37] · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-a">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/imagenet-a.html">ImageNet-A</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.775</span></p>
+  </div>
+  <div class="cell-detail" id="imagenet-shifts--objectnet">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/objectnet.html">ObjectNet</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.718</span></p>
+  </div>
+  <h3><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></h3>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad.html">MVTec AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad-2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-loco-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--visa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/visa.html">VisA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--real-iad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/real-iad.html">Real-IAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mpdd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mpdd.html">MPDD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--btad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/btad.html">BTAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--ksdd2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ksdd2.html">KolektorSDD2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></h3>
+  <div class="cell-detail" id="zeroshot-transfer--cifar-10">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/cifar-10.html">CIFAR-10</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.949</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--cifar-100">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/cifar-100.html">CIFAR-100</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.744</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“We refer to this dataset as WIT for WebImageText.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Few statistically significant improvements in accuracy due to detected data overlap.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CIFAR-100 10 SUN397 SUN 0 ImageNet Sketch”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (left panel point labels and y-axis ticks, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“One possibility we noticed on CIFAR-100 is that, due to the very low resolution of its images, many duplicates were false positives of small objects such as birds or planes.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--food-101">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/food-101.html">Food-101</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.939</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--stanford-cars">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/stanford-cars.html">Stanford Cars</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.793</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“We refer to this dataset as WIT for WebImageText.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Few statistically significant improvements in accuracy due to detected data overlap.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“FER2013 SUN SUN397 Birdsnap Stanford Cars”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (right panel point labels, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“From this we first record the degree of data contamination as the ratio of the number of examples in Overlap to the size of All.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--fgvc-aircraft">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/fgvc-aircraft.html">FGVC-Aircraft</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.335</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--oxford-pets">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/oxford-pets.html">Oxford-IIIT Pet</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.937</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--flowers-102">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/flowers-102.html">Oxford Flowers-102</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.785</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--dtd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/dtd.html">Describable Textures Dataset (DTD)</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.556</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--eurosat">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/eurosat.html">EuroSAT</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.614</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--sun397">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/sun397.html">SUN397</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Overlap detected; shown in the paper&#39;s Figure 17, the exact share is not stated in the text.) (via WIT (WebImageText), OpenAI CLIP pre-training set)</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.686</span></p>
+<details><summary>Evidence (5)</summary><figure class="evidence">
+  <blockquote>“We refer to this dataset as WIT for WebImageText.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Few statistically significant improvements in accuracy due to detected data overlap.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“FER2013 SUN SUN397 Birdsnap Stanford Cars”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (right panel point labels, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“CIFAR-100 10 SUN397 SUN 0 ImageNet Sketch”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Figure 17 (left panel point labels and y-axis ticks, as extracted from the PDF) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“From this we first record the degree of data contamination as the ratio of the number of examples in Overlap to the size of All.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--caltech-101">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/caltech-101.html">Caltech-101</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.922</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--gtsrb">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gtsrb.html">GTSRB</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.524</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--resisc45">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/resisc45.html">NWPU-RESISC45</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.638</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--country211">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/country211.html">Country211</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (21.5% of Country211 test examples were detected as near-duplicates of WIT training images (the largest overlap of the 35 datasets checked); overall zero-shot accuracy changed by only +0.2 points.) (via WIT (WebImageText), OpenAI CLIP pre-training set)</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.344</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“We refer to this dataset as WIT for WebImageText.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The largest overlap is for Country211 at 21.5%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Despite this large overlap there is only a 0.2% increase in accuracy on Country211.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This is due to it being constructed out of YFCC100M, which our pre-training dataset contains a filtered subset of.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2103.00020v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (Data Overlap Analysis) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--stl-10">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/stl-10.html">STL-10</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.994</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--mnist">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mnist.html">MNIST</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Zero-shot top-1 accuracy (0-1) 0.792</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">There was no pre-training deduplication. OpenAI chose to measure overlap afterwards instead (Section 5). The quote &#39;Instead, we document how much overlap occurs and how performance changes due to these overlaps.&#39; is in Section 5. The checkpoint list comes from the model card&#39;s &#39;Model Versions&#39;. All sizes share WIT.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2103.00020v1">Learning Transferable Visual Models From Natural Language Supervision</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/openai/CLIP/main/model-card.md">Model Card: CLIP</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

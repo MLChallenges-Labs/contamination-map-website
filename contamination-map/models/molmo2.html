@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Molmo2 · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Model</p>
+<h1>Molmo2</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Allen Institute for AI (Ai2)</dd>
+  <dt>Family</dt><dd>Molmo · version 2</dd>
+  <dt>Released</dt><dd>2025-12-11 <span class="muted small">(Ai2 blog post &#39;Molmo 2&#39; dated December 11, 2025 (https://allenai.org/blog/molmo2); arXiv v1 2026-01-15)</span></dd>
+<dt>Checkpoints</dt><dd>allenai/Molmo2-4B, allenai/Molmo2-8B, allenai/Molmo2-O-7B</dd>  <dt>Weights</dt><dd>Open · Apache 2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/abs/2601.10611">Paper</a><a href="https://huggingface.co/allenai/Molmo2-8B/raw/main/README.md">Model card</a><a href="https://github.com/allenai/molmo2">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>18%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 3, Related data seen: 1, Not seen: 0, Unknown: 18">
+<span class="lvl-train_seen" style="flex-grow: 3" title="Training data seen: 3"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 18" title="Unknown: 18"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">3</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">1</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">18</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“We train on the Molmo2 data, image data from PixMo, and various open-source datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 Training · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We create nine new datasets (in pink) to train Molmo2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Built on</h2>
+  <p class="muted small">Everything these base models may have seen is inherited by Molmo2.</p>
+  <ul class="rows">
+    <li>
+      <a href="qwen3.html"><strong>Qwen3</strong></a>
+      <span class="muted">· disclosure: Vague</span>
+<p class="small">Molmo2-4B and Molmo2-8B (model card: Qwen/Qwen3-8B). Molmo2-O-7B uses OLMo (see training_data).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We release three versions of Molmo2: 4B and 8B models based on the Qwen3 LLMs [169], and a 7B model based on the OLMo LLM [112]”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Section 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="siglip-2.html"><strong>SigLIP 2</strong></a>
+      <span class="muted">· disclosure: Partial list</span>
+<p class="small">Model card text says SigLIP 2 but its link and base_model metadata point to google/siglip-so400m-patch14-384 (SigLIP 1); see open_questions.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“All models use the SigLIP 2 So400m/14 384px ViT [139].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Appendix, Hyperparameters · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>pre-training data of base model OLMo 3 7B (Molmo2-O-7B only)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">OLMo 3 is not in the allowed base-model id list for this pass, although olmo-3 exists in the registry.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Even with OLMo 3 as the LLM, our models still utilize a closed-data SigLIP 2 image”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Limitations · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PixMo-Cap (captioning pre-training)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Our pre-training stage includes dense captioning with length conditioning and transcript prediction using PixMo-Cap”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 Pre-training · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Tulu SFT data (English, no code) mixed into pre-training</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Tulu version not stated here.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We add NLP data using the supervised fine-tuning data from Tulu [71], filtered to remove non-English content and code”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 Pre-training · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>PixMo-Points, PixMo-Count, CoSyn-Point (pointing pre-training)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Additionally, we add pointing data from PixMo-Points, PixMo-Count, and CoSyn-Point [172].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 Pre-training · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SFT mixture: PixMo, nine new Molmo2 datasets, Tulu, open-source video and image datasets</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Our data mixture combines PixMo [29], the Molmo2 datasets, Tulu, and other open-source video and image datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 SFT · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/chartqa.html">ChartQA</a>  <span class="muted">· split: train of llm-multimodal · fine-tuning</span>
+<p class="small">Reference [102] in the Image QA list is ChartQA. Split from the released SFT launch script (data loader split=&#39;train&#39;); the paper itself only says &#39;following Molmo&#39;, and Molmo trained only on train sets.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“open-source image datasets [48, 130, 101, 102, 103, 105, 65, 125, 94, 95, 14, 2, 61, 62, 107] following Molmo with CoSyn [172] instead of PixMo-Docs”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 (Image QA group) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;chart_qa_weighted&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · IMAGE_ACADEMIC_DATASETS · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“split=&#34;train&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · launch_scripts/sft.py, DataLoaderConfig · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/docvqa.html">DocVQA</a>  <span class="muted">· split: train of llm-multimodal · fine-tuning</span>
+<p class="small">Reference [103] is DocVQA. Split from the released SFT launch script.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“open-source image datasets [48, 130, 101, 102, 103, 105, 65, 125, 94, 95, 14, 2, 61, 62, 107] following Molmo with CoSyn [172] instead of PixMo-Docs”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 (Image QA group) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;doc_qa&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · IMAGE_ACADEMIC_DATASETS · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“split=&#34;train&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · launch_scripts/sft.py, DataLoaderConfig · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a>  <span class="muted">· split: train of llm-multimodal · fine-tuning</span>
+<p class="small">Reference [65] is AI2D. Split from the released SFT launch script.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“open-source image datasets [48, 130, 101, 102, 103, 105, 65, 125, 94, 95, 14, 2, 61, 62, 107] following Molmo with CoSyn [172] instead of PixMo-Docs”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 (Image QA group) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;ai2_diagram_v2_mix_transparent&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · IMAGE_ACADEMIC_DATASETS · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“split=&#34;train&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · launch_scripts/sft.py, DataLoaderConfig · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-multimodal--mmmu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu.html">MMMU (Massive Multi-discipline Multimodal Understanding and Reasoning)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mmmu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu-pro.html">MMMU-Pro</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mathvista">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/mathvista.html">MathVista</a> <span class="muted">· in fine-tuning data: related dataset ChartQA was used</span></p>
+<details><summary>Evidence (6)</summary><figure class="evidence">
+  <blockquote>“open-source image datasets [48, 130, 101, 102, 103, 105, 65, 125, 94, 95, 14, 2, 61, 62, 107] following Molmo with CoSyn [172] instead of PixMo-Docs”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 (Image QA group) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;chart_qa_weighted&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · IMAGE_ACADEMIC_DATASETS · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“split=&#34;train&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · launch_scripts/sft.py, DataLoaderConfig · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“It consists of 6,141 examples, derived from 28 existing multimodal datasets involving mathematics and 3 newly created datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.02255v3">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ChartQA (2022)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.02255v3">arxiv.org</a>
+<span class="muted">· paper · Table 5 (Appendix C) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;dataset&#34;: &#34;ChartQA&#34;,”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/AI4Math/MathVista/raw/main/source.json">huggingface.co</a>
+<span class="muted">· dataset card · source.json · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--chartqa">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/chartqa.html">ChartQA</a> <span class="muted">· in fine-tuning data: only the training split was used, not the benchmark&#39;s test data</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“open-source image datasets [48, 130, 101, 102, 103, 105, 65, 125, 94, 95, 14, 2, 61, 62, 107] following Molmo with CoSyn [172] instead of PixMo-Docs”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 (Image QA group) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;chart_qa_weighted&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · IMAGE_ACADEMIC_DATASETS · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“split=&#34;train&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · launch_scripts/sft.py, DataLoaderConfig · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--docvqa">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/docvqa.html">DocVQA</a> <span class="muted">· in fine-tuning data: only the training split was used, not the benchmark&#39;s test data</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“open-source image datasets [48, 130, 101, 102, 103, 105, 65, 125, 94, 95, 14, 2, 61, 62, 107] following Molmo with CoSyn [172] instead of PixMo-Docs”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 (Image QA group) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;doc_qa&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · IMAGE_ACADEMIC_DATASETS · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“split=&#34;train&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · launch_scripts/sft.py, DataLoaderConfig · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--ai2d">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a> <span class="muted">· in fine-tuning data: only the training split was used, not the benchmark&#39;s test data</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“open-source image datasets [48, 130, 101, 102, 103, 105, 65, 125, 94, 95, 14, 2, 61, 62, 107] following Molmo with CoSyn [172] instead of PixMo-Docs”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2601.10611v4">arxiv.org</a>
+<span class="muted">· paper · Table 1 (Image QA group) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;ai2_diagram_v2_mix_transparent&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · IMAGE_ACADEMIC_DATASETS · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“split=&#34;train&#34;,”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">raw.githubusercontent.com</a>
+<span class="muted">· code · launch_scripts/sft.py, DataLoaderConfig · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--charxiv">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/charxiv.html">CharXiv</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Paper notes Molmo2 lags on reasoning benchmarks (MathVista, MMMU), &#39;possibly due to the lack of multi-modal reasoning training data&#39;. A decontamination step is reported only for MOSE videos against the MeViS validation set (video tracking), not for the multimodal benchmarks here.
+
+Accepts image input: “Molmo2 is a family of open vision-language models developed by the Allen Institute for AI (Ai2) that support image, video and multi-image understanding and grounding.”</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2601.10611v4">Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding (arXiv 2601.10611v4)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/allenai/Molmo2-8B/raw/main/README.md">Molmo2-8B model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/allenai/molmo2/main/launch_scripts/sft.py">allenai/molmo2 launch_scripts/sft.py</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li><li><a href="https://allenai.org/blog/molmo2">Ai2 blog: Molmo 2 (2025-12-11; codebase released 3/3)</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

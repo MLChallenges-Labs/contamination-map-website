@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Segment Anything Model (SAM) · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html" class="active">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/vision/index.html">Vision</a> / Model</p>
+<h1>Segment Anything Model (SAM)</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Meta AI</dd>
+  <dt>Family</dt><dd>Segment Anything · version 1</dd>
+  <dt>Released</dt><dd>2023-04-05 <span class="muted small">(arXiv v1 submission date (https://arxiv.org/abs/2304.02643v1))</span></dd>
+<dt>Checkpoints</dt><dd>sam_vit_h_4b8939.pth (vit_h), sam_vit_l_0b3195.pth (vit_l), vit_b</dd>  <dt>Weights</dt><dd>Open · Apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2304.02643v1">Paper</a><a href="https://github.com/facebookresearch/segment-anything">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>25%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">2</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">6</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“SAM was trained on SA-1B”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.02643v1">arxiv.org</a>
+<span class="muted">· paper · Section 7 (Implementation) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We initialize SAM from an MAE [47] pre-trained ViT-H.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.02643v1">arxiv.org</a>
+<span class="muted">· paper · Appendix A (Training algorithm) · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>SA-1B (Segment Anything 1-Billion masks)</strong>
+      <span class="muted">· 1 source (complete list) · pre-training</span>
+ · <a href="https://ai.meta.com/datasets/segment-anything/">homepage</a>      <details><summary>Evidence that Segment Anything Model (SAM) uses it</summary><figure class="evidence">
+  <blockquote>“SAM was trained on SA-1B, noting that this dataset includes only automatically generated masks from the final stage of our data engine.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.02643v1">arxiv.org</a>
+<span class="muted">· paper · Section 7 (Implementation) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>11M licensed photographs from a photo provider</em>  <span class="muted">· split: unknown</span>
+<p class="small">The images come from a licensed photo collection, not a web crawl. The provider is not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We licensed a new set of 11M images from a provider that works directly with photographers.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.02643v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></h3>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad.html">MVTec AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad-2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a> <span class="muted">· its test items were published from 2025-03-27, after the model&#39;s stated training-data cutoff (2022-12-31)</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“The licensed photos vary in their date taken over a wide range of years up to 2022.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.02643v1">arxiv.org</a>
+<span class="muted">· paper · Datasheet (Collection Process, Q5) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“arXiv:2503.21622v1 [cs.CV] 27 Mar 2025”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2503.21622v1">arxiv.org</a>
+<span class="muted">· paper · header · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All image data is available at https://www.mvtec.com/company/research/datasets/mvtec-ad-2.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2503.21622v1">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-loco-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--visa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/visa.html">VisA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--real-iad">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/real-iad.html">Real-IAD</a> <span class="muted">· its test items were published from 2024-03-19, after the model&#39;s stated training-data cutoff (2022-12-31)</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“The licensed photos vary in their date taken over a wide range of years up to 2022.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.02643v1">arxiv.org</a>
+<span class="muted">· paper · Datasheet (Collection Process, Q5) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“arXiv:2403.12580v1 [cs.CV] 19 Mar 2024”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2403.12580v1">arxiv.org</a>
+<span class="muted">· paper · header · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="industrial-ad--mpdd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mpdd.html">MPDD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--btad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/btad.html">BTAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--ksdd2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ksdd2.html">KolektorSDD2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">The image encoder is initialised from an MAE pre-trained ViT-H. The SAM paper does not state the MAE pre-training data. The MAE paper (https://arxiv.org/pdf/2111.06377v3, Section 4) says &#39;We do self-supervised pre-training on the ImageNet-1K (IN1K) training set&#39;, but SAM does not say which MAE checkpoint it used. disclosure is partial_list for that reason. In the data engine&#39;s first stage, SAM was first trained on common public segmentation datasets, then &#39;retrained using only newly annotated masks&#39; (Section 4). The released model is described as trained on SA-1B.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2304.02643v1">Segment Anything</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/facebookresearch/segment-anything/main/README.md">segment-anything README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

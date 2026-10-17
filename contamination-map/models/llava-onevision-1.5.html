@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLaVA-OneVision-1.5 · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Model</p>
+<h1>LLaVA-OneVision-1.5</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>LLaVA-OneVision Community Contributors (EvolvingLMMs-Lab)</dd>
+  <dt>Family</dt><dd>LLaVA · version 1.5</dd>
+  <dt>Released</dt><dd>2025-09-28 <span class="muted small">(arXiv v1 submission date (2509.23661); HF repo lmms-lab/LLaVA-OneVision-1.5-8B-Instruct created 2025-09-16)</span></dd>
+<dt>Checkpoints</dt><dd>lmms-lab/LLaVA-OneVision-1.5-4B-Instruct, lmms-lab/LLaVA-OneVision-1.5-8B-Instruct, lmms-lab/LLaVA-OneVision-1.5-4B-Base, lmms-lab/LLaVA-OneVision-1.5-8B-Base</dd>  <dt>Weights</dt><dd>Open · Apache 2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/abs/2509.23661">Paper</a><a href="https://huggingface.co/lmms-lab/LLaVA-OneVision-1.5-8B-Instruct/raw/main/README.md">Model card</a><a href="https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-1.5">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>18%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 2, Training data seen: 1, Related data seen: 1, Not seen: 0, Unknown: 18">
+<span class="lvl-seen_split_unclear" style="flex-grow: 2" title="Seen, split unclear: 2"></span><span class="lvl-train_seen" style="flex-grow: 1" title="Training data seen: 1"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 18" title="Unknown: 18"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">2</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">1</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">1</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">18</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“a meticulously curated 22M instruction dataset LLaVA-OneVision-1.5-Instruct”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“As part of the LLaVA-OneVision-1.5 open-source initiative, we are releasing this dataset to the community”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Instruct-Data/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Introduction · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+<section>
+  <h2>Built on</h2>
+  <p class="muted small">Everything these base models may have seen is inherited by LLaVA-OneVision-1.5.</p>
+  <ul class="rows">
+    <li>
+      <a href="qwen3.html"><strong>Qwen3</strong></a>
+      <span class="muted">· disclosure: Vague</span>
+<p class="small">Qwen3-4B/8B base models.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Qwen3 (Team, 2025) as the language backbone”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Qwen/Qwen3-8B-Base”</blockquote>
+  <figcaption><a href="https://huggingface.co/lmms-lab/LLaVA-OneVision-1.5-8B-Instruct/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · base_model metadata · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>pre-training data of base model RICE-ViT (vision encoder; 450M images, 2.4B regions)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">RICE-ViT is not in the registry.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“our LLaVA-OneVision-1.5 leverages the RICE-ViT (Xie et al., 2025) as its vision encoder”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“trained on 450M images and 2.4B candidate regions”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>LLaVA-1.5 558K (alignment stage)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We use the LLaVA-1.5 558K (Liu et al., 2024a) to align the visual features into the word embedding space of LLMs.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>LLaVA-OneVision-1.5-Mid-Training (85M recaptioned images from COYO-700M, Obelics, DataComp-1B, LAION-CN, ImageNet-21K, SAM-1B, MINT, Zero250M)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Images sampled from web-scale collections (incl. DataComp-1B and SAM-1B, cf. corpora datacomp-1b, sa-1b) and recaptioned by a captioner model.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“The data of LLaVA-OneVision-1.5-Mid-Traning are from a wide range of sources: COYO-700M (Byeon et al., 2022), Obelics (Laurençon et al., 2023)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>LLaVA-OneVision-1.5-Instruct (22M)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we construct the LLaVA-OneVision-1.5-Instruct dataset by aggregating a wide range of instruction-tuning datasets from diverse sources.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Section 3.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>FineVision</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">FineVision (24.3M samples, 185 subsets incl. ChartQA, DocVQA, AI2D) was released without removing benchmark-flagged images (see notes).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“as well as the FineVision (Wiedmann et al., 2025) dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 Stage-2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/docvqa.html">DocVQA</a>  <span class="muted">· split: train of llm-multimodal · fine-tuning</span>
+<p class="small">Split inferred only from the subset name &#39;docvqa_train&#39; in the released instruction data.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“config_name: docvqa_train”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Instruct-Data/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · YAML configs · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/chartqa.html">ChartQA</a>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“config_name: chartqa”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Instruct-Data/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · YAML configs · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Split not stated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“config_name: ai2d”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Instruct-Data/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · YAML configs · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“while OCR (2K) and Diagram (0.2K) samples are selected from InfoVQA and AI2D, respectively.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 RL data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>RL corpus (ViRL39K, WebCode2M, UniSVG, Ref-L4, VigoRL-SA/SAT, PixmoCount, AI2D, InfoVQA; ~67K)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We construct the RL training corpus by aggregating diverse public data sources”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-multimodal--mmmu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu.html">MMMU (Massive Multi-discipline Multimodal Understanding and Reasoning)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mmmu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmmu-pro.html">MMMU-Pro</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-multimodal--mathvista">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/mathvista.html">MathVista</a> <span class="muted">· in fine-tuning data: related dataset DocVQA was used</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“config_name: docvqa_train”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Instruct-Data/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · YAML configs · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“It consists of 6,141 examples, derived from 28 existing multimodal datasets involving mathematics and 3 newly created datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.02255v3">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“DocVQA (2022)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.02255v3">arxiv.org</a>
+<span class="muted">· paper · Table 5 (Appendix C) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“&#34;dataset&#34;: &#34;DocVQA&#34;,”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/AI4Math/MathVista/raw/main/source.json">huggingface.co</a>
+<span class="muted">· dataset card · source.json · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--chartqa">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/chartqa.html">ChartQA</a> <span class="muted">· in fine-tuning data: the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“config_name: chartqa”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Instruct-Data/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · YAML configs · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--docvqa">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/docvqa.html">DocVQA</a> <span class="muted">· in fine-tuning data: only the training split was used, not the benchmark&#39;s test data</span></p>
+<details><summary>Evidence (1)</summary><figure class="evidence">
+  <blockquote>“config_name: docvqa_train”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Instruct-Data/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · YAML configs · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--ai2d">
+    <p><span class="badge lvl-seen_split_unclear">Seen, split unclear</span> <a href="../datasets/ai2d.html">AI2D (AI2 Diagrams)</a> <span class="muted">· in fine-tuning data: the dataset was used; the source does not say which part</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“config_name: ai2d”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Instruct-Data/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · YAML configs · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“while OCR (2K) and Diagram (0.2K) samples are selected from InfoVQA and AI2D, respectively.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2509.23661v3">arxiv.org</a>
+<span class="muted">· paper · Section 5.1 RL data · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-multimodal--charxiv">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/charxiv.html">CharXiv</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· unknown for its base model Qwen3: training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Separate team/report from the 2024 LLaVA-OneVision; included as the latest LLaVA-OneVision version. The FineVision paper (used for SFT) measured 1.02% of FineVision images as near-duplicates of 66 lmms-eval test sets and states it was released &#39;in its original form&#39; (not decontaminated). No decontamination statement by the LLaVA-OV-1.5 authors found.
+
+Accepts image input: “Trained on native‑resolution images, it delivers state‑of‑the‑art performance at substantially lower cost.”</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2509.23661v3">LLaVA-OneVision-1.5: Fully Open Framework for Democratized Multimodal Training (arXiv 2509.23661v3)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/lmms-lab/LLaVA-OneVision-1.5-8B-Instruct/raw/main/README.md">LLaVA-OneVision-1.5-8B-Instruct model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Instruct-Data/raw/main/README.md">mvp-lab/LLaVA-OneVision-1.5-Instruct-Data</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2510.17269v2">FineVision: Open Data Is All You Need (arXiv 2510.17269v2)</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

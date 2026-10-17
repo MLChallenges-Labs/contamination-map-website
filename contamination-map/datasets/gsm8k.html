@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GSM8K (Grade School Math 8K) · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Dataset</p>
+<h1>GSM8K (Grade School Math 8K)</h1>
+<p class="lede">8.5K grade-school math word problems written by human problem writers, split into 7.5K training and 1K test problems (HF openai/gsm8k: train 7,473 / test 1,319). Answers are integers reached in 2-8 arithmetic steps.</p>    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+<dt>Also known as</dt><dd>GSM8K, GSM-8K, Grade School Math 8K</dd><dt>Domain</dt><dd>math</dd><dt>License</dt><dd>MIT</dd><dt>Homepage</dt><dd><a href="https://github.com/openai/grade-school-math">github.com</a></dd></dl>
+
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/amber.html#llm-classic--gsm8k">LLM360 Amber</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/bloom.html#llm-classic--gsm8k">BLOOM</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/claude-3-5-sonnet.html#llm-classic--gsm8k">Claude 3.5 Sonnet</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/claude-3-7-sonnet.html#llm-classic--gsm8k">Claude 3.7 Sonnet</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/claude-3.html#llm-classic--gsm8k">Claude 3 (Opus, Sonnet, Haiku)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/claude-4.html#llm-classic--gsm8k">Claude Opus 4 and Claude Sonnet 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/claude-fable-5.html#llm-classic--gsm8k">Claude Fable 5 / Claude Mythos 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/claude-mythos-preview.html#llm-classic--gsm8k">Claude Mythos Preview</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/claude-opus-4-5.html#llm-classic--gsm8k">Claude Opus 4.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/claude-opus-5.html#llm-classic--gsm8k">Claude Opus 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/claude-sonnet-5.html#llm-classic--gsm8k">Claude Sonnet 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/dclm-7b-it.html#llm-classic--gsm8k">DCLM-7B-IT (DCLM-IT-7B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/dclm-7b.html#llm-classic--gsm8k">DCLM-7B (DCLM-Baseline-7B)</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the pre-training data (Via ProofPile2: Llemma Table 6 lists 30-gram hits between GSM8k test problems and OpenWebMath documents (2 test examples, 3 documents; 0 for solutions); CONDA 2024 report lists gsm8k as contaminated in EleutherAI/proof-pile-2.) [third-party study]</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1-0528.html#llm-classic--gsm8k">DeepSeek-R1-0528</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1-distill.html#llm-classic--gsm8k">DeepSeek-R1-Distill</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-r1.html#llm-classic--gsm8k">DeepSeek-R1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3-0324.html#llm-classic--gsm8k">DeepSeek-V3-0324</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.1.html#llm-classic--gsm8k">DeepSeek-V3.1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.2-exp.html#llm-classic--gsm8k">DeepSeek-V3.2-Exp</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.2.html#llm-classic--gsm8k">DeepSeek-V3.2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v3.html#llm-classic--gsm8k">DeepSeek-V3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v4.1-flash.html#llm-classic--gsm8k">DeepSeek-V4.1-Flash</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/deepseek-v4.html#llm-classic--gsm8k">DeepSeek-V4 (Pro / Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gemini-1-5.html#llm-classic--gsm8k">Gemini 1.5 (Pro, Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gemini-2-5.html#llm-classic--gsm8k">Gemini 2.5 (Pro, Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gemini-3-pro.html#llm-classic--gsm8k">Gemini 3 Pro</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gemini-4-argon.html#llm-classic--gsm8k">Gemini 4 Argon</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gemma-2.html#llm-classic--gsm8k">Gemma 2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gemma-3.html#llm-classic--gsm8k">Gemma 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gemma-3n.html#llm-classic--gsm8k">Gemma 3n</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gemma-4.html#llm-classic--gsm8k">Gemma 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gpt-4.html#llm-classic--gsm8k">GPT-4</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the pre-training data (~1% of 1000 sampled GSM-8K test examples matched GPT-4 pre-training data)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gpt-4o.html#llm-classic--gsm8k">GPT-4o</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gpt-5-2.html#llm-classic--gsm8k">GPT-5.2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gpt-5.html#llm-classic--gsm8k">GPT-5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gpt-6-astra.html#llm-classic--gsm8k">GPT-6 Astra</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/gpt-oss.html#llm-classic--gsm8k">gpt-oss</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/internvl3.5.html#llm-classic--gsm8k">InternVL3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen3: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/internvl3.html#llm-classic--gsm8k">InternVL3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen2.5: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/k2-65b.html#llm-classic--gsm8k">LLM360 K2-65B (K2 Diamond)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/k2-horizon.html#llm-classic--gsm8k">K2-Horizon</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/k2-v2.html#llm-classic--gsm8k">K2-V2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/llama-2.html#llm-classic--gsm8k">Llama 2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.1.html#llm-classic--gsm8k">Llama 3.1</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">a contamination analysis found test examples in the pre-training data (41% of GSM8K examples considered contaminated (8-gram overlap); estimated performance gain 0.0 / 0.1 / 1.3 points for 8B / 70B / 405B.)</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.2-vision.html#llm-classic--gsm8k">Llama 3.2-Vision (11B, 90B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.2.html#llm-classic--gsm8k">Llama 3.2 (1B, 3B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.3.html#llm-classic--gsm8k">Llama 3.3 70B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.html#llm-classic--gsm8k">Meta Llama 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/llama-4.html#llm-classic--gsm8k">Llama 4 (Scout, Maverick)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/llava-onevision-1.5.html#llm-classic--gsm8k">LLaVA-OneVision-1.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen3: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/llava-onevision.html#llm-classic--gsm8k">LLaVA-OneVision</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model SigLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/ministral-3.html#llm-classic--gsm8k">Ministral 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/mistral-7b.html#llm-classic--gsm8k">Mistral 7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/mistral-large-3.html#llm-classic--gsm8k">Mistral Large 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/mistral-medium-3.5.html#llm-classic--gsm8k">Mistral Medium 3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/mistral-small-4.html#llm-classic--gsm8k">Mistral Small 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/mixtral-8x7b.html#llm-classic--gsm8k">Mixtral 8x7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/molmo.html#llm-classic--gsm8k">Molmo (0924)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/molmo2.html#llm-classic--gsm8k">Molmo2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen3: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/o1.html#llm-classic--gsm8k">OpenAI o1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/o3.html#llm-classic--gsm8k">OpenAI o3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/olmo-1.html#llm-classic--gsm8k">OLMo (February 2024)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/olmo-2-1124.html#llm-classic--gsm8k">OLMo 2 (November 2024)</a></td>
+        <td><span class="badge lvl-train_seen">Training data seen</span></td>
+        <td class="small">in fine-tuning data: only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/olmo-3.1.html#llm-classic--gsm8k">Olmo 3.1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/olmo-3.html#llm-classic--gsm8k">Olmo 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/olmo-hybrid-7b.html#llm-classic--gsm8k">Olmo Hybrid 7B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/phi-3.5.html#llm-classic--gsm8k">Phi-3.5 (mini / MoE)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/phi-3.html#llm-classic--gsm8k">Phi-3 (mini / small / medium)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini-flash-reasoning.html#llm-classic--gsm8k">Phi-4-mini-flash-reasoning</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini-reasoning.html#llm-classic--gsm8k">Phi-4-mini-reasoning</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-mini.html#llm-classic--gsm8k">Phi-4-mini</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/phi-4-reasoning.html#llm-classic--gsm8k">Phi-4-reasoning / Phi-4-reasoning-plus</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/phi-4.html#llm-classic--gsm8k">Phi-4</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">the authors state its test portion was excluded from training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/phi-slimmoe.html#llm-classic--gsm8k">Phi-mini-MoE / Phi-tiny-MoE (SlimMoE)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/pixtral-12b.html#llm-classic--gsm8k">Pixtral 12B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/pixtral-large.html#llm-classic--gsm8k">Pixtral Large</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/pythia-deduped.html#llm-classic--gsm8k">Pythia (deduplicated)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/pythia.html#llm-classic--gsm8k">Pythia</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/qwen2.5-vl.html#llm-classic--gsm8k">Qwen2.5-VL</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen2.5: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/qwen2.5.html#llm-classic--gsm8k">Qwen2.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-2507.html#llm-classic--gsm8k">Qwen3-2507 (Instruct-2507 / Thinking-2507)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-next.html#llm-classic--gsm8k">Qwen3-Next</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-vl.html#llm-classic--gsm8k">Qwen3-VL</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen3: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.5.html#llm-classic--gsm8k">Qwen3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.6.html#llm-classic--gsm8k">Qwen3.6</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.8-flash-next.html#llm-classic--gsm8k">Qwen3.8-Flash-Next</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.8.html#llm-classic--gsm8k">Qwen3.8</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.html#llm-classic--gsm8k">Qwen3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/smollm2.html#llm-classic--gsm8k">SmolLM2</a></td>
+        <td><span class="badge lvl-train_seen">Training data seen</span></td>
+        <td class="small">only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></td>
+        <td><a href="../models/smollm3.html#llm-classic--gsm8k">SmolLM3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Copies found in public web data by third-party studies: Common Crawl CC-2025-21: 74.2% of (downsampled) GSM8K test questions are &#39;dirty&#39; in the CC-2025-21 crawl (very clean in Pile-train, DCLM-baseline and earlier 2025 crawls).; Llama 1 pre-training corpus: Substantial contamination percentages for GSM8K in the Llama 1 pre-training corpus; significant estimated performance gain seen for Llama 1 models.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2110.14168v2">Training Verifiers to Solve Math Word Problems (arXiv v2)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/openai/grade-school-math/master/README.md">openai/grade-school-math README</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/openai/gsm8k/raw/main/README.md">openai/gsm8k dataset card</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

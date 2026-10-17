@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DINOv2 · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html" class="active">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/vision/index.html">Vision</a> / Model</p>
+<h1>DINOv2</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Meta AI</dd>
+  <dt>Family</dt><dd>DINO · version 2</dd>
+  <dt>Released</dt><dd>2023-04-14 <span class="muted small">(arXiv v1 submission date (https://arxiv.org/abs/2304.07193v1))</span></dd>
+<dt>Checkpoints</dt><dd>dinov2_vits14, dinov2_vitb14, dinov2_vitl14, dinov2_vitg14, dinov2_vits14_reg, dinov2_vitb14_reg, dinov2_vitl14_reg, dinov2_vitg14_reg</dd>  <dt>Weights</dt><dd>Open · Apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2304.07193v2">Paper</a><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">Model card</a><a href="https://github.com/facebookresearch/dinov2">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-partial_list">Partial list</span></h2>
+<p>Level determined for <strong>50%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 9, Not seen: 6, Unknown: 15">
+<span class="lvl-related" style="flex-grow: 9" title="Related data seen: 9"></span><span class="lvl-not_seen" style="flex-grow: 6" title="Not seen: 6"></span><span class="lvl-unknown" style="flex-grow: 15" title="Unknown: 15"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">9</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">6</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">15</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“We chose to include as many datasets as possible in the pretraining data in order to cover as many domains as possible.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we collect a raw unfiltered dataset of images from a publicly available repository of crawled web data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>LVD-142M</strong>
+      <span class="muted">· 13 sources (complete list) · pre-training</span>
+      <details><summary>Evidence that DINOv2 uses it</summary><figure class="evidence">
+  <blockquote>“LVD-142M (see paper)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>ImageNet-22k / –</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Included &#39;as is&#39;. The &#39;–&#39; in Table 15 means no split is named. Not matched to a registry dataset: ImageNet-21k/22k contains ImageNet-1k&#39;s training images, so it is not unrelated.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“ImageNet-22k / –”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (inclusion: as is, 14,197,086 images; also used as a sample-based retrieval seed) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Google Landmarks v2 / train (clean)</em>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Google Landmarks v2 / train (clean)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (inclusion: as is, 1,580,470 images; also used as a sample-based retrieval seed) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Mapillary SLS / train</em>  <span class="muted">· split: train</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Mapillary SLS / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (inclusion: as is, 1,434,262 images) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>uncurated web images (1.2B unique images from a publicly available repository of crawled web data), retrieved by similarity to curated seed datasets</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">About 124M of the 142M images are web images retrieved as neighbours of seed images. Any public web image, including copies of benchmark images, could be retrieved unless it was removed by the deduplication step. The crawl repository and its dates are not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we collect a raw unfiltered dataset of images from a publicly available repository of crawled web data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This results in 1.2B unique images.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/imagenet-1k.html">ImageNet-1k (ILSVRC 2012)</a>  <span class="muted">· split: train of imagenet-shifts · used to select similar data, not trained on</span>
+<p class="small">Retrieval seed, not an inclusion: sample-based retrieval (k = 32): 1,281,167 seed images, 40,997,344 retrieved web images in LVD-142M. The seed images themselves are not part of LVD-142M (Table 15 &#39;Final&#39; equals &#39;Retrieved&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“ImageNet-1k / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use k = 4 for Google Landmarks v2 and ImageNet-22k but a larger k = 32 to make this specific retrieval a core part of our LVD-142M dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.4 (Retrieval) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/caltech-101.html">Caltech-101</a>  <span class="muted">· split: train of zeroshot-transfer · used to select similar data, not trained on</span>
+<p class="small">Retrieval seed, not an inclusion: cluster-based retrieval: 3,030 seed images, 1,000,000 retrieved web images kept. The seed images themselves are not part of LVD-142M (Table 15 &#39;Final&#39; equals &#39;Retrieved&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Caltech 101 / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/dtd.html">Describable Textures Dataset (DTD)</a>  <span class="muted">· split: train of zeroshot-transfer · used to select similar data, not trained on</span>
+<p class="small">Retrieval seed, not an inclusion: cluster-based retrieval: 1,880 seed images, 1,000,000 retrieved web images kept. &#39;train1&#39; is DTD&#39;s first official train partition. The seed images themselves are not part of LVD-142M (Table 15 &#39;Final&#39; equals &#39;Retrieved&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“DTD / train1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/fgvc-aircraft.html">FGVC-Aircraft</a>  <span class="muted">· split: train of zeroshot-transfer · used to select similar data, not trained on</span>
+<p class="small">Retrieval seed, not an inclusion: cluster-based retrieval: 3,334 seed images, 1,000,000 retrieved web images kept. The seed images themselves are not part of LVD-142M (Table 15 &#39;Final&#39; equals &#39;Retrieved&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“FGVC-Aircraft / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/flowers-102.html">Oxford Flowers-102</a>  <span class="muted">· split: train of zeroshot-transfer · used to select similar data, not trained on</span>
+<p class="small">Retrieval seed, not an inclusion: cluster-based retrieval: 1,020 seed images, 1,000,000 retrieved web images kept. The seed images themselves are not part of LVD-142M (Table 15 &#39;Final&#39; equals &#39;Retrieved&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Flowers-102 / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/food-101.html">Food-101</a>  <span class="muted">· split: train of zeroshot-transfer · used to select similar data, not trained on</span>
+<p class="small">Retrieval seed, not an inclusion: cluster-based retrieval: 75,750 seed images, 1,000,000 retrieved web images kept. The seed images themselves are not part of LVD-142M (Table 15 &#39;Final&#39; equals &#39;Retrieved&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Food-101 / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/oxford-pets.html">Oxford-IIIT Pet</a>  <span class="muted">· split: train of zeroshot-transfer · used to select similar data, not trained on</span>
+<p class="small">Retrieval seed, not an inclusion: cluster-based retrieval: 3,680 seed images (train+val split), 1,000,000 retrieved web images kept. The seed images themselves are not part of LVD-142M (Table 15 &#39;Final&#39; equals &#39;Retrieved&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Oxford-IIIT Pet / trainval”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/stanford-cars.html">Stanford Cars</a>  <span class="muted">· split: train of zeroshot-transfer · used to select similar data, not trained on</span>
+<p class="small">Retrieval seed, not an inclusion: cluster-based retrieval: 8,144 seed images, 1,000,000 retrieved web images kept. The seed images themselves are not part of LVD-142M (Table 15 &#39;Final&#39; equals &#39;Retrieved&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Stanford Cars / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<a href="../datasets/sun397.html">SUN397</a>  <span class="muted">· split: train of zeroshot-transfer · used to select similar data, not trained on</span>
+<p class="small">Retrieval seed, not an inclusion: cluster-based retrieval: 19,850 seed images, 1,000,000 retrieved web images kept. &#39;train1&#39; is SUN397&#39;s first official train partition. The seed images themselves are not part of LVD-142M (Table 15 &#39;Final&#39; equals &#39;Retrieved&#39;).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“SUN397 / train1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Dataset <a href="../datasets/imagenet-1k.html">ImageNet-1k (ILSVRC 2012)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-1k ImageNet-22k ImageNet-V2 ImageNet-ReaL”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/imagenet-v2.html">ImageNetV2 (MatchedFrequency)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-1k ImageNet-22k ImageNet-V2 ImageNet-ReaL”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/imagenet-a.html">ImageNet-A</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-A ImageNet-C ImageNet-R ImageNet-Sk.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/imagenet-r.html">ImageNet-R (Renditions)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-A ImageNet-C ImageNet-R ImageNet-Sk.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/imagenet-sketch.html">ImageNet-Sketch</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-A ImageNet-C ImageNet-R ImageNet-Sk.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/food-101.html">Food-101</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/cifar-10.html">CIFAR-10</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/cifar-100.html">CIFAR-100</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/sun397.html">SUN397</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/stanford-cars.html">Stanford Cars</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/fgvc-aircraft.html">FGVC-Aircraft</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/dtd.html">Describable Textures Dataset (DTD)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/oxford-pets.html">Oxford-IIIT Pet</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/caltech-101.html">Caltech-101</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/flowers-102.html">Oxford Flowers-102</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/imagenet-shifts.html">ImageNet and natural distribution shifts</a></h3>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-1k">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/imagenet-1k.html">ImageNet-1k (ILSVRC 2012)</a> <span class="muted">· training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded</span></p>
+<details><summary>Evidence (8)</summary><figure class="evidence">
+  <blockquote>“LVD-142M (see paper)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-1k / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We use k = 4 for Google Landmarks v2 and ImageNet-22k but a larger k = 32 to make this specific retrieval a core part of our LVD-142M dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.4 (Retrieval) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-1k ImageNet-22k ImageNet-V2 ImageNet-ReaL”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-v2">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/imagenet-v2.html">ImageNetV2 (MatchedFrequency)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-1k ImageNet-22k ImageNet-V2 ImageNet-ReaL”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-sketch">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/imagenet-sketch.html">ImageNet-Sketch</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-A ImageNet-C ImageNet-R ImageNet-Sk.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-r">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/imagenet-r.html">ImageNet-R (Renditions)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-A ImageNet-C ImageNet-R ImageNet-Sk.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="imagenet-shifts--imagenet-a">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/imagenet-a.html">ImageNet-A</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“ImageNet-A ImageNet-C ImageNet-R ImageNet-Sk.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="imagenet-shifts--objectnet">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/objectnet.html">ObjectNet</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></h3>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad.html">MVTec AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad-2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-loco-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--visa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/visa.html">VisA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--real-iad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/real-iad.html">Real-IAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mpdd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mpdd.html">MPDD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--btad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/btad.html">BTAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--ksdd2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ksdd2.html">KolektorSDD2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/zeroshot-transfer.html">Zero-shot transfer classification</a></h3>
+  <div class="cell-detail" id="zeroshot-transfer--cifar-10">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/cifar-10.html">CIFAR-10</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--cifar-100">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/cifar-100.html">CIFAR-100</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--food-101">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/food-101.html">Food-101</a> <span class="muted">· training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded</span></p>
+<details><summary>Evidence (7)</summary><figure class="evidence">
+  <blockquote>“LVD-142M (see paper)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--stanford-cars">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/stanford-cars.html">Stanford Cars</a> <span class="muted">· training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded</span></p>
+<details><summary>Evidence (7)</summary><figure class="evidence">
+  <blockquote>“LVD-142M (see paper)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Stanford Cars / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--fgvc-aircraft">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/fgvc-aircraft.html">FGVC-Aircraft</a> <span class="muted">· training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded</span></p>
+<details><summary>Evidence (7)</summary><figure class="evidence">
+  <blockquote>“LVD-142M (see paper)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“FGVC-Aircraft / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--oxford-pets">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/oxford-pets.html">Oxford-IIIT Pet</a> <span class="muted">· training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded</span></p>
+<details><summary>Evidence (7)</summary><figure class="evidence">
+  <blockquote>“LVD-142M (see paper)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Oxford-IIIT Pet / trainval”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--flowers-102">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/flowers-102.html">Oxford Flowers-102</a> <span class="muted">· training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded</span></p>
+<details><summary>Evidence (7)</summary><figure class="evidence">
+  <blockquote>“LVD-142M (see paper)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Flowers-102 / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--dtd">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/dtd.html">Describable Textures Dataset (DTD)</a> <span class="muted">· training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded</span></p>
+<details><summary>Evidence (7)</summary><figure class="evidence">
+  <blockquote>“LVD-142M (see paper)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“DTD / train1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--eurosat">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/eurosat.html">EuroSAT</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--sun397">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/sun397.html">SUN397</a> <span class="muted">· training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded</span></p>
+<details><summary>Evidence (7)</summary><figure class="evidence">
+  <blockquote>“LVD-142M (see paper)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“SUN397 / train1”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--caltech-101">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/caltech-101.html">Caltech-101</a> <span class="muted">· training data was selected to resemble this dataset&#39;s training images (via LVD-142M); the authors state this dataset&#39;s test portion was excluded</span></p>
+<details><summary>Evidence (7)</summary><figure class="evidence">
+  <blockquote>“LVD-142M (see paper)”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">raw.githubusercontent.com</a>
+<span class="muted">· model card · Training Data · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We assemble our curated LVD-142M dataset by retrieving, from a large pool of uncurated data, images that are close to those in several curated datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Caltech 101 / train”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 (retrieval seed) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“how they were included (as is without retrieval or via sample-based or cluster-based retrieval)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 15 caption · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We also remove near-duplicates of images contained in the test or validation set of any benchmark used in this work.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Section 3 (Deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we discard remaining images of our self-deduplicated data source that are too similar to train and test splits of our evaluation datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Appendix A.3 (Relative deduplication) · retrieved 2026-10-16</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Food-101 CIFAR-10 CIFAR-100 SUN397 StanfordCars FGVC-Aircraft VOC 2007 DTD Oxford Pets Caltech101 Flowers CUB200”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2304.07193v2">arxiv.org</a>
+<span class="muted">· paper · Table 18: List of datasets used (evaluation datasets) · retrieved 2026-10-16</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="zeroshot-transfer--gtsrb">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gtsrb.html">GTSRB</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--resisc45">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/resisc45.html">NWPU-RESISC45</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--country211">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/country211.html">Country211</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--stl-10">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/stl-10.html">STL-10</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="zeroshot-transfer--mnist">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mnist.html">MNIST</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">disclosure is partial_list because the curated seeds and the &#39;as is&#39; datasets are fully listed in Table 15, but the web crawl repository is unnamed and only described in general terms. The checkpoint names are the torch.hub names. The model card covers 8 models, with and without registers, all trained on LVD-142M.
+
+Deduplication stated by its authors (not a tracked benchmark): test or validation sets of every benchmark used in the DINOv2 paper.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2304.07193v2">DINOv2: Learning Robust Visual Features without Supervision</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/facebookresearch/dinov2/main/MODEL_CARD.md">DINOv2 MODEL_CARD.md</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

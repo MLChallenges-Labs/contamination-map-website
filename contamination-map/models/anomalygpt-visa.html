@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AnomalyGPT, unsupervised on VisA · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html" class="active">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/vision/index.html">Vision</a> / Model</p>
+<h1>AnomalyGPT, unsupervised on VisA</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Institute of Automation, Chinese Academy of Sciences / Objecteye / Wuhan AI Research</dd>
+  <dt>Family</dt><dd>AnomalyGPT · version train_visa</dd>
+  <dt>Released</dt><dd>2023-08-29 <span class="muted small">(arXiv v1 submission date (https://arxiv.org/abs/2308.15366))</span></dd>
+<dt>Checkpoints</dt><dd>FantasticGNU/AnomalyGPT train_visa/pytorch_model.pt</dd>  <dt>Weights</dt><dd>Open</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2308.15366v4">Paper</a><a href="https://github.com/CASIA-IVA-Lab/AnomalyGPT">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>12%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 1, Related data seen: 0, Not seen: 0, Unknown: 7">
+<span class="lvl-train_seen" style="flex-grow: 1" title="Training data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">1</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">7</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“Consistent with previous IAD methods, we only use the normal data from these datasets for training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2308.15366v4">arxiv.org</a>
+<span class="muted">· paper · Section 4, Datasets · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Unsupervised on VisA”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · 2.4 weights table · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<a href="../datasets/visa.html">VisA</a>  <span class="muted">· split: train of industrial-ad · fine-tuning</span>
+<p class="small">Code (code/datasets/visa.py) keeps rows with split &#39;train&#39; of VisA split_csv/1cls.csv.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Consistent with previous IAD methods, we only use the normal data from these datasets for training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2308.15366v4">arxiv.org</a>
+<span class="muted">· paper · Section 4, Datasets · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We primarily adopt the approach proposed by NSA [24] to simulate anomalous data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2308.15366v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>pre-training data of PandaGPT (pandagpt4_visual_instruction_data)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">PandaGPT visual instruction data (HF dataset openllmplayground/pandagpt_visual_instruction_dataset); the paper says LLaVA/PandaGPT were pre-trained on 160k images with multi-turn conversations.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We perform alternating training using both the pre-training data of PandaGPT [25] and our anomaly image-text data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2308.15366v4">arxiv.org</a>
+<span class="muted">· paper · Section 4, Implementation Details · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Pre-training data of base model imagebind-huge (not tracked here)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We utilize ImageBind-Huge [8] as the image encoder and Vicuna-7B [3] as the inferential LLM, connected through a linear layer.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2308.15366v4">arxiv.org</a>
+<span class="muted">· paper · Section 4, Implementation Details · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Pre-training data of base model vicuna-7b (not tracked here)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We utilize ImageBind-Huge [8] as the image encoder and Vicuna-7B [3] as the inferential LLM, connected through a linear layer.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2308.15366v4">arxiv.org</a>
+<span class="muted">· paper · Section 4, Implementation Details · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Pre-training data of base model pandagpt-7b (not tracked here)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We initialize our model using pre-trained parameters from PandaGPT [25].”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2308.15366v4">arxiv.org</a>
+<span class="muted">· paper · Section 4, Implementation Details · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In our experiments and online demo, we use the Vicuna-7B and `openllmplayground/pandagpt_7b_max_len_1024` due to the limitation of computation resource.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · 2.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></h3>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad.html">MVTec AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-ad-2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-ad-2.html">MVTec AD 2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mvtec-loco-ad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mvtec-loco-ad.html">MVTec LOCO AD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--visa">
+    <p><span class="badge lvl-train_seen">Training data seen</span> <a href="../datasets/visa.html">VisA</a> <span class="muted">· in fine-tuning data: only the training split was used, not the benchmark&#39;s test data</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Consistent with previous IAD methods, we only use the normal data from these datasets for training.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2308.15366v4">arxiv.org</a>
+<span class="muted">· paper · Section 4, Datasets · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We primarily adopt the approach proposed by NSA [24] to simulate anomalous data.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2308.15366v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="industrial-ad--real-iad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/real-iad.html">Real-IAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--mpdd">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mpdd.html">MPDD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--btad">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/btad.html">BTAD</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="industrial-ad--ksdd2">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/ksdd2.html">KolektorSDD2</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Used for unsupervised VisA results and for one-shot transfer to MVTec-AD (&#39;after unsupervised training on the VisA dataset, one-shot transferred to the MVTec-AD dataset&#39;).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2308.15366v4">AnomalyGPT: Detecting Industrial Anomalies Using Large Vision-Language Models (AAAI 2024)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/CASIA-IVA-Lab/AnomalyGPT/main/README.md">AnomalyGPT README (repo now CASIA-LMC-Lab/AnomalyGPT)</a>
+<span class="muted">· readme · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

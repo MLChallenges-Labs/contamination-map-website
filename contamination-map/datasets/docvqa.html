@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DocVQA · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Dataset</p>
+<h1>DocVQA</h1>
+<p class="lede">50,000 extractive questions on 12,767 scanned document images (industry documents from the UCSF Industry Documents Library, dated 1900-2018, mostly 1960-2000); questions and answers written by annotators. Random 80/10/10 split: train 39,463 questions, validation 5,349, test 5,188. Metric ANLS. Test answers are not in public copies (lmms-lab HF copy has answers: null for test; lmms-eval scores docvqa_test with a &#39;submission&#39; metric for the RRC evaluation server); reports cite either test (server) or validation.</p>    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+<dt>Also known as</dt><dd>DocVQA, DocVQA (test), DocVQA (val), SP-DocVQA, Single Page Document VQA, docvqa_test, docvqa_val</dd><dt>Domain</dt><dd>document image question answering</dd><dt>License</dt><dd>Not stated on docvqa.org or in the paper; the lmms-lab HF copy declares apache-2.0 (copy metadata only)</dd><dt>Homepage</dt><dd><a href="https://www.docvqa.org/datasets/docvqa">www.docvqa.org</a></dd></dl>
+
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/claude-3-5-sonnet.html#llm-multimodal--docvqa">Claude 3.5 Sonnet</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/claude-3-7-sonnet.html#llm-multimodal--docvqa">Claude 3.7 Sonnet</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/claude-3.html#llm-multimodal--docvqa">Claude 3 (Opus, Sonnet, Haiku)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/claude-4.html#llm-multimodal--docvqa">Claude Opus 4 and Claude Sonnet 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/claude-fable-5.html#llm-multimodal--docvqa">Claude Fable 5 / Claude Mythos 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/claude-mythos-preview.html#llm-multimodal--docvqa">Claude Mythos Preview</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/claude-opus-4-5.html#llm-multimodal--docvqa">Claude Opus 4.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/claude-opus-5.html#llm-multimodal--docvqa">Claude Opus 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/claude-sonnet-5.html#llm-multimodal--docvqa">Claude Sonnet 5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gemini-1-5.html#llm-multimodal--docvqa">Gemini 1.5 (Pro, Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gemini-2-5.html#llm-multimodal--docvqa">Gemini 2.5 (Pro, Flash)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gemini-3-pro.html#llm-multimodal--docvqa">Gemini 3 Pro</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gemini-4-argon.html#llm-multimodal--docvqa">Gemini 4 Argon</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gemma-3.html#llm-multimodal--docvqa">Gemma 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gemma-3n.html#llm-multimodal--docvqa">Gemma 3n</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gemma-4.html#llm-multimodal--docvqa">Gemma 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gpt-4.html#llm-multimodal--docvqa">GPT-4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gpt-4o.html#llm-multimodal--docvqa">GPT-4o</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gpt-5-2.html#llm-multimodal--docvqa">GPT-5.2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/gpt-5.html#llm-multimodal--docvqa">GPT-5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/internvl3.5.html#llm-multimodal--docvqa">InternVL3.5</a></td>
+        <td><span class="badge lvl-seen_split_unclear">Seen, split unclear</span></td>
+        <td class="small">in fine-tuning data: the dataset was used; the source does not say which part</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/internvl3.html#llm-multimodal--docvqa">InternVL3</a></td>
+        <td><span class="badge lvl-seen_split_unclear">Seen, split unclear</span></td>
+        <td class="small">the dataset was used; the source does not say which part</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/llama-3.2-vision.html#llm-multimodal--docvqa">Llama 3.2-Vision (11B, 90B)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/llama-4.html#llm-multimodal--docvqa">Llama 4 (Scout, Maverick)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/llava-onevision-1.5.html#llm-multimodal--docvqa">LLaVA-OneVision-1.5</a></td>
+        <td><span class="badge lvl-train_seen">Training data seen</span></td>
+        <td class="small">in fine-tuning data: only the training split was used, not the benchmark&#39;s test data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/llava-onevision.html#llm-multimodal--docvqa">LLaVA-OneVision</a></td>
+        <td><span class="badge lvl-train_seen">Training data seen</span></td>
+        <td class="small">in fine-tuning data: only the training split was used, not the benchmark&#39;s test data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/mistral-large-3.html#llm-multimodal--docvqa">Mistral Large 3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/mistral-medium-3.5.html#llm-multimodal--docvqa">Mistral Medium 3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/mistral-small-4.html#llm-multimodal--docvqa">Mistral Small 4</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/molmo.html#llm-multimodal--docvqa">Molmo (0924)</a></td>
+        <td><span class="badge lvl-train_seen">Training data seen</span></td>
+        <td class="small">in fine-tuning data: only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/molmo2.html#llm-multimodal--docvqa">Molmo2</a></td>
+        <td><span class="badge lvl-train_seen">Training data seen</span></td>
+        <td class="small">in fine-tuning data: only the training split was used, not the benchmark&#39;s test data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/o1.html#llm-multimodal--docvqa">OpenAI o1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/o3.html#llm-multimodal--docvqa">OpenAI o3</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/pixtral-12b.html#llm-multimodal--docvqa">Pixtral 12B</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/pixtral-large.html#llm-multimodal--docvqa">Pixtral Large</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/qwen2.5-vl.html#llm-multimodal--docvqa">Qwen2.5-VL</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen2.5: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/qwen3-vl.html#llm-multimodal--docvqa">Qwen3-VL</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Qwen3: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/llm-multimodal.html">Multimodal LLM benchmarks</a></td>
+        <td><a href="../models/qwen3.5.html#llm-multimodal--docvqa">Qwen3.5</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">First released as the 2020 DocVQA challenge Task 1 dataset (docvqa.org: &#39;DocVQA dataset (2020 Challenge task 1 dataset)&#39;); exact first public release date not documented in the sources read, so published_from is null. The underlying documents are old public archive scans.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2007.00398v3">DocVQA: A Dataset for VQA on Document Images (arXiv v3, WACV 2021)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://www.docvqa.org/datasets/docvqa">docvqa.org DocVQA dataset page</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/datasets/lmms-lab/DocVQA/raw/main/README.md">lmms-lab/DocVQA dataset card (validation 5,349 / test 5,188; now redirects to lmms-lab-encoder/DocVQA)</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></li><li><a href="https://raw.githubusercontent.com/EvolvingLMMs-Lab/lmms-eval/main/lmms_eval/tasks/docvqa/docvqa_test.yaml">lmms-eval docvqa_test task config (metric: submission)</a>
+<span class="muted">· code · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

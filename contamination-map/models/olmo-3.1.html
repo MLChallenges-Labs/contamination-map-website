@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olmo 3.1 · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Model</p>
+<h1>Olmo 3.1</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Allen Institute for AI (Ai2)</dd>
+  <dt>Family</dt><dd>OLMo · version 3.1</dd>
+  <dt>Released</dt><dd>2025-12-12 <span class="muted small">(&#39;Update 12/12: Announcing Olmo 3.1&#39; on the Olmo 3 blog (https://allenai.org/blog/olmo3); HF repos created 2025-12-10 (HF API))</span></dd>
+<dt>Training cutoff</dt><dd>2024-12-01<details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Date cutoff:** Dec. 2024.”</blockquote>
+  <figcaption><a href="https://huggingface.co/allenai/Olmo-3.1-32B-Think/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Description · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details></dd><dt>Checkpoints</dt><dd>allenai/Olmo-3.1-32B-Think, allenai/Olmo-3.1-32B-Instruct-SFT, allenai/Olmo-3.1-32B-Instruct-DPO, allenai/Olmo-3.1-32B-Instruct, allenai/Olmo-3.1-7B-RL-Zero-Math, allenai/Olmo-3.1-7B-RL-Zero-Code</dd>  <dt>Weights</dt><dd>Open · apache-2.0</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/abs/2512.13961">Paper</a><a href="https://huggingface.co/allenai/Olmo-3.1-32B-Think">Model card</a><a href="https://github.com/allenai/open-instruct">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>6%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 1, Unknown: 14">
+<span class="lvl-not_seen" style="flex-grow: 1" title="Not seen: 1"></span><span class="lvl-unknown" style="flex-grow: 14" title="Unknown: 14"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">1</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">14</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“These models are pre-trained on the Dolma 3 dataset and post-trained on the Dolci datasets.”</blockquote>
+  <figcaption><a href="https://huggingface.co/allenai/Olmo-3.1-32B-Think/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model card intro · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we resumed our RL training run for Olmo 3 32B Think, training for an additional 21 days on 224 GPUs with extra epochs over our Dolci-Think-RL dataset.”</blockquote>
+  <figcaption><a href="https://allenai.org/blog/olmo3">allenai.org</a>
+<span class="muted">· website · Update 12/12 · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>Dolma 3 Mix</strong>
+      <span class="muted">· 6 sources (complete list) · pre-training</span>
+ · <a href="https://huggingface.co/datasets/allenai/dolma3_mix-6T-1025">homepage</a>      <details><summary>Evidence that Olmo 3.1 uses it</summary><figure class="evidence">
+  <blockquote>“Dataset: [dolma3_mix-5.5T-1125](https://huggingface.co/datasets/allenai/dolma3_mix-5.5T-1125)”</blockquote>
+  <figcaption><a href="https://huggingface.co/allenai/Olmo-3-1125-32B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Stage 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>common_crawl</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“common_crawl         | web pages        | 4.51T”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_mix-6T-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Source Sizes · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Text extraction We start with 104 dumps from the CommonCrawl corpus, with a cutoff date of December”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>olmocr_science_pdfs</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Crawled PDFs (238M unique PDFs, cutoff Dec 2024) converted with olmOCR.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“olmocr_science_pdfs  | academic papers  | 805B”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_mix-6T-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Source Sizes · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>stack_edu</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“stack_edu            | code             | 409B”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_mix-6T-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Source Sizes · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For code data, we use Stack-Edu (Allal et al., 2025), an improved curation of GitHub repositories from”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>finemath-3plus</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">FineMath: Common Crawl math pages.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“finemath-3plus       | mathematics      | 151B”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_mix-6T-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Source Sizes · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This data has a cutoff date of September 2024.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>rpj-proofpile-arxiv</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“rpj-proofpile-arxiv  | research papers  | 50.9B”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_mix-6T-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Source Sizes · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>dolma1_7-wiki-en</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“dolma1_7-wiki-en     | encyclopedic     | 2.51B”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_mix-6T-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Source Sizes · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+    <li>
+      <strong>Dolma 3 Dolmino Mix</strong>
+      <span class="muted">· 24 sources (complete list) · pre-training</span>
+ · <a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025">homepage</a>      <details><summary>Evidence that Olmo 3.1 uses it</summary><figure class="evidence">
+  <blockquote>“Dataset: [dolma3-dolmino-mix-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125)”</blockquote>
+  <figcaption><a href="https://huggingface.co/allenai/Olmo-3-1125-32B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Stage 2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For decontamination, we search for and remove matches of any split of any benchmark”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.5.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We focus our decontamination efforts on the midtraining stage (and the long-context extension, which drew from the same data pools)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.5.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>TinyMATH Mind</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Synthetic problems generated from the MATH training set.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“TinyMATH Mind | Math (synth) | 898M (0.9%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“TinyMATH For each of the 7500 examples in the MATH training set, we generate 100 new, similar”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>TinyMATH PoT</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Synthetic, derived from the MATH training set.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“TinyMATH PoT | Math (synth) | 241M (0.24%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>CraneMath</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“CraneMath | Math (synth) | 5.62B (5.63%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>MegaMatt</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“MegaMatt | Math (synth) | 1.73B (1.73%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Dolmino Math</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">OLMo 2 Dolmino math subset (which contained GSM8K train and GSM8K-derived data), re-filtered by Olmo 3 decontamination, which removes matches of any benchmark split.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Dolmino Math | Math (synth) | 10.7B (10.7%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“The version we use differs from the original only in additional filtering for decontamination.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 3.5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>StackEdu (FIM)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“StackEdu (FIM) | Code | 10.0B (10.0%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>CraneCode</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“CraneCode | Python (synth) | 10.0B (10.0%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Reddit To Flashcards</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Reddit To Flashcards | QA (synth) | 5.90B (5.9%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Wiki To RCQA</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Wiki To RCQA | QA (synth) | 3.0B (3.0%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Nemotron Synth QA</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Nemotron Synth QA | QA (synth) | 5.0B (5.0%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Math Meta-Reasoning</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Math Meta-Reasoning | Thinking (synth) | 381M (0.38%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Code Meta-Reasoning</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Code Meta-Reasoning | Thinking (synth) | 459M (0.46%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Program-Verifiable</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Program-Verifiable | Thinking (synth) | 159M (0.16%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>OMR Rewrite FullThoughts</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“OMR Rewrite FullThoughts | Thinking (synth) | 850M (0.85%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>QWQ Reasoning Traces</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“QWQ Reasoning Traces | Thinking (synth) | 1.87B (1.87%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>General Reasoning Mix</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“General Reasoning Mix | Thinking (synth) | 1.87B (1.87%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Gemini Reasoning Traces</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Gemini Reasoning Traces | Thinking (synth) | 246M (0.25%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Llama Nemotron Reasoning Traces</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Llama Nemotron Reasoning Traces | Thinking (synth) | 1.25B (1.25%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>OpenThoughts2 Reasoning Traces</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“OpenThoughts2 Reasoning Traces | Thinking (synth) | 1.25B (1.25%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Tulu 3 SFT</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Tulu 3 SFT | Instruction (synth) | 1.1B (1.1%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Dolmino 1 Flan</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Dolmino 1 Flan | Instruction (synth) | 5.0B (5.0%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>OLMOCR Science PDFs (High Q.)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“OLMOCR Science PDFs (High Q.) | PDFs | 4.99B (5.0%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>STEM-Heavy Crawl</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“STEM-Heavy Crawl | Web pages | 4.99B (5.0%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Common Crawl (High Q.)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Common Crawl (High Q.) | Web pages | 22.4B (22.5%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+    <li>
+      <strong>Dolma 3 Longmino Mix</strong>
+      <span class="muted">· 2 sources (complete list) · pre-training</span>
+ · <a href="https://huggingface.co/datasets/allenai/dolma3_longmino_mix-50B-1025">homepage</a>      <details><summary>Evidence that Olmo 3.1 uses it</summary><figure class="evidence">
+  <blockquote>“Dataset: [dolma3-longmino-mix-1125](https://huggingface.co/datasets/allenai/dolma3_longmino_mix-100B-1125)”</blockquote>
+  <figcaption><a href="https://huggingface.co/allenai/Olmo-3-1125-32B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Stage 3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>LC-s2pdf (long PDFs, incl. synthetic REX/CWE variants)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“LC-s2pdf 32k-64k | PDFs | 4.81B (9.63%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_longmino_mix-50B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Midtraining Data</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Drawn from the Dolma 3 Dolmino pool.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Midtraining Data | Mix | 33.0B (66.1%)”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/allenai/dolma3_longmino_mix-50B-1025/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Dataset Sources · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>Dolci-Think-SFT / Dolci-Think-DPO</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+<p class="small">Olmo 3.1 Think 32B continues from Olmo 3 32B Think (same SFT/DPO data).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“supervised fine-tuning on the Dolci-Think-SFT-7B dataset. This dataset consits of math, code, chat, and general knowledge queries.”</blockquote>
+  <figcaption><a href="https://huggingface.co/allenai/Olmo-3.1-32B-Think/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Post-training · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Dolci-Think-RL</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“with extra epochs over our Dolci-Think-RL dataset”</blockquote>
+  <figcaption><a href="https://allenai.org/blog/olmo3">allenai.org</a>
+<span class="muted">· website · Update 12/12 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Dolci-Instruct-SFT / DPO / RL</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Olmo 3.1 Instruct 32B, which applies the recipe behind Olmo 3 Instruct 7B to a much larger model”</blockquote>
+  <figcaption><a href="https://allenai.org/blog/olmo3">allenai.org</a>
+<span class="muted">· website · Update 12/12 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“allenai/Dolci-Instruct-RL”</blockquote>
+  <figcaption><a href="https://huggingface.co/allenai/Olmo-3.1-32B-Instruct/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model card metadata (datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Dataset <a href="../datasets/math-500.html">MATH-500</a>      <span class="muted">· test portion excluded from fine-tuning data</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“to filter out the portions of all post-training data (all three stages) that matched the evaluation sets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We used n-gram matching with 8-grams and an overlap threshold of 0.5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MATH 500 (2022; 2023)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Table 16 (Olmo 3 chat evaluation suite) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/aime-2024.html">AIME 2024</a>      <span class="muted">· test portion excluded from fine-tuning data</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“to filter out the portions of all post-training data (all three stages) that matched the evaluation sets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We used n-gram matching with 8-grams and an overlap threshold of 0.5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AIME 2024*”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Table 16 (Olmo 3 chat evaluation suite) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/aime-2025.html">AIME 2025</a>      <span class="muted">· test portion excluded from fine-tuning data</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“to filter out the portions of all post-training data (all three stages) that matched the evaluation sets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We used n-gram matching with 8-grams and an overlap threshold of 0.5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“AIME 2025*”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Table 16 (Olmo 3 chat evaluation suite) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a>      <span class="muted">· test portion excluded from fine-tuning data</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“to filter out the portions of all post-training data (all three stages) that matched the evaluation sets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We used n-gram matching with 8-grams and an overlap threshold of 0.5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“LiveCodeBench v3* (2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Table 16 (Olmo 3 chat evaluation suite) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/gpqa.html">GPQA (Graduate-Level Google-Proof Q&amp;A)</a>      <span class="muted">· test portion excluded from fine-tuning data</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“to filter out the portions of all post-training data (all three stages) that matched the evaluation sets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We used n-gram matching with 8-grams and an overlap threshold of 0.5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“GPQA* (2024)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Table 16 (Olmo 3 chat evaluation suite) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>      <span class="muted">· test portion excluded from fine-tuning data</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“to filter out the portions of all post-training data (all three stages) that matched the evaluation sets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We used n-gram matching with 8-grams and an overlap threshold of 0.5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“MMLU (2021b)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Table 16 (Olmo 3 chat evaluation suite) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a>      <span class="muted">· test portion excluded from fine-tuning data</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“to filter out the portions of all post-training data (all three stages) that matched the evaluation sets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We used n-gram matching with 8-grams and an overlap threshold of 0.5”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Section 4.2.1, Step 4 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Minerva MATH (2022)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2512.13961v2">arxiv.org</a>
+<span class="muted">· paper · Table 16 (Olmo 3 chat evaluation suite) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-12-01)</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“Date cutoff:** Dec. 2024.”</blockquote>
+  <figcaption><a href="https://huggingface.co/allenai/Olmo-3.1-32B-Think/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Description · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“2025 AIME I problems and solutions. The test was held on Thursday, February 6, 2025.”</blockquote>
+  <figcaption><a href="https://web.archive.org/web/20250501204857/https://artofproblemsolving.com/wiki/index.php/2025_AIME_I">web.archive.org</a>
+<span class="muted">· website · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This year the AIME I will take place on February 6, 2025, while the alternate AIME II will take place on February 12, 2025.”</blockquote>
+  <figcaption><a href="https://maa.org/?p=8152">maa.org</a>
+<span class="muted">· website · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Post-training-only release on top of the Olmo 3 bases; the Olmo 3 report (v2) covers Olmo 3.1 results (Tables 14, 25). Exclusions copied from the Olmo 3 post-training decontamination, which the report applies to all post-training data.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://allenai.org/blog/olmo3">Olmo 3 blog post (Olmo 3.1 update)</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/allenai/Olmo-3.1-32B-Think/raw/main/README.md">Olmo-3.1-32B-Think card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/allenai/Olmo-3.1-32B-Instruct/raw/main/README.md">Olmo-3.1-32B-Instruct card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2512.13961v2">Olmo 3 report</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

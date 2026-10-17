@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BTAD · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html" class="active">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/vision/index.html">Vision</a> / Dataset</p>
+<h1>BTAD</h1>
+<p class="lede">Real-world industrial anomaly dataset with 2830 RGB images of 3 industrial products showing body and surface defects; products 1, 2 and 3 have 400, 1000 and 399 training images. Training uses normal images only; each anomalous image has a pixel-wise ground-truth mask.</p>    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+<dt>Also known as</dt><dd>beanTech Anomaly Detection dataset, BeanTech Anomaly Detection</dd><dt>Domain</dt><dd>manufacturing inspection</dd><dt>Test items from</dt><dd>2021-04-20<details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“arXiv:2104.10036v1 [cs.CV] 20 Apr 2021”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2104.10036v1">arxiv.org</a>
+<span class="muted">· paper · header · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“In addition, we also publish BTAD, a real-world industrial anomaly dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2104.10036v1">arxiv.org</a>
+<span class="muted">· paper · Abstract · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details></dd><dt>Homepage</dt><dd><a href="https://arxiv.org/pdf/2104.10036v1">arxiv.org</a></dd></dl>
+
+
+<section>
+  <h2>Exposure by model</h2>
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Benchmark</th><th>Model</th><th>Level</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/aa-clip-mvtec.html#industrial-ad--btad">AA-CLIP, trained on MVTec AD (for VisA results)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/aa-clip-visa.html#industrial-ad--btad">AA-CLIP, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/adaclip-all.html#industrial-ad--btad">AdaCLIP, trained on all 14 datasets (demo model)</a></td>
+        <td><span class="badge lvl-test_seen">Test data seen</span></td>
+        <td class="small">in fine-tuning data: its test split was used for training</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/adaclip-mvtec-colondb.html#industrial-ad--btad">AdaCLIP, trained on MVTec AD + ColonDB</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/adaclip-visa-clinicdb.html#industrial-ad--btad">AdaCLIP, trained on VisA + ClinicDB</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/adaptclip-mvtec.html#industrial-ad--btad">AdaptCLIP, trained on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/adaptclip-visa.html#industrial-ad--btad">AdaptCLIP, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomaly-ov.html#industrial-ad--btad">Anomaly-OneVision (Anomaly-OV)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model LLaVA-OneVision: unknown for its base model SigLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalyclip-mvtec.html#industrial-ad--btad">AnomalyCLIP, trained on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalyclip-visa.html#industrial-ad--btad">AnomalyCLIP, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalydino.html#industrial-ad--btad">AnomalyDINO</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model DINOv2: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalygpt-mvtec.html#industrial-ad--btad">AnomalyGPT, unsupervised on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalygpt-supervised.html#industrial-ad--btad">AnomalyGPT, supervised (demo model)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/anomalygpt-visa.html#industrial-ad--btad">AnomalyGPT, unsupervised on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/april-gan-mvtec.html#industrial-ad--btad">APRIL-GAN (VAND 2023), trained on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/april-gan-visa.html#industrial-ad--btad">APRIL-GAN (VAND 2023), trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/clip-openai.html#industrial-ad--btad">OpenAI CLIP</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/dinov2.html#industrial-ad--btad">DINOv2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/dinov3.html#industrial-ad--btad">DINOv3 (web / LVD-1689M models)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/filo-mvtec.html#industrial-ad--btad">FiLo, trained on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/filo-visa.html#industrial-ad--btad">FiLo, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/imagenet-wrn50.html#industrial-ad--btad">WideResNet-50-2 (supervised ImageNet-1k, torchvision)</a></td>
+        <td><span class="badge lvl-not_seen">Not seen</span></td>
+        <td class="small">absent from the complete list of training data</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/inctrl-mvtec.html#industrial-ad--btad">InCTRL, trained on MVTec AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/inctrl-visa.html#industrial-ad--btad">InCTRL, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/metauas.html#industrial-ad--btad">MetaUAS</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/musc.html#industrial-ad--btad">MuSc</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/openclip-laion2b.html#industrial-ad--btad">OpenCLIP (LAION-2B checkpoints)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/openclip-laion400m.html#industrial-ad--btad">OpenCLIP (LAION-400M checkpoints)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/saa-plus.html#industrial-ad--btad">Segment Any Anomaly (SAA / SAA+)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model Segment Anything Model (SAM): training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/sam-2.html#industrial-ad--btad">SAM 2 / SAM 2.1</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/sam.html#industrial-ad--btad">Segment Anything Model (SAM)</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/siglip-2.html#industrial-ad--btad">SigLIP 2</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/siglip.html#industrial-ad--btad">SigLIP</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/univad.html#industrial-ad--btad">UniVAD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/vcp-clip-mvtec.html#industrial-ad--btad">VCP-CLIP, trained on MVTec-AD</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/vcp-clip-visa.html#industrial-ad--btad">VCP-CLIP, trained on VisA</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenAI CLIP: training data not disclosed in enough detail</td>
+      </tr>
+      <tr>
+        <td><a href="../benchmarks/industrial-ad.html">Industrial anomaly detection</a></td>
+        <td><a href="../models/winclip.html#industrial-ad--btad">WinCLIP / WinCLIP+</a></td>
+        <td><span class="badge lvl-unknown">Unknown</span></td>
+        <td class="small">unknown for its base model OpenCLIP (LAION-400M checkpoints): training data not disclosed in enough detail</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">No license is stated in the paper; no official dataset page was found besides the paper&#39;s download link (http://avires.dimi.uniud.it/papers/btad/btad.zip, a single public zip, no form; HTTP Last-Modified 2021-09-16). The Real-IAD paper mentions noise samples in the BTAD training set (SoftPatch).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2104.10036v1">VT-ADL: A Vision Transformer Network for Image Anomaly Detection and Localization (arXiv v1)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

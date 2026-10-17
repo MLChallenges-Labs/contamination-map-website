@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time-series classification · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html" class="active">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/index.html">Time series</a> / Benchmark</p>
+<h1>Time-series classification</h1>
+<p class="lede">Time-series classification archives (UCR 2018 univariate, 128 datasets; UEA 2018 multivariate, 30 datasets); grouping used on this site, not an official suite.</p>    </div>
+  </div>
+  <main class="container doc">
+<p class="links">
+</p>
+<p><strong>Test split:</strong> Each dataset has a single fixed train/test split. UCR: &#39;From the first iteration, the UCR Archive has had a single predefined train/test split&#39; (Dau et al.); the 2018 release reversed the split of 14 datasets to match the UEA archive, and the authors recommend reporting the default split when resampling. UEA: train/test splits provided for all 30 datasets, retaining donor splits where they existed (Bagnall et al.). Test labels are public in both archives.</p>
+<section>
+  <h2>Contamination matrix</h2>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">8</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">10</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">34</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">38</span></li>
+</ul>
+  <div class="table-wrap">
+  <table class="heatmap">
+    <thead>
+      <tr>
+        <th scope="col" class="corner">Dataset</th>
+<th scope="col" class="model"><a href="../models/chronos-t5.html"><span>Chronos (T5)</span></a></th><th scope="col" class="model"><a href="../models/chronos-2.html"><span>Chronos-2</span></a></th><th scope="col" class="model"><a href="../models/chronos-2-synth.html"><span>Chronos-2-Synth</span></a></th><th scope="col" class="model"><a href="../models/chronos-bolt.html"><span>Chronos-Bolt</span></a></th><th scope="col" class="model"><a href="../models/dada.html"><span>DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders)</span></a></th><th scope="col" class="model"><a href="../models/granite-ttm-r1.html"><span>Granite-TimeSeries-TTM-R1</span></a></th><th scope="col" class="model"><a href="../models/granite-ttm-r2.html"><span>Granite-TimeSeries-TTM-R2</span></a></th><th scope="col" class="model"><a href="../models/granite-ttm-r2-1.html"><span>Granite-TimeSeries-TTM-R2.1</span></a></th><th scope="col" class="model"><a href="../models/granite-ttm-r3.html"><span>Granite-TTM-R3</span></a></th><th scope="col" class="model"><a href="../models/lag-llama.html"><span>Lag-Llama</span></a></th><th scope="col" class="model"><a href="../models/mantis-8m.html"><span>Mantis (Mantis-8M)</span></a></th><th scope="col" class="model"><a href="../models/mantis-plus.html"><span>Mantis+ (MantisPlus)</span></a></th><th scope="col" class="model"><a href="../models/mantis-v2.html"><span>MantisV2</span></a></th><th scope="col" class="model"><a href="../models/moirai-1.0-r.html"><span>Moirai-1.0-R</span></a></th><th scope="col" class="model"><a href="../models/moirai-1.1-r.html"><span>Moirai-1.1-R</span></a></th><th scope="col" class="model"><a href="../models/moirai-2.0-r.html"><span>Moirai-2.0-R</span></a></th><th scope="col" class="model"><a href="../models/moirai-moe-1.0-r.html"><span>Moirai-MoE-1.0-R</span></a></th><th scope="col" class="model"><a href="../models/moment-1.html"><span>MOMENT-1</span></a></th><th scope="col" class="model"><a href="../models/nutime.html"><span>NuTime</span></a></th><th scope="col" class="model"><a href="../models/sundial.html"><span>Sundial (Timer 3.0)</span></a></th><th scope="col" class="model"><a href="../models/time-moe.html"><span>Time-MoE</span></a></th><th scope="col" class="model"><a href="../models/time-rcd.html"><span>Time-RCD (TimeRCD)</span></a></th><th scope="col" class="model"><a href="../models/timer.html"><span>Timer</span></a></th><th scope="col" class="model"><a href="../models/timer-s1.html"><span>Timer-S1</span></a></th><th scope="col" class="model"><a href="../models/timer-xl.html"><span>Timer-XL (timer-base-84m)</span></a></th><th scope="col" class="model"><a href="../models/timeradar.html"><span>TimeRadar</span></a></th><th scope="col" class="model"><a href="../models/timesfm-1-0.html"><span>TimesFM 1.0</span></a></th><th scope="col" class="model"><a href="../models/timesfm-2-0.html"><span>TimesFM 2.0</span></a></th><th scope="col" class="model"><a href="../models/timesfm-2-5.html"><span>TimesFM 2.5</span></a></th><th scope="col" class="model"><a href="../models/timesfm-3-0.html"><span>TimesFM 3.0</span></a></th><th scope="col" class="model"><a href="../models/ttm-research-r2.html"><span>Tiny Time Mixer (TTM) Research-Use R2</span></a></th><th scope="col" class="model"><a href="../models/tirex.html"><span>TiRex</span></a></th><th scope="col" class="model"><a href="../models/tirex-1.1-gifteval.html"><span>TiRex 1.1 (gifteval)</span></a></th><th scope="col" class="model"><a href="../models/tirex-2.html"><span>TiRex-2</span></a></th><th scope="col" class="model"><a href="../models/tirex-2-fevbench.html"><span>TiRex-2-fevbench (TiRex-2-f)</span></a></th><th scope="col" class="model"><a href="../models/tirex-2-gifteval-pretrain.html"><span>TiRex-2-gifteval-pretrain (TiRex-2-gp)</span></a></th><th scope="col" class="model"><a href="../models/tirex-2-gifteval-zs.html"><span>TiRex-2-gifteval-zs (TiRex-2-g)</span></a></th><th scope="col" class="model"><a href="../models/toto-2024.html"><span>Toto (2024 technical report)</span></a></th><th scope="col" class="model"><a href="../models/toto-2.0.html"><span>Toto 2.0</span></a></th><th scope="col" class="model"><a href="../models/toto-2.0-2.5b-ft.html"><span>Toto-2.0-2.5B-FT</span></a></th><th scope="col" class="model"><a href="../models/toto-1.0.html"><span>Toto-Open-Base-1.0</span></a></th><th scope="col" class="model"><a href="../models/tspulse-r1.html"><span>TSPulse r1</span></a></th><th scope="col" class="model"><a href="../models/ttm-r3.html"><span>TTM-R3</span></a></th><th scope="col" class="model"><a href="../models/units.html"><span>UniTS</span></a></th><th scope="col" class="model"><a href="../models/units-few-shot-anomaly-detection.html"><span>UniTS few-shot anomaly detection checkpoints</span></a></th>      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><a href="../datasets/ucr-archive.html">UCR Time Series Classification Archive (2018)</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/chronos-t5.html#ts-classification--ucr-archive" title="Chronos (T5) × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/chronos-2.html#ts-classification--ucr-archive" title="Chronos-2 × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/chronos-2-synth.html#ts-classification--ucr-archive" title="Chronos-2-Synth × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/chronos-bolt.html#ts-classification--ucr-archive" title="Chronos-Bolt × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dada.html#ts-classification--ucr-archive" title="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders) × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/granite-ttm-r1.html#ts-classification--ucr-archive" title="Granite-TimeSeries-TTM-R1 × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/granite-ttm-r2.html#ts-classification--ucr-archive" title="Granite-TimeSeries-TTM-R2 × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/granite-ttm-r2-1.html#ts-classification--ucr-archive" title="Granite-TimeSeries-TTM-R2.1 × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/granite-ttm-r3.html#ts-classification--ucr-archive" title="Granite-TTM-R3 × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/lag-llama.html#ts-classification--ucr-archive" title="Lag-Llama × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/mantis-8m.html#ts-classification--ucr-archive" title="Mantis (Mantis-8M) × UCR Time Series Classification Archive (2018): Training data seen. only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded">Train</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/mantis-plus.html#ts-classification--ucr-archive" title="Mantis+ (MantisPlus) × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/mantis-v2.html#ts-classification--ucr-archive" title="MantisV2 × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/moirai-1.0-r.html#ts-classification--ucr-archive" title="Moirai-1.0-R × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/moirai-1.1-r.html#ts-classification--ucr-archive" title="Moirai-1.1-R × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/moirai-2.0-r.html#ts-classification--ucr-archive" title="Moirai-2.0-R × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/moirai-moe-1.0-r.html#ts-classification--ucr-archive" title="Moirai-MoE-1.0-R × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/moment-1.html#ts-classification--ucr-archive" title="MOMENT-1 × UCR Time Series Classification Archive (2018): Training data seen. only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)">Train</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/nutime.html#ts-classification--ucr-archive" title="NuTime × UCR Time Series Classification Archive (2018): Training data seen. only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded">Train</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/sundial.html#ts-classification--ucr-archive" title="Sundial (Timer 3.0) × UCR Time Series Classification Archive (2018): Seen, split unclear. the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))">Seen</a></td>
+        <td class="cell lvl-unknown"><a href="../models/time-moe.html#ts-classification--ucr-archive" title="Time-MoE × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/time-rcd.html#ts-classification--ucr-archive" title="Time-RCD (TimeRCD) × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/timer.html#ts-classification--ucr-archive" title="Timer × UCR Time Series Classification Archive (2018): Seen, split unclear. the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))">Seen</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/timer-s1.html#ts-classification--ucr-archive" title="Timer-S1 × UCR Time Series Classification Archive (2018): Seen, split unclear. the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))">Seen</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/timer-xl.html#ts-classification--ucr-archive" title="Timer-XL (timer-base-84m) × UCR Time Series Classification Archive (2018): Seen, split unclear. the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))">Seen</a></td>
+        <td class="cell lvl-unknown"><a href="../models/timeradar.html#ts-classification--ucr-archive" title="TimeRadar × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/timesfm-1-0.html#ts-classification--ucr-archive" title="TimesFM 1.0 × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/timesfm-2-0.html#ts-classification--ucr-archive" title="TimesFM 2.0 × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/timesfm-2-5.html#ts-classification--ucr-archive" title="TimesFM 2.5 × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/timesfm-3-0.html#ts-classification--ucr-archive" title="TimesFM 3.0 × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/ttm-research-r2.html#ts-classification--ucr-archive" title="Tiny Time Mixer (TTM) Research-Use R2 × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/tirex.html#ts-classification--ucr-archive" title="TiRex × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/tirex-1.1-gifteval.html#ts-classification--ucr-archive" title="TiRex 1.1 (gifteval) × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/tirex-2.html#ts-classification--ucr-archive" title="TiRex-2 × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/tirex-2-fevbench.html#ts-classification--ucr-archive" title="TiRex-2-fevbench (TiRex-2-f) × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/tirex-2-gifteval-pretrain.html#ts-classification--ucr-archive" title="TiRex-2-gifteval-pretrain (TiRex-2-gp) × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/tirex-2-gifteval-zs.html#ts-classification--ucr-archive" title="TiRex-2-gifteval-zs (TiRex-2-g) × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/toto-2024.html#ts-classification--ucr-archive" title="Toto (2024 technical report) × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/toto-2.0.html#ts-classification--ucr-archive" title="Toto 2.0 × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/toto-2.0-2.5b-ft.html#ts-classification--ucr-archive" title="Toto-2.0-2.5B-FT × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/toto-1.0.html#ts-classification--ucr-archive" title="Toto-Open-Base-1.0 × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/tspulse-r1.html#ts-classification--ucr-archive" title="TSPulse r1 × UCR Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/ttm-r3.html#ts-classification--ucr-archive" title="TTM-R3 × UCR Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/units.html#ts-classification--ucr-archive" title="UniTS × UCR Time Series Classification Archive (2018): Training data seen. only the training split was used, not the benchmark&#39;s test data">Train</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/units-few-shot-anomaly-detection.html#ts-classification--ucr-archive" title="UniTS few-shot anomaly detection checkpoints × UCR Time Series Classification Archive (2018): Training data seen. via base model UniTS: only the training split was used, not the benchmark&#39;s test data">Train</a></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="../datasets/uea-archive.html">UEA Multivariate Time Series Classification Archive (2018)</a></th>
+        <td class="cell lvl-not_seen"><a href="../models/chronos-t5.html#ts-classification--uea-archive" title="Chronos (T5) × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/chronos-2.html#ts-classification--uea-archive" title="Chronos-2 × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/chronos-2-synth.html#ts-classification--uea-archive" title="Chronos-2-Synth × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/chronos-bolt.html#ts-classification--uea-archive" title="Chronos-Bolt × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/dada.html#ts-classification--uea-archive" title="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders) × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/granite-ttm-r1.html#ts-classification--uea-archive" title="Granite-TimeSeries-TTM-R1 × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/granite-ttm-r2.html#ts-classification--uea-archive" title="Granite-TimeSeries-TTM-R2 × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/granite-ttm-r2-1.html#ts-classification--uea-archive" title="Granite-TimeSeries-TTM-R2.1 × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/granite-ttm-r3.html#ts-classification--uea-archive" title="Granite-TTM-R3 × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/lag-llama.html#ts-classification--uea-archive" title="Lag-Llama × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/mantis-8m.html#ts-classification--uea-archive" title="Mantis (Mantis-8M) × UEA Multivariate Time Series Classification Archive (2018): Training data seen. only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded">Train</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/mantis-plus.html#ts-classification--uea-archive" title="Mantis+ (MantisPlus) × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/mantis-v2.html#ts-classification--uea-archive" title="MantisV2 × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/moirai-1.0-r.html#ts-classification--uea-archive" title="Moirai-1.0-R × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/moirai-1.1-r.html#ts-classification--uea-archive" title="Moirai-1.1-R × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/moirai-2.0-r.html#ts-classification--uea-archive" title="Moirai-2.0-R × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/moirai-moe-1.0-r.html#ts-classification--uea-archive" title="Moirai-MoE-1.0-R × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/moment-1.html#ts-classification--uea-archive" title="MOMENT-1 × UEA Multivariate Time Series Classification Archive (2018): Training data seen. only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)">Train</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/nutime.html#ts-classification--uea-archive" title="NuTime × UEA Multivariate Time Series Classification Archive (2018): Training data seen. only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded">Train</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/sundial.html#ts-classification--uea-archive" title="Sundial (Timer 3.0) × UEA Multivariate Time Series Classification Archive (2018): Seen, split unclear. the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))">Seen</a></td>
+        <td class="cell lvl-unknown"><a href="../models/time-moe.html#ts-classification--uea-archive" title="Time-MoE × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/time-rcd.html#ts-classification--uea-archive" title="Time-RCD (TimeRCD) × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/timer.html#ts-classification--uea-archive" title="Timer × UEA Multivariate Time Series Classification Archive (2018): Seen, split unclear. the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))">Seen</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/timer-s1.html#ts-classification--uea-archive" title="Timer-S1 × UEA Multivariate Time Series Classification Archive (2018): Seen, split unclear. the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))">Seen</a></td>
+        <td class="cell lvl-seen_split_unclear"><a href="../models/timer-xl.html#ts-classification--uea-archive" title="Timer-XL (timer-base-84m) × UEA Multivariate Time Series Classification Archive (2018): Seen, split unclear. the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))">Seen</a></td>
+        <td class="cell lvl-unknown"><a href="../models/timeradar.html#ts-classification--uea-archive" title="TimeRadar × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/timesfm-1-0.html#ts-classification--uea-archive" title="TimesFM 1.0 × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/timesfm-2-0.html#ts-classification--uea-archive" title="TimesFM 2.0 × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/timesfm-2-5.html#ts-classification--uea-archive" title="TimesFM 2.5 × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/timesfm-3-0.html#ts-classification--uea-archive" title="TimesFM 3.0 × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/ttm-research-r2.html#ts-classification--uea-archive" title="Tiny Time Mixer (TTM) Research-Use R2 × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/tirex.html#ts-classification--uea-archive" title="TiRex × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/tirex-1.1-gifteval.html#ts-classification--uea-archive" title="TiRex 1.1 (gifteval) × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/tirex-2.html#ts-classification--uea-archive" title="TiRex-2 × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/tirex-2-fevbench.html#ts-classification--uea-archive" title="TiRex-2-fevbench (TiRex-2-f) × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/tirex-2-gifteval-pretrain.html#ts-classification--uea-archive" title="TiRex-2-gifteval-pretrain (TiRex-2-gp) × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/tirex-2-gifteval-zs.html#ts-classification--uea-archive" title="TiRex-2-gifteval-zs (TiRex-2-g) × UEA Multivariate Time Series Classification Archive (2018): Not seen. absent from the complete list of training data">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/toto-2024.html#ts-classification--uea-archive" title="Toto (2024 technical report) × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/toto-2.0.html#ts-classification--uea-archive" title="Toto 2.0 × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/toto-2.0-2.5b-ft.html#ts-classification--uea-archive" title="Toto-2.0-2.5B-FT × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-unknown"><a href="../models/toto-1.0.html#ts-classification--uea-archive" title="Toto-Open-Base-1.0 × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-not_seen"><a href="../models/tspulse-r1.html#ts-classification--uea-archive" title="TSPulse r1 × UEA Multivariate Time Series Classification Archive (2018): Not seen. the authors state the dataset was excluded from training">No</a></td>
+        <td class="cell lvl-unknown"><a href="../models/ttm-r3.html#ts-classification--uea-archive" title="TTM-R3 × UEA Multivariate Time Series Classification Archive (2018): Unknown. training data not disclosed in enough detail">?</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/units.html#ts-classification--uea-archive" title="UniTS × UEA Multivariate Time Series Classification Archive (2018): Training data seen. only the training split was used, not the benchmark&#39;s test data">Train</a></td>
+        <td class="cell lvl-train_seen"><a href="../models/units-few-shot-anomaly-detection.html#ts-classification--uea-archive" title="UniTS few-shot anomaly detection checkpoints × UEA Multivariate Time Series Classification Archive (2018): Training data seen. via base model UniTS: only the training split was used, not the benchmark&#39;s test data">Train</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="muted small">Hover a cell for the reason; click it for the evidence.</p>
+</section>
+
+<section id="scores-mantisv2-paper">
+  <h2>Scores <span class="muted">· MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27</span></h2>
+  <p class="muted small">Accuracy (frozen encoder + logistic regression), mean over every dataset of the archive (128 UCR univariate datasets; 27 UEA multivariate datasets); higher is better. From <a href="https://arxiv.org/abs/2602.17868v1">MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27</a> at arXiv 2602.1 (<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>), retrieved 2026-10-16. The authors ran every model themselves under one protocol: zero-shot feature extraction (frozen encoder, best intermediate layer chosen once per model on UCR, channels encoded independently and concatenated for UEA), then a classifier trained on each dataset&#39;s train split and accuracy reported on its test split. acc_logreg uses StandardScaler + LogisticRegression (single run; the protocol of the paper&#39;s final comparison); acc_rf uses a 200-tree Random Forest (mean of 3 runs; Section 5 of the paper). UCR = all 128 UCR datasets; UEA-27 = UEA minus AtrialFibrillation, StandWalkJump and PenDigits, with InsectWingbeat subsampled to 1000 train / 1000 test. TabPFN and TabICL treat each timestamp as a feature; TabICL failed on InsectWingbeatSubset (NaN), so it has no overall score. Numbers were parsed programmatically from the arXiv LaTeX source tables; the per-model means reproduce the paper&#39;s &#34;Average&#34; rows exactly. The ICML 2026 version of the Mantis paper (arXiv 2502.15637v2) reports the same Random-Forest numbers for its &#34;Mantis&#34; column (= MantisV2). The authors are the Mantis developers, so this is a self-reported comparison. Mantis-8M (V1) and UniTS are not in this source (UniTS was dropped by the authors for low performance). Note: this comparison was run and published by the authors of MantisV2, one of the compared models. The coloured bar shows how much of this benchmark each model may have seen.</p>
+  <div class="table-wrap">
+  <table class="data scores">
+    <thead><tr><th>#</th><th>Model</th><th class="num">Accuracy (frozen encoder + logistic regression)</th><th></th><th>Exposure on this benchmark</th><th title="As declared by the submitter on the leaderboard">Leakage, self-reported</th></tr></thead>
+    <tbody>
+      <tr class="model">
+        <td class="num">1</td>
+        <td><a href="../models/mantis-v2.html">MantisV2</a></td>
+        <td class="num">0.822</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 100.0%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">2</td>
+        <td>TiConvNext <span class="small">· baseline</span></td>
+        <td class="num">0.817</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 99.43549298604745%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">3</td>
+        <td><a href="../models/mantis-plus.html">Mantis+ (MantisPlus)</a></td>
+        <td class="num">0.816</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 99.2162677232597%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">4</td>
+        <td>TiViT-H <span class="small">· baseline</span></td>
+        <td class="num">0.812</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 98.80207090559735%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">5</td>
+        <td><a href="../models/chronos-2.html">Chronos-2</a></td>
+        <td class="num">0.807</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 98.17924510530348%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">6</td>
+        <td><a href="../models/tirex.html">TiRex</a></td>
+        <td class="num">0.804</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 97.76175166714808%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 2, Unknown: 0">
+<span class="lvl-not_seen" style="flex-grow: 2" title="Not seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">7</td>
+        <td><a href="../models/moment-1.html">MOMENT-1</a></td>
+        <td class="num">0.784</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.41345900259962%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 2, Related data seen: 0, Not seen: 0, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 2" title="Training data seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="model">
+        <td class="num">8</td>
+        <td><a href="../models/nutime.html">NuTime</a></td>
+        <td class="num">0.783</td>
+        <td class="bar-cell"><div class="bar"><span class="" style="width: 95.29996106848179%"></span></div></td>
+        <td><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 2, Related data seen: 0, Not seen: 0, Unknown: 0">
+<span class="lvl-train_seen" style="flex-grow: 2" title="Training data seen: 2"></span></div>
+</td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">9</td>
+        <td>TabPFN <span class="small">· baseline</span></td>
+        <td class="num">0.762</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 92.67318246323484%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">10</td>
+        <td>Catch22+ <span class="small">· baseline</span></td>
+        <td class="num">0.754</td>
+        <td class="bar-cell"><div class="bar"><span class="baseline" style="width: 91.71794742989188%"></span></div></td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+      <tr class="baseline">
+        <td class="num">11</td>
+        <td>TabICL <span class="small">· baseline</span></td>
+        <td class="num">—</td>
+        <td class="bar-cell small muted">not scored on every dataset</td>
+        <td><span class="small">fitted per dataset, not pre-trained</span></td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen</li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear</li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen</li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen</li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen</li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown</li>
+</ul>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Grouping used on this site.</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/1810.07758v2">The UCR Time Series Archive (Dau et al.)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/1811.00075v1">The UEA multivariate time series classification archive, 2018 (Bagnall et al.)</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

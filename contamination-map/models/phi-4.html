@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phi-4 · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Model</p>
+<h1>Phi-4</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Microsoft</dd>
+  <dt>Family</dt><dd>Phi · version 4</dd>
+  <dt>Released</dt><dd>2024-12-12 <span class="muted small">(Model card &#39;Release date: December 12, 2024&#39;, https://huggingface.co/microsoft/phi-4; arXiv v1 2024-12-12)</span></dd>
+<dt>Training cutoff</dt><dd>2024-06-01<details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Static model trained on an offline dataset with cutoff dates of June 2024 and earlier for publicly available data”</blockquote>
+  <figcaption><a href="https://huggingface.co/microsoft/phi-4/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Summary / Status · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details></dd><dt>Checkpoints</dt><dd>microsoft/phi-4</dd>  <dt>Weights</dt><dd>Open · MIT</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/abs/2412.08905">Paper</a><a href="https://huggingface.co/microsoft/phi-4">Model card</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-vague">Vague</span></h2>
+<p>Level determined for <strong>60%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 0, Seen, split unclear: 0, Training data seen: 0, Related data seen: 0, Not seen: 9, Unknown: 6">
+<span class="lvl-not_seen" style="flex-grow: 9" title="Not seen: 9"></span><span class="lvl-unknown" style="flex-grow: 6" title="Unknown: 6"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">0</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">0</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">9</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">6</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“Table 5: Data mixture for pretraining.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Table 5 (Web 15%, Web rewrites 15%, Synthetic 40%, Code data 20%, Acquired sources 10%) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“`phi-4` is a state-of-the-art open model built upon a blend of synthetic datasets, data from filtered public domain websites, and acquired academic books and Q&amp;A datasets.”</blockquote>
+  <figcaption><a href="https://huggingface.co/microsoft/phi-4/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Summary · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>Web (filtered web dumps: forums, blogs, course material, wikis)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we took the approach of selecting a small fraction of highest-quality documents from bulk web dumps, using small (non-LLM) classifiers”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 (Filtering Web Dumps) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Web”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Table 5 (15% of training, 1.3T unique tokens) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Web rewrites (synthetic rewrites of filtered web content)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Web rewrites”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Table 5 (15% of training, 290B unique tokens) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Synthetic data (50 dataset types, ~400B unweighted tokens)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We created 50 broad types of synthetic datasets, each one relying on a different set of seeds and different multi-stage prompting procedure”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Code data</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Code repositories (GitHub is named among targeted acquisitions); treated as open-ended.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Code data”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Table 5 (20% of training, 820B unique tokens) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>Acquired sources / targeted acquisitions (arXiv, PubMed Central, GitHub, licensed books)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We included major repositories of reasoning-dense documents that are publicly permissible for use (e.g., arXiv, PubMed Central, GitHub) or explicitly licensed (e.g., licensed books)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 (Targeted Acquisitions) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>organic Q&amp;A datasets (tens of millions of problems and solutions from public websites and existing datasets)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">&#39;existing datasets&#39; not named.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We collected tens-of-millions high-quality organic problems and solutions by reviewing public websites, relying on existing datasets, and acquiring external datasets.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 (Q&amp;A datasets) · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“All collected questions and solutions underwent a thorough decontamination process to ensure there is no overlap with test sets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 2.3 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>SFT data (~8B tokens: math, coding, reasoning, conversation, identity, safety, multilingual)</em> <span class="muted">(not yet matched to a dataset)</span>  <span class="muted">· split: unknown · fine-tuning</span>
+  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We use around 8B tokens of data in this phase, all formatted in the chatml format.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+<section>
+  <h2>Declared exclusions</h2>
+  <ul class="rows">
+    <li>
+Dataset <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/winogrande.html">WinoGrande</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/hellaswag.html">HellaSwag</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/gpqa.html">GPQA (Graduate-Level Google-Proof Q&amp;A)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/mmlu-pro.html">MMLU-Pro</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/humaneval.html">HumanEval</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+Dataset <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>      <span class="muted">· test portion excluded</span>
+      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Accuracy (fraction) 0.561</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· the authors state its test portion was excluded from training</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“We decontaminate against the ARC-Easy, MBPP, phibench, CommonsenseQA, WinoGrande, mcphi, MedQA, MATH, AGIEval, PIQA, OpenBookQA, HellaSwag, GPQA, mt-bench, MMLUPro, GSM8k, HumanEval, arena hard, ARC-Challenge, and MMLU benchmarks.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We apply a hybrid n-gram algorithm for decontamination which uses 13-gram and 7-gram features for removing matches to the test set”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Appendix B.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“these methods are not effective against all scenarios, including rephrasing, which leaves some uncertainty about the true extent of generalization.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2412.08905v1">arxiv.org</a>
+<span class="muted">· paper · Section 5 (limitations of benchmarks) · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-not_seen">Not seen</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· its test items were published from 2025-02-06, after the model&#39;s stated training-data cutoff (2024-06-01)</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“Static model trained on an offline dataset with cutoff dates of June 2024 and earlier for publicly available data”</blockquote>
+  <figcaption><a href="https://huggingface.co/microsoft/phi-4/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Summary / Status · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“2025 AIME I problems and solutions. The test was held on Thursday, February 6, 2025.”</blockquote>
+  <figcaption><a href="https://web.archive.org/web/20250501204857/https://artofproblemsolving.com/wiki/index.php/2025_AIME_I">web.archive.org</a>
+<span class="muted">· website · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This year the AIME I will take place on February 6, 2025, while the alternate AIME II will take place on February 12, 2025.”</blockquote>
+  <figcaption><a href="https://maa.org/?p=8152">maa.org</a>
+<span class="muted">· website · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">~10T pre-training tokens (card: 9.8T). Report Section 1.1 &#39;Addressing Overfitting and Data Contamination&#39;: decontamination improved vs previous Phi models; strong November 2024 AMC-10/12 results are presented as evidence that &#39;phi-4’s top-tier performance on the MATH benchmark is not due to overfitting or contamination&#39;; GPQA weighted as &#39;contamination-proof&#39;. Footnote: &#39;some test benchmark variants can be found on platforms like Hugging Face&#39; and MMLU is &#39;frequently compiled from web-sourced questions&#39;. TruthfulQA is not in the decontamination list.
+
+Decontamination statements not shown as cells (they name no benchmark tracked here, or none at all): AMC-10 / AMC-12, November 2024.
+
+Accepts image input: “Inputs | Text, best suited for prompts in the chat format”</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2412.08905v1">Phi-4 Technical Report</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/microsoft/phi-4/raw/main/README.md">phi-4 model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>

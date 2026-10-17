@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DCLM-7B (DCLM-Baseline-7B) · Contamination map · MetaBenchmark.ai</title>
+  <meta name="description" content="Which benchmark datasets foundation models may have seen during pre-training, with sources for every claim.">
+  <link rel="icon" href="../../static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../static/logo.svg">
+  <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/style.css">
+<link rel="stylesheet" href="../../static/map.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../index.html"><img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark"></a>
+      <nav class="site-tabs" aria-label="Sections">
+        <a href="../../index.html">Platform proposal</a>
+        <a href="../../contamination-map/index.html" class="active" aria-current="true">Contamination map</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="map-band section--dark">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container map-band__inner">
+      <div class="map-band__nav">
+        <nav class="domains" aria-label="Domain">
+          <a href="../../contamination-map/index.html">Time series</a>
+          <a href="../../contamination-map/tabular/index.html">Tabular</a>
+          <a href="../../contamination-map/text/index.html" class="active">Text / LLM</a>
+          <a href="../../contamination-map/vision/index.html">Vision</a>
+        </nav>
+        <a class="nav-link" href="../../contamination-map/methodology.html">Methodology</a>
+      </div>
+<p class="crumb"><a href="../../contamination-map/text/index.html">Text / LLM</a> / Model</p>
+<h1>DCLM-7B (DCLM-Baseline-7B)</h1>
+    </div>
+  </div>
+  <main class="container doc">
+
+<dl class="facts">
+  <dt>Organisation</dt><dd>Apple / DataComp-LM (DCLM) team</dd>
+  <dt>Family</dt><dd>DCLM</dd>
+  <dt>Released</dt><dd>2024-07-11 <span class="muted small">(HF repo creation of apple/DCLM-7B (createdAt 2024-07-11, https://huggingface.co/api/models/apple/DCLM-7B). Model card says &#39;Date: June 2024&#39;; arXiv v1 of 2406.11794 is 2024-06-17.)</span></dd>
+<dt>Checkpoints</dt><dd>apple/DCLM-7B, apple/DCLM-7B-8k</dd>  <dt>Weights</dt><dd>Open · Apple Sample Code License (apple-ascl)</dd>
+  <dt>Links</dt>
+  <dd class="links">
+<a href="https://arxiv.org/pdf/2406.11794v4">Paper</a><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">Model card</a><a href="https://github.com/mlfoundations/dclm">Code</a>  </dd>
+</dl>
+
+<section>
+  <h2>Training data disclosure: <span class="disc disc-full_list">Full list</span></h2>
+<p>Level determined for <strong>53%</strong> of benchmark cells.</p><div class="dist" role="img" aria-label="Test data seen: 7, Seen, split unclear: 0, Training data seen: 0, Related data seen: 1, Not seen: 0, Unknown: 7">
+<span class="lvl-test_seen" style="flex-grow: 7" title="Test data seen: 7"></span><span class="lvl-related" style="flex-grow: 1" title="Related data seen: 1"></span><span class="lvl-unknown" style="flex-grow: 7" title="Unknown: 7"></span></div>
+<ul class="legend" aria-label="Contamination levels">
+  <li title="The benchmark&#39;s test data was in the pre-training data."><span class="swatch lvl-test_seen">Test</span>Test data seen<span class="muted count">7</span></li>
+  <li title="The dataset was used, but the source does not say which part, so the test data may have been seen."><span class="swatch lvl-seen_split_unclear">Seen</span>Seen, split unclear<span class="muted count">0</span></li>
+  <li title="Only the benchmark&#39;s training portion of the dataset was used."><span class="swatch lvl-train_seen">Train</span>Training data seen<span class="muted count">0</span></li>
+  <li title="A related dataset was used: a subset, superset, resampled version or the same underlying source."><span class="swatch lvl-related">Rel.</span>Related data seen<span class="muted count">1</span></li>
+  <li title="The test data was not in the pre-training data: either the full training list is published and does not include it, or the authors state it was excluded."><span class="swatch lvl-not_seen">No</span>Not seen<span class="muted count">0</span></li>
+  <li title="Not enough information has been disclosed to tell."><span class="swatch lvl-unknown">?</span>Unknown<span class="muted count">7</span></li>
+</ul>  <figure class="evidence">
+  <blockquote>“we combine our 3.8T [DCLM-BASELINE](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0)  with the [StarCoder](https://huggingface.co/datasets/bigcode/starcoderdata)  and [ProofPile2](https://huggingface.co/datasets/EleutherAI/proof-pile-2) data to arrive at a 4.1T token dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Details · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the cooldown distribution we use a mix of 70% DCLM- BASELINE with a tighter fastText threshold (top 7% rather than top 10%) and 30% ProofPile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix Q · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“An additional 100B of training was done on the same dataset using [Dataset Decomposition](https://arxiv.org/abs/2405.13226) to extend context length from 2k -&gt; 8k.”</blockquote>
+  <figcaption><a href="https://huggingface.co/apple/DCLM-7B-8k/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Details · retrieved 2026-10-15</span></figcaption>
+</figure>
+
+</section>
+
+
+<section>
+  <h2>Training corpora</h2>
+  <ul class="rows">
+    <li>
+      <strong>DCLM-Baseline 1.0</strong>
+      <span class="muted">· 1 source (complete list) · pre-training</span>
+ · <a href="https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0">homepage</a>      <details><summary>Evidence that DCLM-7B (DCLM-Baseline-7B) uses it</summary><figure class="evidence">
+  <blockquote>“DCLM-Baseline-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset”</blockquote>
+  <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-Baseline-7B · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we combine our 3.8T DCLM- BASELINE with the StarCoder [96] and ProofPile2 [14] datasets to arrive at a 4.1T token dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+      <details><summary>Contents of this corpus</summary><ul class="rows"><li>
+<em>DCLM-Pool (Common Crawl)</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Entire corpus is filtered Common Crawl (data prior to 2023).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“DCLM-Baseline is a subset of the DCLM-Pool, which is a corpus of 240 trillion tokens derived from Common Crawl.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · Out-of-Scope Use · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“DCLM-P OOL is an unfiltered web-text corpus comprised of all Common Crawl [45] data prior to 2023.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul></details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Other declared training data</h2>
+  <ul class="rows"><li>
+<em>StarCoder</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Model card links https://huggingface.co/datasets/bigcode/starcoderdata (GitHub-derived code).</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we combine our 3.8T [DCLM-BASELINE](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0)  with the [StarCoder](https://huggingface.co/datasets/bigcode/starcoderdata)  and [ProofPile2](https://huggingface.co/datasets/EleutherAI/proof-pile-2) data to arrive at a 4.1T token dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Details · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+<li>
+<em>ProofPile2</em> <span class="muted">(broad web data: may contain benchmark test sets)</span>  <span class="muted">· split: unknown</span>
+<p class="small">Model card links https://huggingface.co/datasets/EleutherAI/proof-pile-2 (includes web-derived OpenWebMath, AlgebraicStack code, arXiv); marked open_ended because of its web-crawl component.</p>  <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“we combine our 3.8T [DCLM-BASELINE](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0)  with the [StarCoder](https://huggingface.co/datasets/bigcode/starcoderdata)  and [ProofPile2](https://huggingface.co/datasets/EleutherAI/proof-pile-2) data to arrive at a 4.1T token dataset.”</blockquote>
+  <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Training Details · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For the cooldown distribution we use a mix of 70% DCLM- BASELINE with a tighter fastText threshold (top 7% rather than top 10%) and 30% ProofPile.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix Q · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+</li>
+</ul>
+</section>
+
+
+<section>
+  <h2>Contamination analyses</h2>
+  <p class="muted small">Analyses that found benchmark test data in this model's training data, or in a corpus it uses.</p>
+  <ul class="rows">
+    <li>
+      <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a>
+      <span class="muted">· pre-training data</span>
+<p class="small">Via ProofPile2 (Llemma paper): ~7% of MATH test problem statements and 0.6% of MATH test solutions have 30-gram hits in Proof-Pile-2 (OpenWebMath/AlgebraicStack). CONDA 2024 report also lists hendrycks/competition_math and gsm8k as contaminated in EleutherAI/proof-pile-2.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“around 7% of MATH test problem statements and 0.6% of MATH test solutions have hits”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.10631v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 3.5, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“EleutherAI/proof-pile-2 (Azer- gsm8k (Cobbe et al., 2021), hendrycks/competition_math (Hendrycks et al., 2021b)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2407.21530v2">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a>
+      <span class="muted">· pre-training data</span>
+<p class="small">Via ProofPile2: Llemma Table 6 lists 30-gram hits between GSM8k test problems and OpenWebMath documents (2 test examples, 3 documents; 0 for solutions); CONDA 2024 report lists gsm8k as contaminated in EleutherAI/proof-pile-2.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“OpenWebMath GSM8k”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.10631v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“EleutherAI/proof-pile-2 (Azer- gsm8k (Cobbe et al., 2021), hendrycks/competition_math (Hendrycks et al., 2021b)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2407.21530v2">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/humaneval.html">HumanEval</a>
+      <span class="muted">· pre-training data</span>
+<p class="small">Via StarCoder data: Riddell et al. (2024) find 18.9% of HumanEval gold solutions (and 20.8% of MBPP) seen in the Python split of the Stack training data of StarCoderBase (60.40 GB searched), despite the Stack&#39;s string-matching decontamination.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Results in Fig. 1 show that 12.2% of the solutions in HumanEval have been seen by models trained on the P ILE and 18.9% have been seen by models trained on the S TACK.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2403.04811v1">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we only search through 60.40 GB within the Python split of its training dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2403.04811v1">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">DCLM&#39;s MMLU overlap rule (question last sentence + one answer option on the same page; recall-oriented, likely overestimate) flagged 0.007% of DCLM-Baseline documents (vs 0.001% Dolma-V1.7, 0.009% FineWeb-Edu). Removing the flagged overlaps did not lower MMLU accuracy at 7B-2x scale (51.8 -&gt; 52.7).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“the percentage of documents in DCLM- BASELINE that are flagged by our MMLU-specific decontamination is roughly similar to that for other high-performing contemporary datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Note that because our flagging rule prioritizes recall over precision, these numbers are likely to be overestimates of the true contamination rates.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/hellaswag.html">HellaSwag</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">Overlaps between HellaSwag test examples and DCLM-Baseline pages were detected and removed for an ablation (fraction not reported in text); removal did not lower HellaSwag accuracy (77.9 -&gt; 78.4). In the 10-gram token-overlap analysis HellaSwag is the notable exception with a performance gap between full and &#39;clean&#39; subsets (Figure 12).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“Specifically, we attempt to remove examples from these two test sets that exist in DCLM- BASELINE.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 4.6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“While Hellaswag appears to be a notable exception, we showed in Section 4.6 that removing contaminated Hellaswag examples from our training set does not decrease performance.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">27.70% of (downsampled) MMLU test questions are &#39;dirty&#39; in DCLM-baseline.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/mmlu-pro.html">MMLU-Pro</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+    <li>
+      <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a>
+      <span class="muted">· pre-training data · in DCLM-Baseline 1.0</span>
+<p class="small">32.6% of ARC-Challenge test questions are &#39;dirty&#39; in DCLM-baseline (17x more than in Pile-train).</p>      <details><summary>Evidence</summary><figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For example, ARC-Challenge has 17× more and MMLU has 1.1× more dirty entries.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Benchmark cells</h2>
+  <h3><a href="../benchmarks/llm-classic.html">Classic LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-classic--mmlu">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu.html">MMLU (Measuring Massive Multitask Language Understanding)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (DCLM&#39;s MMLU overlap rule (question last sentence + one answer option on the same page; recall-oriented, likely overestimate) flagged 0.007% of DCLM-Baseline documents (vs 0.001% Dolma-V1.7, 0.009% FineWeb-Edu). Removing the flagged overlaps did not lower MMLU accuracy at 7B-2x scale (51.8 -&gt; 52.7).) (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 64.4</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“DCLM-Baseline-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset”</blockquote>
+  <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-Baseline-7B · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we combine our 3.8T DCLM- BASELINE with the StarCoder [96] and ProofPile2 [14] datasets to arrive at a 4.1T token dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“the percentage of documents in DCLM- BASELINE that are flagged by our MMLU-specific decontamination is roughly similar to that for other high-performing contemporary datasets”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Note that because our flagging rule prioritizes recall over precision, these numbers are likely to be overestimates of the true contamination rates.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O, Table 25 caption · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--gsm8k">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/gsm8k.html">GSM8K (Grade School Math 8K)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Via ProofPile2: Llemma Table 6 lists 30-gram hits between GSM8k test problems and OpenWebMath documents (2 test examples, 3 documents; 0 for solutions); CONDA 2024 report lists gsm8k as contaminated in EleutherAI/proof-pile-2.) [third-party study]</span> <span class="score-chip">Accuracy (%) 46.1</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“OpenWebMath GSM8k”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.10631v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“EleutherAI/proof-pile-2 (Azer- gsm8k (Cobbe et al., 2021), hendrycks/competition_math (Hendrycks et al., 2021b)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2407.21530v2">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--math">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/math.html">MATH (Mathematics Aptitude Test of Heuristics)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Via ProofPile2 (Llemma paper): ~7% of MATH test problem statements and 0.6% of MATH test solutions have 30-gram hits in Proof-Pile-2 (OpenWebMath/AlgebraicStack). CONDA 2024 report also lists hendrycks/competition_math and gsm8k as contaminated in EleutherAI/proof-pile-2.) [third-party study]</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“around 7% of MATH test problem statements and 0.6% of MATH test solutions have hits”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.10631v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 3.5, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“EleutherAI/proof-pile-2 (Azer- gsm8k (Cobbe et al., 2021), hendrycks/competition_math (Hendrycks et al., 2021b)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2407.21530v2">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--humaneval">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/humaneval.html">HumanEval</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Via StarCoder data: Riddell et al. (2024) find 18.9% of HumanEval gold solutions (and 20.8% of MBPP) seen in the Python split of the Stack training data of StarCoderBase (60.40 GB searched), despite the Stack&#39;s string-matching decontamination.) [third-party study]</span></p>
+<details><summary>Evidence (2)</summary><figure class="evidence">
+  <blockquote>“Results in Fig. 1 show that 12.2% of the solutions in HumanEval have been seen by models trained on the P ILE and 18.9% have been seen by models trained on the S TACK.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2403.04811v1">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we only search through 60.40 GB within the Python split of its training dataset”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2403.04811v1">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 3.1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--arc-challenge">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/arc-challenge.html">ARC-Challenge (AI2 Reasoning Challenge, Challenge Set)</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (32.6% of ARC-Challenge test questions are &#39;dirty&#39; in DCLM-baseline (17x more than in Pile-train).) [third-party study] (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 79.8</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“DCLM-Baseline-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset”</blockquote>
+  <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-Baseline-7B · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we combine our 3.8T DCLM- BASELINE with the StarCoder [96] and ProofPile2 [14] datasets to arrive at a 4.1T token dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“For example, ARC-Challenge has 17× more and MMLU has 1.1× more dirty entries.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--hellaswag">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/hellaswag.html">HellaSwag</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (Overlaps between HellaSwag test examples and DCLM-Baseline pages were detected and removed for an ablation (fraction not reported in text); removal did not lower HellaSwag accuracy (77.9 -&gt; 78.4). In the 10-gram token-overlap analysis HellaSwag is the notable exception with a performance gap between full and &#39;clean&#39; subsets (Figure 12).) (via DCLM-Baseline 1.0)</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“DCLM-Baseline-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset”</blockquote>
+  <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-Baseline-7B · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we combine our 3.8T DCLM- BASELINE with the StarCoder [96] and ProofPile2 [14] datasets to arrive at a 4.1T token dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“Specifically, we attempt to remove examples from these two test sets that exist in DCLM- BASELINE.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 4.6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“While Hellaswag appears to be a notable exception, we showed in Section 4.6 that removing contaminated Hellaswag examples from our training set does not decrease performance.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Appendix O · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-classic--truthfulqa">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/truthfulqa.html">TruthfulQA</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-classic--winogrande">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/winogrande.html">WinoGrande</a> <span class="muted">· training data not disclosed in enough detail</span> <span class="score-chip">Accuracy (%) 77.3</span></p>
+  </div>
+  <h3><a href="../benchmarks/llm-recent.html">Recent LLM benchmarks</a></h3>
+  <div class="cell-detail" id="llm-recent--gpqa-diamond">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/gpqa-diamond.html">GPQA Diamond</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--mmlu-pro">
+    <p><span class="badge lvl-test_seen">Test data seen</span> <a href="../datasets/mmlu-pro.html">MMLU-Pro</a> <span class="muted">· a contamination analysis found test examples in the pre-training data (16.20% of (downsampled) MMLU-Pro test questions are &#39;dirty&#39; in DCLM-baseline.) [third-party study] (via DCLM-Baseline 1.0)</span> <span class="score-chip">Accuracy (%) 31.3</span></p>
+<details><summary>Evidence (3)</summary><figure class="evidence">
+  <blockquote>“DCLM-Baseline-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset”</blockquote>
+  <figcaption><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">huggingface.co</a>
+<span class="muted">· model card · Model Card for DCLM-Baseline-7B · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“we combine our 3.8T DCLM- BASELINE with the StarCoder [96] and ProofPile2 [14] datasets to arrive at a 4.1T token dataset.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2406.11794v4">arxiv.org</a>
+<span class="muted">· paper · Section 5 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“When checking against DCLMbaseline, MMLU has 27.70% dirty entries, MMLUPro has 16.20%, ARC-Challenge has 32.6%, and ARC-Easy has 32.3%.”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2506.12229v4">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 4.2 · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+  <div class="cell-detail" id="llm-recent--livecodebench">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/livecodebench.html">LiveCodeBench (code generation, release_v6)</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--swe-bench-verified">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/swe-bench-verified.html">SWE-bench Verified</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2024">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2024.html">AIME 2024</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--aime-2025">
+    <p><span class="badge lvl-unknown">Unknown</span> <a href="../datasets/aime-2025.html">AIME 2025</a> <span class="muted">· training data not disclosed in enough detail</span></p>
+  </div>
+  <div class="cell-detail" id="llm-recent--math-500">
+    <p><span class="badge lvl-related">Related data seen</span> <a href="../datasets/math-500.html">MATH-500</a> <span class="muted">· a contamination analysis found test examples of the related dataset MATH (Mathematics Aptitude Test of Heuristics) (Via ProofPile2 (Llemma paper): ~7% of MATH test problem statements and 0.6% of MATH test solutions have 30-gram hits in Proof-Pile-2 (OpenWebMath/AlgebraicStack). CONDA 2024 report also lists hendrycks/competition_math and gsm8k as contaminated in EleutherAI/proof-pile-2.) [third-party study]</span></p>
+<details><summary>Evidence (4)</summary><figure class="evidence">
+  <blockquote>“around 7% of MATH test problem statements and 0.6% of MATH test solutions have hits”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2310.10631v3">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Section 3.5, Table 6 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“EleutherAI/proof-pile-2 (Azer- gsm8k (Cobbe et al., 2021), hendrycks/competition_math (Hendrycks et al., 2021b)”</blockquote>
+  <figcaption><a href="https://arxiv.org/pdf/2407.21530v2">arxiv.org</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · Table 1 · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“We therefore evaluate our models only on the remaining 500 held-out problems. We selected these 500 test problems uniformly at random, and we believe they are representative of the test set as a whole.”</blockquote>
+  <figcaption><a href="https://raw.githubusercontent.com/openai/prm800k/main/README.md">raw.githubusercontent.com</a>
+<span class="muted">· readme · MATH Splits · retrieved 2026-10-15</span></figcaption>
+</figure>
+<figure class="evidence">
+  <blockquote>“This dataset contains a subset of 500 problems from the MATH benchmark that OpenAI created in their _Let&#39;s Verify Step by Step_ paper.”</blockquote>
+  <figcaption><a href="https://huggingface.co/datasets/HuggingFaceH4/MATH-500/raw/main/README.md">huggingface.co</a>
+<span class="muted">· dataset card · retrieved 2026-10-15</span></figcaption>
+</figure>
+</details>  </div>
+</section>
+
+<section><h2>Notes</h2><p class="notes">Base model; card says it has not undergone alignment or safety fine-tuning. DCLM&#39;s MMLU/HellaSwag decontamination was an ablation at 7B-2x scale only; the released model was trained on non-decontaminated DCLM-Baseline (developer findings recorded on corpus dclm-baseline). DCLM-Pool is all Common Crawl data prior to 2023, but no model knowledge cutoff is stated (card: &#39;limited to its training data cutoff date&#39;).</p></section><section>
+  <h2>Sources</h2>
+  <ul class="sources">
+<li><a href="https://arxiv.org/pdf/2406.11794v4">DataComp-LM: In search of the next generation of training sets for language models</a>
+<span class="muted">· paper · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/apple/DCLM-7B/raw/main/README.md">apple/DCLM-7B model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/apple/DCLM-7B-8k/raw/main/README.md">apple/DCLM-7B-8k model card</a>
+<span class="muted">· model card · retrieved 2026-10-15</span></li><li><a href="https://huggingface.co/api/models/apple/DCLM-7B">HF API metadata for apple/DCLM-7B</a>
+<span class="muted">· website · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2310.10631v3">Llemma: An Open Language Model For Mathematics</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2403.04811v1">Quantifying Contamination in Evaluating Code Generation Capabilities of Language Models</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · retrieved 2026-10-15</span></li><li><a href="https://arxiv.org/pdf/2407.21530v2">Data Contamination Report from the 2024 CONDA Shared Task</a>
+ <span class="third-party">third-party study</span><span class="muted">· study · retrieved 2026-10-15</span></li>  </ul>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="../../static/wordmark-dark.svg" alt="MetaBenchmark.ai" class="wordmark">
+        <p class="footer__tagline">Private data, public scores</p>
+        <p class="footer__tagline">Next Generation AI Competitions &amp; Benchmarks Platform</p>
+        <p class="footer__description">Built for organizations that can't compromise on data privacy, scientific rigor, or real-world impact, with full control over your data, submissions, and compute.</p>
+      </div>
+
+      <div class="footer__links">
+        <span class="footer__links-heading">Get in Touch</span>
+        <div class="footer__social">
+          <a href="mailto:contact@mlchallenges.com" aria-label="Email MetaBenchmark">
+            <svg><use href="../../static/svg/email.svg#icon-email"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ml-challenges/" target="_blank" rel="noopener" aria-label="MetaBenchmark on LinkedIn">
+            <svg><use href="../../static/svg/linkedin.svg#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://github.com/MLChallenges-Labs" target="_blank" rel="noopener" aria-label="MetaBenchmark on GitHub">
+            <svg><use href="../../static/svg/github.svg#icon-github"></use></svg>
+          </a>
+          <a href="https://mlchallenges.com" target="_blank" rel="noopener" aria-label="MLChallenges website">
+            <svg><use href="../../static/svg/globe.svg#icon-globe"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map container">
+      <a class="footer__by" href="https://mlchallenges.com">
+        <span>A project by</span>
+        <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
+      </a>
+      <p class="footer__build">
+      Contamination map built 2026-10-17 ·
+      <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
+      <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
+      Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
+      </p>
+    </div>
+
+    <div class="footer__legal container">
+      <span>© 2026 MLChallenges. All rights reserved.</span>
+      <span>Made in France 🇫🇷</span>
+    </div>
+  </footer>
+</body>
+</html>
